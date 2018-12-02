@@ -68,6 +68,9 @@
 #include "FX1.h"
 #include "GI2C1.h"
 #include "CI2C1.h"
+#include "Term1.h"
+#include "Inhr1.h"
+#include "ASerialLdd1.h"
 #include "Events.h"
 
 #ifdef __cplusplus

@@ -53,6 +53,7 @@
   </PATHS>
   <FILES>
     <GeneratedCs>
+      <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\ASerialLdd1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\CD1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\CI2C1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\CS1.c</PathName>
@@ -60,6 +61,7 @@
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\FAT1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\FX1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\GI2C1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\Inhr1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\MCUC1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\PE_LDD.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\Pins1.c</PathName>
@@ -70,6 +72,7 @@
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\TI1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\TMOUT1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\TU1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\Term1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\TimerIntLdd1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\TmDt1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\UTIL1.c</PathName>
@@ -84,6 +87,7 @@
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Static_Code\System\Vectors.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
+      <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\ASerialLdd1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\CD1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\CI2C1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\CPU_Config.h</PathName>
@@ -96,6 +100,7 @@
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\GI2C1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\GI2C1config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\IO_Map.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\Inhr1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\Init_Config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\MCUC1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\MCUC1config.h</PathName>
@@ -112,6 +117,7 @@
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\TMOUT1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\TMOUT1config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\TU1.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\Term1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\TimerIntLdd1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\TmDt1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\DataLogger1\Generated_Code\TmDt1config.h</PathName>

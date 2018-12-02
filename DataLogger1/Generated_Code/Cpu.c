@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K64P144M120SF5RM, Rev.2, January 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-12-02, 12:06, # CodeGen: 2
+**     Date/Time   : 2018-12-02, 12:37, # CodeGen: 3
 **     Abstract    :
 **
 **     Settings    :
@@ -131,6 +131,9 @@ void Components_Init(void)
   GI2C1_Init(); /* ### GenericI2C "GI2C1" init code ... */
   /* ### FXOS8700CQ "FX1" init code ... */
   /* Write code here ... */
+  /* ### Asynchro serial "Inhr1" init code ... */
+  Inhr1_Init();
+  /* ###  "Term1" init code ... */
 }
 #endif /* CPU_COMPONENTS_INIT */
 

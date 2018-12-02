@@ -11,6 +11,7 @@
 #include "FAT1.h"
 #include "UTIL1.h"
 #include "PORT_PDD.h"
+#include "Term1.h"
 
 static FAT1_FATFS fileSystemObject;
 static FIL fp;
@@ -51,6 +52,7 @@ static void LogToFile(int16_t x, int16_t y, int16_t z) {
   UTIL1_chcat(write_buf, sizeof(write_buf), '\t');
   UTIL1_strcatNum16s(write_buf, sizeof(write_buf), z);
   UTIL1_strcat(write_buf, sizeof(write_buf), (unsigned char*)"\r\n");
+  Term1_SendStr(write_buf);
   if (FAT1_write(&fp, write_buf, UTIL1_strlen((char*)write_buf), &bw)!=FR_OK) {
     (void)FAT1_close(&fp);
     Err();
