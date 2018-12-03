@@ -2,8 +2,8 @@
 
 #if USE_SIMULATOR
 #include <atomic>
-#endif
 #include <assert.h>
+#endif
 #include "scheduling_resumable.h"
 #include "scheduling_scheduler.h"
 
@@ -33,7 +33,7 @@ namespace scheduling {
 		std::function<void(void)> _coro;
 		bool _ready = false;
 		bool _future_acquired = false;
-		task_t::task_id_t _taskid = 0;
+		task_id_t _taskid = 0;
 
 		awaitable_state_base() : _taskid(task_t::getRunningTaskId()) { }
 		awaitable_state_base(awaitable_state_base&&) = delete;
@@ -41,8 +41,10 @@ namespace scheduling {
 
 		void set_coroutine_callback(std::function<void(void)> cb)
 		{
+#ifdef assert
 			// Test to make sure nothing else is waiting on this future.
 			assert(((cb == nullptr) || (_coro == nullptr)) && "This future is already being awaited.");
+#endif
 			_coro = cb;
 		}
 

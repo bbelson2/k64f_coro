@@ -25,9 +25,10 @@ void adcCreateData();
 extern "C"
 void main_cpp()
 {
+#if 0
 	trace("Hello K64F world\r\n");
 	test_cpp();
-
+#endif
 
 	// Instantiate and initialise the application-specific tasks
 	scheduling::resumable adcTaskFn_ = adcTaskFn(12);

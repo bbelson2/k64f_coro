@@ -5,7 +5,7 @@ namespace scheduling {
 	task_t& task_t::getRunningTask() {
 		return scheduler_t::getInstance().getRunningTask();
 	}
-	task_t::task_id_t task_t::getRunningTaskId() {
+	task_id_t task_t::getRunningTaskId() {
 		return scheduler_t::getInstance().hasRunningTask()
 			? scheduler_t::getInstance().getRunningTask().getId()
 			: scheduler_t::bad_task_id();

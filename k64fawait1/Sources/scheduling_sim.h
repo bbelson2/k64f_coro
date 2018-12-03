@@ -2,6 +2,10 @@
 
 #include "scheduling_split_phase.h"
 
+#ifndef USE_SIMULATOR
+#error This file is only for use in the simulator
+#endif
+
 /***************************************************************************/
 /* ISR simulator                                                           */
 /***************************************************************************/

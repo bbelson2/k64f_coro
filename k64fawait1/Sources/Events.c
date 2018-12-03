@@ -38,8 +38,9 @@ extern "C" {
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
 
+#include "scheduling_types.h"
 #include "scheduling_events.h"
-#include "app_events.h"
+#include "app_ids.h"
 
 /*
 ** ===================================================================

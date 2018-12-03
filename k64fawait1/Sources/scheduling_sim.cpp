@@ -1,4 +1,4 @@
-#if 0
+#if USE_SIMULATOR
 
 #include "scheduling_sim.h"
 #include <iostream>

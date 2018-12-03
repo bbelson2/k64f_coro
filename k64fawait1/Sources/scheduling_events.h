@@ -7,12 +7,12 @@
 
 // C/C++ portable
 // Included by events.c, therefore minimal
-// Note: the events ids themselves wilol be in an app-specific file, e.g. app_events.h
+// Note: the events ids themselves will be in an app-specific file, e.g. app_ids.h
 
 #ifndef SOURCES_SCHEDULING_EVENTS_H_
 #define SOURCES_SCHEDULING_EVENTS_H_
 
-typedef uint8_t event_id_t;
+#include "scheduling_types.h"
 
 #ifdef USE_SIMULATOR
 // TODO

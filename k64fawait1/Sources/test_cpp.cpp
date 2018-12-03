@@ -5,6 +5,8 @@
  *      Author: Bruce Belson
  */
 
+#if 0
+
 #include "scheduling_resumable.h"
 #include "scheduling_split_phase.h"
 #include "scheduling_future.h"
@@ -39,3 +41,5 @@ void test_cpp() {
 	 auto t = make_task();
 	 t.resume();
 }
+
+#endif

@@ -1,8 +1,9 @@
 #pragma once
 
-#include "scheduling_resumable.h"
 #include <functional>
 #include <vector>
+#include "scheduling_types.h"
+#include "scheduling_resumable.h"
 
 /***************************************************************************/
 /* Task and scheduler                                                      */
@@ -18,8 +19,6 @@ namespace scheduling {
 			Blocked = 2,
 			Running = 3
 		};
-		typedef int8_t task_priority_t;
-		typedef uint8_t task_id_t;
 	public:
 		task_t(task_id_t id,
 			task_state_t state,
@@ -46,7 +45,7 @@ namespace scheduling {
 		}
 
 		static task_t& getRunningTask();
-		static task_t::task_id_t getRunningTaskId();
+		static task_id_t getRunningTaskId();
 
 		static void blockRunningTask() {
 			getRunningTask().setState(task_state_t::Blocked);
@@ -77,8 +76,8 @@ namespace scheduling {
 	public:
 		scheduler_t() : runningTaskIndex_((size_t)-1) { }
 
-		static task_t::task_id_t idle_task_id() { return 1; }
-		static task_t::task_id_t bad_task_id() { return 0; }
+		static task_id_t idle_task_id() { return 1; }
+		static task_id_t bad_task_id() { return 0; }
 
 		static scheduler_t& getInstance() {
 			static scheduler_t theInstance;
@@ -108,7 +107,7 @@ namespace scheduling {
 		}
 
 		task_t& getNextTask() {
-			task_t::task_priority_t maxPriority = -1;
+			task_priority_t maxPriority = -1;
 			size_t nextTaskIndex = (size_t)-1;
 			for (size_t i = 0; i < tasks_.size(); i++) {
 				size_t j = (i + 1 + runningTaskIndex_) % tasks_.size();
@@ -129,7 +128,7 @@ namespace scheduling {
 			}
 		}
 
-		void unblockTask(task_t::task_id_t taskId) {
+		void unblockTask(task_id_t taskId) {
 			for (auto t : tasks_) {
 				if ((t->getId() == taskId) && (t->getState() == task_t::task_state_t::Blocked)) {
 					t->setState(task_t::task_state_t::Ready);
