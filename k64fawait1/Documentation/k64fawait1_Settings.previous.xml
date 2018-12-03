@@ -362,14 +362,14 @@ Autoselect
           <Low_power_mode v="Disabled" />
           <High_speed_conversion_mode v="Disabled" />
           <Asynchro_clock_output v="Disabled" />
-          <Sample_time v="4 clock periods" />
+          <Sample_time v="24 clock periods" />
           <Number_of_conversions v="1" />
-          <Conversion_time v="9.615385 &amp;#181;s" />
+          <Conversion_time v="17.166138 &amp;#181;s" />
           <ADC_clock v="2.621 MHz (381.47 ns)" />
-          <Single_conversion_time___Single_ended v="11.682 us" />
-          <Single_conversion_time___Differential v="15.115 us" />
-          <Additional_conversion_time___Single_ended v="9.536 us" />
-          <Additional_conversion_time___Differential v="12.969 us" />
+          <Single_conversion_time___Single_ended v="18.548 us" />
+          <Single_conversion_time___Differential v="21.982 us" />
+          <Additional_conversion_time___Single_ended v="17.166 us" />
+          <Additional_conversion_time___Differential v="20.599 us" />
           <Result_type v="unsigned 16 bits, right justified" />
           <boolgroup name="Trigger" v="Disabled" />
           <group name="Voltage reference">
@@ -439,11 +439,11 @@ Autoselect
 
         <EmptySection_DummyValue />
       </A_D_resolution>
-      <Conversion_time v="9.615385 &amp;#181;s" />
+      <Conversion_time v="17.166138 &amp;#181;s" />
       <Low_power_mode v="Disabled" />
       <High_speed_conversion_mode v="Disabled" />
       <Asynchro_clock_output v="Disabled" />
-      <Sample_time v="0 = short" />
+      <Sample_time v="20 = long" />
       <boolgroup name="Internal trigger" v="Disabled" />
       <Number_of_conversions v="1" />
       <group name="Initialization">
@@ -467,7 +467,7 @@ Autoselect
       <MeasureChan v="don&amp;apos;t generate code" />
       <EnableExtChanTrigger v="don&amp;apos;t generate code" />
       <EnableIntChanTrigger v="don&amp;apos;t generate code" />
-      <GetValue v="don&amp;apos;t generate code" />
+      <GetValue v="generate code" />
       <GetChanValue v="don&amp;apos;t generate code" />
       <GetValue8 v="don&amp;apos;t generate code" />
       <GetChanValue8 v="don&amp;apos;t generate code" />

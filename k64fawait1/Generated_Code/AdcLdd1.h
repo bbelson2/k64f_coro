@@ -7,7 +7,7 @@
 **     Version     : Component 01.183, Driver 01.08, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-12-03, 12:50, # CodeGen: 7
+**     Date/Time   : 2018-12-03, 15:32, # CodeGen: 10
 **     Abstract    :
 **         This device "ADC_LDD" implements an A/D converter,
 **         its control methods and interrupt/event handling procedure.
@@ -23,7 +23,7 @@
 **            Channel 0                                    : 
 **              Channel mode                               : Single Ended
 **                Input                                    : 
-**                  A/D channel (pin)                      : VDDA
+**                  A/D channel (pin)                      : ADC0_DM1
 **          Static sample groups                           : Disabled
 **          Max. samples                                   : 8
 **          A/D resolution                                 : Autoselect
@@ -32,12 +32,12 @@
 **          Asynchro clock output                          : Disabled
 **          Sample time                                    : 24 clock periods
 **          Number of conversions                          : 1
-**          Conversion time                                : 34.615385 µs
-**          ADC clock                                      : 1.31 MHz (762.939 ns)
-**          Single conversion time - Single-ended          : 36.859 us
-**          Single conversion time - Differential          : 43.725 us
-**          Additional conversion time - Single-ended      : 34.332 us
-**          Additional conversion time - Differential      : 41.198 us
+**          Conversion time                                : 17.166138 µs
+**          ADC clock                                      : 2.621 MHz (381.47 ns)
+**          Single conversion time - Single-ended          : 18.548 us
+**          Single conversion time - Differential          : 21.982 us
+**          Additional conversion time - Single-ended      : 17.166 us
+**          Additional conversion time - Differential      : 20.599 us
 **          Result type                                    : unsigned 16 bits, right justified
 **          Trigger                                        : Disabled
 **          Voltage reference                              : 

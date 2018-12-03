@@ -7,7 +7,7 @@
 **     Version     : Component 01.183, Driver 01.08, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-12-03, 12:50, # CodeGen: 7
+**     Date/Time   : 2018-12-03, 15:32, # CodeGen: 10
 **     Abstract    :
 **         This device "ADC_LDD" implements an A/D converter,
 **         its control methods and interrupt/event handling procedure.
@@ -23,7 +23,7 @@
 **            Channel 0                                    : 
 **              Channel mode                               : Single Ended
 **                Input                                    : 
-**                  A/D channel (pin)                      : VDDA
+**                  A/D channel (pin)                      : ADC0_DM1
 **          Static sample groups                           : Disabled
 **          Max. samples                                   : 8
 **          A/D resolution                                 : Autoselect
@@ -32,12 +32,12 @@
 **          Asynchro clock output                          : Disabled
 **          Sample time                                    : 24 clock periods
 **          Number of conversions                          : 1
-**          Conversion time                                : 34.615385 µs
-**          ADC clock                                      : 1.31 MHz (762.939 ns)
-**          Single conversion time - Single-ended          : 36.859 us
-**          Single conversion time - Differential          : 43.725 us
-**          Additional conversion time - Single-ended      : 34.332 us
-**          Additional conversion time - Differential      : 41.198 us
+**          Conversion time                                : 17.166138 µs
+**          ADC clock                                      : 2.621 MHz (381.47 ns)
+**          Single conversion time - Single-ended          : 18.548 us
+**          Single conversion time - Differential          : 21.982 us
+**          Additional conversion time - Single-ended      : 17.166 us
+**          Additional conversion time - Differential      : 20.599 us
 **          Result type                                    : unsigned 16 bits, right justified
 **          Trigger                                        : Disabled
 **          Voltage reference                              : 
@@ -129,8 +129,8 @@ extern "C" {
 #define AdcLdd1_AVAILABLE_VOLT_REF_PIN_MASK (LDD_ADC_LOW_VOLT_REF_PIN | LDD_ADC_HIGH_VOLT_REF_PIN) /*!< Mask of all allocated voltage reference pins */
 
 static const uint8_t ChannelToPin[] = { /* Channel to pin conversion table */
-  /* ADC0_SC1A: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,COCO=0,AIEN=1,DIFF=0,ADCH=0x1D */
-  0x5DU                                /* Status and control register value */
+  /* ADC0_SC1A: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,COCO=0,AIEN=1,DIFF=0,ADCH=0x14 */
+  0x54U                                /* Status and control register value */
 };
 
 typedef struct {
@@ -194,17 +194,13 @@ LDD_TDeviceData* AdcLdd1_Init(LDD_TUserData *UserDataPtr)
   /* SIM_SCGC6: ADC0=1 */
   SIM_SCGC6 |= SIM_SCGC6_ADC0_MASK;
   /* Initialization of pin routing */
-  /* ADC0_SC2: REFSEL=1 */
-  ADC0_SC2 = (uint32_t)((ADC0_SC2 & (uint32_t)~(uint32_t)(
-              ADC_SC2_REFSEL(0x02)
-             )) | (uint32_t)(
-              ADC_SC2_REFSEL(0x01)
-             ));
-  /* ADC0_CFG1: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,ADLPC=0,ADIV=3,ADLSMP=1,MODE=3,ADICLK=1 */
+  /* ADC0_SC2: REFSEL=0 */
+  ADC0_SC2 &= (uint32_t)~(uint32_t)(ADC_SC2_REFSEL(0x03));
+  /* ADC0_CFG1: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,ADLPC=0,ADIV=3,ADLSMP=1,MODE=3,ADICLK=0 */
   ADC0_CFG1 = ADC_CFG1_ADIV(0x03) |
               ADC_CFG1_ADLSMP_MASK |
               ADC_CFG1_MODE(0x03) |
-              ADC_CFG1_ADICLK(0x01);
+              ADC_CFG1_ADICLK(0x00);
 
   /* ADC0_CFG2: MUXSEL=0,ADACKEN=0,ADHSC=0,ADLSTS=0 */
   ADC0_CFG2 &= (uint32_t)~(uint32_t)(
@@ -213,8 +209,8 @@ LDD_TDeviceData* AdcLdd1_Init(LDD_TUserData *UserDataPtr)
                 ADC_CFG2_ADHSC_MASK |
                 ADC_CFG2_ADLSTS(0x03)
                );
-  /* ADC0_SC2: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,ADACT=0,ADTRG=0,ACFE=0,ACFGT=0,ACREN=0,DMAEN=0,REFSEL=1 */
-  ADC0_SC2 = ADC_SC2_REFSEL(0x01);
+  /* ADC0_SC2: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,ADACT=0,ADTRG=0,ACFE=0,ACFGT=0,ACREN=0,DMAEN=0,REFSEL=0 */
+  ADC0_SC2 = ADC_SC2_REFSEL(0x00);
   /* ADC0_SC3: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,CAL=0,CALF=1,??=0,??=0,ADCO=0,AVGE=0,AVGS=0 */
   ADC0_SC3 = (ADC_SC3_CALF_MASK | ADC_SC3_AVGS(0x00));
   AdcLdd1_SetClockConfiguration(DeviceDataPrv, Cpu_GetClockConfiguration()); /* Set Initial according speed CPU mode */
@@ -585,7 +581,7 @@ void AdcLdd1_SetClockConfiguration(LDD_TDeviceData *DeviceDataPtr, LDD_TClockCon
       DeviceDataPrv->EnMode = TRUE;    /* Set the flag "device enabled" in the actual speed CPU mode */
       ADC_PDD_WriteConfiguration1Reg(ADC0_BASE_PTR,
         (ADC_PDD_ReadConfiguration1Reg(ADC0_BASE_PTR) & ((uint32_t)~((uint32_t)(ADC_CFG1_ADIV_MASK | ADC_CFG1_ADICLK_MASK))))
-        | 0x61U);
+        | 0x60U);
       break;
     default:
       DeviceDataPrv->EnMode = FALSE;   /* Set the flag "device disabled" in the actual speed CPU mode */

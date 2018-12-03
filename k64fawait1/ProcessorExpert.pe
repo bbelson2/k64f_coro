@@ -3,7 +3,7 @@
   <Header>
     <Name>k64fawait1</Name>
     <SavedBy>Bruce Belson</SavedBy>
-    <ModificationStamp>8</ModificationStamp>
+    <ModificationStamp>10</ModificationStamp>
     <Date>2018-12-02</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.12.2.RT7_b1550-0615</PEversion>
@@ -19385,7 +19385,7 @@
               <ItemSymbol>InputPin_Ch0</ItemSymbol>
               <ReadOnly>false</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
-              <Value>VDDA</Value>
+              <Value>ADC0_DM1</Value>
               <SharedPrphMode>false</SharedPrphMode>
             </ItemState>
             <ItemState>
@@ -19558,7 +19558,7 @@
               <ItemSymbol>_CnvTmg</ItemSymbol>
               <ReadOnly>false</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
-              <Value>init:;prec:5%;RTS:none;clksrc_presc[SpeedMode0]Auto select;clksrc_presc[SpeedMode1]Auto select;clksrc_presc[SpeedMode2]Auto select;clksrc_presc[SpeedMode3]Auto select;dev_presc[SpeedMode3]Auto select;clksrc_presc[SpeedMode4]Auto select;dev_presc[SpeedMode4]Auto select;clksrc_presc[SpeedMode5]Auto select;dev_presc[SpeedMode5]Auto select;clksrc_presc[SpeedMode6]Auto select;dev_presc[SpeedMode6]Auto select;clksrc_presc[SpeedMode7]Auto select;dev_presc[SpeedMode7]Auto select</Value>
+              <Value>init:34.615385 µs;prec:5%;RTS:none;clksrc_presc[SpeedMode0]Auto select;extcomp_presc[SpeedMode0]45;clksrc_presc[SpeedMode1]Auto select;extcomp_presc[SpeedMode1]45;clksrc_presc[SpeedMode2]Auto select;extcomp_presc[SpeedMode2]45;clksrc_presc[SpeedMode3]Auto select;extcomp_presc[SpeedMode3]45;clksrc_presc[SpeedMode4]Auto select;extcomp_presc[SpeedMode4]45;clksrc_presc[SpeedMode5]Auto select;clksrc_presc[SpeedMode6]Auto select;clksrc_presc[SpeedMode7]Auto select</Value>
               <RuntimeSetting>0</RuntimeSetting>
               <ReqDevPrescHigh>-1</ReqDevPrescHigh>
               <ReqDevPrescLow>-1</ReqDevPrescLow>
@@ -19584,7 +19584,7 @@
               <ReqSrcClkPrescSpeedMode5>-1</ReqSrcClkPrescSpeedMode5>
               <ReqSrcClkPrescSpeedMode6>-1</ReqSrcClkPrescSpeedMode6>
               <ReqSrcClkPrescSpeedMode7>-1</ReqSrcClkPrescSpeedMode7>
-              <InitValue>34.615385 us</InitValue>
+              <InitValue>17.166138 us</InitValue>
               <Precision>5.0</Precision>
               <PrecInProc>true</PrecInProc>
               <LowLimit />
@@ -19595,23 +19595,23 @@
             </ItemState>
             <ItemState>
               <ItemSymbol>ADCClock</ItemSymbol>
-              <Value>1.31 MHz (762.939 ns)</Value>
+              <Value>2.621 MHz (381.47 ns)</Value>
             </ItemState>
             <ItemState>
               <ItemSymbol>SingleConversionTimeSE</ItemSymbol>
-              <Value>36.859 us</Value>
+              <Value>18.548 us</Value>
             </ItemState>
             <ItemState>
               <ItemSymbol>SingleConversionTimeDiff</ItemSymbol>
-              <Value>43.725 us</Value>
+              <Value>21.982 us</Value>
             </ItemState>
             <ItemState>
               <ItemSymbol>AdditionalConversionTimeSE</ItemSymbol>
-              <Value>34.332 us</Value>
+              <Value>17.166 us</Value>
             </ItemState>
             <ItemState>
               <ItemSymbol>AdditionalConversionTimeDiff</ItemSymbol>
-              <Value>41.198 us</Value>
+              <Value>20.599 us</Value>
             </ItemState>
             <ItemState>
               <ItemSymbol>StandbyFeatureGroup</ItemSymbol>
@@ -20241,7 +20241,7 @@
             </ItemState>
             <ItemState>
               <ItemSymbol>GetZeroCrossingStatus</ItemSymbol>
-              <ReadOnly>false</ReadOnly>
+              <ReadOnly>true</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
               <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
               <Index>1</Index>
@@ -20257,7 +20257,7 @@
             </ItemState>
             <ItemState>
               <ItemSymbol>GetLowLimitStatus</ItemSymbol>
-              <ReadOnly>false</ReadOnly>
+              <ReadOnly>true</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
               <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
               <Index>1</Index>
@@ -20273,7 +20273,7 @@
             </ItemState>
             <ItemState>
               <ItemSymbol>GetHighLimitStatus</ItemSymbol>
-              <ReadOnly>false</ReadOnly>
+              <ReadOnly>true</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
               <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
               <Index>1</Index>
@@ -20455,7 +20455,7 @@
             </ItemState>
             <ItemState>
               <ItemSymbol>OnZeroCrossing</ItemSymbol>
-              <ReadOnly>false</ReadOnly>
+              <ReadOnly>true</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
               <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
               <Value>false</Value>
@@ -20476,7 +20476,7 @@
             </ItemState>
             <ItemState>
               <ItemSymbol>OnLowLimit</ItemSymbol>
-              <ReadOnly>false</ReadOnly>
+              <ReadOnly>true</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
               <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
               <Value>false</Value>
@@ -20497,7 +20497,7 @@
             </ItemState>
             <ItemState>
               <ItemSymbol>OnHighLimit</ItemSymbol>
-              <ReadOnly>false</ReadOnly>
+              <ReadOnly>true</ReadOnly>
               <UserReadOnly>false</UserReadOnly>
               <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
               <Value>false</Value>
@@ -20654,7 +20654,7 @@
         <ItemSymbol>AD0</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>VDDA</Value>
+        <Value>ADC0_DM1</Value>
         <SharedPrphMode>false</SharedPrphMode>
       </ItemState>
       <ItemState>
@@ -20933,7 +20933,7 @@
         <ItemSymbol>_CnvTmg</ItemSymbol>
         <ReadOnly>false</ReadOnly>
         <UserReadOnly>false</UserReadOnly>
-        <Value>34.615385 µs</Value>
+        <Value>17.166138 µs</Value>
         <RuntimeSetting>0</RuntimeSetting>
         <ReqDevPrescHigh>-1</ReqDevPrescHigh>
         <ReqDevPrescLow>-1</ReqDevPrescLow>
@@ -20959,7 +20959,7 @@
         <ReqSrcClkPrescSpeedMode5>-1</ReqSrcClkPrescSpeedMode5>
         <ReqSrcClkPrescSpeedMode6>-1</ReqSrcClkPrescSpeedMode6>
         <ReqSrcClkPrescSpeedMode7>-1</ReqSrcClkPrescSpeedMode7>
-        <InitValue>34.615385 us</InitValue>
+        <InitValue>17.166138 us</InitValue>
         <Precision>5.0</Precision>
         <PrecInProc>true</PrecInProc>
         <LowLimit />

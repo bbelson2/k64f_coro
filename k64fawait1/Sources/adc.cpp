@@ -56,6 +56,8 @@ future_t<byte> start_adc(uint8_t pin) {
 		auto result = AD1_GetCalibrationStatus();
 		start_adc_promise.return_value(result);
 	}).push();
+	AD1_Calibrate(false);
+	trace("leaving start_adc\r\n");
 	return start_adc_promise.get_future();
 }
 
@@ -88,6 +90,7 @@ future_t<word> read_adc(uint8_t pin) {
 		// TODO - handle error
 		read_adc_promise.return_value(result);
 	}).push();
+	AD1_Measure(false);
 	return read_adc_promise.next_future();
 }
 
@@ -110,12 +113,14 @@ future_t<uint16_t> read_adc2(uint8_t pin) {
 future_t<word> read_adc2(uint8_t pin) {
 	promise_t<word> p;
 	split_phase_event_t(READ_ADC, [s = p._state]() {
+		//trace("read_adc2 split_phase_event_t handler begins\r\n");
 		word result = 0;
-		auto rc = AD1_GetValue16(&result);
+		byte rc = AD1_GetValue16(&result);
+		//trace("AD1_GetValue16(%u)=%u\r\n", result, rc);
 		// TODO - handle error
-		read_adc_promise.return_value(result);
 		s->set_value(result);
 	}).push();
+	AD1_Measure(false);
 	return p.get_future();
 }
 
@@ -153,14 +158,19 @@ future_t<bool> transmit_data(uint16_t value) {
 resumable adcTaskFn(uint8_t pin) {
 	co_await suspend_always{};
 
-	auto ok = co_await start_adc(pin);
+	//auto ok = co_await start_adc(pin);
+	byte ok = co_await start_adc(pin);
 	for (;;) {
-		auto value = co_await read_adc2(pin);
-		bool result = co_await transmit_data(value);
+		//trace("before co_await read_adc2\r\n");
+		//auto value = co_await read_adc2(pin);
+		word value = co_await read_adc2(pin);
+		trace("read_adc2 = %d\r\n", value);
+		//trace("after co_await, read_adc2=%d\r\n", value);
+		//bool result = co_await transmit_data(value);
 #ifdef _DEBUG
-		TRACE_STREAM << "transmit_data(" << (int)value << ")=" << result << "\n";
+		//TRACE_STREAM << "transmit_data(" << (int)value << ")=" << result << "\n";
 #endif
-		trace("transmit(%u)=%u\r\n", value, result);
+		//trace("transmit(%u)=%u\r\n", value, result);
 	}
 }
 

@@ -15,7 +15,7 @@ by the component.
 <tr><td colspan="4" class="ttitle1">AdcLdd1 Initialization</td></tr>
 <tr><td class="ttitle2">Address</td><td class="ttitle2">Register</td><td class="ttitle2">Register Value</td><td class="ttitle2">Register Description</td></tr>
 <tr><td>0x4003B000</td><td>ADC0_SC1A</td>
-<td class="regNotResetVal">0x0000005D</td>
+<td class="regNotResetVal">0x00000054</td>
  <td>ADC0_SC1A register, peripheral AdcLdd1.</td></tr>
 <tr><td>0x4004803C</td><td>SIM_SCGC6</td>
 <td class="regNotResetVal">0x48000001</td>
@@ -27,10 +27,10 @@ by the component.
 <td class="regNotResetVal">0x00000080</td>
  <td>NVICISER1 register, peripheral AdcLdd1.</td></tr>
 <tr><td>0x4003B020</td><td>ADC0_SC2</td>
-<td class="regNotResetVal">0x00000001</td>
+<td class="regResetVal">0x00000000</td>
  <td>ADC0_SC2 register, peripheral AdcLdd1.</td></tr>
 <tr><td>0x4003B008</td><td>ADC0_CFG1</td>
-<td class="regNotResetVal">0x0000007D</td>
+<td class="regNotResetVal">0x0000007C</td>
  <td>ADC0_CFG1 register, peripheral AdcLdd1.</td></tr>
 <tr><td>0x4003B00C</td><td>ADC0_CFG2</td>
 <td class="regResetVal">0x00000000</td>
@@ -91,7 +91,7 @@ registers of the peripheral(s) configured by the component.
         
 </div>
 <table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4003B000</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x0000005D</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000054</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x0000001F</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
 <tr><td>7</td><td>COCO</td><td>0x00</td><td>Conversion Complete Flag</td>
@@ -280,7 +280,7 @@ registers of the peripheral(s) configured by the component.
         
 </div>
 <table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4003B020</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000001</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
 <tr><td>7</td><td>ADACT</td><td>0x00</td><td>Conversion Active</td>
@@ -337,7 +337,7 @@ registers of the peripheral(s) configured by the component.
         
 </div>
 <table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4003B008</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x0000007D</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x0000007C</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
 <tr><td>7</td><td>ADLPC</td><td>0x00</td><td>Low-Power Configuration</td>
@@ -470,7 +470,7 @@ registers of the peripheral(s) configured by the component.
 **            Channel 0                                    : 
 **              Channel mode                               : Single Ended
 **                Input                                    : 
-**                  A/D channel (pin)                      : VDDA
+**                  A/D channel (pin)                      : ADC0_DM1
 **          Static sample groups                           : Disabled
 **          Max. samples                                   : 8
 **          A/D resolution                                 : Autoselect
@@ -479,12 +479,12 @@ registers of the peripheral(s) configured by the component.
 **          Asynchro clock output                          : Disabled
 **          Sample time                                    : 24 clock periods
 **          Number of conversions                          : 1
-**          Conversion time                                : 34.615385 µs
-**          ADC clock                                      : 1.31 MHz (762.939 ns)
-**          Single conversion time - Single-ended          : 36.859 us
-**          Single conversion time - Differential          : 43.725 us
-**          Additional conversion time - Single-ended      : 34.332 us
-**          Additional conversion time - Differential      : 41.198 us
+**          Conversion time                                : 17.166138 µs
+**          ADC clock                                      : 2.621 MHz (381.47 ns)
+**          Single conversion time - Single-ended          : 18.548 us
+**          Single conversion time - Differential          : 21.982 us
+**          Additional conversion time - Single-ended      : 17.166 us
+**          Additional conversion time - Differential      : 20.599 us
 **          Result type                                    : unsigned 16 bits, right justified
 **          Trigger                                        : Disabled
 **          Voltage reference                              : 

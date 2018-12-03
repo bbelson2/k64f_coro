@@ -347,7 +347,7 @@
             <group name="Channel 0">
               <enumgroup name="Channel mode" v="Single Ended">
                 <group name="Input">
-                  <A_D_channel__pin_ v="VDDA" />
+                  <A_D_channel__pin_ v="ADC0_DM1" />
                 </group>
               </enumgroup>
             </group>
@@ -364,12 +364,12 @@ Autoselect
           <Asynchro_clock_output v="Disabled" />
           <Sample_time v="24 clock periods" />
           <Number_of_conversions v="1" />
-          <Conversion_time v="34.615385 &amp;#181;s" />
-          <ADC_clock v="1.31 MHz (762.939 ns)" />
-          <Single_conversion_time___Single_ended v="36.859 us" />
-          <Single_conversion_time___Differential v="43.725 us" />
-          <Additional_conversion_time___Single_ended v="34.332 us" />
-          <Additional_conversion_time___Differential v="41.198 us" />
+          <Conversion_time v="17.166138 &amp;#181;s" />
+          <ADC_clock v="2.621 MHz (381.47 ns)" />
+          <Single_conversion_time___Single_ended v="18.548 us" />
+          <Single_conversion_time___Differential v="21.982 us" />
+          <Additional_conversion_time___Single_ended v="17.166 us" />
+          <Additional_conversion_time___Differential v="20.599 us" />
           <Result_type v="unsigned 16 bits, right justified" />
           <boolgroup name="Trigger" v="Disabled" />
           <group name="Voltage reference">
@@ -429,7 +429,7 @@ Autoselect
       </boolgroup>
       <list name="A/D channels" v="1">
         <group name="Channel0">
-          <A_D_channel__pin_ v="VDDA" />
+          <A_D_channel__pin_ v="ADC0_DM1" />
           <boolgroup name="Mode select" v="Single Ended" />
         </group>
       </list>
@@ -439,7 +439,7 @@ Autoselect
 
         <EmptySection_DummyValue />
       </A_D_resolution>
-      <Conversion_time v="34.615385 &amp;#181;s" />
+      <Conversion_time v="17.166138 &amp;#181;s" />
       <Low_power_mode v="Disabled" />
       <High_speed_conversion_mode v="Disabled" />
       <Asynchro_clock_output v="Disabled" />

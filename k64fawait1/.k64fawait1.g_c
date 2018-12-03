@@ -56,7 +56,7 @@
       <XtraAge5>1300456716</XtraAge5>
       <XtraAge7>1300400845</XtraAge7>
       <XtraAge8>1300456716</XtraAge8>
-      <XtraAge9>1300457036</XtraAge9>
+      <XtraAge9>1300462600</XtraAge9>
       <XtraAge10>1300400845</XtraAge10>
       <GenExtraFileType14>5</GenExtraFileType14>
       <GenExtraFileType13>4</GenExtraFileType13>
@@ -535,7 +535,7 @@
     </GenFiles>
     <SignalListFile />
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>8</ProjectModificationStamp>
+    <ProjectModificationStamp>10</ProjectModificationStamp>
   </Options>
   <CpuID_1>
     <Generated>true</Generated>
@@ -1356,8 +1356,8 @@
     <GenComponentVersion>01.697</GenComponentVersion>
     <GenDriverVersion>01.00</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1300457037</HeaderAge>
-    <CodeAge>1300457037</CodeAge>
+    <HeaderAge>1300462600</HeaderAge>
+    <CodeAge>1300462600</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>25</GenNumMethods>
     <Enable>false</Enable>
@@ -1535,8 +1535,8 @@
       <GenComponentVersion>01.183</GenComponentVersion>
       <GenDriverVersion>01.08</GenDriverVersion>
       <GenEventModule>Events</GenEventModule>
-      <HeaderAge>1300457037</HeaderAge>
-      <CodeAge>1300457037</CodeAge>
+      <HeaderAge>1300462600</HeaderAge>
+      <CodeAge>1300462600</CodeAge>
       <AsemblAge>-1</AsemblAge>
       <GenNumMethods>25</GenNumMethods>
       <Init>true</Init>
@@ -1652,70 +1652,70 @@
         <MethodType>method</MethodType>
         <ModuleType>Code</ModuleType>
         <LineBeg>145</LineBeg>
-        <LineEnd>224</LineEnd>
+        <LineEnd>220</LineEnd>
       </MethodPos>
       <MethodPos>
         <MethodPos11>StartSingleMeasurement</MethodPos11>
         <MethodType>method</MethodType>
         <ModuleType>Code</ModuleType>
-        <LineBeg>225</LineBeg>
-        <LineEnd>278</LineEnd>
+        <LineBeg>221</LineBeg>
+        <LineEnd>274</LineEnd>
       </MethodPos>
       <MethodPos>
         <MethodPos12>CancelMeasurement</MethodPos12>
         <MethodType>method</MethodType>
         <ModuleType>Code</ModuleType>
-        <LineBeg>279</LineBeg>
-        <LineEnd>312</LineEnd>
+        <LineBeg>275</LineBeg>
+        <LineEnd>308</LineEnd>
       </MethodPos>
       <MethodPos>
         <MethodPos13>CreateSampleGroup</MethodPos13>
         <MethodType>method</MethodType>
         <ModuleType>Code</ModuleType>
-        <LineBeg>313</LineBeg>
-        <LineEnd>380</LineEnd>
+        <LineBeg>309</LineBeg>
+        <LineEnd>376</LineEnd>
       </MethodPos>
       <MethodPos>
         <MethodPos14>GetMeasuredValues</MethodPos14>
         <MethodType>method</MethodType>
         <ModuleType>Code</ModuleType>
-        <LineBeg>381</LineBeg>
-        <LineEnd>430</LineEnd>
+        <LineBeg>377</LineBeg>
+        <LineEnd>426</LineEnd>
       </MethodPos>
       <MethodPos>
         <MethodPos15>GetMeasurementCompleteStatus</MethodPos15>
         <MethodType>method</MethodType>
         <ModuleType>Code</ModuleType>
-        <LineBeg>431</LineBeg>
-        <LineEnd>463</LineEnd>
+        <LineBeg>427</LineBeg>
+        <LineEnd>459</LineEnd>
       </MethodPos>
       <MethodPos>
         <MethodPos16>StartCalibration</MethodPos16>
         <MethodType>method</MethodType>
         <ModuleType>Code</ModuleType>
-        <LineBeg>464</LineBeg>
-        <LineEnd>500</LineEnd>
+        <LineBeg>460</LineBeg>
+        <LineEnd>496</LineEnd>
       </MethodPos>
       <MethodPos>
         <MethodPos17>GetCalibrationResultStatus</MethodPos17>
         <MethodType>method</MethodType>
         <ModuleType>Code</ModuleType>
-        <LineBeg>501</LineBeg>
-        <LineEnd>548</LineEnd>
+        <LineBeg>497</LineBeg>
+        <LineEnd>544</LineEnd>
       </MethodPos>
       <MethodPos>
         <MethodPos18>MeasurementCompleteInterrupt</MethodPos18>
         <MethodType>internal_method</MethodType>
         <ModuleType>Code</ModuleType>
-        <LineBeg>549</LineBeg>
-        <LineEnd>566</LineEnd>
+        <LineBeg>545</LineBeg>
+        <LineEnd>562</LineEnd>
       </MethodPos>
       <MethodPos>
         <MethodPos19>SetClockConfiguration</MethodPos19>
         <MethodType>internal_method</MethodType>
         <ModuleType>Code</ModuleType>
-        <LineBeg>567</LineBeg>
-        <LineEnd>596</LineEnd>
+        <LineBeg>563</LineBeg>
+        <LineEnd>592</LineEnd>
       </MethodPos>
       <GenExtraFilesCount>1</GenExtraFilesCount>
       <ExtraFile0>Documentation\doxygen\AdcLdd1_component.txt</ExtraFile0>

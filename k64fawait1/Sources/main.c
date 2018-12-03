@@ -61,6 +61,7 @@ int main(void)
 
   /* Write your code here */
   /* For example: for(;;) { } */
+  Term1_Cls();
   main_cpp();
 
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/

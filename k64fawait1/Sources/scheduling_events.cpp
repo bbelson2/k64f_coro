@@ -16,6 +16,7 @@
 #include "scheduling_crit_sec.h"
 
 #include <vector>
+#include "services.h"
 
 // TODO
 // 1) Separate queue for each event
@@ -55,14 +56,20 @@ bool event_queue_t::popEvent(event_id_t event_id, split_phase_event_t& e) {
 }
 
 void split_phase_event_t::push() {
+	//trace("push(%u)\r\n", this->event_id);
 	event_queue_t::getInstance().pushEvent(*this);
 }
 
 extern "C"
 void handle_async_event(event_id_t event_id) {
+	//trace("handle_async_event(%u)\r\n", event_id);
 	split_phase_event_t e;
 	if (event_queue_t::getInstance().popEvent(event_id, e)) {
+		//trace("Found callback\r\n");
 		e.callback();
+	}
+	else {
+		//trace("No callback found\r\n");
 	}
 }
 
