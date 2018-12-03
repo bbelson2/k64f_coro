@@ -24,7 +24,7 @@ resumable idleTaskFn() {
 	for (;;) {
 #ifdef USE_SIMULATOR
 #else
-		__asm ("wfi");
+//		__asm ("wfi");
 #endif
 		co_await suspend_always{};
 	}

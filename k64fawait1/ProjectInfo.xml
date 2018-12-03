@@ -53,9 +53,13 @@
   </PATHS>
   <FILES>
     <GeneratedCs>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\AD1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\ASerialLdd1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\AdcLdd1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\CS1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Cpu.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Inhr1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\MCUC1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\PE_LDD.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Pins1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Term1.c</PathName>
@@ -67,12 +71,18 @@
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Static_Code\System\Vectors.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\AD1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\ASerialLdd1.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\AdcLdd1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\CPU_Config.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\CS1.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\CS1config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Cpu.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\IO_Map.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Inhr1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Init_Config.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\MCUC1.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\MCUC1config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\PE_Const.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\PE_Error.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\PE_LDD.h</PathName>
@@ -81,7 +91,10 @@
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Term1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Vectors_Config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\Events.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\app_events.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\portable_trace.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_crit_sec.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_events.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_future.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_resumable.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_scheduler.h</PathName>

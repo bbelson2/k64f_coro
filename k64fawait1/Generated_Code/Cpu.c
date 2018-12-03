@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K64P144M120SF5RM, Rev.2, January 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-12-02, 17:54, # CodeGen: 1
+**     Date/Time   : 2018-12-03, 12:40, # CodeGen: 5
 **     Abstract    :
 **
 **     Settings    :
@@ -110,6 +110,10 @@ void Components_Init(void)
   /* ### Asynchro serial "Inhr1" init code ... */
   Inhr1_Init();
   /* ###  "Term1" init code ... */
+  MCUC1_Init(); /* ### McuLibConfig "MCUC1" init code ... */
+  CS1_Init(); /* ### CriticalSection "CS1" init code ... */
+  /* ### ADC "AD1" init code ... */
+  AD1_Init();
 }
 #endif /* CPU_COMPONENTS_INIT */
 

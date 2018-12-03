@@ -6,7 +6,7 @@
 **     Version     : Component 01.046, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-12-02, 17:54, # CodeGen: 1
+**     Date/Time   : 2018-12-03, 12:40, # CodeGen: 5
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -59,6 +59,10 @@
 #include "Term1.h"
 #include "Inhr1.h"
 #include "ASerialLdd1.h"
+#include "CS1.h"
+#include "MCUC1.h"
+#include "AD1.h"
+#include "AdcLdd1.h"
 
 
 /*

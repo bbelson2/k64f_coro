@@ -37,7 +37,7 @@ void main_cpp()
 	scheduling::scheduler_t::getInstance().registerTask(&idleTask);
 	scheduling::scheduler_t::getInstance().registerTask(&adcTask);
 
-
+	scheduling::scheduler_t::getInstance().run();
 
 }
 
