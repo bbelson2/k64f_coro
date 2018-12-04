@@ -8,14 +8,16 @@
  *  file 'LICENSE.txt', which is part of this source code package.
  */
 
+#ifndef SOURCES_SCHEDULING_SPLIT_PHASE_H_
+#define SOURCES_SCHEDULING_SPLIT_PHASE_H_
+
+// TODO - support move semantics, to improve performance when pushing
+// and popping
+
 #pragma once
 
 #include <functional>
 #include "scheduling_events.h"
-
-/***************************************************************************/
-/* ISR data                                                                */
-/***************************************************************************/
 
 struct split_phase_event_t {
 	event_id_t event_id;
@@ -30,4 +32,6 @@ struct split_phase_event_t {
 	}
 	void push();
 };
+
+#endif /* SOURCES_SCHEDULING_SPLIT_PHASE_H_ */
 
