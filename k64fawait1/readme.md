@@ -1,7 +1,6 @@
 # k64fawait1
 
-This file is subject to the terms and conditions defined in
-file 'LICENSE.txt', which is part of this source code package.
+This file is subject to the terms and conditions defined in file 'LICENSE.txt', which is part of this source code package.
 
 # Project setup
 
@@ -49,6 +48,10 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 
 ## Components
 
+### Processors
+
+- Cpu:MK64FN1M0VLL12
+
 ### Term1
 
 1. Processor Expert perspective 
@@ -58,6 +61,30 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 1. Settings > Baud rate = 115200 baud
 1. Settings > Receiver > RxD = PTB16
 1. Settings > Transmitter > TxD = PTB17
+
+### ADC1
+
+1. Processor Expert perspective 
+1. Components Library
+1. ADC
+1. Component Inspector for AD1
+1. A/D Converter = ADC0
+1. Interrupt servce/event > Interrupt servce/event = true
+1. Interrupt servce/event > A/D interrupt = INT_ADC0
+1. Interrupt servce/event > A/D interrupt prioroty = medium priority (112)
+1. A/D channels > A/D channel (pin) = ADC0_DM1
+1. Conversion time = 12.166138 micro s
+
+### CS1
+
+1. Processor Expert perspective 
+1. Components Library
+1. CriticalSection
+1. Component Inspector for CS1 
+1. Component name = CS1
+1. SDK = MCUC1
+1. Use ProcessorExpert Default = false
+1. Use FreeRTOS = false
 
 ## Code
 
@@ -105,4 +132,25 @@ void main_cpp()
 1. Debug the configuration above
 1. Observe `Hello K64F world` in terminal
 
+# Project development
 
+Added the following files:
+
+- adc.cpp
+- app_ids.h
+- main_cpp.cpp
+- pe_polyfill.h
+- scheduling_crit_sec.h
+- scheduling_events.cpp
+- scheduling_events.h
+- scheduling_future.h
+- scheduling_resumable.h
+- scheduling_scheduler.cpp
+- scheduling_scheduler.h
+- scheduling_sim.cpp
+- scheduling_sim.h
+- scheduling_split_phase.h
+- scheduling_types.h
+- services.cpp
+- services.h
+- experimental/resumable
