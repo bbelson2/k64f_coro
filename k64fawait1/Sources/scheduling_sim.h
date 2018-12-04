@@ -2,6 +2,8 @@
 
 #include "scheduling_split_phase.h"
 
+// TODO - move to scheduing_events.h
+
 #ifndef USE_SIMULATOR
 #error This file is only for use in the simulator
 #endif

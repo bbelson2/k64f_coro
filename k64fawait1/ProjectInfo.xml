@@ -91,7 +91,7 @@
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Term1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Vectors_Config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\Events.h</PathName>
-      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\app_events.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\app_ids.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\portable_trace.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_crit_sec.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_events.h</PathName>
@@ -100,6 +100,7 @@
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_scheduler.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_sim.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_split_phase.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_types.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\services.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Static_Code\IO_Map\MK64F12.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Static_Code\PDD\ADC_PDD.h</PathName>

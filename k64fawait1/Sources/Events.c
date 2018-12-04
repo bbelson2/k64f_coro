@@ -76,7 +76,7 @@ void Cpu_OnNMI(void)
 */
 void AD1_OnEnd(void)
 {
-	handle_async_event(READ_ADC);
+	handle_async_event(EVENT_ID_READ_ADC);
 }
 
 /*
@@ -96,7 +96,7 @@ void AD1_OnEnd(void)
 void AD1_OnCalibrationEnd(void)
 {
   /* Write your code here ... */
-	handle_async_event(START_ADC);
+	handle_async_event(EVENT_ID_START_ADC);
 }
 
 /* END Events */

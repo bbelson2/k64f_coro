@@ -3,20 +3,23 @@
  *
  *  Created on: 2 Dec 2018
  *      Author: Bruce Belson
+ *
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE.txt', which is part of this source code package.
  */
-
-
-#include "scheduling_split_phase.h"
 
 #ifdef USE_SIMULATOR
 // TODO - move the simulator code in here ?
 #else
 
+#include "scheduling_split_phase.h"
 #include "scheduling_events.h"
 #include "scheduling_crit_sec.h"
 
 #include <vector>
+#ifdef FULL_TRACE
 #include "services.h"
+#endif
 
 // TODO
 // 1) Separate queue for each event
@@ -56,20 +59,28 @@ bool event_queue_t::popEvent(event_id_t event_id, split_phase_event_t& e) {
 }
 
 void split_phase_event_t::push() {
-	//trace("push(%u)\r\n", this->event_id);
+#ifdef FULL_TRACE
+	trace("push(%u)\r\n", this->event_id);
+#endif
 	event_queue_t::getInstance().pushEvent(*this);
 }
 
 extern "C"
 void handle_async_event(event_id_t event_id) {
-	//trace("handle_async_event(%u)\r\n", event_id);
+#ifdef FULL_TRACE
+	trace("handle_async_event(%u)\r\n", event_id);
+#endif
 	split_phase_event_t e;
 	if (event_queue_t::getInstance().popEvent(event_id, e)) {
-		//trace("Found callback\r\n");
+#ifdef FULL_TRACE
+		trace("Found callback\r\n");
+#endif
 		e.callback();
 	}
 	else {
-		//trace("No callback found\r\n");
+#ifdef FULL_TRACE
+		trace("No callback found\r\n");
+#endif
 	}
 }
 

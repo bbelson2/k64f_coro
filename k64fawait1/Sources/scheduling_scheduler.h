@@ -1,3 +1,16 @@
+/*
+ * scheduling_scheduler.h
+ *
+ *  Created on: 29 Nov 2018
+ *      Author: Bruce Belson
+ *
+ *  This file is subject to the terms and conditions defined in
+ *  file 'LICENSE.txt', which is part of this source code package.
+ */
+
+#ifndef SOURCES_SCHEDULING_SCHEDULER_H_
+#define SOURCES_SCHEDULING_SCHEDULER_H_
+
 #pragma once
 
 #include <functional>
@@ -5,9 +18,16 @@
 #include "scheduling_types.h"
 #include "scheduling_resumable.h"
 
+/**
+ * TODO - lose the vector for tasks (dynamic allocation? no)
+ * TODO - improve the efficiency of the task search
+ */
+
 /***************************************************************************/
 /* Task and scheduler                                                      */
 /***************************************************************************/
+
+#define TASK_ID_IDLE	0x01
 
 namespace scheduling {
 
@@ -76,8 +96,7 @@ namespace scheduling {
 	public:
 		scheduler_t() : runningTaskIndex_((size_t)-1) { }
 
-		static task_id_t idle_task_id() { return 1; }
-		static task_id_t bad_task_id() { return 0; }
+		static task_id_t bad_task_id() { return (task_id_t)-1; }
 
 		static scheduler_t& getInstance() {
 			static scheduler_t theInstance;
@@ -87,6 +106,7 @@ namespace scheduling {
 		void registerTask(task_t* task) {
 			tasks_.push_back(task);
 		}
+		void registerIdleTask();
 
 		bool hasRunningTask() const {
 			return runningTaskIndex_ != (size_t)-1;
@@ -130,7 +150,8 @@ namespace scheduling {
 
 		void unblockTask(task_id_t taskId) {
 			for (auto t : tasks_) {
-				if ((t->getId() == taskId) && (t->getState() == task_t::task_state_t::Blocked)) {
+				if ((t->getId() == taskId)
+				 && (t->getState() == task_t::task_state_t::Blocked)) {
 					t->setState(task_t::task_state_t::Ready);
 					return;
 				}
@@ -150,5 +171,16 @@ namespace scheduling {
 		size_t runningTaskIndex_;
 	};
 
+	inline task_t& task_t::getRunningTask() {
+		return scheduler_t::getInstance().getRunningTask();
+	}
+	inline task_id_t task_t::getRunningTaskId() {
+		return scheduler_t::getInstance().hasRunningTask()
+			? scheduler_t::getInstance().getRunningTask().getId()
+			: scheduler_t::bad_task_id();
+	}
+
 }
+
+#endif /* SOURCES_SCHEDULING_SCHEDULER_H_ */
 

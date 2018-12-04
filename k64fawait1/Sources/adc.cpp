@@ -41,7 +41,7 @@ enum event_ids {
 promise_t<uint16_t> start_adc_promise;
 
 future_t<uint16_t> start_adc(uint8_t pin) {
-	split_phase_event_t(START_ADC, [](uint16_t result) {
+	split_phase_event_t(EVENT_ID_START_ADC, [](uint16_t result) {
 		start_adc_promise.return_value(result);
 	}).push();
 	return start_adc_promise.get_future();
@@ -52,7 +52,7 @@ future_t<uint16_t> start_adc(uint8_t pin) {
 promise_t<byte> start_adc_promise;
 
 future_t<byte> start_adc(uint8_t pin) {
-	split_phase_event_t(START_ADC, [](void) {
+	split_phase_event_t(EVENT_ID_START_ADC, [](void) {
 		auto result = AD1_GetCalibrationStatus();
 		start_adc_promise.return_value(result);
 	}).push();
@@ -72,7 +72,7 @@ promise_t<uint16_t> read_adc_promise;
 
 future_t<uint16_t> read_adc(uint8_t pin) {
 	promise_t<uint16_t> p;
-	split_phase_event_t(READ_ADC, [](uint16_t result) {
+	split_phase_event_t(EVENT_ID_READ_ADC, [](uint16_t result) {
 		read_adc_promise.return_value(result);
 	}).push();
 	return read_adc_promise.next_future();
@@ -84,7 +84,7 @@ promise_t<word> read_adc_promise;
 
 future_t<word> read_adc(uint8_t pin) {
 	promise_t<word> p;
-	split_phase_event_t(READ_ADC, [](void) {
+	split_phase_event_t(EVENT_ID_READ_ADC, [](void) {
 		word result = 0;
 		auto rc = AD1_GetValue16(&result);
 		// TODO - handle error
@@ -102,7 +102,7 @@ future_t<word> read_adc(uint8_t pin) {
 
 future_t<uint16_t> read_adc2(uint8_t pin) {
 	promise_t<uint16_t> p;
-	split_phase_event_t(READ_ADC, [s = p._state](uint16_t result) {
+	split_phase_event_t(EVENT_ID_READ_ADC, [s = p._state](uint16_t result) {
 		s->set_value(result);
 	}).push();
 	return p.get_future();
@@ -112,7 +112,7 @@ future_t<uint16_t> read_adc2(uint8_t pin) {
 
 future_t<word> read_adc2(uint8_t pin) {
 	promise_t<word> p;
-	split_phase_event_t(READ_ADC, [s = p._state]() {
+	split_phase_event_t(EVENT_ID_READ_ADC, [s = p._state]() {
 		//trace("read_adc2 split_phase_event_t handler begins\r\n");
 		word result = 0;
 		byte rc = AD1_GetValue16(&result);
@@ -131,7 +131,7 @@ future_t<word> read_adc2(uint8_t pin) {
 future_t<bool> transmit_data(uint16_t value) {
 	// TODO - send the data
 	promise_t<bool> p;
-	split_phase_event_t(TRANSMIT_DATA, [s = p._state](uint16_t result) {
+	split_phase_event_t(EVENT_ID_TRANSMIT_DATA, [s = p._state](uint16_t result) {
 		s->set_value(result);
 	}).push();
 	return p.next_future();
@@ -142,7 +142,7 @@ future_t<bool> transmit_data(uint16_t value) {
 future_t<bool> transmit_data(uint16_t value) {
 	// TODO - send the data
 	promise_t<bool> p;
-	split_phase_event_t(TRANSMIT_DATA, [s = p._state]() {
+	split_phase_event_t(EVENT_ID_TRANSMIT_DATA, [s = p._state]() {
 		bool result = true;
 		s->set_value(result);
 	}).push();

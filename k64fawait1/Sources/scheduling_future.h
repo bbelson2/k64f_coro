@@ -1,3 +1,16 @@
+/*
+ * scheduling_future.h
+ *
+ *  Created on: 29 Nov 2018
+ *      Author: Bruce Belson
+ *
+ *  This file is subject to the terms and conditions defined in
+ *  file 'LICENSE.txt', which is part of this source code package.
+ */
+
+#ifndef SOURCES_SCHEDULING_FUTURE_H_
+#define SOURCES_SCHEDULING_FUTURE_H_
+
 #pragma once
 
 #if USE_SIMULATOR
@@ -7,10 +20,32 @@
 #include "scheduling_resumable.h"
 #include "scheduling_scheduler.h"
 
-/***************************************************************************/
-/* Futures                                                                 */
-/* See https://github.com/jimspr/awaituv                                   */
-/***************************************************************************/
+/**
+ * Futures, promises and shared data
+ *
+ * This implementation is based on the the libuv adapter written by
+ * Jim Springfield (https://github.com/jimspr/awaituv).
+ *
+ * 1) The code specific to libuv is excluded.
+ *
+ * 2) The scheduler is used for thread control.
+ *    i)   Awaitable state includes the task id of the task that was active
+ *         when the promise was created.
+ *    ii)  When a future (or its underlying data) is awaited, the
+ *    	   originating task is blocked.
+ *    iii) Resumed tasks are posted to the scheduler by marking the owning
+ *         task as unblocked, rather than by simply invoking the blocked
+ *         coroutine.
+ *
+ * 3) std::atomic is excluded in the MCU version because it breaks the clang
+ *    5.0 compiler.
+ *
+ * 4) TODO. Memory allocation is overideable, so that dynamic (heap) allocations
+ *    can be avoided.
+ *
+ * 5) TODO. Exceptions are not directly used. Instead, a platform-specific
+ *    equivalent is invoked.
+ */
 
 namespace scheduling {
 
@@ -33,7 +68,7 @@ namespace scheduling {
 		std::function<void(void)> _coro;
 		bool _ready = false;
 		bool _future_acquired = false;
-		task_id_t _taskid = 0;
+		task_id_t _taskid = scheduler_t::bad_task_id();
 
 		awaitable_state_base() : _taskid(task_t::getRunningTaskId()) { }
 		awaitable_state_base(awaitable_state_base&&) = delete;
@@ -564,4 +599,5 @@ namespace scheduling {
 
 }
 
+#endif /* SOURCES_SCHEDULING_FUTURE_H_ */
 

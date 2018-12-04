@@ -3,19 +3,29 @@
  *
  *  Created on: 3 Dec 2018
  *      Author: Bruce Belson
+ *
+ *  This file is subject to the terms and conditions defined in
+ *  file 'LICENSE.txt', which is part of this source code package.
  */
 
-// C/C++ portable
-// Included by events.c, therefore minimal
-// Note: the events ids themselves will be in an app-specific file, e.g. app_ids.h
+/*
+ * Contains the API for event handlers to call back into the scheduler.
+ * This header must be C/C++ portable.
+ * It is included by events.c, and is therefore minimal.
+ * Note: the events IDs themselves will be in an application-specific file, e.g. app_ids.h.
+ */
 
 #ifndef SOURCES_SCHEDULING_EVENTS_H_
 #define SOURCES_SCHEDULING_EVENTS_H_
 
+#pragma once
+
 #include "scheduling_types.h"
 
 #ifdef USE_SIMULATOR
-// TODO
+
+#error This file does notyet fit in to the simulator framework.
+
 #else
 
 #ifdef __cplusplus

@@ -1,3 +1,21 @@
+/*
+ * scheduling_resumable.h
+ *
+ *  Created on: 29 Nov 2018
+ *      Author: Bruce Belson
+ *
+ *  This file is subject to the terms and conditions defined in
+ *  file 'LICENSE.txt', which is part of this source code package.
+ */
+
+/**
+ * A minimal resumable object, used to instantiate the thread task
+ * as a coroutine.
+ */
+
+#ifndef SOURCES_SCHEDULING_RESUMABLE_H_
+#define SOURCES_SCHEDULING_RESUMABLE_H_
+
 #pragma once
 
 #if __has_include(<experimental/coroutine>)
@@ -5,10 +23,6 @@
 #else
 #include <experimental\resumable>
 #endif
-
-/***************************************************************************/
-/* Basic resumable                                                         */
-/***************************************************************************/
 
 namespace scheduling {
 	using namespace std::experimental;
@@ -57,4 +71,6 @@ namespace scheduling {
 		bool isempty() const { return !(bool)_coroutine; }
 	};
 }
+
+#endif /* SOURCES_SCHEDULING_RESUMABLE_H_ */
 
