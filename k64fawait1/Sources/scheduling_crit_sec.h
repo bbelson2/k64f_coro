@@ -15,12 +15,41 @@
 
 #ifdef USE_SIMULATOR
 
-#error Not implemented
-class critical_section_t {
-public:
-	critical_section_t() {} // TODO
-	~critical_section_t() {} // TODO
-};
+#include <windows.h>
+
+namespace scheduling {
+
+	class mutex_t {
+	public:
+		mutex_t() {
+			InitializeCriticalSection(&criticalSection_);
+		}
+		~mutex_t() {
+			DeleteCriticalSection(&criticalSection_);
+		}
+	public:
+		void lock() {
+			EnterCriticalSection(&criticalSection_);
+		}
+		void unlock() {
+			LeaveCriticalSection(&criticalSection_);
+		}
+	private:
+		CRITICAL_SECTION criticalSection_;
+	};
+
+	class thread_lock_t {
+	public:
+		thread_lock_t(mutex_t& m) : m_(m) {
+			m_.lock();
+		}
+		~thread_lock_t() {
+			m_.unlock();
+		}
+	private:
+		mutex_t& m_;
+	};
+}
 
 #else
 
@@ -29,6 +58,8 @@ extern "C" {
 // CS1.h is a Processor Expert file created by a CriticalSection component, named CS1
 #include "CS1.h"
 }
+
+namespace scheduling {
 
 class critical_section_t {
 public:
@@ -47,6 +78,37 @@ protected:
 		CS1_ExitCritical();
 	}
 };
+
+class mutex_t {
+public:
+	mutex_t() {
+	}
+	~mutex_t() {
+	}
+public:
+	void lock() {
+		CS1_EnterCritical();
+	}
+	void unlock() {
+		CS1_ExitCritical();
+	}
+private:
+	CS1_CriticalVariable()
+};
+
+class thread_lock_t {
+public:
+	thread_lock_t(mutex_t& m) : m_(m) {
+		m_.lock();
+	}
+	~thread_lock_t() {
+		m_.unlock();
+	}
+private:
+	mutex_t& m_;
+};
+
+} // namespace scheduling
 
 #endif
 

@@ -24,7 +24,7 @@
 
 #ifdef USE_SIMULATOR
 
-#error This file does notyet fit in to the simulator framework.
+//#error This file does not yet fit in to the simulator framework.
 
 #else
 

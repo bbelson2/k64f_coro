@@ -8,10 +8,6 @@
  * file 'LICENSE.txt', which is part of this source code package.
  */
 
-#ifdef USE_SIMULATOR
-// TODO - move the simulator code in here ?
-#else
-
 #include "scheduling_split_phase.h"
 #include "scheduling_events.h"
 #include "scheduling_crit_sec.h"
@@ -21,9 +17,9 @@
 #include "services.h"
 #endif
 
-// TODO
-// 1) Separate queue for each event
-// 2) No dynamic containers - use a fixed size rotating buffer
+ // TODO
+ // 1) Separate queue for each event
+ // 2) No dynamic containers - use a fixed size rotating buffer
 
 class event_queue_t {
 private:
@@ -32,8 +28,12 @@ public:
 	static event_queue_t& getInstance();
 	void pushEvent(const split_phase_event_t& e);
 	bool popEvent(event_id_t id, split_phase_event_t& e);
+#ifdef USE_SIMULATOR
+	bool popNextEvent(split_phase_event_t& e);
+#endif
 private:
 	std::vector<split_phase_event_t> event_q_;
+	scheduling::mutex_t mutex_;
 };
 
 /* static */ event_queue_t& event_queue_t::getInstance() {
@@ -42,12 +42,12 @@ private:
 }
 
 void event_queue_t::pushEvent(const split_phase_event_t& e) {
-	critical_section_t cs;
+	scheduling::thread_lock_t l(mutex_);
 	event_q_.push_back(e);
 }
 
 bool event_queue_t::popEvent(event_id_t event_id, split_phase_event_t& e) {
-	critical_section_t cs;
+	scheduling::thread_lock_t l(mutex_);
 	for (auto it = event_q_.begin(); it != event_q_.end(); it++) {
 		if (it->event_id == event_id) {
 			e = *it;
@@ -58,12 +58,35 @@ bool event_queue_t::popEvent(event_id_t event_id, split_phase_event_t& e) {
 	return false;
 }
 
+#ifdef USE_SIMULATOR
+bool event_queue_t::popNextEvent(split_phase_event_t& e) {
+	scheduling::thread_lock_t l(mutex_);
+	if (event_q_.size() != 0) {
+		e = event_q_.front();
+		event_q_.erase(event_q_.begin());
+		return true;
+	}
+	return false;
+}
+#endif
+
 void split_phase_event_t::push() {
 #ifdef FULL_TRACE
 	trace("push(%u)\r\n", this->event_id);
 #endif
 	event_queue_t::getInstance().pushEvent(*this);
 }
+
+#ifdef USE_SIMULATOR
+
+// Public facade
+
+extern "C"
+bool pop_async_event(split_phase_event_t& e) {
+	return event_queue_t::getInstance().popNextEvent(e);
+}
+
+#else
 
 extern "C"
 void handle_async_event(event_id_t event_id) {
@@ -85,5 +108,6 @@ void handle_async_event(event_id_t event_id) {
 }
 
 #endif
+
 
 

@@ -12,11 +12,8 @@
 #include "app_ids.h"
 
 // ADC task, defined elsewhere
-scheduling::resumable adcTaskFn(uint8_t pin);
-#ifdef USE_SIMULATOR
-void adcCreateData();
-#endif
-
+extern scheduling::resumable adcTaskFn(uint8_t pin);
+extern void adcInit();
 
 extern "C"
 void main_cpp()
@@ -28,6 +25,9 @@ void main_cpp()
 	// Register tasks
 	scheduling::scheduler_t::getInstance().registerIdleTask();
 	scheduling::scheduler_t::getInstance().registerTask(&adcTask);
+
+	// Other setup
+	adcInit();
 
 	// Run the program main thread
 	scheduling::scheduler_t::getInstance().run();

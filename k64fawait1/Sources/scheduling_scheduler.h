@@ -17,6 +17,7 @@
 #include <vector>
 #include "scheduling_types.h"
 #include "scheduling_resumable.h"
+#include "scheduling_crit_sec.h"
 
 /**
  * TODO - lose the vector for tasks (dynamic allocation? no)
@@ -94,7 +95,12 @@ namespace scheduling {
 
 	class scheduler_t {
 	public:
-		scheduler_t() : runningTaskIndex_((size_t)-1) { }
+		scheduler_t() : runningTaskIndex_((size_t)-1)
+#ifdef USE_SIMULATOR
+			,stopRequested_(false)
+#endif
+		{
+		}
 
 		static task_id_t bad_task_id() { return (task_id_t)-1; }
 
@@ -143,11 +149,19 @@ namespace scheduling {
 		}
 
 		void run() {
-			for (;;) {
+			while (shouldRun()) {
 				setRunningTask(getNextTask());
 			}
 		}
 
+#ifdef USE_SIMULATOR
+		void requestStop() {
+			thread_lock_t l(stopMutex_);
+			stopRequested_ = true;
+		}
+#else
+		void requestStop() {}
+#endif
 		void unblockTask(task_id_t taskId) {
 			for (auto t : tasks_) {
 				if ((t->getId() == taskId)
@@ -166,9 +180,23 @@ namespace scheduling {
 			}
 			return (size_t)-1;
 		}
+#ifdef USE_SIMULATOR
+		bool shouldRun() {
+			thread_lock_t l(stopMutex_);
+			return !stopRequested_;
+		}
+#else
+		bool shouldRun() {
+			return true;
+		}
+#endif
 	private:
 		std::vector<task_t*> tasks_;
 		size_t runningTaskIndex_;
+#ifdef USE_SIMULATOR
+		mutex_t stopMutex_;
+		bool stopRequested_;
+#endif
 	};
 
 	inline task_t& task_t::getRunningTask() {
