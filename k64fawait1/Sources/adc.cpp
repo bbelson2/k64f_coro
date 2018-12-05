@@ -80,6 +80,17 @@ future_t<byte> start_adc(uint8_t pin) {
 	return start_adc_promise.get_future();
 }
 
+future_t<byte> start_adc2(uint8_t pin) {
+	promise_t<byte> p;
+	split_phase_event_t(EVENT_ID_START_ADC, [s = p._state]() {
+		auto result = AD1_GetCalibrationStatus();
+		s->set_value(result);
+	}).push();
+	AD1_Calibrate(false);
+	trace("leaving start_adc\r\n");
+	return p.get_future();
+}
+
 // Reusable stream model
 
 promise_t<word> read_adc_promise;
@@ -129,12 +140,12 @@ future_t<bool> transmit_data(uint16_t value) {
 resumable adcTaskFn(uint8_t pin) {
 	co_await suspend_always{};
 
-	//auto ok = co_await start_adc(pin);
-	byte ok = co_await start_adc(pin);
+	auto ok = co_await start_adc2(pin);
+	//byte ok = co_await start_adc2(pin);
 	for (;;) {
 		//trace("before co_await read_adc2\r\n");
-		//auto value = co_await read_adc2(pin);
-		word value = co_await read_adc2(pin);
+		auto value = co_await read_adc2(pin);
+		//word value = co_await read_adc2(pin);
 		trace("read_adc2 = %d\r\n", value);
 		//trace("after co_await, read_adc2=%d\r\n", value);
 		//bool result = co_await transmit_data(value);

@@ -92,7 +92,7 @@
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Vectors_Config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\Events.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\app_ids.h</PathName>
-      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\portable_trace.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\pe_polyfill.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_crit_sec.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_events.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Sources\scheduling_future.h</PathName>
