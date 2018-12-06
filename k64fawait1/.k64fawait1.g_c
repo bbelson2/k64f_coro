@@ -19,7 +19,7 @@
         <Line>PE_Const</Line>
         <Line>IO_Map</Line>
       </GenSharedModules>
-      <ShrdHeaderAge0>1300456716</ShrdHeaderAge0>
+      <ShrdHeaderAge0>1300654083</ShrdHeaderAge0>
       <ShrdCodeAge0>-1</ShrdCodeAge0>
       <ShrdAsemblAge0>-1</ShrdAsemblAge0>
       <ShrdHeaderAge1>1300400845</ShrdHeaderAge1>
@@ -31,11 +31,12 @@
       <ShrdHeaderAge3>1300400845</ShrdHeaderAge3>
       <ShrdCodeAge3>-1</ShrdCodeAge3>
       <ShrdAsemblAge3>-1</ShrdAsemblAge3>
-      <GenExtraFiles lines_count="15">
+      <GenExtraFiles lines_count="16">
         <Line>Documentation\doxygen\ASerialLdd1_component.txt</Line>
         <Line>Generated_Code\MCUC1config.h</Line>
         <Line>Generated_Code\CS1config.h</Line>
         <Line>Documentation\doxygen\AdcLdd1_component.txt</Line>
+        <Line>Documentation\doxygen\AdcLdd2_component.txt</Line>
         <Line>Generated_Code\PE_LDD.c</Line>
         <Line>Generated_Code\PE_LDD.h</Line>
         <Line>Project_Settings\Linker_Files\ProcessorExpert.ld</Line>
@@ -48,24 +49,25 @@
         <Line>Documentation\doxygen\pex.doxyfile</Line>
         <Line>Documentation\doxygen\pex.css</Line>
       </GenExtraFiles>
-      <GenExtraFileSrcDir14>Repositories\lib\doxygen\</GenExtraFileSrcDir14>
-      <GenExtraFileSrcDir7>lib\Kinetis\startup\</GenExtraFileSrcDir7>
+      <GenExtraFileSrcDir15>Repositories\lib\doxygen\</GenExtraFileSrcDir15>
+      <GenExtraFileSrcDir8>lib\Kinetis\startup\</GenExtraFileSrcDir8>
       <XtraAge1>1300451762</XtraAge1>
       <XtraAge2>1300451762</XtraAge2>
-      <XtraAge4>1300456716</XtraAge4>
-      <XtraAge5>1300456716</XtraAge5>
-      <XtraAge7>1300400845</XtraAge7>
-      <XtraAge8>1300456716</XtraAge8>
-      <XtraAge9>1300595644</XtraAge9>
-      <XtraAge10>1300400845</XtraAge10>
-      <GenExtraFileType14>5</GenExtraFileType14>
+      <XtraAge5>1300654083</XtraAge5>
+      <XtraAge6>1300654083</XtraAge6>
+      <XtraAge8>1300400845</XtraAge8>
+      <XtraAge9>1300654083</XtraAge9>
+      <XtraAge10>1300654254</XtraAge10>
+      <XtraAge11>1300400845</XtraAge11>
+      <GenExtraFileType15>5</GenExtraFileType15>
+      <GenExtraFileType14>4</GenExtraFileType14>
       <GenExtraFileType13>4</GenExtraFileType13>
       <GenExtraFileType12>4</GenExtraFileType12>
       <GenExtraFileType11>4</GenExtraFileType11>
       <GenExtraFileType10>4</GenExtraFileType10>
       <GenExtraFileType9>4</GenExtraFileType9>
-      <GenExtraFileType8>4</GenExtraFileType8>
-      <GenExtraFileType7>5</GenExtraFileType7>
+      <GenExtraFileType8>5</GenExtraFileType8>
+      <GenExtraFileType7>4</GenExtraFileType7>
       <GenExtraFileType6>4</GenExtraFileType6>
       <GenExtraFileType5>4</GenExtraFileType5>
       <GenExtraFileType4>4</GenExtraFileType4>
@@ -500,14 +502,18 @@
       <GenEventModules lines_count="1">
         <Line>Events</Line>
       </GenEventModules>
-      <GenMethodsInEvents lines_count="3">
+      <GenMethodsInEvents lines_count="5">
+        <Line>AD2_OnEnd</Line>
+        <Line>AD2_OnCalibrationEnd</Line>
         <Line>AD1_OnEnd</Line>
         <Line>AD1_OnCalibrationEnd</Line>
         <Line>Cpu_OnNMI</Line>
       </GenMethodsInEvents>
-      <GenAllModules lines_count="14">
+      <GenAllModules lines_count="16">
         <Line>AD1</Line>
+        <Line>AD2</Line>
         <Line>AdcLdd1</Line>
+        <Line>AdcLdd2</Line>
         <Line>ASerialLdd1</Line>
         <Line>Cpu</Line>
         <Line>CS1</Line>
@@ -522,7 +528,7 @@
         <Line>Term1</Line>
       </GenAllModules>
       <GenExternModules lines_count="0" />
-      <GenBeanModules lines_count="8">
+      <GenBeanModules lines_count="10">
         <Line>Pins1</Line>
         <Line>Term1</Line>
         <Line>Inhr1</Line>
@@ -531,11 +537,13 @@
         <Line>MCUC1</Line>
         <Line>AD1</Line>
         <Line>AdcLdd1</Line>
+        <Line>AD2</Line>
+        <Line>AdcLdd2</Line>
       </GenBeanModules>
     </GenFiles>
     <SignalListFile />
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>10</ProjectModificationStamp>
+    <ProjectModificationStamp>15</ProjectModificationStamp>
   </Options>
   <CpuID_1>
     <Generated>true</Generated>
@@ -544,7 +552,7 @@
     <GenDriverVersion>01.00</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
     <HeaderAge>1300400845</HeaderAge>
-    <CodeAge>1300456716</CodeAge>
+    <CodeAge>1300654083</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>10</GenNumMethods>
     <SetClockConfiguration>true</SetClockConfiguration>
@@ -1721,6 +1729,363 @@
       <ExtraFile0>Documentation\doxygen\AdcLdd1_component.txt</ExtraFile0>
     </InhrCompID_10>
   </ComponentID_9>
+  <ComponentID_17>
+    <Generated>true</Generated>
+    <GenCompName>AD2</GenCompName>
+    <GenComponentVersion>01.697</GenComponentVersion>
+    <GenDriverVersion>01.00</GenDriverVersion>
+    <GenEventModule>Events</GenEventModule>
+    <HeaderAge>1300654176</HeaderAge>
+    <CodeAge>1300654176</CodeAge>
+    <AsemblAge>-1</AsemblAge>
+    <GenNumMethods>25</GenNumMethods>
+    <Enable>false</Enable>
+    <Disable>false</Disable>
+    <EnableEvent>false</EnableEvent>
+    <DisableEvent>false</DisableEvent>
+    <Start>false</Start>
+    <Stop>false</Stop>
+    <Measure>true</Measure>
+    <MeasureChan>false</MeasureChan>
+    <EnableExtChanTrigger>false</EnableExtChanTrigger>
+    <EnableIntChanTrigger>false</EnableIntChanTrigger>
+    <GetValue>false</GetValue>
+    <GetChanValue>false</GetChanValue>
+    <GetValue8>false</GetValue8>
+    <GetChanValue8>false</GetChanValue8>
+    <GetValue16>true</GetValue16>
+    <GetChanValue16>false</GetChanValue16>
+    <SetOffset>false</SetOffset>
+    <Calibrate>true</Calibrate>
+    <GetCalibrationStatus>true</GetCalibrationStatus>
+    <EnableAsynchroClock>false</EnableAsynchroClock>
+    <DisableAsynchroClock>false</DisableAsynchroClock>
+    <EnableAutoCompare>false</EnableAutoCompare>
+    <EnableRangeAutoCompare>false</EnableRangeAutoCompare>
+    <DisableAutoCompare>false</DisableAutoCompare>
+    <ConnectPin>false</ConnectPin>
+    <GenNumEvents>4</GenNumEvents>
+    <BeforeNewSpeed_Selected>1</BeforeNewSpeed_Selected>
+    <BeforeNewSpeed_Name>AD2_BeforeNewSpeed</BeforeNewSpeed_Name>
+    <BeforeNewSpeed_Priority>interrupts disabled</BeforeNewSpeed_Priority>
+    <AfterNewSpeed_Selected>1</AfterNewSpeed_Selected>
+    <AfterNewSpeed_Name>AD2_AfterNewSpeed</AfterNewSpeed_Name>
+    <AfterNewSpeed_Priority>interrupts disabled</AfterNewSpeed_Priority>
+    <OnEnd_Selected>3</OnEnd_Selected>
+    <OnEnd_Name>AD2_OnEnd</OnEnd_Name>
+    <OnEnd_Priority>same as interrupt</OnEnd_Priority>
+    <OnCalibrationEnd_Selected>3</OnCalibrationEnd_Selected>
+    <OnCalibrationEnd_Name>AD2_OnCalibrationEnd</OnCalibrationEnd_Name>
+    <OnCalibrationEnd_Priority>same as interrupt</OnCalibrationEnd_Priority>
+    <GenSmartUserChangesDetected_Header>false</GenSmartUserChangesDetected_Header>
+    <GenSmartUserChangesDetected_Code>false</GenSmartUserChangesDetected_Code>
+    <GenSmartUserChangesDetected_Asembl>false</GenSmartUserChangesDetected_Asembl>
+    <GenMethodPos>16</GenMethodPos>
+    <MethodPos>
+      <MethodPos0>HWEnDi</MethodPos0>
+      <MethodType>internal_method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>115</LineBeg>
+      <LineEnd>127</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos1>Measure</MethodPos1>
+      <MethodType>method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>128</LineBeg>
+      <LineEnd>162</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos2>GetValue16</MethodPos2>
+      <MethodType>method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>163</LineBeg>
+      <LineEnd>192</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos3>Calibrate</MethodPos3>
+      <MethodType>method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>193</LineBeg>
+      <LineEnd>219</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos4>GetCalibrationStatus</MethodPos4>
+      <MethodType>method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>220</LineBeg>
+      <LineEnd>235</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos5>ADC_LDD OnMeasurementComplete</MethodPos5>
+      <MethodType>inherited_event</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>236</LineBeg>
+      <LineEnd>237</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos6>SetClockConfiguration</MethodPos6>
+      <MethodType>internal_method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>238</LineBeg>
+      <LineEnd>250</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos7>Init</MethodPos7>
+      <MethodType>internal_method</MethodType>
+      <ModuleType>Header</ModuleType>
+      <LineBeg>251</LineBeg>
+      <LineEnd>263</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos8>HWEnDi</MethodPos8>
+      <MethodType>internal_method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>115</LineBeg>
+      <LineEnd>140</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos9>Measure</MethodPos9>
+      <MethodType>method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>141</LineBeg>
+      <LineEnd>189</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos10>GetValue16</MethodPos10>
+      <MethodType>method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>190</LineBeg>
+      <LineEnd>229</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos11>Calibrate</MethodPos11>
+      <MethodType>method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>230</LineBeg>
+      <LineEnd>276</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos12>GetCalibrationStatus</MethodPos12>
+      <MethodType>method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>277</LineBeg>
+      <LineEnd>295</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos13>ADC_LDD OnMeasurementComplete</MethodPos13>
+      <MethodType>inherited_event</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>296</LineBeg>
+      <LineEnd>321</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos14>SetClockConfiguration</MethodPos14>
+      <MethodType>internal_method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>322</LineBeg>
+      <LineEnd>345</LineEnd>
+    </MethodPos>
+    <MethodPos>
+      <MethodPos15>Init</MethodPos15>
+      <MethodType>internal_method</MethodType>
+      <ModuleType>Code</ModuleType>
+      <LineBeg>346</LineBeg>
+      <LineEnd>364</LineEnd>
+    </MethodPos>
+    <GenExtraFilesCount>0</GenExtraFilesCount>
+    <InhrCompID_18>
+      <Generated>true</Generated>
+      <GenCompName>AdcLdd2</GenCompName>
+      <GenComponentVersion>01.183</GenComponentVersion>
+      <GenDriverVersion>01.08</GenDriverVersion>
+      <GenEventModule>Events</GenEventModule>
+      <HeaderAge>1300654083</HeaderAge>
+      <CodeAge>1300654083</CodeAge>
+      <AsemblAge>-1</AsemblAge>
+      <GenNumMethods>25</GenNumMethods>
+      <Init>true</Init>
+      <Deinit>false</Deinit>
+      <Enable>false</Enable>
+      <Disable>false</Disable>
+      <GetEventMask>false</GetEventMask>
+      <SetEventMask>false</SetEventMask>
+      <StartSingleMeasurement>true</StartSingleMeasurement>
+      <StartLoopMeasurement>false</StartLoopMeasurement>
+      <StartSingleTriggeredMeasurement>false</StartSingleTriggeredMeasurement>
+      <StartLoopTriggeredMeasurement>false</StartLoopTriggeredMeasurement>
+      <CancelMeasurement>true</CancelMeasurement>
+      <GetMeasuredValues>true</GetMeasuredValues>
+      <SelectSampleGroup>false</SelectSampleGroup>
+      <CreateSampleGroup>true</CreateSampleGroup>
+      <GetMeasurementCompleteStatus>true</GetMeasurementCompleteStatus>
+      <EnableAutoCompare>false</EnableAutoCompare>
+      <DisableAutoCompare>false</DisableAutoCompare>
+      <StartCalibration>true</StartCalibration>
+      <GetCalibrationResultStatus>true</GetCalibrationResultStatus>
+      <SetOperationMode>false</SetOperationMode>
+      <GetDriverState>false</GetDriverState>
+      <ConnectPin>false</ConnectPin>
+      <SetBuffer>false</SetBuffer>
+      <GetError>false</GetError>
+      <GetMeasuredSamplesCount>false</GetMeasuredSamplesCount>
+      <GenNumEvents>2</GenNumEvents>
+      <OnMeasurementComplete_Selected>2</OnMeasurementComplete_Selected>
+      <OnMeasurementComplete_Name>AdcLdd2_OnMeasurementComplete</OnMeasurementComplete_Name>
+      <OnMeasurementComplete_Priority>interrupts disabled</OnMeasurementComplete_Priority>
+      <OnError_Selected>0</OnError_Selected>
+      <OnError_Name>AdcLdd2_OnError</OnError_Name>
+      <OnError_Priority>interrupts disabled</OnError_Priority>
+      <ISR_MeasurementCompleteInterruptISRHandle />
+      <ISR_ErrorInterruptISRHandle />
+      <GenSmartUserChangesDetected_Header>false</GenSmartUserChangesDetected_Header>
+      <GenSmartUserChangesDetected_Code>false</GenSmartUserChangesDetected_Code>
+      <GenSmartUserChangesDetected_Asembl>false</GenSmartUserChangesDetected_Asembl>
+      <GenMethodPos>20</GenMethodPos>
+      <MethodPos>
+        <MethodPos0>Init</MethodPos0>
+        <MethodType>method</MethodType>
+        <ModuleType>Header</ModuleType>
+        <LineBeg>199</LineBeg>
+        <LineEnd>223</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos1>StartSingleMeasurement</MethodPos1>
+        <MethodType>method</MethodType>
+        <ModuleType>Header</ModuleType>
+        <LineBeg>224</LineBeg>
+        <LineEnd>263</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos2>CancelMeasurement</MethodPos2>
+        <MethodType>method</MethodType>
+        <ModuleType>Header</ModuleType>
+        <LineBeg>264</LineBeg>
+        <LineEnd>286</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos3>CreateSampleGroup</MethodPos3>
+        <MethodType>method</MethodType>
+        <ModuleType>Header</ModuleType>
+        <LineBeg>287</LineBeg>
+        <LineEnd>329</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos4>GetMeasuredValues</MethodPos4>
+        <MethodType>method</MethodType>
+        <ModuleType>Header</ModuleType>
+        <LineBeg>330</LineBeg>
+        <LineEnd>363</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos5>GetMeasurementCompleteStatus</MethodPos5>
+        <MethodType>method</MethodType>
+        <ModuleType>Header</ModuleType>
+        <LineBeg>364</LineBeg>
+        <LineEnd>385</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos6>StartCalibration</MethodPos6>
+        <MethodType>method</MethodType>
+        <ModuleType>Header</ModuleType>
+        <LineBeg>386</LineBeg>
+        <LineEnd>408</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos7>GetCalibrationResultStatus</MethodPos7>
+        <MethodType>method</MethodType>
+        <ModuleType>Header</ModuleType>
+        <LineBeg>409</LineBeg>
+        <LineEnd>429</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos8>MeasurementCompleteInterrupt</MethodPos8>
+        <MethodType>method</MethodType>
+        <ModuleType>Header</ModuleType>
+        <LineBeg>430</LineBeg>
+        <LineEnd>441</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos9>SetClockConfiguration</MethodPos9>
+        <MethodType>internal_method</MethodType>
+        <ModuleType>Header</ModuleType>
+        <LineBeg>442</LineBeg>
+        <LineEnd>454</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos10>Init</MethodPos10>
+        <MethodType>method</MethodType>
+        <ModuleType>Code</ModuleType>
+        <LineBeg>145</LineBeg>
+        <LineEnd>220</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos11>StartSingleMeasurement</MethodPos11>
+        <MethodType>method</MethodType>
+        <ModuleType>Code</ModuleType>
+        <LineBeg>221</LineBeg>
+        <LineEnd>274</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos12>CancelMeasurement</MethodPos12>
+        <MethodType>method</MethodType>
+        <ModuleType>Code</ModuleType>
+        <LineBeg>275</LineBeg>
+        <LineEnd>308</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos13>CreateSampleGroup</MethodPos13>
+        <MethodType>method</MethodType>
+        <ModuleType>Code</ModuleType>
+        <LineBeg>309</LineBeg>
+        <LineEnd>376</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos14>GetMeasuredValues</MethodPos14>
+        <MethodType>method</MethodType>
+        <ModuleType>Code</ModuleType>
+        <LineBeg>377</LineBeg>
+        <LineEnd>426</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos15>GetMeasurementCompleteStatus</MethodPos15>
+        <MethodType>method</MethodType>
+        <ModuleType>Code</ModuleType>
+        <LineBeg>427</LineBeg>
+        <LineEnd>459</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos16>StartCalibration</MethodPos16>
+        <MethodType>method</MethodType>
+        <ModuleType>Code</ModuleType>
+        <LineBeg>460</LineBeg>
+        <LineEnd>496</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos17>GetCalibrationResultStatus</MethodPos17>
+        <MethodType>method</MethodType>
+        <ModuleType>Code</ModuleType>
+        <LineBeg>497</LineBeg>
+        <LineEnd>544</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos18>MeasurementCompleteInterrupt</MethodPos18>
+        <MethodType>internal_method</MethodType>
+        <ModuleType>Code</ModuleType>
+        <LineBeg>545</LineBeg>
+        <LineEnd>562</LineEnd>
+      </MethodPos>
+      <MethodPos>
+        <MethodPos19>SetClockConfiguration</MethodPos19>
+        <MethodType>internal_method</MethodType>
+        <ModuleType>Code</ModuleType>
+        <LineBeg>563</LineBeg>
+        <LineEnd>592</LineEnd>
+      </MethodPos>
+      <GenExtraFilesCount>1</GenExtraFilesCount>
+      <ExtraFile0>Documentation\doxygen\AdcLdd2_component.txt</ExtraFile0>
+    </InhrCompID_18>
+  </ComponentID_17>
   <UsedSrcFiles>
     <SrcFile0>Drivers\Common\ADC_LDDInit.inc=-1</SrcFile0>
     <SrcFile1>Drivers\Kinetis\AsynchroSerial.drv=-1</SrcFile1>

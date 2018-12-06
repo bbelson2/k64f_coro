@@ -54,8 +54,10 @@
   <FILES>
     <GeneratedCs>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\AD1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\AD2.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\ASerialLdd1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\AdcLdd1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\AdcLdd2.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\CS1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Cpu.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\Inhr1.c</PathName>
@@ -72,8 +74,10 @@
     </GeneratedCs>
     <GeneratedHs>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\AD1.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\AD2.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\ASerialLdd1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\AdcLdd1.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\AdcLdd2.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\CPU_Config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\CS1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k64fawait1\Generated_Code\CS1config.h</PathName>

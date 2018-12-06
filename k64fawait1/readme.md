@@ -74,6 +74,7 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 1. Interrupt servce/event > A/D interrupt prioroty = medium priority (112)
 1. A/D channels > A/D channel (pin) = ADC0_DM1
 1. Conversion time = 12.166138 micro s
+1. Enable methods: Calibrate() and GetValue16()
 
 ### CS1
 

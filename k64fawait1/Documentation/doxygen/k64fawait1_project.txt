@@ -28,6 +28,7 @@
 \page page_components Components 
 - \subpage ASerialLdd1
 - \subpage AdcLdd1
+- \subpage AdcLdd2
 
 */
 
@@ -62,6 +63,7 @@
 \page page_components Components 
 - \subpage ASerialLdd1
 - \subpage AdcLdd1
+- \subpage AdcLdd2
 
 */
 

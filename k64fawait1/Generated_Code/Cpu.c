@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K64P144M120SF5RM, Rev.2, January 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-12-03, 12:40, # CodeGen: 5
+**     Date/Time   : 2018-12-06, 12:59, # CodeGen: 16
 **     Abstract    :
 **
 **     Settings    :
@@ -114,6 +114,8 @@ void Components_Init(void)
   CS1_Init(); /* ### CriticalSection "CS1" init code ... */
   /* ### ADC "AD1" init code ... */
   AD1_Init();
+  /* ### ADC "AD2" init code ... */
+  AD2_Init();
 }
 #endif /* CPU_COMPONENTS_INIT */
 
