@@ -15,6 +15,7 @@
 
 #include <functional>
 #include <vector>
+#include <queue>
 #include "scheduling_types.h"
 #include "scheduling_resumable.h"
 #include "scheduling_crit_sec.h"
@@ -28,7 +29,7 @@
 /* Task and scheduler                                                      */
 /***************************************************************************/
 
-#define TASK_ID_IDLE	0x01
+#define TASK_ID_IDLE	0x00
 
 namespace scheduling {
 
@@ -44,7 +45,9 @@ namespace scheduling {
 		task_t(task_id_t id,
 			task_state_t state,
 			coroutine_handle<> coro)
-			: id_(id), state_(state), priority_(0), coro_(coro) {
+			: id_(id), state_(state), priority_(0), //coro_(coro) 
+				coroh_(coro)
+		{
 		}
 
 		uint8_t getId() const {
@@ -80,9 +83,16 @@ namespace scheduling {
 				|| (getState() == task_state_t::Ready);
 		}
 
+		void unblock() {
+			if (getState() == task_state_t::Blocked) {
+				setState(task_t::task_state_t::Ready);
+			}
+			// TODO - push the coro
+		}
 		void resume() {
-			if (coro_) {
-				coro_();
+			// TODO - pop the coro
+			if (coroh_) {
+				coroh_.resume();
 			}
 		}
 
@@ -90,10 +100,14 @@ namespace scheduling {
 		task_id_t id_;
 		task_state_t state_;
 		task_priority_t priority_;
-		std::function<void(void)> coro_;
+		coroutine_handle<> coroh_;
+		//std::function<void(void)> coro_;
+		std::queue< coroutine_handle<> > coro_call_stack_;
 	};
 
 	class scheduler_t {
+	private:
+
 	public:
 		scheduler_t() : runningTaskIndex_((size_t)-1)
 #ifdef USE_SIMULATOR
@@ -163,23 +177,53 @@ namespace scheduling {
 		void requestStop() {}
 #endif
 		void unblockTask(task_id_t taskId) {
-			for (auto t : tasks_) {
+			auto t = findTaskById(taskId);
+			(*t)->unblock();
+				/*
 				if ((t->getId() == taskId)
 				 && (t->getState() == task_t::task_state_t::Blocked)) {
 					t->setState(task_t::task_state_t::Ready);
 					return;
 				}
-			}
+				*/
+			
 		}
 	protected:
-		size_t getTaskIndex(task_t const& task) {
+		size_t getTaskIndex(task_t const& task) const {
+			/*
 			for (size_t i = 0; i < tasks_.size(); i++) {
 				if (&task == tasks_[i]) {
 					return i;
 				}
 			}
 			return (size_t)-1;
+			*/
+			return itToIndex(findTaskByRef(task));
 		}
+	private:
+		std::vector<task_t*>::const_iterator findTaskByRef(task_t const& task) const {
+			return std::find(tasks_.begin(), tasks_.end(), &task);
+		}
+		std::vector<task_t*>::iterator findTaskByRef(task_t const& task) {
+			return std::find(tasks_.begin(), tasks_.end(), &task);
+		}
+		std::vector<task_t*>::const_iterator findTaskById(task_id_t taskId) const {
+			auto it = std::find_if(tasks_.begin(), tasks_.end(),
+				[taskId](task_t* t) { return t->getId() == taskId; });
+			return it;
+		}
+		std::vector<task_t*>::iterator findTaskById(task_id_t taskId) {
+			auto it = std::find_if(tasks_.begin(), tasks_.end(),
+				[taskId](task_t* t) { return t->getId() == taskId; });
+			return it;
+		}
+		size_t itToIndex(std::vector<task_t*>::const_iterator it) const {
+			return (it == tasks_.end()) ? (size_t)-1 : (it - tasks_.begin());
+		}
+		size_t itToIndex(std::vector<task_t*>::iterator it) const {
+			return (it == tasks_.end()) ? (size_t)-1 : (it - tasks_.begin());
+		}
+
 #ifdef USE_SIMULATOR
 		bool shouldRun() {
 			thread_lock_t l(stopMutex_);

@@ -299,6 +299,7 @@ namespace scheduling {
 	struct future_t
 	{
 		typedef T type;
+		typedef state_t state_type;
 		typedef promise_t<T, state_t> promise_type;
 		counted_ptr<state_t> _state;
 
@@ -590,13 +591,13 @@ namespace scheduling {
 	{
 		return future_of_any(t1, t2);
 	}
-
+	/*
 	template<typename T1, typename S1, typename T2, typename S2>
 	auto operator&&(future_t<T1, S1>& t1, future_t<T2, S2>& t2)
 	{
 		return future_of_all(t1, t2);
 	}
-
+	*/
 }
 
 #endif /* SOURCES_SCHEDULING_FUTURE_H_ */
