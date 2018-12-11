@@ -184,6 +184,10 @@ extern void main_cpp();
 
 ## Events.c
 ```
+#include "scheduling_types.h"
+#include "scheduling_events.h"
+#include "app_ids.h"
+
 void AD1_OnEnd(void)
 {
 	handle_async_event(EVENT_ID_READ_ADCX);
