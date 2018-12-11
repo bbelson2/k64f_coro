@@ -65,7 +65,8 @@ namespace scheduling {
 
 	struct awaitable_state_base
 	{
-		std::function<void(void)> _coro;
+		//std::function<void(void)> _coro;
+		std::experimental::coroutine_handle<> _coro;
 		bool _ready = false;
 		bool _future_acquired = false;
 		task_id_t _taskid = scheduler_t::bad_task_id();
@@ -74,11 +75,13 @@ namespace scheduling {
 		awaitable_state_base(awaitable_state_base&&) = delete;
 		awaitable_state_base(const awaitable_state_base&) = delete;
 
-		void set_coroutine_callback(std::function<void(void)> cb)
+		//void set_coroutine_callback(std::function<void(void)> cb)
+		void set_coroutine_callback(std::experimental::coroutine_handle<> cb)
 		{
 #ifdef assert
 			// Test to make sure nothing else is waiting on this future.
-			assert(((cb == nullptr) || (_coro == nullptr)) && "This future is already being awaited.");
+			//assert(((cb == nullptr) || (_coro == nullptr)) && "This future is already being awaited.");
+			assert(((!cb) || (!_coro)) && "This future is already being awaited.");
 #endif
 			_coro = cb;
 		}
@@ -89,11 +92,11 @@ namespace scheduling {
 			_ready = true;
 			auto coro = _coro;
 			_coro = nullptr;
-			if (coro != nullptr) {
+			if (coro) {
 				//coro();
 				// Push coro on to queue for scheduler, where it will be matched against a task
 				// and then resumed.
-				scheduling::scheduler_t::getInstance().unblockTask(_taskid);
+				scheduling::scheduler_t::getInstance().unblockTask(_taskid, coro);
 			}
 		}
 

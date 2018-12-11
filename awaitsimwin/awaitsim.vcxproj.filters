@@ -15,51 +15,51 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_future.h">
+    <ClInclude Include="..\Shared\Include\app_ids.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_sim.h">
+    <ClInclude Include="..\Shared\Include\scheduling_crit_sec.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_split_phase.h">
+    <ClInclude Include="..\Shared\Include\scheduling_events.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_scheduler.h">
+    <ClInclude Include="..\Shared\Include\scheduling_future.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_resumable.h">
+    <ClInclude Include="..\Shared\Include\scheduling_resumable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\k64fawait1\Sources\app_ids.h">
+    <ClInclude Include="..\Shared\Include\scheduling_scheduler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_crit_sec.h">
+    <ClInclude Include="..\Shared\Include\scheduling_sim.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_events.h">
+    <ClInclude Include="..\Shared\Include\scheduling_split_phase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_types.h">
+    <ClInclude Include="..\Shared\Include\scheduling_types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\k64fawait1\Sources\adc.cpp">
+    <ClCompile Include="..\Shared\Sources\adc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\k64fawait1\Sources\scheduling_scheduler.cpp">
+    <ClCompile Include="..\Shared\Sources\main_cpp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\k64fawait1\Sources\scheduling_sim.cpp">
+    <ClCompile Include="..\Shared\Sources\scheduling_events.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\k64fawait1\Sources\scheduling_events.cpp">
+    <ClCompile Include="..\Shared\Sources\scheduling_scheduler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\k64fawait1\Sources\main_cpp.cpp">
+    <ClCompile Include="..\Shared\Sources\scheduling_sim.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\k64fawait1\Sources\services.cpp">
+    <ClCompile Include="..\Shared\Sources\services.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

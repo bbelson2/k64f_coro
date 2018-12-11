@@ -484,7 +484,8 @@ resumable adcTaskFn(uint8_t pin) {
 
 #if ADC_VERSION == 5
 
-resumable adcSubFn() {
+void adcSubFn() {
+
 	auto x = co_await read_adc(ADC_CHANNEL_X);
 	auto y = co_await read_adc(ADC_CHANNEL_Y);
 
@@ -497,9 +498,8 @@ resumable adcTaskFn(uint8_t pin) {
 	auto okx = co_await start_adc(ADC_CHANNEL_X);
 	auto oky = co_await start_adc(ADC_CHANNEL_Y);
 
-	auto sf = adcSubFn();
 	for (;;) {
-		sf.resume();
+		adcSubFn();
 		//auto result = co_await transmit_data(value);
 		//trace("transmit(%u)=%u\r\n", value, result);
 	}

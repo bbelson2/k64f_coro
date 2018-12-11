@@ -92,6 +92,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalOptions>/await %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\Shared\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -108,6 +109,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalOptions>/await %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\Shared\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,6 +128,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalOptions>/await %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\Shared\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -146,6 +149,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalOptions>/await %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>..\Shared\Include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -155,23 +159,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\k64fawait1\Sources\app_ids.h" />
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_crit_sec.h" />
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_events.h" />
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_future.h" />
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_resumable.h" />
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_scheduler.h" />
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_sim.h" />
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_split_phase.h" />
-    <ClInclude Include="..\k64fawait1\Sources\scheduling_types.h" />
+    <ClInclude Include="..\Shared\Include\app_ids.h" />
+    <ClInclude Include="..\Shared\Include\scheduling_crit_sec.h" />
+    <ClInclude Include="..\Shared\Include\scheduling_events.h" />
+    <ClInclude Include="..\Shared\Include\scheduling_future.h" />
+    <ClInclude Include="..\Shared\Include\scheduling_resumable.h" />
+    <ClInclude Include="..\Shared\Include\scheduling_scheduler.h" />
+    <ClInclude Include="..\Shared\Include\scheduling_sim.h" />
+    <ClInclude Include="..\Shared\Include\scheduling_split_phase.h" />
+    <ClInclude Include="..\Shared\Include\scheduling_types.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\k64fawait1\Sources\adc.cpp" />
-    <ClCompile Include="..\k64fawait1\Sources\main_cpp.cpp" />
-    <ClCompile Include="..\k64fawait1\Sources\scheduling_events.cpp" />
-    <ClCompile Include="..\k64fawait1\Sources\scheduling_scheduler.cpp" />
-    <ClCompile Include="..\k64fawait1\Sources\scheduling_sim.cpp" />
-    <ClCompile Include="..\k64fawait1\Sources\services.cpp" />
+    <ClCompile Include="..\Shared\Sources\adc.cpp" />
+    <ClCompile Include="..\Shared\Sources\main_cpp.cpp" />
+    <ClCompile Include="..\Shared\Sources\scheduling_events.cpp" />
+    <ClCompile Include="..\Shared\Sources\scheduling_scheduler.cpp" />
+    <ClCompile Include="..\Shared\Sources\scheduling_sim.cpp" />
+    <ClCompile Include="..\Shared\Sources\services.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

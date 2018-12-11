@@ -15,14 +15,16 @@
 
 #include <functional>
 #include <vector>
-#include <queue>
+#include <algorithm>
+#include <stack>
 #include "scheduling_types.h"
 #include "scheduling_resumable.h"
 #include "scheduling_crit_sec.h"
+#include "services.h"
 
 /**
  * TODO - lose the vector for tasks (dynamic allocation? no)
- * TODO - improve the efficiency of the task search
+ * TODO - improve the efficiency of the task search (?? O(n) and n is tiny)
  */
 
 /***************************************************************************/
@@ -45,8 +47,8 @@ namespace scheduling {
 		task_t(task_id_t id,
 			task_state_t state,
 			coroutine_handle<> coro)
-			: id_(id), state_(state), priority_(0), //coro_(coro) 
-				coroh_(coro)
+			: id_(id), state_(state), priority_(0),
+			coro_task_(coro)
 		{
 		}
 
@@ -72,7 +74,7 @@ namespace scheduling {
 		static task_id_t getRunningTaskId();
 
 		static void blockRunningTask() {
-			getRunningTask().setState(task_state_t::Blocked);
+			getRunningTask().block();
 		}
 
 		bool isRunning() const {
@@ -83,16 +85,26 @@ namespace scheduling {
 				|| (getState() == task_state_t::Ready);
 		}
 
-		void unblock() {
+		void block() {
+			trace("Blocking task %u\r\n", getId());
+			setState(task_state_t::Blocked);
+		}
+
+		void unblock(std::experimental::coroutine_handle<> coro) {
+			trace("Unblocking task %u\r\n", getId());
 			if (getState() == task_state_t::Blocked) {
 				setState(task_t::task_state_t::Ready);
 			}
-			// TODO - push the coro
+			coro_call_stack_.push(coro);
 		}
 		void resume() {
-			// TODO - pop the coro
-			if (coroh_) {
-				coroh_.resume();
+			coroutine_handle<> coro = coro_task_;
+			if (!coro_call_stack_.empty()) {
+				coro = coro_call_stack_.top();
+				coro_call_stack_.pop();
+			}
+			if (coro) {
+				coro.resume();
 			}
 		}
 
@@ -100,9 +112,9 @@ namespace scheduling {
 		task_id_t id_;
 		task_state_t state_;
 		task_priority_t priority_;
-		coroutine_handle<> coroh_;
-		//std::function<void(void)> coro_;
-		std::queue< coroutine_handle<> > coro_call_stack_;
+		coroutine_handle<> coro_task_;
+		//std::function<void(void)> coro_task_;
+		std::stack< coroutine_handle<> > coro_call_stack_;
 	};
 
 	class scheduler_t {
@@ -176,28 +188,14 @@ namespace scheduling {
 #else
 		void requestStop() {}
 #endif
-		void unblockTask(task_id_t taskId) {
+		void unblockTask(task_id_t taskId, std::experimental::coroutine_handle<> coro) {
 			auto t = findTaskById(taskId);
-			(*t)->unblock();
-				/*
-				if ((t->getId() == taskId)
-				 && (t->getState() == task_t::task_state_t::Blocked)) {
-					t->setState(task_t::task_state_t::Ready);
-					return;
-				}
-				*/
-			
+			if (*t) {
+				(*t)->unblock(coro);
+			}
 		}
 	protected:
 		size_t getTaskIndex(task_t const& task) const {
-			/*
-			for (size_t i = 0; i < tasks_.size(); i++) {
-				if (&task == tasks_[i]) {
-					return i;
-				}
-			}
-			return (size_t)-1;
-			*/
 			return itToIndex(findTaskByRef(task));
 		}
 	private:

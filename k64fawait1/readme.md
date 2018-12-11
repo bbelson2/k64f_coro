@@ -21,7 +21,7 @@ If necessary, restart Kinetic Studio with clang in the PATH, e.g.:
 
 ```
 set PATH=E:\llvm-trunk\install\bin;%PATH%
-E:\Freescale\KDS_v3\eclipse\kinetis-design-studio.exe -data E:\Source\K64F
+E:\Freescale\KDS_v3\eclipse\kinetis-design-studio.exe -data E:\Source\repos\K64F
 ```
 
 Create a project configuration which uses clang as a compiler in place of gcc. (We will also set the C++ compiler settings so that they will be copied into any projects cloned from this.)
@@ -69,11 +69,27 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 1. ADC
 1. Component Inspector for AD1
 1. A/D Converter = ADC0
-1. Interrupt servce/event > Interrupt servce/event = true
-1. Interrupt servce/event > A/D interrupt = INT_ADC0
-1. Interrupt servce/event > A/D interrupt prioroty = medium priority (112)
+1. Interrupt service/event > Interrupt service/event = true
+1. Interrupt service/event > A/D interrupt = INT_ADC0
+1. Interrupt service/event > A/D interrupt priority = medium priority (112)
 1. A/D channels > A/D channel (pin) = ADC0_DM1
-1. Conversion time = 12.166138 micro s
+1. Sample time = 20 = long
+1. Conversion time = 17.166138 µs
+1. Enable methods: Calibrate() and GetValue16()
+
+### ADC2
+
+1. Processor Expert perspective 
+1. Components Library
+1. ADC
+1. Component Inspector for AD2
+1. A/D Converter = ADC1
+1. Interrupt service/event > Interrupt service/event = true
+1. Interrupt service/event > A/D interrupt = INT_ADC1
+1. Interrupt service/event > A/D interrupt priority = medium priority (112)
+1. A/D channels > A/D channel (pin) = ADC1_DM1
+1. Sample time = 20 = long
+1. Conversion time = 17.166138 µs
 1. Enable methods: Calibrate() and GetValue16()
 
 ### CS1
@@ -87,33 +103,31 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 1. Use ProcessorExpert Default = false
 1. Use FreeRTOS = false
 
+## Shared Code
+
+1. Right click on project > New > Folder > Advanced
+1. Folder name = `Shared` 
+1. Link to alternate location = true
+1. Add location = `PROJECT_LOC\..\Shared`
+1. Right click on project > Properties
+1. C/C++ General > Paths and Symbols
+1. Tab > Source Location > Add Folder...
+1. Select /[projectdir]/Shared/Sources
+1. Tab > Includes
+1. Languages = GNU C
+1. Add... `${ProjDirPath}/../Shared/Include`
+1. Languages = GNU C++
+1. Add... `${ProjDirPath}/../Shared/Include`
+1. Add... `${ProjDirPath}/../Shared/IncludeARM`
+
 ## Code
 
 ### main.c
 
 ```
-extern void main_cpp();
-...
-main_cpp();
-```
-
-### Services
-
-Add links to services.h and services.cpp into Sources
-
-### main_cpp.cpp
-
-1. File > New > Source File
-1. Source; main_cpp.cpp; default C++ source template
-
-```
 #include "services.h"
-
-extern "C"
-void main_cpp()
-{
+...
   trace("Hello K64F world\r\n");
-}
 ```
 
 ## Debug
@@ -124,6 +138,8 @@ void main_cpp()
 1. Select GDB PEMicro Interface Debugging
 1. New
 1. Main > C.C++ Application = `DebugLLVM/k64fawait1.elf`
+1. Debugger > Interface = OpenSDA Embedded Debug - USB Port
+1. Debugger > Port
 
 ### Test
 
@@ -155,3 +171,39 @@ Added the following files:
 - services.cpp
 - services.h
 - experimental/resumable
+
+## main.c
+
+```
+extern void main_cpp();
+...
+  Term1_Cls();
+  main_cpp();
+```
+
+## Events.c
+```
+#include "scheduling_types.h"
+#include "scheduling_events.h"
+#include "app_ids.h"
+
+void AD1_OnEnd(void)
+{
+	handle_async_event(EVENT_ID_READ_ADCX);
+}
+
+void AD1_OnCalibrationEnd(void)
+{
+	handle_async_event(EVENT_ID_START_ADCX);
+}
+
+void AD2_OnEnd(void)
+{
+	handle_async_event(EVENT_ID_READ_ADCY);
+}
+
+void AD2_OnCalibrationEnd(void)
+{
+	handle_async_event(EVENT_ID_START_ADCY);
+}
+
