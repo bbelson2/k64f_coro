@@ -54,8 +54,57 @@ void meta_thread_fn() {
  * Main
  */
 
+#ifdef MEM_TEST
+namespace test {
+
+	class A {
+	public:
+		double a, b;
+	public:
+		void* operator new(std::size_t sz) {
+			trace("A::new(%lu)\n", sz);
+			return malloc(sz);
+		}
+		void operator delete(void* p) {
+			if (p)
+				free(p);
+		}
+	};
+
+	class C {
+	public:
+		double a, b;
+	};
+}
+
+void* operator new(std::size_t sz) {
+	trace("global::new(%lu)\n", sz);
+	return malloc(sz);
+}
+void operator delete(void* p) {
+	trace("global::delete()\n");
+	if (p)
+		free(p);
+}
+
+class B {
+public:
+	double a, b;
+};
+
+#endif // MEM_TEST
+
 int main()
 {
+#ifdef MEM_TEST
+	auto a = new test::A();
+	delete a;
+	auto b = new B();
+	delete b;
+	auto c = new test::C();
+	delete c;
+#endif // MEM_TEST
+
 	trace("main() begins\n");
 
 	// Run all three threads

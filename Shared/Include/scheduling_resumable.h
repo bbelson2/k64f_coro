@@ -22,7 +22,11 @@
 #include <experimental/coroutine>
 #else
 #include <experimental\resumable>
+#include <new>
+#include <stdlib.h>
 #endif
+
+#include "services.h"
 
 namespace scheduling {
 	using namespace std::experimental;
@@ -41,6 +45,28 @@ namespace scheduling {
 			void return_void() {
 			}
 			void unhandled_exception() {}
+			/*
+			template<int sz> 
+			static void* my_alloc()
+			{
+				trace("resumable::new(%lu)\n", sz);
+				return malloc(sz);
+			}
+			void* operator new(std::size_t sz) {
+			// This fails because sz is not available as a constexpr 
+			// when the coroutine is built
+				return my_alloc<sz>();
+			}
+			*/
+			void* operator new(std::size_t sz) {
+				trace("resumable::new(%lu)\n", sz);
+				return malloc(sz);
+			}
+			void operator delete(void* p) {
+				trace("resumable::delete()\n");
+				if (p)
+					free(p);
+			}
 		};
 		coroutine_handle<promise_type> _coroutine; // = nullptr;
 		resumable() = default;

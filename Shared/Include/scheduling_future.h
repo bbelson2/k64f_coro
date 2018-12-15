@@ -401,6 +401,17 @@ namespace scheduling {
 		{
 			std::terminate();
 		}
+		/*
+		void* operator new(std::size_t sz) {
+			trace("promise_t::new(%lu)\n", sz);
+			return malloc(sz);
+		}
+		void operator delete(void* p) {
+			trace("promise_t::delete()\n");
+			if (p)
+				free(p);
+		}
+		*/
 	};
 
 	template <typename state_t>
