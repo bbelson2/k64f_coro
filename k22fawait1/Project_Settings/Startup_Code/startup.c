@@ -192,7 +192,11 @@ void __iar_program_start()
 	__thumb_startup();
 }
 
+#if defined (__clang__)
+void __thumb_startup(void)
+#else
 __attribute__((naked)) void __thumb_startup(void)
+#endif
 {
 int addr = (int)__SP_INIT;
 

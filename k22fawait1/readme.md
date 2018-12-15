@@ -27,24 +27,42 @@ E:\Freescale\KDS_v3\eclipse\kinetis-design-studio.exe -data E:\Source\repos\K64F
 Create a project configuration which uses clang as a compiler in place of gcc. (We will also set the C++ compiler settings so that they will be copied into any projects cloned from this.)
 
 1. Project > Build Configurations > Manage...
-2. New...
-3. Name: DebugLLVM; Copy existing settings from Debug. OK.
-4. Select DebugLLVM and Set active.
-5. Project > Properties > C/C++ Build > Settings
-6. Ensure Configuration = DebugLLVM
-7. Tool settings > Cross ARM C++ Compiler 
-8. Command => clang++
-9. Optimization > Language standard => Toolchain default (GNU ISO 1998 C++)
-10. Optimization > ABI version => Toolchain default (2)
-11. Optimization > Do not use exceptions => checked
-12. Optimization > Do not use RTTI => checked.
-13. Optimization > Do not use _cxa_atexit() => checked
-14. Optimization > Do not use thread-safe statics => checked.
-15. Miscellaneous > Other compiler flags => -fshort-enums -target armv7m-none-eabi "-fcoroutines-ts" "-stdlib=libc++" -std=c++14 
-16. Includes. Add the following to the list:
-- "C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include\c++\6.3.1\arm-none-eabi"
-- "C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include\c++\6.3.1"
-- "C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include"
+1. New...
+1. Name: DebugLLVM; Copy existing settings from Debug. OK.
+1. Select DebugLLVM and Set active.
+1. Project > Properties > C/C++ Build > Settings
+1. Ensure Configuration = DebugLLVM
+1. Tool settings > Cross ARM C++ Compiler 
+1. Command => clang++
+1. Optimization > Language standard => Toolchain default (GNU ISO 1998 C++)
+1. Optimization > ABI version => Toolchain default (2)
+1. Optimization > Do not use exceptions => checked
+1. Optimization > Do not use RTTI => checked.
+1. Optimization > Do not use _cxa_atexit() => checked
+1. Optimization > Do not use thread-safe statics => checked.
+1. Optimization > Other optimization flags => -fshort-enums -target armv7m-none-eabi "-fcoroutines-ts" "-stdlib=libc++" -std=c++14 
+1. Includes. Add the following to the list:
+    - "C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include\c++\6.3.1\arm-none-eabi"
+    - "C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include\c++\6.3.1"
+    - "C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include"
+1. Tool settings > Cross ARM C Compiler 
+1. Command => clang
+1. Optimization > Other optimization flags => -target armv7m-none-eabi
+1. Includes. Add the following to the list:
+    - "C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include"
+1. Change startup.c:
+	```
+	__attribute__((naked)) void __thumb_startup(void)
+	```
+	becomes:
+	```
+	#if defined (__clang__)
+	void __thumb_startup(void)
+	#else
+	__attribute__((naked)) void __thumb_startup(void)
+	#endif
+	```
+
 
 ## Components
 

@@ -212,7 +212,7 @@ resumable adcTaskFn(uint8_t pin) {
 		auto x = co_await read_adc(ADC_CHANNEL_X);
 		auto y = co_await read_adc(ADC_CHANNEL_Y);
 
-		trace("x,y = %d,%d\r\n", x, y);
+		trace("x,y : %d,%d\r\n", x, y);
 		//auto result = co_await transmit_data(value);
 		//trace("transmit(%u)=%u\r\n", value, result);
 	}
@@ -237,7 +237,7 @@ resumable adcTaskFn(uint8_t pin) {
 		auto x = co_await fmx;
 		auto y = co_await fmy;
 
-		trace("x,y = %d,%d\r\n", x, y);
+		trace("x,y : %d,%d\r\n", x, y);
 		//auto result = co_await transmit_data(value);
 		//trace("transmit(%u)=%u\r\n", value, result);
 	}
