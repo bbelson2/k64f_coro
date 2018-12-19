@@ -43,6 +43,10 @@
 #include "AdcLdd1.h"
 #include "AD2.h"
 #include "AdcLdd2.h"
+#include "TU1.h"
+#include "FC1.h"
+#include "FreeCntrLdd1.h"
+#include "TU2.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -127,6 +131,45 @@ void AD2_OnCalibrationEnd(void);
 **     Returns     : Nothing
 ** ===================================================================
 */
+
+/*
+** ===================================================================
+**     Event       :  FC1_OnInterrupt (module Events)
+**
+**     Component   :  FC1 [FreeCntr]
+*/
+/*!
+**     @brief
+**         This event is called when a compare matches the counter
+**         value (if compare or reload is selected as a interrupt
+**         source) or a counter overflows (for free-running devices).
+**         It is valid only when the component is enabled - <"Enable">
+**         and the events are enabled - <"EnableEvent">. The event is
+**         available only if <Interrupt service/event> is enabled.
+*/
+/* ===================================================================*/
+void FC1_OnInterrupt(void);
+
+/*
+** ===================================================================
+**     Event       :  TU1_OnCounterRestart (module Events)
+**
+**     Component   :  TU1 [TimerUnit_LDD]
+*/
+/*!
+**     @brief
+**         Called if counter overflow/underflow or counter is
+**         reinitialized by modulo or compare register matching.
+**         OnCounterRestart event and Timer unit must be enabled. See
+**         [SetEventMask] and [GetEventMask] methods. This event is
+**         available only if a [Interrupt] is enabled.
+**     @param
+**         UserDataPtr     - Pointer to the user or
+**                           RTOS specific data. The pointer passed as
+**                           the parameter of Init method.
+*/
+/* ===================================================================*/
+void TU1_OnCounterRestart(LDD_TUserData *UserDataPtr);
 
 /* END Events */
 

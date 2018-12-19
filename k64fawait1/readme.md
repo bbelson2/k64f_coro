@@ -103,6 +103,39 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 1. Use ProcessorExpert Default = false
 1. Use FreeRTOS = false
 
+### TU1
+
+1. Processor Expert perspective 
+1. Components Library
+1. TimerUnit
+1. Component Inspector for TU1 
+1. Component name = TU1
+1. Device = FTM0_MOD
+1. Counter = FTM0_CNT
+1. Input clock source > Counter frequency = 256 Hz
+1. Counter restart = On-match
+1. Counter restart > Period device = FTM0_MOD
+1. Counter restart > Period = 1 Hz
+1. Counter restart > Interrupt = Enabled
+1. Initialization > Auto initialization = yes
+1. Interrupt service/event = Enabled
+1. Enable: TU1_OnCounterRestart
+
+### FC1
+
+1. Processor Expert perspective 
+1. Components Library
+1. FreeCntr
+1. New Component [Kinetis/TimerUnit_LDD]
+1. Component Inspector for FC1 
+1. Component name = FC1
+1. Device = FTM1_MOD
+1. Counter = FTM1_CNT
+1. Interrupt service/event = Enabled 
+1. Period/offset = 3.125 ms
+1. Interrupt service/event = true
+1. Enable: FC1_OnInterrupt
+
 ## Shared Code
 
 1. Right click on project > New > Folder > Advanced
