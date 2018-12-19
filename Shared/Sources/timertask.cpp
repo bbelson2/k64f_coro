@@ -9,6 +9,32 @@
  *
  */
 
+#include "timer_api.h"
+#include "scheduling_resumable.h"
 
+/***************************************************************************/
+/* Timer task                                                                */
+/***************************************************************************/
 
+#define TIMER_VERSION 0
+
+#if TIMER_VERSION == 0
+
+using namespace scheduling;
+
+volatile unsigned long __timer_count = 0;
+
+resumable timerTaskFn(uint8_t pin) {
+	unsigned long count = 0;
+	co_await suspend_always{};
+
+	for (;;) {
+		co_await wait_on_timer(0);
+
+		//trace("Timer: %lu\r\n", ++count);
+		__timer_count = ++count;
+	}
+}
+
+#endif // TIMER_VERSION == 0
 

@@ -6,7 +6,7 @@
 **     Version     : Component 01.048, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-12-11, 19:45, # CodeGen: 2
+**     Date/Time   : 2018-12-19, 18:49, # CodeGen: 13
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -63,7 +63,10 @@
 ** Array of initialized device structures of LDD components.
 ** ===========================================================================
 */
-LDD_TDeviceData *PE_LDD_DeviceDataList[3] = {
+LDD_TDeviceData *PE_LDD_DeviceDataList[6] = {
+    NULL,
+    NULL,
+    NULL,
     NULL,
     NULL,
     NULL
@@ -194,6 +197,10 @@ bool PE_PeripheralUsed(uint32_t PrphBaseAddress)
     case 0x4003B000UL:
     /* Base address allocated by peripheral(s) ADC1 */
     case 0x40027000UL:
+    /* Base address allocated by peripheral(s) FTM0 */
+    case 0x40038000UL:
+    /* Base address allocated by peripheral(s) FTM1 */
+    case 0x40039000UL:
       result = TRUE;
       break;
     default:
@@ -227,6 +234,18 @@ void LDD_SetClockConfiguration(LDD_TClockConfiguration ClockConfiguration)
   /* Component AdcLdd2 (ADC_LDD). */
   if (PE_LDD_DeviceDataList[PE_LDD_COMPONENT_AdcLdd2_ID] != NULL) {
     AdcLdd2_SetClockConfiguration(PE_LDD_DeviceDataList[PE_LDD_COMPONENT_AdcLdd2_ID], ClockConfiguration);
+  }
+  /* Component TU1 (TimerUnit_LDD). */
+  if (PE_LDD_DeviceDataList[PE_LDD_COMPONENT_TU1_ID] != NULL) {
+    TU1_SetClockConfiguration(PE_LDD_DeviceDataList[PE_LDD_COMPONENT_TU1_ID], ClockConfiguration);
+  }
+  /* Component TU2 (TimerUnit_LDD). */
+  if (PE_LDD_DeviceDataList[PE_LDD_COMPONENT_TU2_ID] != NULL) {
+    TU2_SetClockConfiguration(PE_LDD_DeviceDataList[PE_LDD_COMPONENT_TU2_ID], ClockConfiguration);
+  }
+  /* Component FreeCntrLdd1 (FreeCntr_LDD). */
+  if (PE_LDD_DeviceDataList[PE_LDD_COMPONENT_FreeCntrLdd1_ID] != NULL) {
+    FreeCntrLdd1_SetClockConfiguration(PE_LDD_DeviceDataList[PE_LDD_COMPONENT_FreeCntrLdd1_ID], ClockConfiguration);
   }
   Inhr1_SetClockConfiguration(ClockConfiguration);
   AD1_SetClockConfiguration(ClockConfiguration);

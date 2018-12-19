@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K22P121M120SF7RM, Rev. 1, March 24, 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-12-11, 19:58, # CodeGen: 4
+**     Date/Time   : 2018-12-19, 18:49, # CodeGen: 13
 **     Abstract    :
 **
 **     Settings    :
@@ -152,6 +152,8 @@ void Common_Init(void)
 #if CPU_COMPONENTS_INIT
 void Components_Init(void)
 {
+  /* SIM_SCGC6: FTM0=1 */
+  SIM_SCGC6 |= SIM_SCGC6_FTM0_MASK;
   /* ### Asynchro serial "Inhr1" init code ... */
   Inhr1_Init();
   /* ###  "Term1" init code ... */
@@ -161,6 +163,10 @@ void Components_Init(void)
   AD2_Init();
   MCUC1_Init(); /* ### McuLibConfig "MCUC1" init code ... */
   CS1_Init(); /* ### CriticalSection "CS1" init code ... */
+  /* ### TimerUnit_LDD "TU1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)TU1_Init(NULL);
+  /* ### FreeCntr_LDD "FreeCntrLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)FreeCntrLdd1_Init(NULL);
 }
 #endif /* CPU_COMPONENTS_INIT */
 

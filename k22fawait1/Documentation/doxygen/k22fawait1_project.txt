@@ -29,6 +29,9 @@
 - \subpage ASerialLdd1
 - \subpage AdcLdd1
 - \subpage AdcLdd2
+- \subpage TU1
+- \subpage TU2
+- \subpage FreeCntrLdd1
 
 */
 
@@ -64,6 +67,9 @@
 - \subpage ASerialLdd1
 - \subpage AdcLdd1
 - \subpage AdcLdd2
+- \subpage TU1
+- \subpage TU2
+- \subpage FreeCntrLdd1
 
 */
 

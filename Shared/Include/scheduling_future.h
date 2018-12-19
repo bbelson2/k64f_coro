@@ -350,7 +350,8 @@ namespace scheduling {
 	{
 		typedef future_t<T, state_t> future_type;
 		typedef counted_awaitable_state<state_t> state_type;
-		counted_ptr<state_t> _state;
+		typedef counted_ptr<state_t> state_ptr_type;
+		state_ptr_type _state;
 
 		// movable not copyable
 		template <typename ...Args>
@@ -419,7 +420,8 @@ namespace scheduling {
 	{
 		typedef future_t<void, state_t> future_type;
 		typedef counted_awaitable_state<state_t> state_type;
-		counted_ptr<state_t> _state;
+		typedef counted_ptr<state_t> state_ptr_type;
+		state_ptr_type _state;
 
 		// movable not copyable
 		template <typename ...Args>

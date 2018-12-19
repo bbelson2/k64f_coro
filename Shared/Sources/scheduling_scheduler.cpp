@@ -14,6 +14,8 @@
  * Task and scheduler implementation
  */
 
+volatile unsigned long __idle_count = 0;
+
 namespace scheduling {
 
 	resumable idleTaskFn() {
@@ -23,6 +25,7 @@ namespace scheduling {
 	#else
 	//		__asm ("wfi");
 	#endif
+			__idle_count++;
 			co_await suspend_always{};
 		}
 	}

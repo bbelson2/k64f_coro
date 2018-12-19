@@ -17,6 +17,7 @@
 #include "scheduling_split_phase.h"
 #include "app_ids.h"
 #include "services.h"
+#include "timer_api.h"
 
 #if USE_SIMULATOR
 // Simulator utilities
@@ -212,6 +213,9 @@ future_t<bool> transmit_data(uint16_t value) {
 
 #if ADC_VERSION == 0
 
+extern volatile unsigned long __idle_count;
+extern volatile unsigned long __timer_count;
+
 resumable adcTaskFn(uint8_t pin) {
 	co_await suspend_always{};
 
@@ -222,7 +226,8 @@ resumable adcTaskFn(uint8_t pin) {
 		auto x = co_await read_adc(ADC_CHANNEL_X);
 		auto y = co_await read_adc(ADC_CHANNEL_Y);
 
-		trace("x,y : %d,%d\r\n", x, y);
+		trace("x,y [t,i] : %d,%d [%lu,%lu]\r\n", x, y, __timer_count, __idle_count);
+		co_await wait_on_ticks(10);
 		//auto result = co_await transmit_data(value);
 		//trace("transmit(%u)=%u\r\n", value, result);
 	}

@@ -86,12 +86,12 @@ namespace scheduling {
 		}
 
 		void block() {
-			trace("Blocking task %u\r\n", getId());
+			//trace("Blocking task %u\r\n", getId());
 			setState(task_state_t::Blocked);
 		}
 
 		void unblock(std::experimental::coroutine_handle<> coro) {
-			trace("Unblocking task %u\r\n", getId());
+			//trace("Unblocking task %u\r\n", getId());
 			if (getState() == task_state_t::Blocked) {
 				setState(task_t::task_state_t::Ready);
 			}
@@ -153,7 +153,7 @@ namespace scheduling {
 					tOld.setState(task_t::task_state_t::Ready);
 				}
 			}
-			trace("resuming task %d\r\n", task.getId());
+			//trace("resuming task %d\r\n", task.getId());
 			task.setState(task_t::task_state_t::Running);
 			runningTaskIndex_ = getTaskIndex(task);
 			task.resume();
