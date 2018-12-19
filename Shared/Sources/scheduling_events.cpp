@@ -12,6 +12,8 @@
 #include "scheduling_events.h"
 #include "scheduling_crit_sec.h"
 
+//#define FULL_TRACE
+
 #include <vector>
 #ifdef FULL_TRACE
 #include "services.h"

@@ -40,17 +40,17 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 1. Optimization > Do not use RTTI => checked.
 1. Optimization > Do not use _cxa_atexit() => checked
 1. Optimization > Do not use thread-safe statics => checked.
-1. Optimization > Other optimization flags => -fshort-enums -target armv7m-none-eabi "-fcoroutines-ts" "-stdlib=libc++" -std=c++14 
+1. Miscellaneous > Other compiler flags => -fshort-enums -target armv7m-none-eabi "-fcoroutines-ts" "-stdlib=libc++" -std=c++14 
 1. Includes. Add the following to the list:
     - "C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include\c++\6.3.1\arm-none-eabi"
     - "C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include\c++\6.3.1"
     - "C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include"
 1. Tool settings > Cross ARM C Compiler 
 1. Command => clang
-1. Optimization > Other optimization flags => -target armv7m-none-eabi
+1. Miscellaneous > Other compiler flags => -fshort-enums -target armv7m-none-eabi
 1. Includes. Add the following to the list:
     - "C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include"
-1. Change startup.c:
+1. Change startup.c (see http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.dui0774g/jhg1476893564298.html)
 	```
 	__attribute__((naked)) void __thumb_startup(void)
 	```

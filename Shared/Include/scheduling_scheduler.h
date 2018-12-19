@@ -153,6 +153,7 @@ namespace scheduling {
 					tOld.setState(task_t::task_state_t::Ready);
 				}
 			}
+			trace("resuming task %d\r\n", task.getId());
 			task.setState(task_t::task_state_t::Running);
 			runningTaskIndex_ = getTaskIndex(task);
 			task.resume();
