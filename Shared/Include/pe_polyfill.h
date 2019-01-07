@@ -12,11 +12,15 @@
 #ifndef SOURCES_PE_POLYFILL_H_
 #define SOURCES_PE_POLYFILL_H_
 
+#ifndef USE_SIMULATOR
+
 typedef unsigned char byte;
 typedef unsigned int word;
 
 enum {
 	ERR_OK = 0
 };
+
+#endif// ifndef USE_SIMULATOR
 
 #endif /* SOURCES_PE_POLYFILL_H_ */
