@@ -12,7 +12,7 @@
 #ifndef SHARED_INCLUDE_TIMER_API_H_
 #define SHARED_INCLUDE_TIMER_API_H_
 
-#if USE_SIMULATOR
+#ifdef USE_SIMULATOR
 // Simulator utilities
 #include "scheduling_sim.h"
 // General purpose PE polyfill

@@ -13,7 +13,7 @@
 
 #pragma once
 
-#if USE_SIMULATOR
+#ifdef USE_SIMULATOR
 #include <atomic>
 #include <assert.h>
 #endif
@@ -181,7 +181,7 @@ namespace scheduling {
 	template <typename awaitable_state_t>
 	struct counted_awaitable_state : public awaitable_state_t
 	{
-#if USE_SIMULATOR
+#ifdef USE_SIMULATOR
 		std::atomic<int> _count{ 0 }; // tracks reference count of state object
 #else
 		volatile int _count;

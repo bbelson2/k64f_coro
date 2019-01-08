@@ -1,4 +1,4 @@
-#if USE_SIMULATOR
+#ifdef USE_SIMULATOR
 
 #include "scheduling_events.h"
 #include "scheduling_sim.h"
@@ -20,9 +20,11 @@ void main_thread_fn() {
 void isr_thread_fn() {
 	for (;;) {
 		split_phase_event_t e;
-		// TODO - random order of events
-		if (pop_async_event(e)) {
-			e.callback();
+		if (scheduling::scheduler_t::getInstance().shouldRun()) {
+			// TODO - random order of events
+			if (pop_async_event(e)) {
+				e.callback();
+			}
 		}
 		std::this_thread::sleep_for(std::chrono::milliseconds(
 			event_period_in_ms));

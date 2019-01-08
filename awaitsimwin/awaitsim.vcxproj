@@ -159,7 +159,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Shared\Include\adc_api.h" />
     <ClInclude Include="..\Shared\Include\app_ids.h" />
+    <ClInclude Include="..\Shared\Include\pe_polyfill.h" />
     <ClInclude Include="..\Shared\Include\scheduling_crit_sec.h" />
     <ClInclude Include="..\Shared\Include\scheduling_events.h" />
     <ClInclude Include="..\Shared\Include\scheduling_future.h" />
@@ -168,14 +170,19 @@
     <ClInclude Include="..\Shared\Include\scheduling_sim.h" />
     <ClInclude Include="..\Shared\Include\scheduling_split_phase.h" />
     <ClInclude Include="..\Shared\Include\scheduling_types.h" />
+    <ClInclude Include="..\Shared\Include\services.h" />
+    <ClInclude Include="..\Shared\Include\timer_api.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\Shared\Sources\adc.cpp" />
+    <ClCompile Include="..\Shared\Sources\adctask.cpp" />
+    <ClCompile Include="..\Shared\Sources\adc_api.cpp" />
     <ClCompile Include="..\Shared\Sources\main_cpp.cpp" />
     <ClCompile Include="..\Shared\Sources\scheduling_events.cpp" />
     <ClCompile Include="..\Shared\Sources\scheduling_scheduler.cpp" />
     <ClCompile Include="..\Shared\Sources\scheduling_sim.cpp" />
     <ClCompile Include="..\Shared\Sources\services.cpp" />
+    <ClCompile Include="..\Shared\Sources\timertask.cpp" />
+    <ClCompile Include="..\Shared\Sources\timer_api.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

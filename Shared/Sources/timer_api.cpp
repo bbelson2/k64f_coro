@@ -10,9 +10,8 @@
  */
 
 #include "timer_api.h"
-
-#include "scheduling_scheduler.h"
 #include "scheduling_split_phase.h"
+
 #include "app_ids.h"
 
 /*
@@ -29,6 +28,11 @@ future_t<void> wait_on_timer(uint8_t channelId) {
 	}).push();
 	return p.get_future();
 }
+
+#ifdef USE_SIMULATOR
+void sim_start_timer();
+void sim_trigger_tick_event();
+#endif
 
 #include "scheduling_crit_sec.h"
 
@@ -76,11 +80,15 @@ void timer_item_list::push(timer_item_t&& t) {
 // Public tick API
 
 future_t<void> wait_on_ticks(tick_count_t ticks) {
+#ifdef USE_SIMULATOR
+	sim_start_timer();
+#endif
 	promise_t<void> p;
 	theList.push(timer_item_t {
-		.state = p._state,
-		.ticks_wait = ticks,
-		.ticks_start = (tick_count_t)-1 });
+		p._state,
+		ticks,
+		(tick_count_t)-1
+	});
 	return p.get_future();
 }
 
@@ -88,4 +96,27 @@ extern "C" void handle_tick_event() {
 	theList.handle_event();
 }
 
+#ifdef USE_SIMULATOR
+#include <thread>
+bool sim_timer_started = false;
+std::thread sim_timer_thread;
+void sim_timer_thread_fn();
+void sim_start_timer() {
+	if (!sim_timer_started) {
+		sim_timer_thread = std::thread(sim_timer_thread_fn);
+		sim_timer_started = true;
+	}
+}
+void sim_timer_thread_fn() {
+	while (true) {
+		Sleep(50);
+		sim_trigger_tick_event();
+	}
+}
+void sim_trigger_tick_event() {
+	if (scheduling::scheduler_t::getInstance().shouldRun()) {
+		handle_tick_event();
+	}
+}
+#endif
 

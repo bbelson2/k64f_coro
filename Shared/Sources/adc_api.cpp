@@ -19,7 +19,7 @@
 #include "services.h"
 #include "adc_api.h"
 
-#if USE_SIMULATOR
+#ifdef USE_SIMULATOR
 // Simulator utilities
 #include "scheduling_sim.h"
 // General purpose PE polyfill
@@ -54,7 +54,7 @@ extern "C" {
  * ADC simulated data
  */
 
-#if USE_SIMULATOR
+#ifdef USE_SIMULATOR
 
 void adcCreateData() {
 	word adc_values1[] = {

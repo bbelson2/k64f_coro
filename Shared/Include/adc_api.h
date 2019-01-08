@@ -13,6 +13,7 @@
 #define SHARED_INCLUDE_ADC_API_H_
 
 #include "scheduling_future.h"
+#include "pe_polyfill.h"
 
 enum ADC_CHANNELS {
 	ADC_CHANNEL_NONE,

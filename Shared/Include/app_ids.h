@@ -25,5 +25,6 @@
 // 1st task ID is 1 (IDLE = 0)
 #define TASK_ID_ADC					  		0x01
 #define TASK_ID_TIMER					  	0x02
+#define TASK_COUNT								3
 
 #endif /* SOURCES_APP_IDS_H_ */
