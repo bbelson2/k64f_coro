@@ -19,6 +19,7 @@
 #endif
 #include "scheduling_resumable.h"
 #include "scheduling_scheduler.h"
+#include <vector>
 
 /**
  * Futures, promises and shared data

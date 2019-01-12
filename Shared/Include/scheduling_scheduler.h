@@ -14,7 +14,6 @@
 #pragma once
 
 #include <functional>
-#include <vector>
 #include <array>
 #include <algorithm>
 #include <stack>
@@ -24,7 +23,6 @@
 #include "services.h"
 
 /**
- * TODO - lose the vector for tasks (dynamic allocation? no)
  * TODO - improve the efficiency of the task search (?? O(n) and n is tiny)
  */
 
