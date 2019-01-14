@@ -7,7 +7,7 @@
 **     Version     : Component 01.100, Driver 1.1, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2018-12-11, 19:05, # CodeGen: 1
+**     Date/Time   : 2019-01-13, 09:43, # CodeGen: 18
 **     Abstract    :
 **
 **     Settings    :
@@ -1055,30 +1055,6 @@ void pin_mux_hardware_init(void)
                  PORT_PCR_PE_MASK |
                  PORT_PCR_PS_MASK
                 );
-  /* PORTB_PCR2: ISF=0,MUX=0,DSE=0,ODE=1,PFE=0,SRE=0,PE=0,PS=0 */
-  PORTB_PCR2 = (uint32_t)((PORTB_PCR2 & (uint32_t)~(uint32_t)(
-                PORT_PCR_ISF_MASK |
-                PORT_PCR_MUX(0x07) |
-                PORT_PCR_DSE_MASK |
-                PORT_PCR_PFE_MASK |
-                PORT_PCR_SRE_MASK |
-                PORT_PCR_PE_MASK |
-                PORT_PCR_PS_MASK
-               )) | (uint32_t)(
-                PORT_PCR_ODE_MASK
-               ));
-  /* PORTB_PCR3: ISF=0,MUX=0,DSE=0,ODE=1,PFE=0,SRE=0,PE=0,PS=0 */
-  PORTB_PCR3 = (uint32_t)((PORTB_PCR3 & (uint32_t)~(uint32_t)(
-                PORT_PCR_ISF_MASK |
-                PORT_PCR_MUX(0x07) |
-                PORT_PCR_DSE_MASK |
-                PORT_PCR_PFE_MASK |
-                PORT_PCR_SRE_MASK |
-                PORT_PCR_PE_MASK |
-                PORT_PCR_PS_MASK
-               )) | (uint32_t)(
-                PORT_PCR_ODE_MASK
-               ));
   /* PORTC_PCR0: ISF=0,MUX=0,DSE=0,ODE=0,PFE=0,SRE=0,PE=0,PS=0 */
   PORTC_PCR0 &= (uint32_t)~(uint32_t)(
                  PORT_PCR_ISF_MASK |
@@ -1236,6 +1212,32 @@ void pin_mux_hardware_init(void)
                 SIM_SOPT4_FTM0TRG1SRC_MASK |
                 SIM_SOPT4_FTM0TRG0SRC_MASK
                );
+  /* PORTB_PCR2: ISF=0,MUX=2,DSE=0,ODE=1,PFE=0,SRE=0,PE=0,PS=0 */
+  PORTB_PCR2 = (uint32_t)((PORTB_PCR2 & (uint32_t)~(uint32_t)(
+                PORT_PCR_ISF_MASK |
+                PORT_PCR_MUX(0x05) |
+                PORT_PCR_DSE_MASK |
+                PORT_PCR_PFE_MASK |
+                PORT_PCR_SRE_MASK |
+                PORT_PCR_PE_MASK |
+                PORT_PCR_PS_MASK
+               )) | (uint32_t)(
+                PORT_PCR_MUX(0x02) |
+                PORT_PCR_ODE_MASK
+               ));
+  /* PORTB_PCR3: ISF=0,MUX=2,DSE=0,ODE=1,PFE=0,SRE=0,PE=0,PS=0 */
+  PORTB_PCR3 = (uint32_t)((PORTB_PCR3 & (uint32_t)~(uint32_t)(
+                PORT_PCR_ISF_MASK |
+                PORT_PCR_MUX(0x05) |
+                PORT_PCR_DSE_MASK |
+                PORT_PCR_PFE_MASK |
+                PORT_PCR_SRE_MASK |
+                PORT_PCR_PE_MASK |
+                PORT_PCR_PS_MASK
+               )) | (uint32_t)(
+                PORT_PCR_MUX(0x02) |
+                PORT_PCR_ODE_MASK
+               ));
   /* PORTA_PCR0: ISF=0,MUX=7,DSE=0,ODE=0,PFE=0,SRE=0,PE=1,PS=0 */
   PORTA_PCR0 = (uint32_t)((PORTA_PCR0 & (uint32_t)~(uint32_t)(
                 PORT_PCR_ISF_MASK |

@@ -30,7 +30,14 @@ struct split_phase_event_t {
 		event_id = 0;
 		callback = nullptr;
 	}
-	void push();
+	
+	static void reg(event_id_t id,
+			std::function<void(void)> immediate,
+			std::function<void(void)> deferred) {
+		split_phase_event_t(id, deferred).reg();
+		immediate();
+	}
+	void reg();
 };
 
 #endif /* SOURCES_SCHEDULING_SPLIT_PHASE_H_ */

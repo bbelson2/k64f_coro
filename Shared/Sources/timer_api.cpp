@@ -25,7 +25,7 @@ future_t<void> wait_on_timer(uint8_t channelId) {
 	promise_t<void> p;
 	split_phase_event_t(EVENT_ID_TIMER, [s = p._state]() {
 		s->set_value();
-	}).push();
+	}).reg();
 	return p.get_future();
 }
 
@@ -108,7 +108,7 @@ void sim_start_timer() {
 	}
 }
 void sim_timer_thread_fn() {
-	while (true) {
+	while (scheduling::scheduler_t::getInstance().shouldRun()) {
 		Sleep(50);
 		sim_trigger_tick_event();
 	}

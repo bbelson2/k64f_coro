@@ -62,7 +62,9 @@
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\Cpu.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\FC1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\FreeCntrLdd1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\I2C.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\Inhr1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\IntI2cLdd1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\MCUC1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\PE_LDD.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\TU1.c</PathName>
@@ -88,9 +90,11 @@
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\Cpu.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\FC1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\FreeCntrLdd1.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\I2C.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\IO_Map.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\Inhr1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\Init_Config.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\IntI2cLdd1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\MCUC1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\MCUC1config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\PE_Const.h</PathName>
@@ -103,6 +107,7 @@
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\Vectors_Config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Generated_Code\pin_mux.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Shared\Include\adc_api.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fawait1\Shared\Include\api_i2c.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Shared\Include\app_ids.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Shared\Include\pe_polyfill.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fawait1\Shared\Include\scheduling_crit_sec.h</PathName>

@@ -63,6 +63,8 @@
 #include "FC1.h"
 #include "FreeCntrLdd1.h"
 #include "TU2.h"
+#include "I2C.h"
+#include "IntI2cLdd1.h"
 #include "Events.h"
 
 #ifdef __cplusplus
@@ -112,7 +114,7 @@ extern "C" {
 #define VECTOR_37         (tIsrFunc)&UnhandledInterrupt         /* 0x25 -    ivINT_LLWU                    unused by PE */
 #define VECTOR_38         (tIsrFunc)&UnhandledInterrupt         /* 0x26 -    ivINT_WDOG_EWM                unused by PE */
 #define VECTOR_39         (tIsrFunc)&UnhandledInterrupt         /* 0x27 -    ivINT_RNG                     unused by PE */
-#define VECTOR_40         (tIsrFunc)&UnhandledInterrupt         /* 0x28 -    ivINT_I2C0                    unused by PE */
+#define VECTOR_40         (tIsrFunc)&IntI2cLdd1_Interrupt       /* 0x28 112  ivINT_I2C0                    used by PE */
 #define VECTOR_41         (tIsrFunc)&UnhandledInterrupt         /* 0x29 -    ivINT_I2C1                    unused by PE */
 #define VECTOR_42         (tIsrFunc)&UnhandledInterrupt         /* 0x2A -    ivINT_SPI0                    unused by PE */
 #define VECTOR_43         (tIsrFunc)&UnhandledInterrupt         /* 0x2B -    ivINT_SPI1                    unused by PE */

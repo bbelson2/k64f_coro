@@ -24,5 +24,6 @@ enum ADC_CHANNELS {
 scheduling::future_t<byte> start_adc(uint8_t channelId);
 scheduling::future_t<word> read_adc(uint8_t channelId);
 //scheduling::future_t<word> read_adc2(uint8_t channelId);
+scheduling::future_t<word> read_adc3(uint8_t channelId);
 
 #endif /* SHARED_INCLUDE_ADC_API_H_ */

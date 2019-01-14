@@ -12,7 +12,12 @@ extern "C" void main_cpp();
 // Settings
 unsigned long event_period_in_ms = 2000;
 
-// The three threads
+// Handles to all threads
+std::thread tMain;
+std::thread tISR;
+extern std::thread sim_timer_thread;
+
+// The three simulator threads
 void main_thread_fn() {
 	main_cpp();
 }
@@ -26,10 +31,14 @@ void isr_thread_fn() {
 				e.callback();
 			}
 		}
-		std::this_thread::sleep_for(std::chrono::milliseconds(
-			event_period_in_ms));
+		else {
+			return;
+		}
+		Sleep(event_period_in_ms);
+		//std::this_thread::sleep_for(std::chrono::milliseconds(event_period_in_ms));
 	}
 }
+
 
 void meta_thread_fn() {
 	char buf[128];
@@ -38,8 +47,10 @@ void meta_thread_fn() {
 		switch (buf[0]) {
 		case 'q':
 			scheduling::scheduler_t::getInstance().requestStop();
-			exit(0);
-			break;
+			tMain.join();
+			tISR.join();
+			sim_timer_thread.join();
+			return;
 		case 't':
 			{
 				int delay = atoi(buf + 1);
@@ -56,62 +67,23 @@ void meta_thread_fn() {
  * Main
  */
 
-#ifdef MEM_TEST
-namespace test {
-
-	class A {
-	public:
-		double a, b;
-	public:
-		void* operator new(std::size_t sz) {
-			trace("A::new(%lu)\n", sz);
-			return malloc(sz);
-		}
-		void operator delete(void* p) {
-			if (p)
-				free(p);
-		}
-	};
-
-	class C {
-	public:
-		double a, b;
-	};
+DWORD WINAPI main_thread_fn_win(void* data) {
+	main_thread_fn();
+	return 0;
 }
 
-void* operator new(std::size_t sz) {
-	trace("global::new(%lu)\n", sz);
-	return malloc(sz);
+DWORD WINAPI isr_thread_fn_win(void* data) {
+	isr_thread_fn();
+	return 0;
 }
-void operator delete(void* p) {
-	trace("global::delete()\n");
-	if (p)
-		free(p);
-}
-
-class B {
-public:
-	double a, b;
-};
-
-#endif // MEM_TEST
 
 int main()
 {
-#ifdef MEM_TEST
-	auto a = new test::A();
-	delete a;
-	auto b = new B();
-	delete b;
-	auto c = new test::C();
-	delete c;
-#endif // MEM_TEST
-
 	trace("main() begins\n");
 
 	// Run all three threads
-	std::thread tMain(main_thread_fn);
-	std::thread tISR(isr_thread_fn);
+	tMain = std::thread(main_thread_fn);
+	tISR = std::thread(isr_thread_fn);
 	meta_thread_fn();
 }
 

@@ -72,9 +72,9 @@ bool event_queue_t::popNextEvent(split_phase_event_t& e) {
 }
 #endif
 
-void split_phase_event_t::push() {
+void split_phase_event_t::reg() {
 #ifdef FULL_TRACE
-	trace("push(%u)\r\n", this->event_id);
+	trace("reg(%u)\r\n", this->event_id);
 #endif
 	event_queue_t::getInstance().pushEvent(*this);
 }

@@ -155,6 +155,30 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 1. Interrupt service/event = true
 1. Enable: FC1_OnInterrupt
 
+### I2C
+
+1. Processor Expert perspective 
+1. Components Library
+1. InternalI2C
+1. New Component [Kinetis/InternalI2C]
+1. Component Inspector for CI2C1 
+1. Component name = Rename to I2C
+1. Device = Kinetis/I2C_LDD
+1. I2C channel => I2C0
+1. Mode selction = MASTER
+1. Bits 0-2 of Frequency divider register = 001
+1. Bits 3-5 of Frequency divider register = 100
+1. Internal frequency (multipler factor) = 10.48576 MHz
+1. Interrupt service/event > Interrupt service/event = on
+1. Interrupt service/event > Interrupt = INT_I2C0
+1. Interrupt service/event > Interrupt priority = medium priority (112)
+1. Data and Clock > SDA Pin = PTB3
+1. Data and Clock > SDA CLn = PTB2
+1. MASTER mode > Automatic stop mode = yes
+1. MASTER mode > Initialization > Address mode = 7-bit addressing
+1. MASTER mode > Initialization > Target slave address init = 0x1C
+1. Check enabled: OnTransmitData & OnReceiveData
+
 ## Shared Code
 
 1. Right click on project > New > Folder > Advanced

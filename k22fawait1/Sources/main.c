@@ -44,6 +44,8 @@
 #include "FC1.h"
 #include "FreeCntrLdd1.h"
 #include "TU2.h"
+#include "I2C.h"
+#include "IntI2cLdd1.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"

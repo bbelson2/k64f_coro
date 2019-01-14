@@ -25,6 +25,11 @@ using namespace scheduling;
 
 extern volatile unsigned long __idle_count;
 extern volatile unsigned long __timer_count;
+extern volatile int16_t __accel_x;
+extern volatile int16_t __accel_y;
+extern volatile int16_t __accel_z;
+extern volatile uint8_t __accel_whoami;
+extern volatile int16_t __accel_count;
 
 resumable adcTaskFn(uint8_t pin) {
 	//trace("adcTaskFn() create\r\n");
@@ -35,10 +40,13 @@ resumable adcTaskFn(uint8_t pin) {
 	auto oky = co_await start_adc(ADC_CHANNEL_Y);
 
 	for (;;) {
-		auto x = co_await read_adc(ADC_CHANNEL_X);
-		auto y = co_await read_adc(ADC_CHANNEL_Y);
+		auto x = co_await read_adc3(ADC_CHANNEL_X);
+		auto y = co_await read_adc3(ADC_CHANNEL_Y);
 
-		trace("x,y [t,i] : %d,%d [%lu,%lu]\r\n", x, y, __timer_count, __idle_count);
+		trace("x,y (accel) [t,i] : %d,%d (%d,%d,%d,%x,%d) [%lu,%lu]\r\n",
+				x, y,
+				__accel_x, __accel_y, __accel_z, __accel_whoami, __accel_count,
+				__timer_count, __idle_count);
 		co_await wait_on_ticks(10);
 		//auto result = co_await transmit_data(value);
 		//trace("transmit(%u)=%u\r\n", value, result);

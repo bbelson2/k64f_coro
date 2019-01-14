@@ -54,6 +54,9 @@
     <ClInclude Include="..\Shared\Include\timer_api.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\Shared\Include\api_i2c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Shared\Sources\main_cpp.cpp">
@@ -81,6 +84,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\Shared\Sources\timertask.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\Sources\api_i2c.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Shared\Sources\i2ctask.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

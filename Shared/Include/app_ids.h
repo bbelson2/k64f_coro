@@ -21,10 +21,13 @@
 #define EVENT_ID_READ_ADCY				0x04
 #define EVENT_ID_TIMER						0x05
 #define EVENT_ID_TRANSMIT_DATA		0x06
+#define EVENT_ID_I2C_TRANSMIT			0x06
+#define EVENT_ID_I2C_RECEIVE			0x07
 
 // 1st task ID is 1 (IDLE = 0)
 #define TASK_ID_ADC					  		0x01
 #define TASK_ID_TIMER					  	0x02
-#define TASK_COUNT								3
+#define TASK_ID_I2C					  	  0x03
+#define TASK_COUNT								4
 
 #endif /* SOURCES_APP_IDS_H_ */

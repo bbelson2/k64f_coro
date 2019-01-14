@@ -160,6 +160,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Shared\Include\adc_api.h" />
+    <ClInclude Include="..\Shared\Include\api_i2c.h" />
     <ClInclude Include="..\Shared\Include\app_ids.h" />
     <ClInclude Include="..\Shared\Include\pe_polyfill.h" />
     <ClInclude Include="..\Shared\Include\scheduling_crit_sec.h" />
@@ -176,6 +177,8 @@
   <ItemGroup>
     <ClCompile Include="..\Shared\Sources\adctask.cpp" />
     <ClCompile Include="..\Shared\Sources\adc_api.cpp" />
+    <ClCompile Include="..\Shared\Sources\api_i2c.cpp" />
+    <ClCompile Include="..\Shared\Sources\i2ctask.cpp" />
     <ClCompile Include="..\Shared\Sources\main_cpp.cpp" />
     <ClCompile Include="..\Shared\Sources\scheduling_events.cpp" />
     <ClCompile Include="..\Shared\Sources\scheduling_scheduler.cpp" />

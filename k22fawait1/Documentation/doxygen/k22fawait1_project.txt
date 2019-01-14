@@ -32,6 +32,7 @@
 - \subpage TU1
 - \subpage TU2
 - \subpage FreeCntrLdd1
+- \subpage IntI2cLdd1
 
 */
 
@@ -70,6 +71,7 @@
 - \subpage TU1
 - \subpage TU2
 - \subpage FreeCntrLdd1
+- \subpage IntI2cLdd1
 
 */
 

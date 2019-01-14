@@ -152,7 +152,7 @@ future_t<byte> start_adc(uint8_t channelId) {
 	split_phase_event_t(w->calibrateEventId, [w, s = p._state]() {
 		auto result = w->getCalibrationStatus();
 		s->set_value(result);
-	}).push();
+	}).reg();
 	w->calibrate(false);
 	trace("leaving start_adc\r\n");
 	return p.get_future();
@@ -170,7 +170,7 @@ future_t<word> read_adc2(uint8_t channelId) {
 		auto rc = w->getValue16(&result);
 		// TODO - handle error
 		read_adc_promise.return_value(result);
-	}).push();
+	}).reg();
 	w->measure(false);
 	return read_adc_promise.next_future();
 }
@@ -180,12 +180,26 @@ future_t<word> read_adc2(uint8_t channelId) {
 future_t<word> read_adc(uint8_t channelId) {
 	auto w = findAdc(channelId);
 	promise_t<word> p;
-	split_phase_event_t(w->measureEventId, [w, s = p._state]() {
-		word result = 0;
-		byte rc = w->getValue16(&result);
-		s->set_value(result);
-	}).push();
+	split_phase_event_t(w->measureEventId, 
+		[w, s = p._state]() {
+			word result = 0;
+			byte rc = w->getValue16(&result);
+			s->set_value(result);
+		}).reg();
 	w->measure(false);
+	return p.get_future();
+}
+
+future_t<word> read_adc3(uint8_t channelId) {
+	auto w = findAdc(channelId);
+	promise_t<word> p;
+	split_phase_event_t::reg(w->measureEventId,
+	  [w]() { w->measure(false); },
+		[w, s = p._state]() {
+			word result = 0;
+			byte rc = w->getValue16(&result);
+			s->set_value(result); }
+	  );
 	return p.get_future();
 }
 
@@ -195,7 +209,7 @@ future_t<bool> transmit_data(uint16_t value) {
 	split_phase_event_t(EVENT_ID_TRANSMIT_DATA, [s = p._state]() {
 		bool result = true;
 		s->set_value(result);
-	}).push();
+	}).reg();
 	return p.next_future();
 }
 

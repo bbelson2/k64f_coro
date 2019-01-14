@@ -18,7 +18,8 @@ typedef unsigned char byte;
 typedef unsigned int word;
 
 enum {
-	ERR_OK = 0
+	ERR_OK = 0,
+	ERR_COMMON = 0x19U
 };
 
 #endif// ifdef USE_SIMULATOR
