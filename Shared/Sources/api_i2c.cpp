@@ -35,7 +35,9 @@ byte I2C_SendStop(void) { return ERR_OK; }
 #include "I2C.h"	// TODO wrap for simulator
 #endif
 
-using namespace scheduling;
+namespace scp { namespace drivers {
+
+using namespace scp::core;
 
 future_t<byte> write_i2c1(uint8_t slave_address, uint8_t reg, uint8_t data) {
 	promise_t<byte> p;
@@ -112,3 +114,5 @@ future_t<byte> read_i2c(uint8_t slave_address, uint8_t reg, uint8_t* data, word 
 	}
 	return p.get_future();
 }
+
+} } // namespace scp::drivers

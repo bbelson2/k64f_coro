@@ -19,6 +19,8 @@
 #include "services.h"
 #endif
 
+namespace scp { namespace core {
+
  // TODO
  // 1) Separate queue for each event
  // 2) No dynamic containers - use a fixed size rotating buffer
@@ -35,7 +37,7 @@ public:
 #endif
 private:
 	std::vector<split_phase_event_t> event_q_;
-	scheduling::mutex_t mutex_;
+	mutex_t mutex_;
 };
 
 /* static */ event_queue_t& event_queue_t::getInstance() {
@@ -44,12 +46,12 @@ private:
 }
 
 void event_queue_t::pushEvent(const split_phase_event_t& e) {
-	scheduling::thread_lock_t l(mutex_);
+	thread_lock_t l(mutex_);
 	event_q_.push_back(e);
 }
 
 bool event_queue_t::popEvent(event_id_t event_id, split_phase_event_t& e) {
-	scheduling::thread_lock_t l(mutex_);
+	thread_lock_t l(mutex_);
 	for (auto it = event_q_.begin(); it != event_q_.end(); it++) {
 		if (it->event_id == event_id) {
 			e = *it;
@@ -62,7 +64,7 @@ bool event_queue_t::popEvent(event_id_t event_id, split_phase_event_t& e) {
 
 #ifdef USE_SIMULATOR
 bool event_queue_t::popNextEvent(split_phase_event_t& e) {
-	scheduling::thread_lock_t l(mutex_);
+	thread_lock_t l(mutex_);
 	if (event_q_.size() != 0) {
 		e = event_q_.front();
 		event_q_.erase(event_q_.begin());
@@ -77,7 +79,11 @@ void split_phase_event_t::reg() {
 	trace("reg(%u)\r\n", this->event_id);
 #endif
 	event_queue_t::getInstance().pushEvent(*this);
+
+} } // namespace scp::core
 }
+
+using namespace scp::core;
 
 #ifdef USE_SIMULATOR
 

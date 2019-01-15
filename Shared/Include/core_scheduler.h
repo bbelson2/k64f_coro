@@ -32,7 +32,7 @@
 
 #define TASK_ID_IDLE	0x00
 
-namespace scheduling {
+namespace scp { namespace core {
 
 	class task_t {
 	public:
@@ -256,7 +256,7 @@ namespace scheduling {
 			: scheduler_t::bad_task_id();
 	}
 
-}
+} }
 
 #endif /* SOURCES_SCHEDULING_SCHEDULER_H_ */
 

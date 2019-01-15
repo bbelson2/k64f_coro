@@ -20,7 +20,8 @@
 
 #if TIMER_VERSION == 0
 
-using namespace scheduling;
+using namespace scp::core;
+using namespace scp::drivers;
 
 volatile unsigned long __timer_count = 0;
 

@@ -48,7 +48,7 @@
  *    equivalent is invoked.
  */
 
-namespace scheduling {
+namespace scp { namespace core {
 
 	enum struct future_error
 	{
@@ -97,7 +97,7 @@ namespace scheduling {
 				//coro();
 				// Push coro on to queue for scheduler, where it will be matched against a task
 				// and then resumed.
-				scheduling::scheduler_t::getInstance().unblockTask(_taskid, coro);
+				scp::core::scheduler_t::getInstance().unblockTask(_taskid, coro);
 			}
 		}
 
@@ -615,7 +615,7 @@ namespace scheduling {
 		return future_of_all(t1, t2);
 	}
 	*/
-}
+} }
 
 #endif /* SOURCES_SCHEDULING_FUTURE_H_ */
 

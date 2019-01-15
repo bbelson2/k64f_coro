@@ -8,8 +8,8 @@
  *  file 'LICENSE.txt', which is part of this source code package.
  */
 
-#ifndef SOURCES_SCHEDULING_CRIT_SEC_H_
-#define SOURCES_SCHEDULING_CRIT_SEC_H_
+#ifndef SOURCES_CORE_CRIT_SEC_H_
+#define SOURCES_CORE_CRIT_SEC_H_
 
 #pragma once
 
@@ -59,7 +59,7 @@ extern "C" {
 #include "CS1.h"
 }
 
-namespace scheduling {
+namespace scp { namespace core {
 
 class critical_section_t {
 public:
@@ -108,10 +108,10 @@ private:
 	mutex_t& m_;
 };
 
-} // namespace scheduling
+} } // namespace scp::core
 
 #endif
 
 #endif
 
-#endif /* SOURCES_SCHEDULING_CRIT_SEC_H_ */
+#endif /* SOURCES_CORE_CRIT_SEC_H_ */

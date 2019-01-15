@@ -16,7 +16,7 @@
 
 volatile unsigned long __idle_count = 0;
 
-namespace scheduling {
+namespace scp { namespace core {
 
 	resumable idleTaskFn() {
 		co_await suspend_always{};
@@ -38,4 +38,4 @@ namespace scheduling {
 		registerTask(&idleTask);
 	}
 
-}
+} }

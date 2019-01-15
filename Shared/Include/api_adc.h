@@ -21,9 +21,13 @@ enum ADC_CHANNELS {
 	ADC_CHANNEL_Y
 };
 
-scheduling::future_t<byte> start_adc(uint8_t channelId);
-scheduling::future_t<word> read_adc(uint8_t channelId);
-//scheduling::future_t<word> read_adc2(uint8_t channelId);
-scheduling::future_t<word> read_adc3(uint8_t channelId);
+namespace scp { namespace drivers {
+
+scp::core::future_t<byte> start_adc(uint8_t channelId);
+scp::core::future_t<word> read_adc(uint8_t channelId);
+//scp::core::future_t<word> read_adc2(uint8_t channelId);
+scp::core::future_t<word> read_adc3(uint8_t channelId);
+
+} } // namespace scp::drivers
 
 #endif /* SHARED_INCLUDE_API_ADC_H_ */

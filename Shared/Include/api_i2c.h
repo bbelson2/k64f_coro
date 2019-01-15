@@ -12,9 +12,10 @@
 #ifndef SHARED_INCLUDE_API_I2C_H_
 #define SHARED_INCLUDE_API_I2C_H_
 
-
 #include "core_future.h"
 #include "pe_polyfill.h"
+
+namespace scp { namespace drivers {
 
 enum I2C_CHANNELS {
 	I2C_CHANNEL_NONE,
@@ -22,7 +23,9 @@ enum I2C_CHANNELS {
 	I2C_CHANNEL_1
 };
 
-scheduling::future_t<byte> write_i2c(uint8_t slave_address, uint8_t reg, uint8_t data);
-scheduling::future_t<byte> read_i2c(uint8_t slave_address, uint8_t reg, uint8_t* data, word len);
+scp::core::future_t<byte> write_i2c(uint8_t slave_address, uint8_t reg, uint8_t data);
+scp::core::future_t<byte> read_i2c(uint8_t slave_address, uint8_t reg, uint8_t* data, word len);
+
+} } // namespace scp::drivers
 
 #endif /* SHARED_INCLUDE_API_I2C_H_ */

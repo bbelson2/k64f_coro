@@ -17,7 +17,7 @@
 /* ADC task                                                                */
 /***************************************************************************/
 
-using namespace scheduling;
+using namespace scp::core;
 
 #define ADC_VERSION 0
 
@@ -32,24 +32,20 @@ extern volatile uint8_t __accel_whoami;
 extern volatile int16_t __accel_count;
 
 resumable adcTaskFn(uint8_t pin) {
-	//trace("adcTaskFn() create\r\n");
 	co_await suspend_always{};
-	//trace("adcTaskFn() start\r\n");
 
-	auto okx = co_await start_adc(ADC_CHANNEL_X);
-	auto oky = co_await start_adc(ADC_CHANNEL_Y);
+	auto okx = co_await scp::drivers::start_adc(ADC_CHANNEL_X);
+	auto oky = co_await scp::drivers::start_adc(ADC_CHANNEL_Y);
 
 	for (;;) {
-		auto x = co_await read_adc3(ADC_CHANNEL_X);
-		auto y = co_await read_adc3(ADC_CHANNEL_Y);
+		auto x = co_await scp::drivers::read_adc3(ADC_CHANNEL_X);
+		auto y = co_await scp::drivers::read_adc3(ADC_CHANNEL_Y);
 
 		trace("x,y (accel) [t,i] : %d,%d (%d,%d,%d,%x,%d) [%lu,%lu]\r\n",
 				x, y,
 				__accel_x, __accel_y, __accel_z, __accel_whoami, __accel_count,
 				__timer_count, __idle_count);
-		co_await wait_on_ticks(10);
-		//auto result = co_await transmit_data(value);
-		//trace("transmit(%u)=%u\r\n", value, result);
+		co_await scp::drivers::wait_on_ticks(10);
 	}
 }
 

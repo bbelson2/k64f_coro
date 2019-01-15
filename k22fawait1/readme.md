@@ -282,4 +282,17 @@ void AD2_OnCalibrationEnd(void)
 {
 	handle_async_event(EVENT_ID_START_ADCY);
 }
+```
+
+## Build chain experiments
+`
+E:\Source\repos\k64f_coro>
+clang++ -mcpu=cortex-m4 -mthumb -mfloat-abi=hard -mfpu=fpv4-sp-d16 -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include\c++\6.3.1\arm-none-eabi" -I"C:\Program Files (x86)\GNU ToolsARM Embedded\6 2017-q1-update\arm-none-eabi\include\c++\6.3.1" -I"C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include" -I"E:/Source/repos/k64f_coro/k22fawait1/Static_Code/System" -I"E:/Source/repos/k64f_coro/k22fawait1/Static_Code/PDD" -I"E:/Source/repos/k64f_coro/k22fawait1/Static_Code/IO_Map" -I"E:\Freescale\KDS_v3\eclipse\ProcessorExpert/lib/Kinetis/pdd/inc" -I"E:/Source/repos/k64f_coro/k22fawait1/Sources" -I"E:/Source/repos/k64f_coro/k22fawait1/Generated_Code" -I"E:/Source/repos/k64f_coro/k22fawait1/../Shared/Include" -I"E:/Source/repos/k64f_coro/k22fawait1/../Shared/IncludeARM" -fno-rtti -fno-use-cxa-atexit -fno-threadsafe-statics -fshort-enums -target armv7m-none-eabi "-fcoroutines-ts" "-stdlib=libc++" -std=c++14 -MMD -MP -MF"Shared/Sources/task_adc.d" -MT"Shared/Sources/task_adc.o" -S -emit-llvm "E:/Source/repos/k64f_coro/Shared/Sources/task_adc.cpp"
+`
+
+The important part here is:
+
+`-S -emit-llvm`
+
+See https://stackoverflow.com/questions/9148890/how-to-make-clang-compile-to-llvm-ir
 

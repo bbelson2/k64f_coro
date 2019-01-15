@@ -27,11 +27,15 @@ extern "C" {
 
 #include "core_future.h"
 
-scheduling::future_t<void> wait_on_timer(uint8_t channelId);
-
-
 typedef unsigned long tick_count_t;
-scheduling::future_t<void> wait_on_ticks(tick_count_t ticks);
 extern "C" void handle_tick_event();
+
+namespace scp { namespace drivers {
+
+scp::core::future_t<void> wait_on_timer(uint8_t channelId);
+scp::core::future_t<void> wait_on_ticks(tick_count_t ticks);
+
+} } // namespace scp::drivers
+
 
 #endif /* SHARED_INCLUDE_API_TIMER_H_ */

@@ -13,8 +13,8 @@
  * as a coroutine.
  */
 
-#ifndef SOURCES_SCHEDULING_RESUMABLE_H_
-#define SOURCES_SCHEDULING_RESUMABLE_H_
+#ifndef SOURCES_CORE_RESUMABLE_H_
+#define SOURCES_CORE_RESUMABLE_H_
 
 #pragma once
 
@@ -28,7 +28,7 @@
 
 #include "services.h"
 
-namespace scheduling {
+namespace scp { namespace core {
 	using namespace std::experimental;
 	struct resumable {
 		struct promise_type {
@@ -96,7 +96,7 @@ namespace scheduling {
 		}
 		bool isempty() const { return !(bool)_coroutine; }
 	};
-}
+} }
 
-#endif /* SOURCES_SCHEDULING_RESUMABLE_H_ */
+#endif /* SOURCES_CORE_RESUMABLE_H_ */
 

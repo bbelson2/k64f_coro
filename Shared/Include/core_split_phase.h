@@ -19,6 +19,8 @@
 #include <functional>
 #include "core_events.h"
 
+namespace scp { namespace core {
+
 struct split_phase_event_t {
 	event_id_t event_id;
 	std::function<void(void)> callback;
@@ -39,6 +41,8 @@ struct split_phase_event_t {
 	}
 	void reg();
 };
+
+} } // namespace scp::core
 
 #endif /* SOURCES_SCHEDULING_SPLIT_PHASE_H_ */
 

@@ -22,7 +22,8 @@
 
 #if I2C_VERSION == 0
 
-using namespace scheduling;
+using namespace scp::core;
+using namespace scp::drivers;
 
 #define ACCEL_ADDRESS 0x1C
 

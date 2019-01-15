@@ -18,7 +18,9 @@
  * Timer component promises
  */
 
-using namespace scheduling;
+namespace scp { namespace drivers {
+
+using namespace scp::core;
 
 future_t<void> wait_on_timer(uint8_t channelId) {
 	//auto w = findAdc(channelId);
@@ -50,7 +52,7 @@ public:
 private:
 	tick_count_t global_ticks_;
 	std::vector<timer_item_t> timer_items_;
-	scheduling::mutex_t mutex_;
+	scp::core::mutex_t mutex_;
 };
 
 timer_item_list theList;
@@ -120,3 +122,4 @@ void sim_trigger_tick_event() {
 }
 #endif
 
+} } // namespace scp::drivers

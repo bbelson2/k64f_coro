@@ -131,6 +131,10 @@ adc_wrapper_t adc_wrappers[] = {
 	}
 };
 
+namespace scp { namespace drivers {
+
+using namespace scp::core;
+
 const adc_wrapper_t * findAdc(uint8_t channelId) {
 	for (auto w = adc_wrappers; w->channelId != ADC_CHANNEL_NONE; w++) {
 		if (w->channelId == channelId) {
@@ -144,7 +148,7 @@ const adc_wrapper_t * findAdc(uint8_t channelId) {
  * ADC component promises
  */
 
-using namespace scheduling;
+using namespace scp::core;
 
 future_t<byte> start_adc(uint8_t channelId) {
 	auto w = findAdc(channelId);
@@ -212,4 +216,6 @@ future_t<bool> transmit_data(uint16_t value) {
 	}).reg();
 	return p.next_future();
 }
+
+} } // namespace scp::drivers
 
