@@ -6,9 +6,9 @@
  */
 
 #include "services.h"
-#include "scheduling_resumable.h"
-#include "scheduling_split_phase.h"
-#include "scheduling_future.h"
+#include "core_resumable.h"
+#include "core_split_phase.h"
+#include "core_future.h"
 #include "app_ids.h"
 
 // ADC task, defined elsewhere

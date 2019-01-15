@@ -1,5 +1,5 @@
 /*
- * scheduling_crit_sec.h
+ * core_crit_sec.h
  *
  *  Created on: 3 Dec 2018
  *      Author: Bruce Belson

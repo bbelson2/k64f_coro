@@ -233,17 +233,17 @@ Added the following files:
 - app_ids.h
 - main_cpp.cpp
 - pe_polyfill.h
-- scheduling_crit_sec.h
+- core_crit_sec.h
 - scheduling_events.cpp
-- scheduling_events.h
-- scheduling_future.h
-- scheduling_resumable.h
+- core_events.h
+- core_future.h
+- core_resumable.h
 - scheduling_scheduler.cpp
-- scheduling_scheduler.h
+- core_scheduler.h
 - scheduling_sim.cpp
-- scheduling_sim.h
-- scheduling_split_phase.h
-- scheduling_types.h
+- core_simulator.h
+- core_split_phase.h
+- core_types.h
 - services.cpp
 - services.h
 - experimental/resumable
@@ -259,8 +259,8 @@ extern void main_cpp();
 
 ## Events.c
 ```
-#include "scheduling_types.h"
-#include "scheduling_events.h"
+#include "core_types.h"
+#include "core_events.h"
 #include "app_ids.h"
 
 void AD1_OnEnd(void)

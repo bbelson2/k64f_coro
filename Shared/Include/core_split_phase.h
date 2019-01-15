@@ -1,5 +1,5 @@
 /*
- * scheduling_split_phase.h
+ * core_split_phase.h
  *
  *  Created on: 29 Nov 2018
  *      Author: Bruce Belson
@@ -17,7 +17,7 @@
 #pragma once
 
 #include <functional>
-#include "scheduling_events.h"
+#include "core_events.h"
 
 struct split_phase_event_t {
 	event_id_t event_id;

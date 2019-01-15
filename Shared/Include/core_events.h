@@ -1,5 +1,5 @@
 /*
- * scheduling_events.h
+ * core_events.h
  *
  *  Created on: 3 Dec 2018
  *      Author: Bruce Belson
@@ -20,7 +20,7 @@
 
 #pragma once
 
-#include "scheduling_types.h"
+#include "core_types.h"
 
 #ifdef USE_SIMULATOR
 

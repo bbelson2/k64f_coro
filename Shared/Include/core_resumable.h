@@ -1,5 +1,5 @@
 /*
- * scheduling_resumable.h
+ * core_resumable.h
  *
  *  Created on: 29 Nov 2018
  *      Author: Bruce Belson

@@ -9,8 +9,8 @@
  *
  */
 
-#include "timer_api.h"
-#include "scheduling_resumable.h"
+#include "api_timer.h"
+#include "core_resumable.h"
 
 /***************************************************************************/
 /* Timer task                                                                */

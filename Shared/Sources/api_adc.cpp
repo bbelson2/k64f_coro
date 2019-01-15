@@ -11,17 +11,17 @@
  *
  */
 
-#include "scheduling_resumable.h"
-#include "scheduling_scheduler.h"
-#include "scheduling_future.h"
-#include "scheduling_split_phase.h"
+#include "core_resumable.h"
+#include "core_scheduler.h"
+#include "core_future.h"
+#include "core_split_phase.h"
 #include "app_ids.h"
 #include "services.h"
-#include "adc_api.h"
+#include "api_adc.h"
 
 #ifdef USE_SIMULATOR
 // Simulator utilities
-#include "scheduling_sim.h"
+#include "core_simulator.h"
 // General purpose PE polyfill
 #include "pe_polyfill.h"
 // Simulated data

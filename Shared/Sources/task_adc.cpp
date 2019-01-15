@@ -10,8 +10,8 @@
  */
 
 
-#include "adc_api.h"
-#include "timer_api.h"
+#include "api_adc.h"
+#include "api_timer.h"
 
 /***************************************************************************/
 /* ADC task                                                                */

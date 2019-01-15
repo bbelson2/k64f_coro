@@ -1,8 +1,8 @@
 #ifdef USE_SIMULATOR
 
-#include "scheduling_events.h"
-#include "scheduling_sim.h"
-#include "scheduling_scheduler.h"
+#include "core_events.h"
+#include "core_simulator.h"
+#include "core_scheduler.h"
 #include "services.h"
 #include <iostream>
 #include <thread>

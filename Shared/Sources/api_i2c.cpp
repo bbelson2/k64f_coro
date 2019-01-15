@@ -9,10 +9,10 @@
  *
  */
 
-#include "scheduling_resumable.h"
-#include "scheduling_scheduler.h"
-#include "scheduling_future.h"
-#include "scheduling_split_phase.h"
+#include "core_resumable.h"
+#include "core_scheduler.h"
+#include "core_future.h"
+#include "core_split_phase.h"
 #include "app_ids.h"
 #include "services.h"
 #include "api_i2c.h"
@@ -20,7 +20,7 @@
 
 #ifdef USE_SIMULATOR
  // Simulator utilities
-#include "scheduling_sim.h"
+#include "core_simulator.h"
 // General purpose PE polyfill
 #include "pe_polyfill.h"
 // Simulated calls
@@ -37,7 +37,7 @@ byte I2C_SendStop(void) { return ERR_OK; }
 
 using namespace scheduling;
 
-future_t<byte> write_i2c(uint8_t slave_address, uint8_t reg, uint8_t data) {
+future_t<byte> write_i2c1(uint8_t slave_address, uint8_t reg, uint8_t data) {
 	promise_t<byte> p;
 	split_phase_event_t(EVENT_ID_I2C_TRANSMIT, [s = p._state]() {
 		I2C_SendStop();
@@ -53,6 +53,30 @@ future_t<byte> write_i2c(uint8_t slave_address, uint8_t reg, uint8_t data) {
 		I2C_SendStop();
 		p._state->set_value(rc);
 	}
+	return p.get_future();
+}
+
+future_t<byte> write_i2c(uint8_t slave_address, uint8_t reg, uint8_t data) {
+	promise_t<byte> p;
+	byte rc = ERR_OK;
+	split_phase_event_t::reg(
+			EVENT_ID_I2C_TRANSMIT,
+			[slave_address, reg, data, s = p._state]() {
+				byte rc = I2C_SelectSlave(slave_address);
+				if (rc == ERR_OK) {
+					uint8_t msg [2] = {reg, data};
+					word sent;
+					rc = I2C_SendBlock(msg, 2, &sent);
+				}
+				if (rc != ERR_OK) {
+					I2C_SendStop();
+					s->set_value(rc);
+				}
+			},
+			[s = p._state]() {
+				I2C_SendStop();
+				s->set_value(ERR_OK);
+			});
 	return p.get_future();
 }
 

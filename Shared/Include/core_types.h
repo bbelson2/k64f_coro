@@ -1,5 +1,5 @@
 /*
- * scheduling_types.h
+ * core_types.h
  *
  *  Created on: 3 Dec 2018
  *      Author: Bruce Belson

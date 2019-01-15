@@ -8,9 +8,9 @@
  * file 'LICENSE.txt', which is part of this source code package.
  */
 
-#include "scheduling_split_phase.h"
-#include "scheduling_events.h"
-#include "scheduling_crit_sec.h"
+#include "core_split_phase.h"
+#include "core_events.h"
+#include "core_crit_sec.h"
 
 //#define FULL_TRACE
 

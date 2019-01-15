@@ -13,7 +13,7 @@
 #define SHARED_INCLUDE_API_I2C_H_
 
 
-#include "scheduling_future.h"
+#include "core_future.h"
 #include "pe_polyfill.h"
 
 enum I2C_CHANNELS {

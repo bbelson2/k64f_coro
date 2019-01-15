@@ -10,8 +10,8 @@
  */
 
 #include "api_i2c.h"
-#include "timer_api.h"
-#include "scheduling_resumable.h"
+#include "api_timer.h"
+#include "core_resumable.h"
 #include "services.h"
 
 /***************************************************************************/
@@ -31,6 +31,12 @@ volatile int16_t __accel_y = 0;
 volatile int16_t __accel_z = 0;
 volatile uint8_t __accel_whoami = 0;
 volatile int16_t __accel_count = 0;
+
+void decodeCoordsFromBuffer(const uint8_t* buf, int16_t& x, int16_t& y, int16_t& z) {
+  x = (int16_t)(((buf[1] << 8) | buf[2])) >> 2;
+  y = (int16_t)(((buf[3] << 8) | buf[4])) >> 2;
+  z = (int16_t)(((buf[5] << 8) | buf[6])) >> 2;
+}
 
 resumable i2cTaskFn(uint8_t channel /* ignored */) {
 	co_await suspend_always{};
@@ -53,17 +59,12 @@ resumable i2cTaskFn(uint8_t channel /* ignored */) {
 	}
 
 	for (;;) {
-		if (rc) {
-			co_await suspend_always{};
-		}
 		if (!rc) {
-			uint8_t buf[7];
-			byte rc2 = co_await read_i2c(ACCEL_ADDRESS, 0x00, buf, sizeof(buf));
-			if (!rc2) {
-			  int16_t x = (int16_t)(((buf[1] << 8) | buf[2])) >> 2;
-			  int16_t y = (int16_t)(((buf[3] << 8) | buf[4])) >> 2;
-			  int16_t z = (int16_t)(((buf[5] << 8) | buf[6])) >> 2;
-
+			uint8_t buf[7] = { 0, 0, 0, 0, 0, 0, 0 };
+			rc = co_await read_i2c(ACCEL_ADDRESS, 0x00, buf, sizeof(buf));
+			if (!rc) {
+				int16_t x = 0, y = 0, z = 0;
+				decodeCoordsFromBuffer(buf, x, y, z);
 			  __accel_x = x;
 			  __accel_y = y;
 			  __accel_z = z;

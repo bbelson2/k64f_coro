@@ -1,5 +1,5 @@
 /*
- * scheduling_scheduler.h
+ * core_scheduler.h
  *
  *  Created on: 29 Nov 2018
  *      Author: Bruce Belson
@@ -17,9 +17,9 @@
 #include <array>
 #include <algorithm>
 #include <stack>
-#include "scheduling_types.h"
-#include "scheduling_resumable.h"
-#include "scheduling_crit_sec.h"
+#include "core_types.h"
+#include "core_resumable.h"
+#include "core_crit_sec.h"
 #include "services.h"
 
 /**

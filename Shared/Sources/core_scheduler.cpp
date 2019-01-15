@@ -8,7 +8,7 @@
  *  file 'LICENSE.txt', which is part of this source code package.
  */
 
-#include "scheduling_scheduler.h"
+#include "core_scheduler.h"
 
 /**
  * Task and scheduler implementation

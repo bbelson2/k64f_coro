@@ -1,5 +1,5 @@
 /*
- * scheduling_future.h
+ * core_future.h
  *
  *  Created on: 29 Nov 2018
  *      Author: Bruce Belson
@@ -17,8 +17,8 @@
 #include <atomic>
 #include <assert.h>
 #endif
-#include "scheduling_resumable.h"
-#include "scheduling_scheduler.h"
+#include "core_resumable.h"
+#include "core_scheduler.h"
 #include <vector>
 
 /**

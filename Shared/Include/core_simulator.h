@@ -1,6 +1,6 @@
 #pragma once
 
-#include "scheduling_split_phase.h"
+#include "core_split_phase.h"
 
 // TODO - move to scheduing_events.h
 

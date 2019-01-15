@@ -13015,7 +13015,7 @@
             </ItemState>
             <ItemState>
               <ItemSymbol>InpBufferSize</ItemSymbol>
-              <ReadOnly>false</ReadOnly>
+              <ReadOnly>true</ReadOnly>
               <UserReadOnly>true</UserReadOnly>
               <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
               <Value>0</Value>
@@ -13023,7 +13023,7 @@
             </ItemState>
             <ItemState>
               <ItemSymbol>OutBufferSize</ItemSymbol>
-              <ReadOnly>false</ReadOnly>
+              <ReadOnly>true</ReadOnly>
               <UserReadOnly>true</UserReadOnly>
               <PropertyModelIsAutomatic>false</PropertyModelIsAutomatic>
               <Value>0</Value>

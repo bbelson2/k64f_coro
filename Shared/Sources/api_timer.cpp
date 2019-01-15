@@ -9,8 +9,8 @@
  *
  */
 
-#include "timer_api.h"
-#include "scheduling_split_phase.h"
+#include "api_timer.h"
+#include "core_split_phase.h"
 
 #include "app_ids.h"
 
@@ -34,7 +34,7 @@ void sim_start_timer();
 void sim_trigger_tick_event();
 #endif
 
-#include "scheduling_crit_sec.h"
+#include "core_crit_sec.h"
 
 struct timer_item_t {
 	promise_t<void>::state_ptr_type state;

@@ -1,5 +1,5 @@
 /*
- * adc_api.h
+ * api_adc.h
  *
  *  Created on: 7 Jan 2019
  *      Author: Bruce Belson
@@ -9,10 +9,10 @@
  *
  */
 
-#ifndef SHARED_INCLUDE_ADC_API_H_
-#define SHARED_INCLUDE_ADC_API_H_
+#ifndef SHARED_INCLUDE_API_ADC_H_
+#define SHARED_INCLUDE_API_ADC_H_
 
-#include "scheduling_future.h"
+#include "core_future.h"
 #include "pe_polyfill.h"
 
 enum ADC_CHANNELS {
@@ -26,4 +26,4 @@ scheduling::future_t<word> read_adc(uint8_t channelId);
 //scheduling::future_t<word> read_adc2(uint8_t channelId);
 scheduling::future_t<word> read_adc3(uint8_t channelId);
 
-#endif /* SHARED_INCLUDE_ADC_API_H_ */
+#endif /* SHARED_INCLUDE_API_ADC_H_ */
