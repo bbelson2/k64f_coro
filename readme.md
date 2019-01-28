@@ -6,9 +6,9 @@ This repo contains projects that investigate the use, on resource-constrained em
 
 | Project | Summary |
 |---|---|
-| [CoroCA_K22F](../blob/master/CoroCA_K22F/readme.md) | A proof-of-concept for custom memory allocation |
-| [k22fawait1](../blob/master/k22fawait1/readme.md) | Test project for the cost of `co_await` in an embedded aplilcation on the K22F platform. |
-| [k64fawait1](../blob/master/k64fawait1/readme.md) | A variant of k22fawait1 for the K64F development board. |
+| [CoroCA_K22F](../master/CoroCA_K22F/readme.md) | A proof-of-concept for custom memory allocation |
+| [k22fawait1](../master/k22fawait1/readme.md) | Test project for the cost of `co_await` in an embedded aplilcation on the K22F platform. |
+| [k64fawait1](../master/k64fawait1/readme.md) | A variant of k22fawait1 for the K64F development board. |
 
 ## License
 
