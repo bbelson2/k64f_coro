@@ -296,29 +296,3 @@ The important part here is:
 
 See https://stackoverflow.com/questions/9148890/how-to-make-clang-compile-to-llvm-ir
 
-# Size
-
--Os
-
-```
-Invoking: Cross ARM GNU Print Size
-arm-none-eabi-size --format=berkeley "k22fawait1.elf"
-   text	   data	    bss	    dec	    hex	filename
-  36560	    244	   1784	  38588	   96bc	k22fawait1.elf
-Finished building: k22fawait1.siz
- ```
-
--O3
-
-```
-Invoking: Cross ARM GNU Print Size
-arm-none-eabi-size --format=berkeley "k22fawait1.elf"
-   text	   data	    bss	    dec	    hex	filename
-  39576	    244	   1784	  41604	   a284	k22fawait1.elf
-Finished building: k22fawait1.siz
- 
-
-19:11:43 Build Finished (took 5m:14s.592ms)
-```
-
-
