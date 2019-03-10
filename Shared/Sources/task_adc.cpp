@@ -12,6 +12,7 @@
 
 #include "api_adc.h"
 #include "api_timer.h"
+#include "Bit1.h"
 
 /***************************************************************************/
 /* ADC task                                                                */
@@ -31,6 +32,8 @@ extern volatile int16_t __accel_z;
 extern volatile uint8_t __accel_whoami;
 extern volatile int16_t __accel_count;
 
+static int count = 0;
+
 resumable adcTaskFn(uint8_t pin) {
 	co_await suspend_always{};
 
@@ -45,6 +48,7 @@ resumable adcTaskFn(uint8_t pin) {
 				x, y,
 				__accel_x, __accel_y, __accel_z, __accel_whoami, __accel_count,
 				__timer_count, __idle_count);
+		Bit1_PutVal(++count % 2 == 0);
 		co_await scp::drivers::wait_on_ticks(10);
 	}
 }

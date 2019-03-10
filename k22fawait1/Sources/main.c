@@ -46,6 +46,8 @@
 #include "TU2.h"
 #include "I2C.h"
 #include "IntI2cLdd1.h"
+#include "Bit1.h"
+#include "BitIoLdd1.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"

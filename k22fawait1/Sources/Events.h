@@ -49,6 +49,8 @@
 #include "TU2.h"
 #include "I2C.h"
 #include "IntI2cLdd1.h"
+#include "Bit1.h"
+#include "BitIoLdd1.h"
 
 #ifdef __cplusplus
 extern "C" {

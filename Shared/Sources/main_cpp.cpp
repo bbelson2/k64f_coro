@@ -13,6 +13,9 @@
 
 using namespace scp::core;
 
+#define TEST_BUILD
+#ifndef TEST_BUILD
+
 // ADC task, defined elsewhere
 extern resumable adcTaskFn(uint8_t pin);
 extern void adcInit();
@@ -49,3 +52,31 @@ void main_cpp()
 	scheduler_t::getInstance().run();
 }
 
+#else // !TEST_BUILD
+
+// Test task, defined elsewhere
+extern resumable testTaskFn(uint8_t value);
+// TODO - remove unused tasks from build
+
+extern "C"
+void main_cpp()
+{
+	// Instantiate and initialise the application-specific tasks
+	resumable testTaskFnOff_ = testTaskFn(0);
+	resumable testTaskFnOn_ = testTaskFn(1);
+	task_t testTaskOff(1, task_t::task_state_t::Ready, testTaskFnOff_._coroutine);
+	task_t testTaskOn(1, task_t::task_state_t::Ready, testTaskFnOn_._coroutine);
+
+	// Register tasks
+	scheduler_t::getInstance().registerIdleTask();
+	scheduler_t::getInstance().registerTask(&testTaskOff);
+	scheduler_t::getInstance().registerTask(&testTaskOn);
+
+	// Other setup
+	// None...
+
+	// Run the program main thread
+	scheduler_t::getInstance().run();
+}
+
+#endif // !TEST_BUILD

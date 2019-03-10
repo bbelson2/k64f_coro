@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K22P121M120SF7RM, Rev. 1, March 24, 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-01-13, 09:43, # CodeGen: 18
+**     Date/Time   : 2019-02-06, 15:36, # CodeGen: 26
 **     Abstract    :
 **
 **     Settings    :
@@ -169,6 +169,8 @@ void Components_Init(void)
   (void)FreeCntrLdd1_Init(NULL);
   /* ### InternalI2C "I2C" init code ... */
   I2C_Init();
+  /* ### BitIO_LDD "BitIoLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)BitIoLdd1_Init(NULL);
 }
 #endif /* CPU_COMPONENTS_INIT */
 

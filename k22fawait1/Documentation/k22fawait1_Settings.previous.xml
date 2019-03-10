@@ -1043,7 +1043,7 @@ Autoselect
       </boolgroup>
       <boolgroup name="MASTER mode" v="Enabled">
         <Polling_trials v="2000" />
-        <Automatic_stop_condition v="yes" />
+        <Automatic_stop_condition v="no" />
         <group name="Initialization">
           <Address_mode v="7-bit addressing" />
           <Target_slave_address_init v="8" />
@@ -1082,7 +1082,7 @@ Autoselect
       <RecvChar v="generate code" />
       <SendBlock v="generate code" />
       <RecvBlock v="generate code" />
-      <SendStop v="don&amp;apos;t generate code" />
+      <SendStop v="generate code" />
       <ClearTxBuf v="don&amp;apos;t generate code" />
       <ClearRxBuf v="don&amp;apos;t generate code" />
       <GetCharsInTxBuf v="generate code" />
@@ -1125,6 +1125,69 @@ Autoselect
       <event name="OnSDAlowTimeout" v="don&amp;apos;t generate code" />
       <event name="OnSecondAddr" v="don&amp;apos;t generate code" />
       <event name="OnAlertResponse" v="don&amp;apos;t generate code" />
+    </Events>
+  </Bean>
+  <Bean name="Bit1" type="BitIO">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="Bit1" />
+      <Pin_for_I_O v="J1_12" />
+      <inhrbean type="BitIO_LDD">
+        <Enabled v="Y" />
+        <Template v="BitIO_LDD" />
+        <Properties>
+          <Component_name v="BitIoLdd1" />
+          <Pin_for_I_O v="J1_12" />
+          <Direction v="Input/Output" />
+          <group name="Initialization">
+            <Init__direction v="Output" />
+            <Init__value v="0" />
+            <Auto_initialization v="yes" />
+          </group>
+          <Safe_mode v="yes" />
+        </Properties>
+        <Methods>
+          <Init v="generate code" />
+          <Deinit v="don&amp;apos;t generate code" />
+          <GetDir v="don&amp;apos;t generate code" />
+          <SetDir v="generate code" />
+          <SetInput v="don&amp;apos;t generate code" />
+          <SetOutput v="don&amp;apos;t generate code" />
+          <GetVal v="generate code" />
+          <PutVal v="generate code" />
+          <ClrVal v="generate code" />
+          <SetVal v="generate code" />
+          <NegVal v="don&amp;apos;t generate code" />
+          <ConnectPin v="don&amp;apos;t generate code" />
+          <GetRawVal v="don&amp;apos;t generate code" />
+        </Methods>
+        <Events>
+          <EmptySection_DummyValue />
+        </Events>
+      </inhrbean>
+      <Direction v="Input/Output" />
+      <group name="Initialization">
+        <Init__direction v="Output" />
+        <Init__value v="0" />
+      </group>
+      <Safe_mode v="yes" />
+      <Optimization_for v="speed" />
+    </Properties>
+    <Methods>
+      <GetDir v="don&amp;apos;t generate code" />
+      <SetDir v="generate code" />
+      <SetInput v="don&amp;apos;t generate code" />
+      <SetOutput v="don&amp;apos;t generate code" />
+      <GetVal v="generate code" />
+      <PutVal v="generate code" />
+      <ClrVal v="generate code" />
+      <SetVal v="generate code" />
+      <NegVal v="don&amp;apos;t generate code" />
+      <ConnectPin v="don&amp;apos;t generate code" />
+      <GetRawVal v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
     </Events>
   </Bean>
 </PE_PROJECT_SETTINGS_DOCUMENTATION>
