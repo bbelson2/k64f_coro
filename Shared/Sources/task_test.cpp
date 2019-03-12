@@ -10,7 +10,7 @@
  */
 
 #include "core_resumable.h"
-#include "bit1.h"
+#include "Bit1.h"
 
 /***************************************************************************/
 /* Timer task                                                                */

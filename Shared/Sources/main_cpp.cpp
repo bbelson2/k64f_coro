@@ -7,14 +7,15 @@
 
 #include "services.h"
 #include "core_resumable.h"
-#include "core_split_phase.h"
-#include "core_future.h"
 #include "app_ids.h"
 
 using namespace scp::core;
 
 #define TEST_BUILD
 #ifndef TEST_BUILD
+
+#include "core_split_phase.h"
+#include "core_future.h"
 
 // ADC task, defined elsewhere
 extern resumable adcTaskFn(uint8_t pin);
@@ -53,6 +54,9 @@ void main_cpp()
 }
 
 #else // !TEST_BUILD
+
+#include "core_types.h"
+#include "core_scheduler.h"
 
 // Test task, defined elsewhere
 extern resumable testTaskFn(uint8_t value);

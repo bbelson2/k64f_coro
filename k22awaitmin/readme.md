@@ -1,6 +1,15 @@
-# k22fawait1
+# k22fawaitmin
 
 This file is subject to the terms and conditions defined in file 'LICENSE.txt', which is part of this source code package.
+
+The project contains the co_await version of a minimal K22F application. 
+It is to be compared to the protothreads version to measuere the overhead of task switching.
+
+The application contains a simple scheduler, in which each task is implemented as a coroutine.
+The task is initially suspended and intermittently resumed by the scheduler.  
+
+For this test, there are two tasks: one sets a GPIO pin high, the other sets it low.
+An oscilloscope is used to measure the time taken for a complete sequence.
 
 # Project setup
 
@@ -8,7 +17,7 @@ This file is subject to the terms and conditions defined in file 'LICENSE.txt', 
 
 1. Kinetis Design Studio 3.2.0
 1. File > New > Processor Expert Project...
-1. Project name = `k22fawait1`
+1. Project name = `k22fawaitmin`
 1. Boards > Kinetis > FRDM-K22F
 1. Kinetis SDK = None; Processor Expert = True
 1. Target compiler = GNU C Compiler
@@ -63,121 +72,11 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 	#endif
 	```
 
-
 ## Components
 
 ### Processors
 
 - Cpu:MK22FN512VLH12
-
-### Term1
-
-1. Processor Expert perspective 
-1. Components Library
-1. Term
-1. Component Inspector for Term1 > Inhr1:AsynchroSerial
-1. Settings > Channel = UART1
-1. Settings > Baud rate = 115200 baud
-1. Settings > Receiver > RxD = PTE1
-1. Settings > Transmitter > TxD = PTE0
-
-### ADC1
-
-1. Processor Expert perspective 
-1. Components Library
-1. ADC
-1. Component Inspector for AD1
-1. A/D Converter = ADC0
-1. Interrupt service/event > Interrupt service/event = true
-1. Interrupt service/event > A/D interrupt = INT_ADC0
-1. Interrupt service/event > A/D interrupt priority = medium priority (112)
-1. A/D channels > A/D channel (pin) = ADC0_DM0/ADC1_DM3
-1. Sample time = 20 = long
-1. Conversion time = 17.166138 micro s
-1. Enable methods: Calibrate() and GetCalibrationStatus()
-
-### ADC2
-
-1. Processor Expert perspective 
-1. Components Library
-1. ADC
-1. Component Inspector for AD1
-1. A/D Converter = ADC1
-1. Interrupt service/event > Interrupt service/event = true
-1. Interrupt service/event > A/D interrupt = INT_ADC1
-1. Interrupt service/event > A/D interrupt priority = medium priority (112)
-1. A/D channels > A/D channel (pin) = ADC1_DM1/ADC0_DM3
-1. Sample time = 20 = long
-1. Conversion time = 17.166138 micro s
-1. Enable methods: Calibrate() and GetCalibrationStatus()
-
-### CS1
-
-1. Processor Expert perspective 
-1. Components Library
-1. CriticalSection
-1. Component Inspector for CS1 
-1. Component name = CS1
-1. SDK = MCUC1
-1. Use ProcessorExpert Default = false
-1. Use FreeRTOS = false
-
-### TU1
-
-1. Processor Expert perspective 
-1. Components Library
-1. TimerUnit
-1. Component Inspector for TU1 
-1. Component name = TU1
-1. Device = FTM0_MOD
-1. Counter = FTM0_CNT
-1. Input clock source > Counter frequency = 256 Hz
-1. Counter restart = On-match
-1. Counter restart > Period device = FTM0_MOD
-1. Counter restart > Period = 1 Hz
-1. Counter restart > Interrupt = Enabled
-1. Initialization > Auto initialization = yes
-1. Interrupt service/event = Enabled
-1. Enable: TU1_OnCounterRestart
-
-### FC1
-
-1. Processor Expert perspective 
-1. Components Library
-1. FreeCntr
-1. New Component [Kinetis/TimerUnit_LDD]
-1. Component Inspector for FC1 
-1. Component name = FC1
-1. Device = FTM1_MOD
-1. Counter = FTM1_CNT
-1. Interrupt service/event = Enabled 
-1. Period/offset = 3.125 ms
-1. Interrupt service/event = true
-1. Enable: FC1_OnInterrupt
-
-### I2C
-
-1. Processor Expert perspective 
-1. Components Library
-1. InternalI2C
-1. New Component [Kinetis/InternalI2C]
-1. Component Inspector for CI2C1 
-1. Component name = Rename to I2C
-1. Device = Kinetis/I2C_LDD
-1. I2C channel => I2C0
-1. Mode selection = MASTER
-1. Bits 0-2 of Frequency divider register = 001
-1. Bits 3-5 of Frequency divider register = 100
-1. Internal frequency (multipler factor) = 10.48576 MHz
-1. Interrupt service/event > Interrupt service/event = on
-1. Interrupt service/event > Interrupt = INT_I2C0
-1. Interrupt service/event > Interrupt priority = medium priority (112)
-1. Data and Clock > SDA Pin = PTB3
-1. Data and Clock > SDA CLn = PTB2
-1. MASTER mode > Automatic stop mode = yes
-1. MASTER mode > Initialization > Address mode = 7-bit addressing
-1. MASTER mode > Initialization > Target slave address init = 0x1C
-1. Check enabled: OnTransmitData & OnReceiveData
 
 ### BitIO
 
@@ -195,21 +94,22 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 
 ## Shared Code
 
-1. Right click on project > New > Folder > Advanced
-1. Folder name = `Shared` 
-1. Link to alternate location = true
-1. Add location = `PROJECT_LOC\..\Shared`
 1. Right click on project > Properties
 1. C/C++ General > Paths and Symbols
-1. Tab > Source Location > Add Folder...
-1. Select /[projectdir]/Shared/Sources
 1. Tab > Includes
 1. Languages = GNU C
-1. Add... `${ProjDirPath}/../Shared/Include`
+1. Add... `${ProjDirPath}/../Shared/Include` (Add to all configurations => true)
 1. Languages = GNU C++
-1. Add... `${ProjDirPath}/../Shared/Include`
-1. Add... `${ProjDirPath}/../Shared/IncludeARM`
+1. Add... `${ProjDirPath}/../Shared/Include` (Add to all configurations => true)
+1. Add... `${ProjDirPath}/../Shared/IncludeARM` (Add to all configurations => true)
 
+1. Right click on project/Sources > New > File > Advanced
+1. Link to file in the file system = true
+1. Click Variables...
+1. New...
+1. Name => SHARED_LOC; Location => ${PROJECT_LOC}\..\Shared
+1. Back in New File dialog: SHARED_LOC\Sources\core_scheduler.cpp
+1. Add alod: SHARED_LOC\Sources\main_cpp.cpp, SHARED_LOC\Sources\task_test.cpp
 ## Code
 
 ### main.c
@@ -238,6 +138,8 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 1. Open
 1. Debug the configuration above
 1. Observe `Hello K22F world` in terminal
+
+171.20 micros high, 88.80 us low = total 260 us 
 
 # Project development
 
@@ -336,3 +238,6 @@ Finished building: k22fawait1.siz
 ```
 
 
+Add build configuration fo 'No scheduler'
+
+https://stackoverflow.com/questions/46547985/is-it-possible-to-alter-code-in-eclipse-cdt-based-on-build-configuration
