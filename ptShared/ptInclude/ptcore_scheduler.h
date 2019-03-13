@@ -33,13 +33,14 @@ namespace ptp { namespace core {
 			Blocked = 2,
 			Running = 3
 		};
-	public:
+	protected:
 		task_t(task_id_t id,
 			task_state_t state)
 			: id_(id), state_(state), priority_(0)
 		{
 		}
 
+	public:
 		uint8_t getId() const {
 			return id_;
 		}
@@ -87,6 +88,8 @@ namespace ptp { namespace core {
 		void resume() {
 			Run();
 		}
+
+		virtual bool Run() = 0;
 
 	private:
 		task_id_t id_;

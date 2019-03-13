@@ -19,8 +19,19 @@ volatile unsigned long __pt_idle_count = 0;
 
 namespace ptp { namespace core {
 
+IdleTask theIdleTask;
+
+void scheduler_t::registerIdleTask() {
+	registerTask(&theIdleTask);
+}
+
+
 bool IdleTask::Run() {
 	PT_BEGIN();
+
+	while (true) {
+		PT_YIELD();
+	}
 
 	PT_END();
 }

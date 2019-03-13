@@ -65,9 +65,9 @@ int main(void)
   for (;;) {
   	bit1Value = !bit1Value;
   	Bit1_PutVal(bit1Value);
-		for (i = 0; i < 100000; i++) {
+		//for (i = 0; i < 100000; i++) {
 			// Wait
-		}
+		//}
   }
 #else
   main_cpp();

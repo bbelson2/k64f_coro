@@ -69,7 +69,7 @@ void main_cpp()
 	resumable testTaskFnOff_ = testTaskFn(0);
 	resumable testTaskFnOn_ = testTaskFn(1);
 	task_t testTaskOff(1, task_t::task_state_t::Ready, testTaskFnOff_._coroutine);
-	task_t testTaskOn(1, task_t::task_state_t::Ready, testTaskFnOn_._coroutine);
+	task_t testTaskOn(2, task_t::task_state_t::Ready, testTaskFnOn_._coroutine);
 
 	// Register tasks
 	scheduler_t::getInstance().registerIdleTask();

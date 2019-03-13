@@ -15,9 +15,10 @@
 #include "ptcore_split_phase.h"
 //#include "ptcore_future.h"
 #include "app_ids.h"
-
+#include "pttask_test.h"
 
 using namespace ptp::core;
+using namespace ptp::task;
 
 // ADC task, defined elsewhere
 //#include "pt_task_adc.h"
@@ -35,14 +36,14 @@ using namespace ptp::core;
 extern "C"
 void pt_main_cpp()
 {
-	IdleTask idleTask();
 
 	// Instantiate and initialise the application-specific tasks
-	//AdcTask adcTask(TASK_ID_ADC, task_t::task_state_t::Ready);
+	TestTask testTaskOn(1, 1);
+	TestTask testTaskOff(2, 0);
 
-	//TimerTask timerTask(TASK_ID_TIMERC, task_t::task_state_t::Ready);
-
-	//I2CTask i2cTask(TASK_ID_I2C, task_t::task_state_t::Ready);
+	scheduler_t::getInstance().registerIdleTask();
+	scheduler_t::getInstance().registerTask(&testTaskOn);
+	scheduler_t::getInstance().registerTask(&testTaskOff);
 
 	// Other setup
 	//adcInit();

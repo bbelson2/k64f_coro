@@ -121,6 +121,11 @@
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Shared\Include\pe_polyfill.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Shared\Include\services.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Sources\Events.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\Sources\pt-c\lc-addrlabels.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\Sources\pt-c\lc-switch.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\Sources\pt-c\lc.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\Sources\pt-c\pt-sem.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\Sources\pt-c\pt.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Static_Code\IO_Map\MK22F51212.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Static_Code\PDD\ADC_PDD.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Static_Code\PDD\CMP_PDD.h</PathName>
@@ -161,6 +166,14 @@
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Static_Code\System\CPU_Init.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Static_Code\System\PDD_Includes.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Static_Code\System\Peripherals_Init.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\Protothread.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\ptapp_ids.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\ptcore_crit_sec.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\ptcore_events.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\ptcore_future.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\ptcore_scheduler.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\ptcore_split_phase.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\pttask_test.h</PathName>
     </GeneratedHs>
   </FILES>
   <OPTIONS>
