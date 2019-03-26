@@ -53,10 +53,14 @@
   </PATHS>
   <FILES>
     <GeneratedCs>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\ASerialLdd1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Bit1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\BitIoLdd1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Cpu.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Inhr1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\PE_LDD.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\TU1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Term1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\pin_mux.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Project_Settings\Startup_Code\startup.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\Events.c</PathName>
@@ -66,19 +70,31 @@
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Static_Code\System\Vectors.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\ASerialLdd1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Bit1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\BitIoLdd1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\CPU_Config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Cpu.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\IO_Map.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Inhr1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Init_Config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\PE_Const.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\PE_Error.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\PE_LDD.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\PE_Types.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\TU1.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Term1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Vectors_Config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\pin_mux.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\Events.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\ptInclude\Protothread.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\ptInclude\ptapp_ids.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\ptInclude\ptcore_crit_sec.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\ptInclude\ptcore_events.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\ptInclude\ptcore_future.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\ptInclude\ptcore_scheduler.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\ptInclude\ptcore_split_phase.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\ptInclude\pttask_test.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Static_Code\IO_Map\MK22F51212.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Static_Code\PDD\ADC_PDD.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Static_Code\PDD\CMP_PDD.h</PathName>

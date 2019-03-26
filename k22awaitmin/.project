@@ -32,14 +32,39 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>Sources/core_crit_sec.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Shared/Include/core_crit_sec.h</locationURI>
+		</link>
+		<link>
+			<name>Sources/core_resumable.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Shared/Include/core_resumable.h</locationURI>
+		</link>
+		<link>
 			<name>Sources/core_scheduler.cpp</name>
 			<type>1</type>
 			<locationURI>SHARED_LOC/Sources/core_scheduler.cpp</locationURI>
 		</link>
 		<link>
+			<name>Sources/core_scheduler.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Shared/Include/core_scheduler.h</locationURI>
+		</link>
+		<link>
+			<name>Sources/core_types.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Shared/Include/core_types.h</locationURI>
+		</link>
+		<link>
 			<name>Sources/main_cpp.cpp</name>
 			<type>1</type>
 			<locationURI>SHARED_LOC/Sources/main_cpp.cpp</locationURI>
+		</link>
+		<link>
+			<name>Sources/services.h</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Shared/Include/services.h</locationURI>
 		</link>
 		<link>
 			<name>Sources/task_test.cpp</name>

@@ -6,7 +6,7 @@
 **     Version     : Component 01.048, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-03-13, 10:17, # CodeGen: 6
+**     Date/Time   : 2019-03-26, 14:51, # CodeGen: 7
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -58,6 +58,10 @@
 #include "pin_mux.h"
 #include "Bit1.h"
 #include "BitIoLdd1.h"
+#include "TU1.h"
+#include "Term1.h"
+#include "Inhr1.h"
+#include "ASerialLdd1.h"
 
 
 /*

@@ -42,6 +42,24 @@ Module "Bit1"      (component BitIO)
    - Bit1_SetVal -Sets (to one) the output value. It is equivalent to the [PutVal(TRUE)]. This method is available only if the 
                 direction = _[output]_ or _[input/output]_.
 
+Module "TU1"       (component TimerUnit_LDD)
+   - TU1_Init -Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets 
+                interrupt priority, sets pin routing, sets timing, etc. If the property <"Enable in init. code"> is set to 
+                "yes" value then the device is also enabled (see the description of the <Enable> method). In this case the 
+                <Enable> method is not necessary and needn't to be generated. This method can be called only once. Before the 
+                second call of Init the <Deinit> must be called first.
+
+Module "Term1"     (component Term)
+   - Term1_CRLF -Send CRLF to terminal.
+   - Term1_SendStr -Send string to terminal.
+   - Term1_SendNum -Send number to terminal.
+   - Term1_SendChar -Send char to terminal.
+   - Term1_Cls -Clear the terminal window.
+   - Term1_MoveTo -Move cursor to position x, y. Range of coordinates can be from 1 to the size, which depends on the used 
+                terminal. Position [1,1] represents the upper left corner.
+   - Term1_ReadChar -Read char from terminal.
+   - Term1_KeyPressed -Test if char was received from the terminal.
+
 Module "Cpu"       (component MK22FN512LH12)
    - Cpu_SetClockConfiguration -Calling of this method will cause the clock configuration change and reconfiguration of all 
                 components according to the requested clock configuration setting.

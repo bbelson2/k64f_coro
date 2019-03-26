@@ -30,9 +30,9 @@
       <File Name="Static_Code/PDD/PMC_PDD.h" FileDate="2019-03-11, 08:42:30" FileAge="1552257750433" FileType="1048576" />
       <File Name="Static_Code/PDD/PDB_PDD.h" FileDate="2019-03-11, 08:42:30" FileAge="1552257750428" FileType="1048576" />
       <File Name="Static_Code/PDD/LPUART_PDD.h" FileDate="2019-03-11, 08:42:30" FileAge="1552257750418" FileType="1048576" />
-      <File Name="ProjectInfo.xml" FileDate="2019-03-11, 11:14:18" FileAge="1552266858990" FileType="45637" />
+      <File Name="ProjectInfo.xml" FileDate="2019-03-20, 12:34:38" FileAge="1553049278877" FileType="45637" />
       <File Name="Static_Code/PDD/GPIO_PDD.h" FileDate="2019-03-11, 08:42:30" FileAge="1552257750408" FileType="1048576" />
-      <File Name="Generated_Code/CPU_Config.h" FileDate="2019-03-13, 09:57:05" FileAge="1552435025018" FileType="45637" CompNumb="1" />
+      <File Name="Generated_Code/CPU_Config.h" FileDate="2019-03-20, 12:34:35" FileAge="1553049275274" FileType="45637" CompNumb="1" />
       <File Name="Static_Code/PDD/PIT_PDD.h" FileDate="2019-03-11, 08:42:30" FileAge="1552257750430" FileType="1048576" />
       <File Name="Sources/main.c" FileDate="2019-03-13, 09:56:04" FileAge="1552434964389" FileType="128" />
       <File Name="Sources/Events.h" FileDate="2019-03-11, 11:14:18" FileAge="1552266858824" FileType="131328" />
@@ -100,5 +100,5 @@
       <File Name="Static_Code/PDD/SCB_PDD.h" FileDate="2019-03-11, 08:42:30" FileAge="1552257750450" FileType="1048576" />
     </GeneratedByPE>
   </GeneratedFilesList>
-  <CodeGenReference>5</CodeGenReference>
+  <CodeGenReference>7</CodeGenReference>
 </CodeGenerationInfo>

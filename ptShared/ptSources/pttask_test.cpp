@@ -24,12 +24,15 @@
 
 using namespace ptp::core;
 
+unsigned long g_cycles = 0;
+
 namespace ptp { namespace task {
 	bool TestTask::Run() {
 		PT_BEGIN();
 
 		for (;;) {
 			Bit1_PutVal(!!arg_);
+			g_cycles++;
 			PT_YIELD();
 		}
 		PT_END();

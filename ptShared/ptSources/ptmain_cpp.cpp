@@ -33,6 +33,20 @@ using namespace ptp::task;
 //#include "pt_task_i2c.h"
 //extern resumable i2cTaskFn(uint8_t channel);
 
+extern unsigned long g_cycles;
+
+extern "C" {
+#include "Term1.h"
+}
+extern "C"
+void record_stats() {
+	Term1_SendStr((void*)"Cycles in timer period: ");
+	Term1_SendNum(g_cycles);
+	Term1_SendStr((void*)"\r\n");
+	g_cycles = 0;
+}
+
+
 extern "C"
 void pt_main_cpp()
 {
