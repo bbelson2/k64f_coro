@@ -51,6 +51,11 @@ void trace(const char* tpl, ...) {}
 
 void pt_main_cpp();
 
+#if (0 && defined(CONFIG_LLVM_NS))
+extern unsigned long g_cycles;
+extern void report_cycles();
+#endif
+
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
 int main(void)
 /*lint -restore Enable MISRA rule (6.3) checking. */
@@ -65,10 +70,13 @@ int main(void)
 
   /* Write your code here */
   /* For example: for(;;) { } */
-#ifdef CONFIG_LLVM_NS
+#if 0
+  // This bare-bones version is for measuring the basc H/W cost of switching the port
   for (;;) {
+  	g_cycles++;
   	bit1Value = !bit1Value;
   	Bit1_PutVal(bit1Value);
+
 		//for (i = 0; i < 100000; i++) {
 			// Wait
 		//}

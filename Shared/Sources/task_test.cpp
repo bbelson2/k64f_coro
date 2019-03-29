@@ -22,6 +22,8 @@
 
 using namespace scp::core;
 
+extern unsigned long g_cycles;
+
 resumable testTaskFn(uint8_t value) {
 	bool bitValue = !!value;
 	co_await suspend_always{};
@@ -29,6 +31,20 @@ resumable testTaskFn(uint8_t value) {
 	for (;;) {
 
 		Bit1_PutVal(bitValue);
+		g_cycles++;
+		co_await suspend_always{};
+	}
+}
+
+resumable testTaskAltFn(uint8_t value) {
+	bool bitValue = !!value;
+	co_await suspend_always{};
+
+	for (;;) {
+
+		Bit1_PutVal(bitValue);
+		bitValue = !bitValue;
+		g_cycles++;
 		co_await suspend_always{};
 	}
 }

@@ -33,3 +33,6 @@
 
 # Outputs
 /Data/
+
+# Temporary files
+~*.xlsx

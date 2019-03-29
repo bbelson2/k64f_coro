@@ -20,7 +20,7 @@
 #include "core_future.h"
 #endif
 
-#if defined(INCLUDE_TEST_TASK)
+#if (defined(INCLUDE_TEST_TASK) || defined(INCLUDE_TEST_ALT_TASK) || defined(INCLUDE_UNUSED_TASK))
 #include "core_types.h"
 #include "core_scheduler.h"
 #endif
@@ -29,7 +29,7 @@
 // Each task
 //////////////////////////////////////
 
-#if (defined(INCLUDE_ADC_TASK) || defined(INCLUDE_TIMER_TASK) || defined(INCLUDE_I2C_TASK) || defined(INCLUDE_TEST_TASK))
+#if (defined(INCLUDE_ADC_TASK) || defined(INCLUDE_TIMER_TASK) || defined(INCLUDE_I2C_TASK) || defined(INCLUDE_TEST_TASK) || defined(INCLUDE_TEST_ALT_TASK))
 using namespace scp::core;
 #endif
 
@@ -49,9 +49,15 @@ extern resumable timerTaskFn(uint8_t timer);
 extern resumable i2cTaskFn(uint8_t channel);
 #endif
 
-#ifdef INCLUDE_TEST_TASK
+#if (defined(INCLUDE_TEST_TASK) || defined(INCLUDE_UNUSED_TASK))
 // Test task, defined elsewhere
 extern resumable testTaskFn(uint8_t value);
+// TODO - remove unused tasks from build
+#endif
+
+#ifdef INCLUDE_TEST_ALT_TASK
+// Test task, defined elsewhere
+extern resumable testTaskAltFn(uint8_t value);
 // TODO - remove unused tasks from build
 #endif
 
@@ -82,9 +88,22 @@ void main_cpp()
 	task_t testTaskOn(2, task_t::task_state_t::Ready, testTaskFnOn_._coroutine);
 #endif
 
+#ifdef INCLUDE_UNUSED_TASK
+	resumable testTaskFnUnused_ = testTaskFn(0);
+	task_t testTaskUnused(3, task_t::task_state_t::Ready, testTaskFnUnused_._coroutine);
+	testTaskUnused.setPriority(0);
+	testTaskOff.setPriority(20);
+	testTaskOn.setPriority(20);
+#endif
+
+#ifdef INCLUDE_TEST_ALT_TASK
+	resumable testTaskFnAlt_ = testTaskAltFn(0);
+	task_t testTaskAlt(1, task_t::task_state_t::Ready, testTaskFnAlt_._coroutine);
+#endif
+
 	// Register tasks
-	scheduler_t::getInstance().registerIdleTask();
 #ifdef INCLUDE_ADC_TASK
+	scheduler_t::getInstance().registerIdleTask();
 	scheduler_t::getInstance().registerTask(&adcTask);
 #endif
 #ifdef INCLUDE_TIMER_TASK
@@ -96,6 +115,12 @@ void main_cpp()
 #ifdef INCLUDE_TEST_TASK
 	scheduler_t::getInstance().registerTask(&testTaskOn);
 	scheduler_t::getInstance().registerTask(&testTaskOff);
+#endif
+#ifdef INCLUDE_TEST_ALT_TASK
+	scheduler_t::getInstance().registerTask(&testTaskAlt);
+#endif
+#ifdef INCLUDE_UNUSED_TASK
+	scheduler_t::getInstance().registerTask(&testTaskUnused);
 #endif
 
 	// Other setup

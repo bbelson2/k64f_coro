@@ -9,6 +9,8 @@
  *
  */
 
+#ifndef CONFIG_LLVM_NS
+
 #include "ptcore_scheduler.h"
 #include "Bit1.h"
 #include "pttask_test.h"
@@ -24,7 +26,7 @@
 
 using namespace ptp::core;
 
-unsigned long g_cycles = 0;
+extern unsigned long g_cycles;
 
 namespace ptp { namespace task {
 	bool TestTask::Run() {
@@ -41,3 +43,4 @@ namespace ptp { namespace task {
 
 #endif // TEST_VERSION == 0
 
+#endif

@@ -65,6 +65,7 @@
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Project_Settings\Startup_Code\startup.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\Events.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\main.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\report_cycles.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Static_Code\System\CPU_Init.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Static_Code\System\Peripherals_Init.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Static_Code\System\Vectors.c</PathName>

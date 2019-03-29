@@ -75,12 +75,11 @@ void Cpu_OnNMI(void)
 **                           the parameter of Init method.
 */
 /* ===================================================================*/
-extern void record_stats();
+extern void report_cycles();
 
 void TU1_OnCounterRestart(LDD_TUserData *UserDataPtr)
 {
-  /* Write your code here ... */
-	record_stats();
+  report_cycles();
 }
 
 /* END Events */

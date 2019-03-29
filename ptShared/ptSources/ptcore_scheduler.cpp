@@ -13,9 +13,12 @@
  * Task and scheduler implementation
  */
 
+
+#ifndef CONFIG_LLVM_NS
+
 #include "ptcore_scheduler.h"
 
-volatile unsigned long __pt_idle_count = 0;
+extern volatile unsigned long __pt_idle_count;
 
 namespace ptp { namespace core {
 
@@ -30,6 +33,7 @@ bool IdleTask::Run() {
 	PT_BEGIN();
 
 	while (true) {
+		__pt_idle_count++;
 		PT_YIELD();
 	}
 
@@ -37,3 +41,5 @@ bool IdleTask::Run() {
 }
 
 } }
+
+#endif

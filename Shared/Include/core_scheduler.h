@@ -356,7 +356,8 @@ namespace scp { namespace core {
 
 	class scheduler_t {
 	public:
-		using tasks_t = std::array<task_t*, SCHEDULER_MAX_TASKS>;
+		//using tasks_t = std::array<task_t*, SCHEDULER_MAX_TASKS>;
+		using tasks_t = task_t*[SCHEDULER_MAX_TASKS];
 	private:
 
 	public:
@@ -376,7 +377,8 @@ namespace scp { namespace core {
 		}
 
 		void registerTask(task_t* task) {
-			if (tasksRegistered_ < tasks_.size()) {
+			//if (tasksRegistered_ < tasks_.size()) {
+			if (tasksRegistered_ < SCHEDULER_MAX_TASKS) {
 				tasks_[tasksRegistered_++] = task;
 			}
 		}
@@ -388,7 +390,7 @@ namespace scp { namespace core {
 		task_t& getRunningTask() {
 			return *tasks_[runningTaskIndex_];
 		}
-		void setRunningTask(task_t& task) {
+		void setRunningTask(size_t nextTaskIndex) {
 			if (runningTaskIndex_ != (size_t)-1) {
 				task_t& tOld = getRunningTask();
 				if (tOld.getState() == task_t::task_state_t::Running) {
@@ -396,12 +398,13 @@ namespace scp { namespace core {
 				}
 			}
 			//trace("resuming task %d\r\n", task.getId());
+			task_t& task = *tasks_[nextTaskIndex];
 			task.setState(task_t::task_state_t::Running);
-			runningTaskIndex_ = getTaskIndex(task);
+			runningTaskIndex_ = nextTaskIndex;
 			task.resume();
 		}
 
-		task_t& getNextTask() {
+		size_t getNextTask() {
 			task_priority_t maxPriority = -1;
 			size_t nextTaskIndex = (size_t)-1;
 			for (size_t i = 0; i < tasksRegistered_; i++) {
@@ -414,12 +417,13 @@ namespace scp { namespace core {
 					}
 				}
 			}
-			return *tasks_[nextTaskIndex];
+			return nextTaskIndex;
 		}
 
 		void run() {
 			while (shouldRun()) {
-				setRunningTask(getNextTask());
+				size_t nextTaskId = getNextTask();
+				setRunningTask(nextTaskId);
 			}
 		}
 
@@ -439,16 +443,33 @@ namespace scp { namespace core {
 		}
 #endif
 		void unblockTask(task_id_t taskId, std::experimental::coroutine_handle<> coro) {
+			/*
 			auto t = findTaskById(taskId);
 			if (*t) {
 				(*t)->unblock(coro);
 			}
+			*/
+			auto t = findTaskPtrById(taskId);
+			if (t) {
+				(t)->unblock(coro);
+			}
 		}
 	protected:
+		/*
 		size_t getTaskIndex(task_t const& task) const {
 			return itToIndex(findTaskByRef(task));
 		}
+		*/
 	private:
+		task_t* findTaskPtrById(task_id_t taskId) {
+			for (size_t i = 0; i < tasksRegistered_; i++) {
+				if (tasks_[i]->getId() == taskId) {
+					return tasks_[i];
+				}
+			}
+			return nullptr;
+		}
+		/*
 		tasks_t::const_iterator findTaskByRef(task_t const& task) const {
 			return std::find(tasks_.begin(), tasks_.begin() + tasksRegistered_, &task);
 		}
@@ -471,6 +492,7 @@ namespace scp { namespace core {
 		size_t itToIndex(tasks_t::iterator it) const {
 			return (it == tasks_.begin() + tasksRegistered_) ? (size_t)-1 : (it - tasks_.begin());
 		}
+		*/
 	private:
 		tasks_t tasks_;
 		size_t tasksRegistered_;
