@@ -7,6 +7,9 @@
 
 #include "cobuild.h" // macros based on build flags
 
+//#undef UNUSED_TASK_COUNT
+//#define UNUSED_TASK_COUNT 2
+
 #include "services.h"
 #include "core_resumable.h"
 #include "app_ids.h"
@@ -131,7 +134,10 @@ void main_cpp()
 	scheduler_t::getInstance().registerTask(&testTaskAlt);
 #endif
 #if (UNUSED_TASK_COUNT > 0)
-	scheduler_t::getInstance().registerTask(&testTaskUnused);
+	scheduler_t::getInstance().registerTask(&testTaskUnused0);
+#if (UNUSED_TASK_COUNT > 1)
+	scheduler_t::getInstance().registerTask(&testTaskUnused1);
+#endif
 #endif
 
 	// Other setup

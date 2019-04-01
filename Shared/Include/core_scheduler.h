@@ -422,8 +422,8 @@ namespace scp { namespace core {
 
 		void run() {
 			while (shouldRun()) {
-				size_t nextTaskId = getNextTask();
-				setRunningTask(nextTaskId);
+				size_t nextTaskIndex = getNextTask();
+				setRunningTask(nextTaskIndex);
 			}
 		}
 
