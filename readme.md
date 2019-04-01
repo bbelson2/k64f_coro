@@ -6,12 +6,13 @@ This repo contains projects that investigate the use, on resource-constrained em
 
 | Project | Summary | Platform | Tech |
 |---|---|---|---|
-| [CoroCA_K22F](../master/CoroCA_K22F/readme.md) | A proof-of-concept for custom memory allocation | K22F | Coroutines |
-| [k22fawait1](../master/k22fawait1/readme.md) | Test project for the cost of `co_await` in an embedded application on the K22F platform. | K22F | Coroutines |
-| [k22fawaitmin](../master/k22fawaitmin/readme.md) | Minimal  project to investigate the cost of context switching using `co_await`. Uses a software timer. | K22F | Coroutines |
-| [k22fpt1](../master/k22fpt1/readme.md) | Control project using Protothreads in an embedded application equivalent to k22fawait1. | K22F | Protothreads |
 | [k22ptmin](../master/k22ptmin/readme.md) | Minimal project to investigate the cost of context switching using Protothreads. Uses a software timer. | K22F | Protothreads |
 | [k22ptmin_xt](../master/k22ptmin_xt/readme.md) | Minimal project to investigate the cost of context switching using Protothreads. Uses an external timer. | K22F | Protothreads |
+| [k22fawaitmin](../master/k22fawaitmin/readme.md) | Minimal  project to investigate the cost of context switching using `co_await`. Uses a software timer. | K22F | Coroutines |
+| [k22fawaitmin_xt](../master/k22fawaitmin_xt/readme.md) | Minimal  project to investigate the cost of context switching using `co_await`. Uses an external timer. | K22F | Coroutines |
+| [CoroCA_K22F](../master/CoroCA_K22F/readme.md) | A proof-of-concept for custom memory allocation | K22F | Coroutines |
+| [k22fawait1](../master/k22fawait1/readme.md) | Test project for the cost of `co_await` in an embedded application on the K22F platform. | K22F | Coroutines |
+| [k22fpt1](../master/k22fpt1/readme.md) | Control project using Protothreads in an embedded application equivalent to k22fawait1. | K22F | Protothreads |
 | [k64fawait1](../master/k64fawait1/readme.md) | A variant of k22fawait1 for the K64F development board. | K64F | Coroutines |
 
 The repo also contains other resources as follows;
