@@ -9,6 +9,8 @@
  *
  */
 
+#include "cobuild.h" // macros based on build flags
+
 #include "core_resumable.h"
 #include "Bit1.h"
 
@@ -22,8 +24,9 @@
 
 using namespace scp::core;
 
-extern unsigned long g_cycles;
+extern unsigned long __co_g_cycles;
 
+#ifdef INCLUDE_TEST_TASK
 resumable testTaskFn(uint8_t value) {
 	bool bitValue = !!value;
 	co_await suspend_always{};
@@ -31,11 +34,13 @@ resumable testTaskFn(uint8_t value) {
 	for (;;) {
 
 		Bit1_PutVal(bitValue);
-		g_cycles++;
+		__co_g_cycles++;
 		co_await suspend_always{};
 	}
 }
+#endif // INCLUDE_TEST_TASK
 
+#ifdef INCLUDE_TEST_ALT_TASK
 resumable testTaskAltFn(uint8_t value) {
 	bool bitValue = !!value;
 	co_await suspend_always{};
@@ -44,13 +49,10 @@ resumable testTaskAltFn(uint8_t value) {
 
 		Bit1_PutVal(bitValue);
 		bitValue = !bitValue;
-		g_cycles++;
+		__co_g_cycles++;
 		co_await suspend_always{};
 	}
 }
+#endif // INCLUDE_TEST_ALT_TASK
 
 #endif // TEST_VERSION == 0
-
-
-
-

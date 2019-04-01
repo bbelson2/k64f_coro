@@ -9,20 +9,20 @@
  *
  */
 
-#ifdef INCLUDE_TERM
+#ifndef COBUILD_EXTERNAL_TIMER
 
 #include "Term1.h"
 
-unsigned long g_cycles = 0;
-extern volatile unsigned long __idle_count;
+unsigned long __co_g_cycles = 0;
+volatile unsigned long __co_idle_count = 0;
 
 void report_cycles() {
 	Term1_SendStr((void*)"Cycles in timer period: ");
-	Term1_SendNum(g_cycles);
+	Term1_SendNum(__co_g_cycles);
 	Term1_SendStr((void*)". Idle cycles: ");
-	Term1_SendNum(__idle_count);
+	Term1_SendNum(__co_idle_count);
 	Term1_SendStr((void*)"\r\n");
-	g_cycles = 0;
+	__co_g_cycles = 0;
 }
 
 #else

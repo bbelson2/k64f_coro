@@ -30,7 +30,7 @@
 /* Task and scheduler                                                      */
 /***************************************************************************/
 
-#ifdef SCHEDULER_MODEL_1
+#ifdef SCHEDULER_VERSION_1
 
 #define TASK_ID_IDLE	0x00
 
@@ -260,9 +260,9 @@ namespace scp { namespace core {
 
 } }
 
-#endif //SCHEDULER_MODEL_1
+#endif //SCHEDULER_VERSION_1
 
-#ifdef SCHEDULER_MODEL_2
+#ifdef SCHEDULER_VERSION_2
 
 #define TASK_ID_IDLE	0x00
 
@@ -514,7 +514,7 @@ namespace scp { namespace core {
 
 } }
 
-#endif //SCHEDULER_MODEL_2
+#endif //SCHEDULER_VERSION_2
 
 #endif /* SOURCES_SCHEDULING_SCHEDULER_H_ */
 

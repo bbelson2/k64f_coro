@@ -5,6 +5,8 @@
  *      Author: Bruce Belson
  */
 
+#include "cobuild.h" // macros based on build flags
+
 #include "services.h"
 #include "core_resumable.h"
 #include "app_ids.h"
@@ -65,6 +67,8 @@ extern resumable testTaskAltFn(uint8_t value);
 extern "C"
 void main_cpp()
 {
+	PRINT_STRING("co_main_cpp (" COBUILD_DESCRIPTION ")\r\n");
+
 #ifdef INCLUDE_ADC_TASK
 	// Instantiate and initialise the application-specific tasks
 	resumable adcTaskFn_ = adcTaskFn(12);
@@ -88,12 +92,17 @@ void main_cpp()
 	task_t testTaskOn(2, task_t::task_state_t::Ready, testTaskFnOn_._coroutine);
 #endif
 
-#ifdef INCLUDE_UNUSED_TASK
+#if (UNUSED_TASK_COUNT > 0)
+	PRINT_STRING("UNUSED_TASK_COUNT > 0\r\n");
 	resumable testTaskFnUnused_ = testTaskFn(0);
-	task_t testTaskUnused(3, task_t::task_state_t::Ready, testTaskFnUnused_._coroutine);
-	testTaskUnused.setPriority(0);
-	testTaskOff.setPriority(20);
-	testTaskOn.setPriority(20);
+	task_t testTaskUnused0(3, task_t::task_state_t::Ready, testTaskFnUnused_._coroutine);
+	testTaskUnused0.setPriority(0);
+#if (UNUSED_TASK_COUNT > 1)
+	task_t testTaskUnused1(4, task_t::task_state_t::Ready, testTaskFnUnused_._coroutine);
+	testTaskUnused0.setPriority(0);
+#endif
+	testTaskOff.setPriority(10);
+	testTaskOn.setPriority(10);
 #endif
 
 #ifdef INCLUDE_TEST_ALT_TASK
@@ -102,8 +111,10 @@ void main_cpp()
 #endif
 
 	// Register tasks
-#ifdef INCLUDE_ADC_TASK
+#ifdef INCLUDE_IDLE_TASK
 	scheduler_t::getInstance().registerIdleTask();
+#endif
+#ifdef INCLUDE_ADC_TASK
 	scheduler_t::getInstance().registerTask(&adcTask);
 #endif
 #ifdef INCLUDE_TIMER_TASK
@@ -119,7 +130,7 @@ void main_cpp()
 #ifdef INCLUDE_TEST_ALT_TASK
 	scheduler_t::getInstance().registerTask(&testTaskAlt);
 #endif
-#ifdef INCLUDE_UNUSED_TASK
+#if (UNUSED_TASK_COUNT > 0)
 	scheduler_t::getInstance().registerTask(&testTaskUnused);
 #endif
 

@@ -32,6 +32,16 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>Sources/Include</name>
+			<type>2</type>
+			<locationURI>SHARED_LOC/Include</locationURI>
+		</link>
+		<link>
+			<name>Sources/IncludeARM</name>
+			<type>2</type>
+			<locationURI>SHARED_LOC/IncludeARM</locationURI>
+		</link>
+		<link>
 			<name>Sources/core_crit_sec.h</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/Shared/Include/core_crit_sec.h</locationURI>
@@ -60,6 +70,11 @@
 			<name>Sources/main_cpp.cpp</name>
 			<type>1</type>
 			<locationURI>SHARED_LOC/Sources/main_cpp.cpp</locationURI>
+		</link>
+		<link>
+			<name>Sources/min_services.cpp</name>
+			<type>1</type>
+			<locationURI>SHARED_LOC/Sources/min_services.cpp</locationURI>
 		</link>
 		<link>
 			<name>Sources/services.h</name>
