@@ -376,10 +376,10 @@
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
 	<storageModule moduleId="refreshScope" versionNumber="2">
 		<configuration configurationName="DebugLLVM_NS">
-			<resource resourceType="PROJECT" workspacePath="/k22awaitmin"/>
+			<resource resourceType="PROJECT" workspacePath="/k22awaitmin_xt"/>
 		</configuration>
 		<configuration configurationName="DebugLLVM">
-			<resource resourceType="PROJECT" workspacePath="/k22awaitmin"/>
+			<resource resourceType="PROJECT" workspacePath="/k22awaitmin_xt"/>
 		</configuration>
 		<configuration configurationName="Configuration">
 			<resource resourceType="PROJECT" workspacePath="/k22awaitmin"/>
