@@ -9,7 +9,12 @@
  *
  */
 
-#ifndef CONFIG_LLVM_NS
+#include "ptbuild.h" // macros based on build flags
+
+#ifndef PTBUILD_NO_SCHEDULER
+
+//#undef UNUSED_TASK_COUNT
+//#define UNUSED_TASK_COUNT 1
 
 #include "ptcore_scheduler.h"
 
@@ -18,6 +23,7 @@
 //#include "ptcore_future.h"
 #include "app_ids.h"
 #include "pttask_test.h"
+#include "services.h"
 
 using namespace ptp::core;
 using namespace ptp::task;
@@ -35,23 +41,19 @@ using namespace ptp::task;
 //#include "pt_task_i2c.h"
 //extern resumable i2cTaskFn(uint8_t channel);
 
-extern "C" {
-#include "Term1.h"
-}
-
 extern "C"
 void pt_main_cpp()
 {
-
+	PRINT_STRING("pt_main_cpp (" PTBUILD_DESCRIPTION ")\r\n");
 	// Instantiate and initialise the application-specific tasks
 	TestTask testTaskOn(1, 1);
 	TestTask testTaskOff(2, 0);
 
 #if (UNUSED_TASK_COUNT > 0)
-	Term1_SendStr((void*)"UNUSED_TASK_COUNT > 0\r\n");
+	PRINT_STRING("UNUSED_TASK_COUNT > 0\r\n");
 	TestTask testTaskUnused0(3, 0);
 #if (UNUSED_TASK_COUNT > 1)
-	Term1_SendStr((void*)"UNUSED_TASK_COUNT > 1\r\n");
+	PRINT_STRING("UNUSED_TASK_COUNT > 1\r\n");
 	TestTask testTaskUnused1(4, 1);
 #endif
 #endif
@@ -60,16 +62,18 @@ void pt_main_cpp()
 	testTaskOn.setPriority(10);
 	testTaskOff.setPriority(10);
 	#endif
-	testTaskOn.setPriority(10);
-	testTaskOff.setPriority(10);
 
-	//scheduler_t::getInstance().registerIdleTask();
+#ifdef INCLUDE_IDLE_TASK
+	scheduler_t::getInstance().registerIdleTask();
+#endif
+#ifdef INCLUDE_TEST_TASK
 	scheduler_t::getInstance().registerTask(&testTaskOn);
 	scheduler_t::getInstance().registerTask(&testTaskOff);
 #if (UNUSED_TASK_COUNT > 0)
 	scheduler_t::getInstance().registerTask(&testTaskUnused0);
 #if (UNUSED_TASK_COUNT > 1)
 	scheduler_t::getInstance().registerTask(&testTaskUnused1);
+#endif
 #endif
 #endif
 
@@ -80,15 +84,14 @@ void pt_main_cpp()
 	scheduler_t::getInstance().run();
 }
 
+#endif
 
-
-
-#else
+#ifdef PTBUILD_NO_SCHEDULER
 
 #include "Protothread.h"
 #include "Bit1.h"
 
-extern unsigned long g_cycles;
+extern unsigned long __pt_g_cycles;
 
 class TestTask : public Protothread
 {
@@ -104,7 +107,9 @@ bool TestTask::Run() {
 
 	for (;;) {
 		Bit1_PutVal(!!arg_);
-		g_cycles++;
+#ifndef PTBUILD_EXTERNAL_TIMER
+		__pt_g_cycles++;
+#endif
 		PT_YIELD();
 	}
 	PT_END();

@@ -13,11 +13,18 @@
 
 #pragma once
 
+#include <stdint.h>
+
 #ifdef __cplusplus
 extern "C" {
 #endif
 
+// Full service, using <stdio.h>
 void trace(const char* tpl, ...);
+
+// Minimal service, using "Term1.h" or simulated equivalent
+void print_number(int32_t);
+void print_string(const char*);
 
 #ifdef __cplusplus
 } // extern "C"

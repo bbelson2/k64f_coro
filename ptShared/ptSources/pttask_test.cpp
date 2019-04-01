@@ -17,7 +17,7 @@
 
 
 /***************************************************************************/
-/* Timer task                                                                */
+/* Test task                                                                */
 /***************************************************************************/
 
 #define TEST_VERSION 0
@@ -26,7 +26,9 @@
 
 using namespace ptp::core;
 
-extern unsigned long g_cycles;
+#ifndef PTBUILD_EXTERNAL_TIMER
+extern unsigned long __pt_g_cycles;
+#endif
 
 namespace ptp { namespace task {
 	bool TestTask::Run() {
@@ -34,7 +36,9 @@ namespace ptp { namespace task {
 
 		for (;;) {
 			Bit1_PutVal(!!arg_);
-			g_cycles++;
+#ifndef PTBUILD_EXTERNAL_TIMER
+			__pt_g_cycles++;
+#endif
 			PT_YIELD();
 		}
 		PT_END();

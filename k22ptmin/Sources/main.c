@@ -51,8 +51,10 @@ void trace(const char* tpl, ...) {}
 
 void pt_main_cpp();
 
-#if (0 && defined(CONFIG_LLVM_NS))
-extern unsigned long g_cycles;
+#define LOOP_ONLY
+
+#if defined(LOOP_ONLY)
+extern unsigned long __pt_g_cycles;
 extern void report_cycles();
 #endif
 
@@ -70,10 +72,12 @@ int main(void)
 
   /* Write your code here */
   /* For example: for(;;) { } */
-#if 0
+#if defined(LOOP_ONLY)
   // This bare-bones version is for measuring the basc H/W cost of switching the port
   for (;;) {
-  	g_cycles++;
+#ifndef PTBUILD_EXTERNAL_TIMER
+		__pt_g_cycles++;
+#endif
   	bit1Value = !bit1Value;
   	Bit1_PutVal(bit1Value);
 

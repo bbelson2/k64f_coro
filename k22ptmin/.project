@@ -32,6 +32,16 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>Sources/Include</name>
+			<type>2</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Shared/Include</locationURI>
+		</link>
+		<link>
+			<name>Sources/min_services.cpp</name>
+			<type>1</type>
+			<locationURI>SHARED_LOC/Sources/min_services.cpp</locationURI>
+		</link>
+		<link>
 			<name>Sources/ptInclude</name>
 			<type>2</type>
 			<locationURI>PARENT-1-PROJECT_LOC/ptShared/ptInclude</locationURI>
@@ -50,6 +60,11 @@
 			<name>Sources/pttask_test.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/ptShared/ptSources/pttask_test.cpp</locationURI>
+		</link>
+		<link>
+			<name>Sources/report_cycles.c</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/ptShared/ptSources/report_cycles.c</locationURI>
 		</link>
 	</linkedResources>
 	<variableList>

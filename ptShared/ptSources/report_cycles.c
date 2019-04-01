@@ -9,20 +9,20 @@
  *
  */
 
-#ifdef INCLUDE_TERM
+#ifndef PTBUILD_EXTERNAL_TIMER
 
 #include "Term1.h"
 
-unsigned long g_cycles = 0;
+unsigned long __pt_g_cycles = 0;
 volatile unsigned long __pt_idle_count = 0;
 
 void report_cycles() {
 	Term1_SendStr((void*)"Cycles in timer period: ");
-	Term1_SendNum(g_cycles);
+	Term1_SendNum(__pt_g_cycles);
 	Term1_SendStr((void*)". Idle cycles: ");
 	Term1_SendNum(__pt_idle_count);
 	Term1_SendStr((void*)"\r\n");
-	g_cycles = 0;
+	__pt_g_cycles = 0;
 }
 
 #else
