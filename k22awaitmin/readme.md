@@ -71,6 +71,8 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 	__attribute__((naked)) void __thumb_startup(void)
 	#endif
 	```
+1. Properties > Settings > C/C++ Build > Behavior 
+1. Enable Parallel Build => true
 
 ## Components
 
