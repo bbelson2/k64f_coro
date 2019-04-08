@@ -14,23 +14,23 @@
 
 #if defined(COBUILD_EXTERNAL_TIMER)
 
-#define PRINT_NUMBER
-#define PRINT_STRING
+#define PRINT_NUMBER(x)
+#define PRINT_STRING(x)
 
 #define COBUILD_EXTERNAL_TIMER_DESCRIPTION "ExtTimer=true"
 
 #else
 
 #define INCLUDE_TERM
-#define PRINT_NUMBER print_number
-#define PRINT_STRING print_string
+#define PRINT_NUMBER(x) print_number(x)
+#define PRINT_STRING(x) print_string(x)
 
 #define COBUILD_EXTERNAL_TIMER_DESCRIPTION "ExtTimer=false"
 
 #endif
 
 #if defined(COBUILD_NO_SCHEDULER)
-#define COUILD_NO_SCHEDULER_DESCRIPTION "NoScheduler=true"
+#define COBUILD_NO_SCHEDULER_DESCRIPTION "NoScheduler=true"
 #else
 #define COBUILD_NO_SCHEDULER_DESCRIPTION "NoScheduler=false"
 #endif

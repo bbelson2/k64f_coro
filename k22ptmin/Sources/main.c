@@ -51,7 +51,7 @@ void trace(const char* tpl, ...) {}
 
 void pt_main_cpp();
 
-#define LOOP_ONLY
+//#define LOOP_ONLY
 
 #if defined(LOOP_ONLY)
 extern unsigned long __pt_g_cycles;

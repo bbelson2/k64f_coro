@@ -27,7 +27,7 @@ void print_string(const char* val) {
 #if __has_include("Term1.h")
 
 extern "C" {
-// Term1.h is a Processor Expert file created by a CriticalTerm component, named Term1
+// Term1.h is a Processor Expert file created by a Term component, named Term1
 #include "Term1.h"
 }
 
@@ -39,6 +39,15 @@ void print_number(int32_t val) {
 extern "C"
 void print_string(const char* val) {
 	Term1_SendStr((void*)val);
+}
+#else
+
+extern "C"
+void print_number(int32_t val) {
+}
+
+extern "C"
+void print_string(const char* val) {
 }
 
 #endif // __has_include("Term1.h")

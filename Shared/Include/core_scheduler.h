@@ -331,6 +331,9 @@ namespace scp { namespace core {
 			coro_call_stack_.push(coro);
 		}
 		void resume() {
+#if defined(COBUILD_NO_SCHEDULER)
+			coro_task_.resume();
+#else
 			coroutine_handle<> coro = coro_task_;
 			if (!coro_call_stack_.empty()) {
 				coro = coro_call_stack_.top();
@@ -339,6 +342,7 @@ namespace scp { namespace core {
 			if (coro) {
 				coro.resume();
 			}
+#endif
 		}
 
 	private:

@@ -7,6 +7,8 @@
 
 #include "cobuild.h" // macros based on build flags
 
+#ifndef COBUILD_NO_SCHEDULER
+
 //#undef UNUSED_TASK_COUNT
 //#define UNUSED_TASK_COUNT 2
 
@@ -149,3 +151,30 @@ void main_cpp()
 	scheduler_t::getInstance().run();
 }
 
+#endif // COBUILD_NO_SCHEDULER
+
+#ifdef COBUILD_NO_SCHEDULER
+
+#include "services.h"
+#include "core_resumable.h"
+#include "core_types.h"
+#include "core_scheduler.h"
+using namespace scp::core;
+
+// Test task, defined elsewhere
+extern resumable testTaskFn(uint8_t value);
+
+extern "C"
+void main_cpp()
+{
+	PRINT_STRING("co_main_cpp (" COBUILD_DESCRIPTION ")\r\n");
+	resumable testTaskFnOff_ = testTaskFn(0);
+	resumable testTaskFnOn_ = testTaskFn(1);
+	task_t testTaskOff(1, task_t::task_state_t::Ready, testTaskFnOff_._coroutine);
+	task_t testTaskOn(2, task_t::task_state_t::Ready, testTaskFnOn_._coroutine);
+	for (;;) {
+		testTaskOn.resume();
+		testTaskOff.resume();
+	}
+}
+#endif // COBUILD_NO_SCHEDULER

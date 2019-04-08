@@ -14,16 +14,16 @@
 
 #if defined(PTBUILD_EXTERNAL_TIMER)
 
-#define PRINT_NUMBER
-#define PRINT_STRING
+#define PRINT_NUMBER(x)
+#define PRINT_STRING(x)
 
 #define PTBUILD_EXTERNAL_TIMER_DESCRIPTION "ExtTimer=true"
 
 #else
 
 #define INCLUDE_TERM
-#define PRINT_NUMBER print_number
-#define PRINT_STRING print_string
+#define PRINT_NUMBER(x) print_number(x)
+#define PRINT_STRING(x) print_string(x)
 
 #define PTBUILD_EXTERNAL_TIMER_DESCRIPTION "ExtTimer=false"
 

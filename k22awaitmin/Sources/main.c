@@ -47,6 +47,8 @@
 /* User includes (#include below this line is not maintained by Processor Expert) */
 #include "Bit1.h"
 
+//#define LOOP_ONLY
+
 void trace(const char* tpl, ...) {}
 
 void main_cpp();
@@ -65,7 +67,7 @@ int main(void)
 
   /* Write your code here */
   /* For example: for(;;) { } */
-#ifdef CONFIG_LLVM_NS
+#ifdef LOOP_ONLY
   for (;;) {
   	bit1Value = !bit1Value;
   	Bit1_PutVal(bit1Value);

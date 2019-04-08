@@ -118,6 +118,7 @@ bool TestTask::Run() {
 extern "C"
 void pt_main_cpp()
 {
+	//PRINT_STRING("pt_main_cpp (" PTBUILD_DESCRIPTION ")\r\n");
 	TestTask testTaskOn(true);
 	TestTask testTaskOff(false);
 	for (;;) {
