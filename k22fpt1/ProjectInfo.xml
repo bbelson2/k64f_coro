@@ -49,6 +49,7 @@
       <Path>E:\Source\repos\k64f_coro\k22fpt1\Project_Settings\Startup_Code\</Path>
       <Path>E:\Source\repos\k64f_coro\k22fpt1\Sources\</Path>
       <Path>E:\Source\repos\k64f_coro\k22fpt1\Static_Code\System\</Path>
+      <Path>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptSources\</Path>
     </SourceCodePaths>
   </PATHS>
   <FILES>
@@ -58,6 +59,8 @@
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\ASerialLdd1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\AdcLdd1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\AdcLdd2.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\Bit1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\BitIoLdd1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\CS1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\Cpu.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\FC1.c</PathName>
@@ -77,6 +80,7 @@
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Static_Code\System\CPU_Init.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Static_Code\System\Peripherals_Init.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Static_Code\System\Vectors.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptSources\report_cycles.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\AD1.h</PathName>
@@ -84,6 +88,8 @@
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\ASerialLdd1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\AdcLdd1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\AdcLdd2.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\Bit1.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\BitIoLdd1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\CPU_Config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\CS1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Generated_Code\CS1config.h</PathName>
@@ -110,6 +116,7 @@
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Shared\Include\api_i2c.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Shared\Include\api_timer.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Shared\Include\app_ids.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\Shared\Include\cobuild.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Shared\Include\core_crit_sec.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Shared\Include\core_events.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Shared\Include\core_future.h</PathName>
@@ -168,6 +175,7 @@
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\Static_Code\System\Peripherals_Init.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\Protothread.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\ptapp_ids.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\ptbuild.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\ptcore_crit_sec.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\ptcore_events.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22fpt1\ptShared\ptInclude\ptcore_future.h</PathName>

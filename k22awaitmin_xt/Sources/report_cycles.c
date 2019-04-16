@@ -9,8 +9,11 @@
  *
  */
 
-#ifndef COBUILD_EXTERNAL_TIMER
+#if !defined(COBUILD_EXTERNAL_TIMER) || defined(SET_GLOBAL_COUNTER)
+unsigned long __co_g_cycles = 0;
+#endif
 
+#ifndef COBUILD_EXTERNAL_TIMER
 #include "Term1.h"
 
 unsigned long __co_g_cycles = 0;

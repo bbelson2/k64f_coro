@@ -73,6 +73,8 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 	```
 1. Properties > Settings > C/C++ Build > Behavior 
 1. Enable Parallel Build => true
+1. Project > Properties > C/C++ Build > Settings
+1. Toolchains > Print size => `true`
 
 ## Components
 

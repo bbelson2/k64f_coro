@@ -7,7 +7,7 @@
 **     Version     : Component 01.100, Driver 1.1, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-03-13, 11:31, # CodeGen: 26
+**     Date/Time   : 2019-04-15, 12:13, # CodeGen: 27
 **     Abstract    :
 **
 **     Settings    :
@@ -1212,6 +1212,19 @@ void pin_mux_hardware_init(void)
                 SIM_SOPT4_FTM0TRG1SRC_MASK |
                 SIM_SOPT4_FTM0TRG0SRC_MASK
                );
+  /* PORTB_PCR16: ISF=0,MUX=1,DSE=0,ODE=0,PFE=0,SRE=0,PE=0,PS=0 */
+  PORTB_PCR16 = (uint32_t)((PORTB_PCR16 & (uint32_t)~(uint32_t)(
+                 PORT_PCR_ISF_MASK |
+                 PORT_PCR_MUX(0x06) |
+                 PORT_PCR_DSE_MASK |
+                 PORT_PCR_ODE_MASK |
+                 PORT_PCR_PFE_MASK |
+                 PORT_PCR_SRE_MASK |
+                 PORT_PCR_PE_MASK |
+                 PORT_PCR_PS_MASK
+                )) | (uint32_t)(
+                 PORT_PCR_MUX(0x01)
+                ));
   /* PORTB_PCR2: ISF=0,MUX=2,DSE=0,ODE=1,PFE=0,SRE=0,PE=0,PS=0 */
   PORTB_PCR2 = (uint32_t)((PORTB_PCR2 & (uint32_t)~(uint32_t)(
                 PORT_PCR_ISF_MASK |
@@ -1373,16 +1386,6 @@ void pin_mux_hardware_init(void)
                  );
   /* PORTA_PCR13: ISF=0,DSE=0,ODE=0,PFE=0,SRE=0,PE=0,PS=0 */
   PORTA_PCR13 &= (uint32_t)~(uint32_t)(
-                  PORT_PCR_ISF_MASK |
-                  PORT_PCR_DSE_MASK |
-                  PORT_PCR_ODE_MASK |
-                  PORT_PCR_PFE_MASK |
-                  PORT_PCR_SRE_MASK |
-                  PORT_PCR_PE_MASK |
-                  PORT_PCR_PS_MASK
-                 );
-  /* PORTB_PCR16: ISF=0,DSE=0,ODE=0,PFE=0,SRE=0,PE=0,PS=0 */
-  PORTB_PCR16 &= (uint32_t)~(uint32_t)(
                   PORT_PCR_ISF_MASK |
                   PORT_PCR_DSE_MASK |
                   PORT_PCR_ODE_MASK |

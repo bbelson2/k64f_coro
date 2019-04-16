@@ -315,8 +315,8 @@
               <Methods>
                 <Init v="generate code" />
                 <Deinit v="don&amp;apos;t generate code" />
-                <Enable v="generate code" />
-                <Disable v="generate code" />
+                <Enable v="don&amp;apos;t generate code" />
+                <Disable v="don&amp;apos;t generate code" />
                 <SendBlock v="generate code" />
                 <ReceiveBlock v="generate code" />
                 <CancelBlockTransmission v="don&amp;apos;t generate code" />

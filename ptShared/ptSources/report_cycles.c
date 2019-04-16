@@ -9,11 +9,14 @@
  *
  */
 
+#if !defined(PTBUILD_EXTERNAL_TIMER) || defined(SET_GLOBAL_COUNTER)
+unsigned long __pt_g_cycles = 0;
+#endif
+
 #ifndef PTBUILD_EXTERNAL_TIMER
 
 #include "Term1.h"
 
-unsigned long __pt_g_cycles = 0;
 volatile unsigned long __pt_idle_count = 0;
 
 void report_cycles() {

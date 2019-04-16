@@ -60,8 +60,10 @@
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Cpu.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Inhr1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\PE_LDD.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\TI1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\TU1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Term1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\TimerIntLdd1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\pin_mux.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Project_Settings\Startup_Code\startup.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\Events.c</PathName>
@@ -84,8 +86,10 @@
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\PE_Error.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\PE_LDD.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\PE_Types.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\TI1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\TU1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Term1.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\TimerIntLdd1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\Vectors_Config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Generated_Code\pin_mux.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\k22ptmin\Sources\Events.h</PathName>

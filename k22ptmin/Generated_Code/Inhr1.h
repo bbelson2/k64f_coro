@@ -7,7 +7,7 @@
 **     Version     : Component 02.611, Driver 01.01, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-03-26, 14:51, # CodeGen: 7
+**     Date/Time   : 2019-04-16, 19:24, # CodeGen: 29
 **     Abstract    :
 **         This component "AsynchroSerial" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -217,17 +217,6 @@ word Inhr1_GetCharsInRxBuf(void);
 ** ===================================================================
 */
 void Inhr1_Init(void);
-
-/*
-** ===================================================================
-**     Method      :  Inhr1_SetClockConfiguration (component AsynchroSerial)
-**
-**     Description :
-**         This method changes the clock configuration.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void Inhr1_SetClockConfiguration(LDD_TClockConfiguration ClockConfiguration);
 
 /*
 ** ===================================================================

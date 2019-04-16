@@ -52,10 +52,12 @@
 #include "pin_mux.h"
 #include "Bit1.h"
 #include "BitIoLdd1.h"
-#include "TU1.h"
 #include "Term1.h"
 #include "Inhr1.h"
 #include "ASerialLdd1.h"
+#include "TI1.h"
+#include "TimerIntLdd1.h"
+#include "TU1.h"
 #include "Events.h"
 
 #ifdef __cplusplus

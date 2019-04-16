@@ -7,7 +7,7 @@
 **     Version     : Component 01.164, Driver 01.11, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-03-26, 16:59, # CodeGen: 8
+**     Date/Time   : 2019-04-16, 19:20, # CodeGen: 28
 **     Abstract    :
 **          This TimerUnit component provides a low level API for unified hardware access across
 **          various timer devices using the Prescaler-Counter-Compare-Capture timer structure.
@@ -17,19 +17,19 @@
 **          Counter                                        : FTM0_CNT
 **          Counter direction                              : Up
 **          Counter width                                  : 16 bits
-**          Value type                                     : Optimal
+**          Value type                                     : uint16_t
 **          Input clock source                             : Internal
-**            Counter frequency                            : 256 Hz
+**            Counter frequency                            : Auto select
 **          Counter restart                                : On-match
 **            Period device                                : FTM0_MOD
-**            Period                                       : 1 Hz
+**            Period                                       : 1 sec
 **            Interrupt                                    : Enabled
 **              Interrupt                                  : INT_FTM0
 **              Interrupt priority                         : medium priority
 **          Channel list                                   : 0
 **          Initialization                                 : 
 **            Enabled in init. code                        : yes
-**            Auto initialization                          : yes
+**            Auto initialization                          : no
 **            Event mask                                   : 
 **              OnCounterRestart                           : Enabled
 **              OnChannel0                                 : Disabled
@@ -117,23 +117,18 @@ extern "C" {
 
 #ifndef __BWUserType_TU1_TValueType
 #define __BWUserType_TU1_TValueType
-  typedef uint32_t TU1_TValueType ;    /* Type for data parameters of methods */
+  typedef uint16_t TU1_TValueType ;    /* Type for data parameters of methods */
 #endif
-#define TU1_CNT_INP_FREQ_U_0 0x0100UL  /* Counter input frequency in Hz */
-#define TU1_CNT_INP_FREQ_U_0_CFG_0 0x0100UL /* Counter input frequency in Hz for Clock configuration 0 */
-#define TU1_CNT_INP_FREQ_R_0 256.0F    /* Counter input frequency in Hz */
-#define TU1_CNT_INP_FREQ_R_0_CFG_0 256.0F /* Counter input frequency in Hz for Clock configuration 0 */
+#define TU1_CNT_INP_FREQ_U_0 0x7A12UL  /* Counter input frequency in Hz */
+#define TU1_CNT_INP_FREQ_R_0 31250.0F  /* Counter input frequency in Hz */
 #define TU1_CNT_INP_FREQ_COUNT 0U      /* Count of predefined counter input frequencies */
-#define TU1_PERIOD_TICKS   0x0100UL    /* Initialization value of period in 'counter ticks' */
+#define TU1_PERIOD_TICKS   0x7A12UL    /* Initialization value of period in 'counter ticks' */
 #define TU1_NUMBER_OF_CHANNELS 0x00U   /* Count of predefined channels */
 #define TU1_COUNTER_WIDTH  0x10U       /* Counter width in bits  */
 #define TU1_COUNTER_DIR    DIR_UP      /* Direction of counting */
 /*! Peripheral base address of a device allocated by the component. This constant can be used directly in PDD macros. */
 #define TU1_PRPH_BASE_ADDRESS  0x40038000U
   
-/*! Device data structure pointer used when auto initialization property is enabled. This constant can be passed as a first parameter to all component's methods. */
-#define TU1_DeviceData  ((LDD_TDeviceData *)PE_LDD_GetDeviceStructure(PE_LDD_COMPONENT_TU1_ID))
-
 /* Methods configuration constants - generated for all enabled component's methods */
 #define TU1_Init_METHOD_ENABLED        /*!< Init method of the component TU1 is enabled (generated) */
 
@@ -167,19 +162,6 @@ extern "C" {
 */
 /* ===================================================================*/
 LDD_TDeviceData* TU1_Init(LDD_TUserData *UserDataPtr);
-
-/*
-** ===================================================================
-**     Method      :  TU1_SetClockConfiguration (component TimerUnit_LDD)
-**
-**     Description :
-**         This method changes the clock configuration. During a clock 
-**         configuration change the component changes it's setting 
-**         immediately upon a request.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void TU1_SetClockConfiguration(LDD_TDeviceData *DeviceDataPtr, LDD_TClockConfiguration ClockConfiguration);
 
 /*
 ** ===================================================================

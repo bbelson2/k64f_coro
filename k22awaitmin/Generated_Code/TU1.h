@@ -7,7 +7,7 @@
 **     Version     : Component 01.164, Driver 01.11, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-03-26, 22:59, # CodeGen: 9
+**     Date/Time   : 2019-04-16, 19:46, # CodeGen: 12
 **     Abstract    :
 **          This TimerUnit component provides a low level API for unified hardware access across
 **          various timer devices using the Prescaler-Counter-Compare-Capture timer structure.
@@ -119,12 +119,10 @@ extern "C" {
 #define __BWUserType_TU1_TValueType
   typedef uint32_t TU1_TValueType ;    /* Type for data parameters of methods */
 #endif
-#define TU1_CNT_INP_FREQ_U_0 0x0100UL  /* Counter input frequency in Hz */
-#define TU1_CNT_INP_FREQ_U_0_CFG_0 0x0100UL /* Counter input frequency in Hz for Clock configuration 0 */
-#define TU1_CNT_INP_FREQ_R_0 256.0F    /* Counter input frequency in Hz */
-#define TU1_CNT_INP_FREQ_R_0_CFG_0 256.0F /* Counter input frequency in Hz for Clock configuration 0 */
+#define TU1_CNT_INP_FREQ_U_0 0xF4UL    /* Counter input frequency in Hz */
+#define TU1_CNT_INP_FREQ_R_0 244.140625F /* Counter input frequency in Hz */
 #define TU1_CNT_INP_FREQ_COUNT 0U      /* Count of predefined counter input frequencies */
-#define TU1_PERIOD_TICKS   0x0100UL    /* Initialization value of period in 'counter ticks' */
+#define TU1_PERIOD_TICKS   0xF4UL      /* Initialization value of period in 'counter ticks' */
 #define TU1_NUMBER_OF_CHANNELS 0x00U   /* Count of predefined channels */
 #define TU1_COUNTER_WIDTH  0x10U       /* Counter width in bits  */
 #define TU1_COUNTER_DIR    DIR_UP      /* Direction of counting */
@@ -167,19 +165,6 @@ extern "C" {
 */
 /* ===================================================================*/
 LDD_TDeviceData* TU1_Init(LDD_TUserData *UserDataPtr);
-
-/*
-** ===================================================================
-**     Method      :  TU1_SetClockConfiguration (component TimerUnit_LDD)
-**
-**     Description :
-**         This method changes the clock configuration. During a clock 
-**         configuration change the component changes it's setting 
-**         immediately upon a request.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void TU1_SetClockConfiguration(LDD_TDeviceData *DeviceDataPtr, LDD_TClockConfiguration ClockConfiguration);
 
 /*
 ** ===================================================================

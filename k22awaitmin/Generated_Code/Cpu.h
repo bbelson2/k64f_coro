@@ -8,14 +8,13 @@
 **     Repository  : Kinetis
 **     Datasheet   : K22P121M120SF7RM, Rev. 1, March 24, 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-03-11, 08:42, # CodeGen: 0
+**     Date/Time   : 2019-04-16, 19:46, # CodeGen: 12
 **     Abstract    :
 **
 **     Settings    :
 **
 **     Contents    :
-**         SetClockConfiguration - LDD_TError Cpu_SetClockConfiguration(LDD_TClockConfiguration ModeID);
-**         GetClockConfiguration - LDD_TClockConfiguration Cpu_GetClockConfiguration(void);
+**         No public methods
 **
 **     (c) Freescale Semiconductor, Inc.
 **     2004 All Rights Reserved
@@ -112,10 +111,6 @@ void Components_Init(void);
 #endif /* CPU_COMPONENTS_INIT */
 
 /* Method synonyms. Following constants maps static CPU methods with enabled user methods of which names are derived from the CPU component name */
-
-#define Cpu_SetClockConfiguration(ModeID) CPU_SetClockConfiguration(ModeID)
-
-#define Cpu_GetClockConfiguration() CPU_GetClockConfiguration()
 
 
 /*

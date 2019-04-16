@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K22P121M120SF7RM, Rev. 1, March 24, 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-03-13, 10:17, # CodeGen: 6
+**     Date/Time   : 2019-04-16, 19:20, # CodeGen: 28
 **     Abstract    :
 **         This file collects Processor Expert components configuration 
 **         and interface files.
@@ -36,7 +36,7 @@
 **                  Clock frequency [MHz]                  : 8
 **                  Capacitor load                         : 0pF
 **                  Oscillator operating mode              : Low power
-**            Clock source settings                        : 5
+**            Clock source settings                        : 1
 **              Clock source setting 0                     : 
 **                Internal reference clock                 : 
 **                  MCGIRCLK clock                         : Enabled
@@ -44,40 +44,6 @@
 **                  MCGIRCLK source                        : Slow
 **                  MCGIRCLK clock [MHz]                   : 0.032768
 **                External reference clock                 : 
-**                  OSC0ERCLK clock                        : Disabled
-**                  OSC0ERCLK in stop                      : Disabled
-**                  OSC0ERCLK clock [MHz]                  : 0
-**                  ERCLK32K clock source                  : Auto select
-**                  ERCLK32K. clock [kHz]                  : 0.032768
-**                MCG settings                             : 
-**                  MCG mode                               : FEI
-**                  MCG output clock                       : FLL clock
-**                  MCG output [MHz]                       : 20.97152
-**                  MCG external ref. clock source         : System oscillator 0
-**                  MCG external ref. clock [MHz]          : 8
-**                  Clock monitor                          : Disabled
-**                  FLL settings                           : 
-**                    FLL module                           : Enabled
-**                    FLL output [MHz]                     : 20.97152
-**                    MCGFFCLK clock [kHz]                 : 32.768
-**                    Reference clock source               : Slow internal clock
-**                    FLL reference clock [kHz]            : 32.768
-**                    Multiplication factor                : Auto select
-**                  PLL 0 settings                         : 
-**                    PLL module                           : Disabled
-**                    PLL module in Stop                   : Disabled
-**                    PLL output [MHz]                     : 0
-**                    Reference clock divider              : Auto select
-**                    PLL reference clock [MHz]            : 1
-**                    Multiplication factor                : Auto select
-**                    Loss of lock interrupt               : Disabled
-**              Clock source setting 1                     : 
-**                Internal reference clock                 : 
-**                  MCGIRCLK clock                         : Enabled
-**                  MCGIRCLK in stop                       : Disabled
-**                  MCGIRCLK source                        : Slow
-**                  MCGIRCLK clock [MHz]                   : 0.032768
-**                External reference clock                 : 
 **                  OSC0ERCLK clock                        : Enabled
 **                  OSC0ERCLK in stop                      : Disabled
 **                  OSC0ERCLK clock [MHz]                  : 8
@@ -106,113 +72,7 @@
 **                    PLL reference clock [MHz]            : 4
 **                    Multiplication factor                : Auto select
 **                    Loss of lock interrupt               : Disabled
-**              Clock source setting 2                     : 
-**                Internal reference clock                 : 
-**                  MCGIRCLK clock                         : Enabled
-**                  MCGIRCLK in stop                       : Disabled
-**                  MCGIRCLK source                        : Fast
-**                    Reference divider                    : 1
-**                  MCGIRCLK clock [MHz]                   : 4
-**                External reference clock                 : 
-**                  OSC0ERCLK clock                        : Enabled
-**                  OSC0ERCLK in stop                      : Disabled
-**                  OSC0ERCLK clock [MHz]                  : 8
-**                  ERCLK32K clock source                  : Auto select
-**                  ERCLK32K. clock [kHz]                  : 0.032768
-**                MCG settings                             : 
-**                  MCG mode                               : BLPI
-**                  MCG output clock                       : Internal clock
-**                  MCG output [MHz]                       : 4
-**                  MCG external ref. clock source         : System oscillator 0
-**                  MCG external ref. clock [MHz]          : 8
-**                  Clock monitor                          : Disabled
-**                  FLL settings                           : 
-**                    FLL module                           : Disabled
-**                    FLL output [MHz]                     : 0
-**                    MCGFFCLK clock [kHz]                 : 32.768
-**                    Reference clock source               : Slow internal clock
-**                    FLL reference clock [kHz]            : 32.768
-**                    Multiplication factor                : Auto select
-**                  PLL 0 settings                         : 
-**                    PLL module                           : Disabled
-**                    PLL module in Stop                   : Disabled
-**                    PLL output [MHz]                     : 0
-**                    Reference clock divider              : Auto select
-**                    PLL reference clock [MHz]            : 1
-**                    Multiplication factor                : Auto select
-**                    Loss of lock interrupt               : Disabled
-**              Clock source setting 3                     : 
-**                Internal reference clock                 : 
-**                  MCGIRCLK clock                         : Enabled
-**                  MCGIRCLK in stop                       : Disabled
-**                  MCGIRCLK source                        : Fast
-**                    Reference divider                    : 2
-**                  MCGIRCLK clock [MHz]                   : 2
-**                External reference clock                 : 
-**                  OSC0ERCLK clock                        : Disabled
-**                  OSC0ERCLK in stop                      : Disabled
-**                  OSC0ERCLK clock [MHz]                  : 0
-**                  ERCLK32K clock source                  : Auto select
-**                  ERCLK32K. clock [kHz]                  : 0.032768
-**                MCG settings                             : 
-**                  MCG mode                               : BLPE
-**                  MCG output clock                       : External clock
-**                  MCG output [MHz]                       : 8
-**                  MCG external ref. clock source         : System oscillator 0
-**                  MCG external ref. clock [MHz]          : 8
-**                  Clock monitor                          : Disabled
-**                  FLL settings                           : 
-**                    FLL module                           : Disabled
-**                    FLL output [MHz]                     : 0
-**                    MCGFFCLK clock [kHz]                 : 31.25
-**                    Reference clock source               : External clock
-**                      Reference clock divider            : Auto select
-**                    FLL reference clock [kHz]            : 31.25
-**                    Multiplication factor                : Auto select
-**                  PLL 0 settings                         : 
-**                    PLL module                           : Disabled
-**                    PLL module in Stop                   : Disabled
-**                    PLL output [MHz]                     : 0
-**                    Reference clock divider              : Auto select
-**                    PLL reference clock [MHz]            : 1
-**                    Multiplication factor                : Auto select
-**                    Loss of lock interrupt               : Disabled
-**              Clock source setting 4                     : 
-**                Internal reference clock                 : 
-**                  MCGIRCLK clock                         : Enabled
-**                  MCGIRCLK in stop                       : Disabled
-**                  MCGIRCLK source                        : Slow
-**                  MCGIRCLK clock [MHz]                   : 0.032768
-**                External reference clock                 : 
-**                  OSC0ERCLK clock                        : Enabled
-**                  OSC0ERCLK in stop                      : Disabled
-**                  OSC0ERCLK clock [MHz]                  : 8
-**                  ERCLK32K clock source                  : Auto select
-**                  ERCLK32K. clock [kHz]                  : 0.032768
-**                MCG settings                             : 
-**                  MCG mode                               : PEE
-**                  MCG output clock                       : PLL clock
-**                  MCG output [MHz]                       : 120
-**                  MCG external ref. clock source         : System oscillator 0
-**                  MCG external ref. clock [MHz]          : 8
-**                  Clock monitor                          : Disabled
-**                  FLL settings                           : 
-**                    FLL module                           : Disabled
-**                    FLL output [MHz]                     : 0
-**                    MCGFFCLK clock [kHz]                 : 31.25
-**                    Reference clock source               : External clock
-**                      Reference clock divider            : Auto select
-**                    FLL reference clock [kHz]            : 31.25
-**                    Multiplication factor                : Auto select
-**                  PLL 0 settings                         : 
-**                    PLL module                           : Enabled
-**                    PLL module in Stop                   : Disabled
-**                    PLL output [MHz]                     : 120
-**                    Reference clock divider              : Auto select
-**                    PLL reference clock [MHz]            : 4
-**                    Multiplication factor                : Auto select
-**                    Loss of lock interrupt               : Disabled
-**            Clock configurations                         : 5
+**            Clock configurations                         : 1
 **              Clock configuration 0                      : 
 **                __IRC_32kHz                              : 0.032768
 **                __IRC_4MHz                               : 2
@@ -220,102 +80,6 @@
 **                __RTC_OSC                                : 0.032768
 **                Very low power mode                      : Disabled
 **                Clock source setting                     : configuration 0
-**                  MCG mode                               : FEI
-**                  MCG output [MHz]                       : 20.97152
-**                  MCGIRCLK clock [MHz]                   : 0.032768
-**                  OSCERCLK clock [MHz]                   : 0
-**                  ERCLK32K. clock [kHz]                  : 0.032768
-**                  MCGFFCLK [kHz]                         : 32.768
-**                System clocks                            : 
-**                  Core clock prescaler                   : Auto select
-**                  Core clock                             : 20.97152
-**                  Bus clock prescaler                    : Auto select
-**                  Bus clock                              : 20.97152
-**                  External clock prescaler               : Auto select
-**                  External bus clock                     : 10.48576
-**                  Flash clock prescaler                  : Auto select
-**                  Flash clock                            : 10.48576
-**                  PLL/FLL clock selection                : Auto select
-**                    Clock frequency [MHz]                : 20.97152
-**              Clock configuration 1                      : 
-**                __IRC_32kHz                              : 0.032768
-**                __IRC_4MHz                               : 2
-**                __SYSTEM_OSC                             : 8
-**                __RTC_OSC                                : 0.032768
-**                Very low power mode                      : Disabled
-**                Clock source setting                     : configuration 1
-**                  MCG mode                               : PEE
-**                  MCG output [MHz]                       : 120
-**                  MCGIRCLK clock [MHz]                   : 0.032768
-**                  OSCERCLK clock [MHz]                   : 8
-**                  ERCLK32K. clock [kHz]                  : 0.032768
-**                  MCGFFCLK [kHz]                         : 31.25
-**                System clocks                            : 
-**                  Core clock prescaler                   : Auto select
-**                  Core clock                             : 120
-**                  Bus clock prescaler                    : Auto select
-**                  Bus clock                              : 60
-**                  External clock prescaler               : Auto select
-**                  External bus clock                     : 60
-**                  Flash clock prescaler                  : Auto select
-**                  Flash clock                            : 24
-**                  PLL/FLL clock selection                : Auto select
-**                    Clock frequency [MHz]                : 120
-**              Clock configuration 2                      : 
-**                __IRC_32kHz                              : 0.032768
-**                __IRC_4MHz                               : 4
-**                __SYSTEM_OSC                             : 8
-**                __RTC_OSC                                : 0.032768
-**                Very low power mode                      : Disabled
-**                Clock source setting                     : configuration 2
-**                  MCG mode                               : BLPI
-**                  MCG output [MHz]                       : 4
-**                  MCGIRCLK clock [MHz]                   : 4
-**                  OSCERCLK clock [MHz]                   : 8
-**                  ERCLK32K. clock [kHz]                  : 0.032768
-**                  MCGFFCLK [kHz]                         : 32.768
-**                System clocks                            : 
-**                  Core clock prescaler                   : Auto select
-**                  Core clock                             : 4
-**                  Bus clock prescaler                    : Auto select
-**                  Bus clock                              : 4
-**                  External clock prescaler               : Auto select
-**                  External bus clock                     : 4
-**                  Flash clock prescaler                  : Auto select
-**                  Flash clock                            : 0.8
-**                  PLL/FLL clock selection                : Auto select
-**                    Clock frequency [MHz]                : 48
-**              Clock configuration 3                      : 
-**                __IRC_32kHz                              : 0.032768
-**                __IRC_4MHz                               : 2
-**                __SYSTEM_OSC                             : 8
-**                __RTC_OSC                                : 0.032768
-**                Very low power mode                      : Disabled
-**                Clock source setting                     : configuration 3
-**                  MCG mode                               : BLPE
-**                  MCG output [MHz]                       : 8
-**                  MCGIRCLK clock [MHz]                   : 2
-**                  OSCERCLK clock [MHz]                   : 0
-**                  ERCLK32K. clock [kHz]                  : 0.032768
-**                  MCGFFCLK [kHz]                         : 31.25
-**                System clocks                            : 
-**                  Core clock prescaler                   : Auto select
-**                  Core clock                             : 4
-**                  Bus clock prescaler                    : Auto select
-**                  Bus clock                              : 4
-**                  External clock prescaler               : Auto select
-**                  External bus clock                     : 4
-**                  Flash clock prescaler                  : Auto select
-**                  Flash clock                            : 1
-**                  PLL/FLL clock selection                : Auto select
-**                    Clock frequency [MHz]                : 48
-**              Clock configuration 4                      : 
-**                __IRC_32kHz                              : 0.032768
-**                __IRC_4MHz                               : 2
-**                __SYSTEM_OSC                             : 8
-**                __RTC_OSC                                : 0.032768
-**                Very low power mode                      : Disabled
-**                Clock source setting                     : configuration 4
 **                  MCG mode                               : PEE
 **                  MCG output [MHz]                       : 120
 **                  MCGIRCLK clock [MHz]                   : 0.032768
@@ -387,8 +151,7 @@
 **            Pendable service                             : Disabled
 **            MCG Loss of lock                             : Disabled
 **     Contents    :
-**         SetClockConfiguration - LDD_TError Cpu_SetClockConfiguration(LDD_TClockConfiguration ModeID);
-**         GetClockConfiguration - LDD_TClockConfiguration Cpu_GetClockConfiguration(void);
+**         No public methods
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.

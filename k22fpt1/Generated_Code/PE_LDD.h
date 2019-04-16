@@ -6,7 +6,7 @@
 **     Version     : Component 01.048, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-03-13, 11:31, # CodeGen: 26
+**     Date/Time   : 2019-04-15, 12:13, # CodeGen: 27
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -71,6 +71,8 @@
 #include "TU2.h"
 #include "I2C.h"
 #include "IntI2cLdd1.h"
+#include "Bit1.h"
+#include "BitIoLdd1.h"
 
 
 /*

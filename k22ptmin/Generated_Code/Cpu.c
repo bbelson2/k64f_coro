@@ -8,14 +8,13 @@
 **     Repository  : Kinetis
 **     Datasheet   : K22P121M120SF7RM, Rev. 1, March 24, 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-03-26, 14:51, # CodeGen: 7
+**     Date/Time   : 2019-04-16, 18:10, # CodeGen: 22
 **     Abstract    :
 **
 **     Settings    :
 **
 **     Contents    :
-**         SetClockConfiguration - LDD_TError Cpu_SetClockConfiguration(LDD_TClockConfiguration ModeID);
-**         GetClockConfiguration - LDD_TClockConfiguration Cpu_GetClockConfiguration(void);
+**         No public methods
 **
 **     (c) Freescale Semiconductor, Inc.
 **     2004 All Rights Reserved
@@ -152,15 +151,14 @@ void Common_Init(void)
 #if CPU_COMPONENTS_INIT
 void Components_Init(void)
 {
-  /* SIM_SCGC6: FTM0=1 */
-  SIM_SCGC6 |= SIM_SCGC6_FTM0_MASK;
   /* ### BitIO_LDD "BitIoLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)BitIoLdd1_Init(NULL);
-  /* ### TimerUnit_LDD "TU1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
-  (void)TU1_Init(NULL);
   /* ### Asynchro serial "Inhr1" init code ... */
   Inhr1_Init();
   /* ###  "Term1" init code ... */
+  /* ### TimerInt_LDD "TimerIntLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)TimerIntLdd1_Init(NULL);
+  /* ### TimerInt "TI1" init code ... */
 }
 #endif /* CPU_COMPONENTS_INIT */
 

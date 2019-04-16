@@ -7,7 +7,7 @@
 **     Version     : Component 01.164, Driver 01.11, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-03-26, 16:59, # CodeGen: 8
+**     Date/Time   : 2019-04-16, 19:20, # CodeGen: 28
 **     Abstract    :
 **          This TimerUnit component provides a low level API for unified hardware access across
 **          various timer devices using the Prescaler-Counter-Compare-Capture timer structure.
@@ -17,19 +17,19 @@
 **          Counter                                        : FTM0_CNT
 **          Counter direction                              : Up
 **          Counter width                                  : 16 bits
-**          Value type                                     : Optimal
+**          Value type                                     : uint16_t
 **          Input clock source                             : Internal
-**            Counter frequency                            : 256 Hz
+**            Counter frequency                            : Auto select
 **          Counter restart                                : On-match
 **            Period device                                : FTM0_MOD
-**            Period                                       : 1 Hz
+**            Period                                       : 1 sec
 **            Interrupt                                    : Enabled
 **              Interrupt                                  : INT_FTM0
 **              Interrupt priority                         : medium priority
 **          Channel list                                   : 0
 **          Initialization                                 : 
 **            Enabled in init. code                        : yes
-**            Auto initialization                          : yes
+**            Auto initialization                          : no
 **            Event mask                                   : 
 **              OnCounterRestart                           : Enabled
 **              OnChannel0                                 : Disabled
@@ -97,7 +97,7 @@
 
 /* MODULE TU1. */
 
-#include "Events.h"
+#include "TimerIntLdd1.h"
 #include "TU1.h"
 /* {Default RTOS Adapter} No RTOS includes */
 #include "IO_Map.h"
@@ -108,10 +108,8 @@ extern "C" {
 
 
 typedef struct {
-  bool EnUser;                         /* Enable/Disable device */
-  bool EnMode;                         /* Enable/Disable device in clock configuration */
   LDD_TEventMask EnEvents;             /* Enable/Disable events mask */
-  uint32_t Source;                     /* Current source clock */
+  uint8_t InitCntr;                    /* Number of initialization */
   LDD_TUserData *UserDataPtr;          /* RTOS device data structure */
 } TU1_TDeviceData;
 
@@ -125,7 +123,6 @@ static TU1_TDeviceDataPtr INT_FTM0__DEFAULT_RTOS_ISRPARAM;
 #define AVAILABLE_EVENTS_MASK (LDD_TEventMask)(LDD_TIMERUNIT_ON_COUNTER_RESTART)
 
 /* Internal method prototypes */
-static void HWEnDi(LDD_TDeviceData *DeviceDataPtr);
 /*
 ** ===================================================================
 **     Method      :  TU1_Init (component TimerUnit_LDD)
@@ -152,14 +149,27 @@ static void HWEnDi(LDD_TDeviceData *DeviceDataPtr);
 /* ===================================================================*/
 LDD_TDeviceData* TU1_Init(LDD_TUserData *UserDataPtr)
 {
-  /* Allocate device structure */
   TU1_TDeviceData *DeviceDataPrv;
-  /* {Default RTOS Adapter} Driver memory allocation: Dynamic allocation is simulated by a pointer to the static object */
-  DeviceDataPrv = &DeviceDataPrv__DEFAULT_RTOS_ALLOC;
-  DeviceDataPrv->UserDataPtr = UserDataPtr; /* Store the RTOS device structure */
+
+  if (PE_LDD_DeviceDataList[PE_LDD_COMPONENT_TU1_ID] == NULL) {
+    /* Allocate device structure */
+    /* {Default RTOS Adapter} Driver memory allocation: Dynamic allocation is simulated by a pointer to the static object */
+    DeviceDataPrv = &DeviceDataPrv__DEFAULT_RTOS_ALLOC;
+    DeviceDataPrv->UserDataPtr = UserDataPtr; /* Store the RTOS device structure */
+    DeviceDataPrv->InitCntr = 1U;      /* First initialization */
+  }
+  else {
+    /* Memory is already allocated */
+    DeviceDataPrv = (TU1_TDeviceDataPtr) PE_LDD_DeviceDataList[PE_LDD_COMPONENT_TU1_ID];
+    DeviceDataPrv->UserDataPtr = UserDataPtr; /* Store the RTOS device structure */
+    DeviceDataPrv->InitCntr++;         /* Increment counter of initialization */
+    return ((LDD_TDeviceData *)DeviceDataPrv); /* Return pointer to the device data structure */
+  }
   /* Interrupt vector(s) allocation */
   /* {Default RTOS Adapter} Set interrupt vector: IVT is static, ISR parameter is passed by the global variable */
   INT_FTM0__DEFAULT_RTOS_ISRPARAM = DeviceDataPrv;
+  /* SIM_SCGC6: FTM0=1 */
+  SIM_SCGC6 |= SIM_SCGC6_FTM0_MASK;
   /* FTM0_MODE: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,FAULTIE=0,FAULTM=0,CAPTEST=0,PWMSYNC=0,WPDIS=1,INIT=0,FTMEN=0 */
   FTM0_MODE = (FTM_MODE_FAULTM(0x00) | FTM_MODE_WPDIS_MASK); /* Set up mode register */
   /* FTM0_SC: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,TOF=0,TOIE=0,CPWMS=0,CLKS=0,PS=0 */
@@ -184,50 +194,18 @@ LDD_TDeviceData* TU1_Init(LDD_TUserData *UserDataPtr)
   FTM0_C6SC = 0x00U;                   /* Clear channel status and control register */
   /* FTM0_C7SC: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,CHF=0,CHIE=0,MSB=0,MSA=0,ELSB=0,ELSA=0,ICRST=0,DMA=0 */
   FTM0_C7SC = 0x00U;                   /* Clear channel status and control register */
-  /* FTM0_MOD: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,MOD=0xFF */
-  FTM0_MOD = FTM_MOD_MOD(0xFF);        /* Set up modulo register */
+  /* FTM0_MOD: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,MOD=0x7A11 */
+  FTM0_MOD = FTM_MOD_MOD(0x7A11);      /* Set up modulo register */
   DeviceDataPrv->EnEvents = 0x0100U;   /* Enable selected events */
-  DeviceDataPrv->Source = FTM_PDD_FIXED; /* Store clock source */
   /* NVICIP42: PRI42=0x70 */
   NVICIP42 = NVIC_IP_PRI42(0x70);
   /* NVICISER1: SETENA|=0x0400 */
   NVICISER1 |= NVIC_ISER_SETENA(0x0400);
-  /* FTM0_SC: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,TOF=0,TOIE=1,CPWMS=0,CLKS=0,PS=0 */
-  FTM0_SC = (FTM_SC_TOIE_MASK | FTM_SC_CLKS(0x00) | FTM_SC_PS(0x00)); /* Set up status and control register */
-  DeviceDataPrv->EnUser = TRUE;        /* Set the flag "device enabled" */
-  TU1_SetClockConfiguration(DeviceDataPrv, Cpu_GetClockConfiguration()); /* Set Initial according clock configuration */
+  /* FTM0_SC: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,TOF=0,TOIE=1,CPWMS=0,CLKS=2,PS=0 */
+  FTM0_SC = (FTM_SC_TOIE_MASK | FTM_SC_CLKS(0x02) | FTM_SC_PS(0x00)); /* Set up status and control register */
   /* Registration of the device structure */
   PE_LDD_RegisterDeviceStructure(PE_LDD_COMPONENT_TU1_ID,DeviceDataPrv);
   return ((LDD_TDeviceData *)DeviceDataPrv); /* Return pointer to the device data structure */
-}
-
-/*
-** ===================================================================
-**     Method      :  TU1_SetClockConfiguration (component TimerUnit_LDD)
-**
-**     Description :
-**         This method changes the clock configuration. During a clock 
-**         configuration change the component changes it's setting 
-**         immediately upon a request.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void TU1_SetClockConfiguration(LDD_TDeviceData *DeviceDataPtr, LDD_TClockConfiguration ClockConfiguration)
-{
-  TU1_TDeviceData *DeviceDataPrv = (TU1_TDeviceData *)DeviceDataPtr;
-
-  FTM_PDD_SelectPrescalerSource(FTM0_BASE_PTR, FTM_PDD_DISABLED);
-  switch (ClockConfiguration) {
-    case CPU_CLOCK_CONFIG_0:
-      DeviceDataPrv->EnMode = TRUE;    /* Set the flag "device enabled" in the actual clock configuration */
-      DeviceDataPrv->Source = FTM_PDD_FIXED; /* Select clock source */
-      FTM_PDD_SetPrescaler(FTM0_BASE_PTR, FTM_PDD_DIVIDE_128); /* Set prescaler register */
-      break;
-    default:
-      DeviceDataPrv->EnMode = FALSE;   /* Set the flag "device disabled" in the actual clock configuration */
-      break;
-  }
-  HWEnDi(DeviceDataPtr);               /* Enable/disable device according to status flags */
 }
 
 /*
@@ -257,32 +235,6 @@ PE_ISR(TU1_Interrupt)
   }
 }
 
-/*
-** ===================================================================
-**     Method      :  HWEnDi (component TimerUnit_LDD)
-**
-**     Description :
-**         Enables or disables the peripheral(s) associated with the 
-**         component. The method is called automatically as a part of the 
-**         Enable and Disable methods and several internal methods.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-static void HWEnDi(LDD_TDeviceData *DeviceDataPtr)
-{
-  TU1_TDeviceDataPtr DeviceDataPrv = (TU1_TDeviceDataPtr)DeviceDataPtr;
-
-  /* {Default RTOS Adapter} Critical section begin, general PE function is used */
-  EnterCritical();
-  if (DeviceDataPrv->EnMode && DeviceDataPrv->EnUser) { /* Enable device? */
-    FTM_PDD_SelectPrescalerSource(FTM0_BASE_PTR, DeviceDataPrv->Source);
-  }
-  else {
-    FTM_PDD_SelectPrescalerSource(FTM0_BASE_PTR, FTM_PDD_DISABLED);
-  }
-  /* {Default RTOS Adapter} Critical section end, general PE function is used */
-  ExitCritical();
-}
 /* END TU1. */
 
 #ifdef __cplusplus

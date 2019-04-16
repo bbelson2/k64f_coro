@@ -33,10 +33,12 @@
 #include "pin_mux.h"
 #include "Bit1.h"
 #include "BitIoLdd1.h"
-#include "TU1.h"
 #include "Term1.h"
 #include "Inhr1.h"
 #include "ASerialLdd1.h"
+#include "TI1.h"
+#include "TimerIntLdd1.h"
+#include "TU1.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -72,6 +74,7 @@ int main(void)
 
   /* Write your code here */
   /* For example: for(;;) { } */
+
 #if defined(LOOP_ONLY)
   // This bare-bones version is for measuring the basc H/W cost of switching the port
   for (;;) {

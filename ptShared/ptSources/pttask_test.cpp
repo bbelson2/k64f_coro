@@ -26,7 +26,7 @@
 
 using namespace ptp::core;
 
-#ifndef PTBUILD_EXTERNAL_TIMER
+#if !defined(PTBUILD_EXTERNAL_TIMER) || defined(SET_GLOBAL_COUNTER)
 extern unsigned long __pt_g_cycles;
 #endif
 
@@ -36,7 +36,7 @@ namespace ptp { namespace task {
 
 		for (;;) {
 			Bit1_PutVal(!!arg_);
-#ifndef PTBUILD_EXTERNAL_TIMER
+#if !defined(PTBUILD_EXTERNAL_TIMER) || defined(SET_GLOBAL_COUNTER)
 			__pt_g_cycles++;
 #endif
 			PT_YIELD();

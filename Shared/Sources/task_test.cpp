@@ -24,7 +24,7 @@
 
 using namespace scp::core;
 
-#ifndef COBUILD_EXTERNAL_TIMER
+#if !defined(COBUILD_EXTERNAL_TIMER) || defined(SET_GLOBAL_COUNTER)
 extern unsigned long __co_g_cycles;
 #endif
 
@@ -36,7 +36,7 @@ resumable testTaskFn(uint8_t value) {
 	for (;;) {
 
 		Bit1_PutVal(bitValue);
-#ifndef COBUILD_EXTERNAL_TIMER
+#if !defined(COBUILD_EXTERNAL_TIMER) || defined(SET_GLOBAL_COUNTER)
 		__co_g_cycles++;
 #endif
 		co_await suspend_always{};
