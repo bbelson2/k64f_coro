@@ -7,7 +7,7 @@
 **     Version     : Component 01.562, Driver 01.00, CPU db: 3.00.000
 **     Repository  : My Components
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-04-16, 20:23, # CodeGen: 1
+**     Date/Time   : 2019-04-17, 11:06, # CodeGen: 3
 **     Abstract    :
 **          This component implements the FreeRTOS Realtime Operating System
 **     Settings    :
@@ -82,7 +82,9 @@
 **              Linker Heap Limit Symbol                   : __HeapLimit
 **              Linker Heap Size Symbol                    : __heap_size
 **              Memory Allocation Scheme                   : Scheme 4: merge free blocks
-**            Static Allocation                            : Disabled
+**            Static Allocation                            : Enabled
+**              Default vApplicationGetIdleTaskMemory()    : yes
+**              Default vApplicationGetTimerTaskMemory()   : yes
 **            User Memory Section                          : Disabled
 **          RTOS Adaptor                                   : Configures the RTOS adapter settings
 **            Memory allocation                            : Configures how memory is allocated and deallocated.
@@ -254,6 +256,39 @@
 #if configHEAP_SCHEME_IDENTIFICATION
   /* special variable identifying the used heap scheme */
   const uint8_t freeRTOSMemoryScheme = configUSE_HEAP_SCHEME;
+#endif
+
+#if configSUPPORT_STATIC_ALLOCATION
+/* static memory allocation for the IDLE task */
+#if configUSE_HEAP_SECTION_NAME && configCOMPILER==configCOMPILER_ARM_GCC
+  #define SECTION __attribute__((section (configHEAP_SECTION_NAME_STRING)))
+#else
+  #define SECTION /* empty */
+#endif
+static StaticTask_t SECTION xIdleTaskTCBBuffer;
+static StackType_t SECTION xIdleStack[configMINIMAL_STACK_SIZE];
+
+void vApplicationGetIdleTaskMemory(StaticTask_t **ppxIdleTaskTCBBuffer, StackType_t **ppxIdleTaskStackBuffer, uint32_t *pulIdleTaskStackSize) {
+  *ppxIdleTaskTCBBuffer = &xIdleTaskTCBBuffer;
+  *ppxIdleTaskStackBuffer = &xIdleStack[0];
+  *pulIdleTaskStackSize = configMINIMAL_STACK_SIZE;
+}
+#endif
+
+#if configSUPPORT_STATIC_ALLOCATION && configUSE_TIMERS
+/* static memory allocation for the Timer task */
+static StaticTask_t SECTION xTimerTaskTCBBuffer;
+static StackType_t SECTION xTimerStack[configTIMER_TASK_STACK_DEPTH];
+
+/* If static allocation is supported then the application must provide the
+   following callback function - which enables the application to optionally
+   provide the memory that will be used by the timer task as the task's stack
+   and TCB. */
+void vApplicationGetTimerTaskMemory(StaticTask_t **ppxTimerTaskTCBBuffer, StackType_t **ppxTimerTaskStackBuffer, uint32_t *pulTimerTaskStackSize) {
+  *ppxTimerTaskTCBBuffer = &xTimerTaskTCBBuffer;
+  *ppxTimerTaskStackBuffer = &xTimerStack[0];
+  *pulTimerTaskStackSize = configTIMER_TASK_STACK_DEPTH;
+}
 #endif
 
 

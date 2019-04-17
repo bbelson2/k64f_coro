@@ -176,7 +176,10 @@
           <Linker_Heap_Size_Symbol v="__heap_size" />
           <Memory_Allocation_Scheme v="Scheme 4: merge free blocks" />
         </boolgroup>
-        <boolgroup name="Static Allocation" v="Disabled" />
+        <boolgroup name="Static Allocation" v="Enabled">
+          <Default_vApplicationGetIdleTaskMemory__ v="yes" />
+          <Default_vApplicationGetTimerTaskMemory__ v="yes" />
+        </boolgroup>
         <boolgroup name="User Memory Section" v="Disabled" />
       </group>
       <group name="RTOS Adaptor">

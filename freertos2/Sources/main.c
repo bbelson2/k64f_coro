@@ -48,10 +48,12 @@
 
 
 static void blinky_task(void *param) {
-  (void)param;
+  int state = *(int*)param ? 1 : 0;
   for(;;) {
-  	LED1_Neg(); /* toggle red LED */
-    vTaskDelay(500/portTICK_RATE_MS); /* wait for 500 ms */
+  	LED1_Put(state);
+  	taskYIELD();
+  	//LED1_Neg(); /* toggle red LED */
+    //vTaskDelay(500/portTICK_RATE_MS); /* wait for 500 ms */
   } /* for */
 }
 
@@ -75,16 +77,26 @@ int main(void)
   }
   */
 
-  if (xTaskCreate(
-        blinky_task,  /* task function */
-        "Blinky", /* task name for kernel awareness */
-        configMINIMAL_STACK_SIZE, /* task stack size */
-        (void*)NULL, /* optional task startup argument */
-        tskIDLE_PRIORITY,  /* initial priority */
-        NULL /* task handle */
-      ) != pdPASS) {
-      for(;;){} /* error! probably out of memory */
-    }
+  int state0 = 0, state1 = 1;
+  if ((xTaskCreate(
+  		blinky_task,  /* task function */
+			"Blinky0", /* task name for kernel awareness */
+			configMINIMAL_STACK_SIZE, /* task stack size */
+			(void*)&state0, /* optional task startup argument */
+			tskIDLE_PRIORITY,  /* initial priority */
+			NULL /* task handle */
+  ) != pdPASS)
+  || (xTaskCreate(
+  		blinky_task,  /* task function */
+			"Blinky1", /* task name for kernel awareness */
+			configMINIMAL_STACK_SIZE, /* task stack size */
+			(void*)&state1, /* optional task startup argument */
+			tskIDLE_PRIORITY,  /* initial priority */
+			NULL /* task handle */
+  ) != pdPASS))
+  {
+  	for(;;){} /* error! probably out of memory */
+  }
 
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
   /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
