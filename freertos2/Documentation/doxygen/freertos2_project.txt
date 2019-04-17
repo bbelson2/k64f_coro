@@ -27,6 +27,8 @@
 
 \page page_components Components 
 - \subpage BitIoLdd1
+- \subpage TU1
+- \subpage ASerialLdd1
 
 */
 
@@ -60,6 +62,8 @@
 
 \page page_components Components 
 - \subpage BitIoLdd1
+- \subpage TU1
+- \subpage ASerialLdd1
 
 */
 

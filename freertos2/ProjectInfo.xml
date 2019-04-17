@@ -53,13 +53,17 @@
   </PATHS>
   <FILES>
     <GeneratedCs>
+      <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\ASerialLdd1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\BitIoLdd1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\Cpu.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\FRTOS1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\Inhr1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\LED1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\LEDpin1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\MCUC1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\PE_LDD.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\TU1.c</PathName>
+      <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\Term1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\UTIL1.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\croutine.c</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\event_groups.c</PathName>
@@ -85,6 +89,7 @@
       <PathName>E:\Source\repos\k64f_coro\freertos2\Static_Code\System\Vectors.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
+      <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\ASerialLdd1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\BitIoLdd1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\CPU_Config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\Cpu.h</PathName>
@@ -93,6 +98,7 @@
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\FreeRTOS.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\FreeRTOSConfig.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\IO_Map.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\Inhr1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\Init_Config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\LED1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\LED1config.h</PathName>
@@ -103,6 +109,8 @@
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\PE_Error.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\PE_LDD.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\PE_Types.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\TU1.h</PathName>
+      <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\Term1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\UTIL1.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\UTIL1config.h</PathName>
       <PathName>E:\Source\repos\k64f_coro\freertos2\Generated_Code\Vectors_Config.h</PathName>

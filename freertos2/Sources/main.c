@@ -37,6 +37,10 @@
 #include "LED1.h"
 #include "LEDpin1.h"
 #include "BitIoLdd1.h"
+#include "TU1.h"
+#include "Term1.h"
+#include "Inhr1.h"
+#include "ASerialLdd1.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -46,11 +50,12 @@
 #include "Init_Config.h"
 /* User includes (#include below this line is not maintained by Processor Expert) */
 
-
+volatile unsigned long int __ft_g_cycles = 0;
 static void blinky_task(void *param) {
   int state = *(int*)param ? 1 : 0;
   for(;;) {
   	LED1_Put(state);
+  	__ft_g_cycles++;
   	taskYIELD();
   	//LED1_Neg(); /* toggle red LED */
     //vTaskDelay(500/portTICK_RATE_MS); /* wait for 500 ms */

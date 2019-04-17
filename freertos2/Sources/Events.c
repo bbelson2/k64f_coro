@@ -37,6 +37,7 @@ extern "C" {
 
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
+#include "Term1.h"
 
 /*
 ** ===================================================================
@@ -143,6 +144,34 @@ void FRTOS1_vApplicationMallocFailedHook(void)
   taskDISABLE_INTERRUPTS();
   /* Write your code here ... */
   for(;;) {}
+}
+
+/*
+** ===================================================================
+**     Event       :  TU1_OnCounterRestart (module Events)
+**
+**     Component   :  TU1 [TimerUnit_LDD]
+*/
+/*!
+**     @brief
+**         Called if counter overflow/underflow or counter is
+**         reinitialized by modulo or compare register matching.
+**         OnCounterRestart event and Timer unit must be enabled. See
+**         [SetEventMask] and [GetEventMask] methods. This event is
+**         available only if a [Interrupt] is enabled.
+**     @param
+**         UserDataPtr     - Pointer to the user or
+**                           RTOS specific data. The pointer passed as
+**                           the parameter of Init method.
+*/
+/* ===================================================================*/
+extern volatile unsigned long int __ft_g_cycles;
+void TU1_OnCounterRestart(LDD_TUserData *UserDataPtr)
+{
+	Term1_SendStr("Cycles: ");
+	Term1_SendNum(__ft_g_cycles);
+	__ft_g_cycles = 0;
+	Term1_SendStr("\r\n");
 }
 
 /* END Events */
