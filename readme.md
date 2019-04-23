@@ -80,16 +80,18 @@ This needs to be fixed when projects are copied; otherwise the project will be r
 
 ## Tool-chain
 
-Here we alter the tool chain to use LLVM/clang.
+Here we alter the tool chain to use `LLVM/clang`.
 
-If necessary, restart Kinetic Studio with clang in the PATH, e.g.:
+If necessary, restart Kinetic Studio with `clang` in the PATH, e.g.:
 
 ```
 set PATH=E:\llvm-trunk\install\bin;%PATH%
 E:\Freescale\KDS_v3\eclipse\kinetis-design-studio.exe -data E:\Source\repos\K64F
 ```
 
-Create a project configuration which uses clang as a compiler in place of gcc. (We will also set the C++ compiler settings so that they will be copied into any projects cloned from this.)
+Create a project configuration which uses `clang` as a compiler in place of `gcc`. 
+
+### New configuration
 
 1. Project > Build Configurations > Manage...
 1. New...
@@ -99,6 +101,9 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 1. Ensure Configuration = DebugLLVM
 1. C/C++ Build > Build Variables
 1. Add ARM_INCLUDE => C:\Program Files (x86)\GNU Tools ARM Embedded\6 2017-q1-update\arm-none-eabi\include
+
+### C++ Settings
+
 1. C/C++ Build > Settings > Tool settings > Cross ARM C++ Compiler 
 1. Command => clang++
 1. Optimization > Language standard => Toolchain default (GNU ISO 1998 C++)
@@ -113,6 +118,9 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
     - "${ARM_INCLUDE}\c++\6.3.1\arm-none-eabi"
     - "${ARM_INCLUDE}\c++\6.3.1"
     - "${ARM_INCLUDE}"
+
+### C Settings
+
 1. Tool settings > Cross ARM C Compiler 
 1. Command => clang
 1. Miscellaneous > Other compiler flags => -fshort-enums -target armv7m-none-eabi
