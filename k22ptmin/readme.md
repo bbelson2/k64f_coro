@@ -78,6 +78,8 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 
 - Cpu:MK22FN512VLH12
 
+Set clock speed according to instructions in repo readme for `K22F CPU clock speed`.
+
 ### BitIO
 
 1. Processor Expert perspective 
@@ -102,24 +104,6 @@ Create a project configuration which uses clang as a compiler in place of gcc. (
 1. Settings > Baud rate = 115200 baud
 1. Settings > Receiver > RxD = PTE1
 1. Settings > Transmitter > TxD = PTE0
-
-### Clock
-
-See https://mcuoneclipse.com/2014/06/14/frdm-k64f-atmaximum-speed-of-120-mhz/
-
-Use version 2 (IRC 48MHz).
-
-1. Component Inspector > CPU
-1. Clock settings > Clock configurations > Clock source setting (tab)
-1. Clock source setting => `configuration 1`
-1. System clocks (tab)
-1. Core clock => `20 MHz`
-1. Bus clock => `20 MHz`
-1. External bus clock => `10 MHz`
-1. Flash clock => `10 MHz`
-1. CPU clock/configuration selection (node)
-1. Disable Clock configuration 0
-1. Enable Clock configuration 1
 
 ## Shared Code
 
@@ -270,3 +254,5 @@ Finished building: k22fawait1.siz
 Add build configuration fo 'No scheduler'
 
 https://stackoverflow.com/questions/46547985/is-it-possible-to-alter-code-in-eclipse-cdt-based-on-build-configuration
+
+And without doubt, this table is hogher than any previous table, or even than my butt.

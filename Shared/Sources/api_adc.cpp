@@ -196,6 +196,7 @@ future_t<word> read_adc(uint8_t channelId) {
 
 future_t<word> read_adc3(uint8_t channelId) {
 	auto w = findAdc(channelId);
+	int i = 0;
 	promise_t<word> p;
 	split_phase_event_t::reg(w->measureEventId,
 	  [w]() { w->measure(false); },
@@ -204,6 +205,7 @@ future_t<word> read_adc3(uint8_t channelId) {
 			byte rc = w->getValue16(&result);
 			s->set_value(result); }
 	  );
+	i++;
 	return p.get_future();
 }
 
