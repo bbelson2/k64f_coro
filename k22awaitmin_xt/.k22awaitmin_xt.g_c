@@ -47,12 +47,12 @@
       </GenExtraFiles>
       <GenExtraFileSrcDir11>Repositories\lib\doxygen\</GenExtraFileSrcDir11>
       <GenExtraFileSrcDir4>lib\Kinetis\startup\</GenExtraFileSrcDir4>
-      <XtraAge1>1317116417</XtraAge1>
+      <XtraAge1>1318607059</XtraAge1>
       <XtraAge2>1317116417</XtraAge2>
       <XtraAge4>1315653155</XtraAge4>
       <XtraAge5>1317116417</XtraAge5>
-      <XtraAge6>1318020026</XtraAge6>
-      <XtraAge7>1317116218</XtraAge7>
+      <XtraAge6>1318608968</XtraAge6>
+      <XtraAge7>1318607059</XtraAge7>
       <GenExtraFileType11>5</GenExtraFileType11>
       <GenExtraFileType10>4</GenExtraFileType10>
       <GenExtraFileType9>4</GenExtraFileType9>
@@ -479,7 +479,7 @@
     </GenFiles>
     <SignalListFile />
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>5</ProjectModificationStamp>
+    <ProjectModificationStamp>6</ProjectModificationStamp>
   </Options>
   <CpuID_1>
     <Generated>true</Generated>
@@ -487,12 +487,12 @@
     <GenComponentVersion>01.048</GenComponentVersion>
     <GenDriverVersion>01.00</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1317116218</HeaderAge>
-    <CodeAge>1317116417</CodeAge>
+    <HeaderAge>1318607059</HeaderAge>
+    <CodeAge>1318607059</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>10</GenNumMethods>
-    <SetClockConfiguration>true</SetClockConfiguration>
-    <GetClockConfiguration>true</GetClockConfiguration>
+    <SetClockConfiguration>false</SetClockConfiguration>
+    <GetClockConfiguration>false</GetClockConfiguration>
     <SetOperationMode>false</SetOperationMode>
     <EnableInt>false</EnableInt>
     <DisableInt>false</DisableInt>

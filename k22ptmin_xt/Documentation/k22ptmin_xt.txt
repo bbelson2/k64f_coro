@@ -43,9 +43,5 @@ Module "Bit1"      (component BitIO)
                 direction = _[output]_ or _[input/output]_.
 
 Module "Cpu"       (component MK22FN512LH12)
-   - Cpu_SetClockConfiguration -Calling of this method will cause the clock configuration change and reconfiguration of all 
-                components according to the requested clock configuration setting.
-   - Cpu_GetClockConfiguration -Returns the active clock configuration identifier. The method is automatically enabled if more 
-                than one clock configuration is enabled in the component.
 
 ===================================================================================

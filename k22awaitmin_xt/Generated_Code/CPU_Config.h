@@ -6,7 +6,7 @@
 **     Version     : Component 01.048, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-04-15, 12:29, # CodeGen: 2
+**     Date/Time   : 2019-04-24, 12:02, # CodeGen: 4
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -72,8 +72,8 @@ extern "C" {
    has value 1 otherwise 0.
 */
 
-#define CPU_SET_CLOCK_CONFIGURATION                        0x01U      
-#define CPU_GET_CLOCK_CONFIGURATION                        0x01U      
+#define CPU_SET_CLOCK_CONFIGURATION                        0x00U      
+#define CPU_GET_CLOCK_CONFIGURATION                        0x00U      
 #define CPU_SET_OPERATION_MODE                             0x00U      
 #define CPU_ENABLE_INT                                     0x00U      
 #define CPU_DISABLE_INT                                    0x00U      
@@ -106,8 +106,8 @@ extern "C" {
     Constants containing frequencies of processor reference clock sources.
 */
 
-#define CPU_BUS_CLK_HZ                  20971520U /* Initial value of the bus clock frequency in Hz */
-#define CPU_CORE_CLK_HZ                 20971520U /* Initial value of the core/system clock frequency in Hz.  */
+#define CPU_BUS_CLK_HZ                  60000000U /* Initial value of the bus clock frequency in Hz */
+#define CPU_CORE_CLK_HZ                 120000000U /* Initial value of the core/system clock frequency in Hz.  */
 #define CPU_XTAL_CLK_HZ                 8000000U /* Value of the external crystal or oscillator clock frequency in Hz */
 #define CPU_XTAL32k_CLK_HZ              32768U /* Value of the external 32k crystal or oscillator clock frequency in Hz */
 #define CPU_INT_SLOW_CLK_HZ             32768U /* Value of the slow internal oscillator clock frequency in Hz  */
@@ -127,87 +127,23 @@ extern "C" {
     Clock settings\Clock configurations group of properties.
 */
 
-#define CPU_CLOCK_CONFIG_NUMBER         0x05U /* Specifies number of defined clock configurations. */
+#define CPU_CLOCK_CONFIG_NUMBER         0x01U /* Specifies number of defined clock configurations. */
 
-#define CPU_BUS_CLK_HZ_CLOCK_CONFIG0    20971520U /* Value of the bus clock frequency in the clock configuration 0 in Hz. */
-#define CPU_CORE_CLK_HZ_CLOCK_CONFIG0   20971520U /* Value of the core/system clock frequency in the clock configuration 0 in Hz. */
-
-#define CPU_BUS_CLK_HZ_CLOCK_CONFIG1    60000000U /* Value of the bus clock frequency in the clock configuration 1 in Hz. */
-#define CPU_CORE_CLK_HZ_CLOCK_CONFIG1   120000000U /* Value of the core/system clock frequency in the clock configuration 1 in Hz. */
-
-#define CPU_BUS_CLK_HZ_CLOCK_CONFIG2    4000000U /* Value of the bus clock frequency in the clock configuration 2 in Hz. */
-#define CPU_CORE_CLK_HZ_CLOCK_CONFIG2   4000000U /* Value of the core/system clock frequency in the clock configuration 2 in Hz. */
-
-#define CPU_BUS_CLK_HZ_CLOCK_CONFIG3    4000000U /* Value of the bus clock frequency in the clock configuration 3 in Hz. */
-#define CPU_CORE_CLK_HZ_CLOCK_CONFIG3   4000000U /* Value of the core/system clock frequency in the clock configuration 3 in Hz. */
-
-#define CPU_BUS_CLK_HZ_CLOCK_CONFIG4    60000000U /* Value of the bus clock frequency in the clock configuration 4 in Hz. */
-#define CPU_CORE_CLK_HZ_CLOCK_CONFIG4   120000000U /* Value of the core/system clock frequency in the clock configuration 4 in Hz. */
+#define CPU_BUS_CLK_HZ_CLOCK_CONFIG0    60000000U /* Value of the bus clock frequency in the clock configuration 0 in Hz. */
+#define CPU_CORE_CLK_HZ_CLOCK_CONFIG0   120000000U /* Value of the core/system clock frequency in the clock configuration 0 in Hz. */
 
 /* CPU frequencies in clock configuration 0 */
 #define CPU_CLOCK_CONFIG_0              0x00U /* Clock configuration 0 identifier */
-#define CPU_CORE_CLK_HZ_CONFIG_0        20971520UL /* Core clock frequency in clock configuration 0 */
-#define CPU_BUS_CLK_HZ_CONFIG_0         20971520UL /* Bus clock frequency in clock configuration 0 */
-#define CPU_FLEXBUS_CLK_HZ_CONFIG_0     10485760UL /* Flexbus clock frequency in clock configuration 0 */
-#define CPU_FLASH_CLK_HZ_CONFIG_0       10485760UL /* FLASH clock frequency in clock configuration 0 */
+#define CPU_CORE_CLK_HZ_CONFIG_0        120000000UL /* Core clock frequency in clock configuration 0 */
+#define CPU_BUS_CLK_HZ_CONFIG_0         60000000UL /* Bus clock frequency in clock configuration 0 */
+#define CPU_FLEXBUS_CLK_HZ_CONFIG_0     60000000UL /* Flexbus clock frequency in clock configuration 0 */
+#define CPU_FLASH_CLK_HZ_CONFIG_0       24000000UL /* FLASH clock frequency in clock configuration 0 */
 #define CPU_USB_CLK_HZ_CONFIG_0         0UL /* USB clock frequency in clock configuration 0 */
-#define CPU_PLL_FLL_CLK_HZ_CONFIG_0     20971520UL /* PLL/FLL clock frequency in clock configuration 0 */
+#define CPU_PLL_FLL_CLK_HZ_CONFIG_0     120000000UL /* PLL/FLL clock frequency in clock configuration 0 */
 #define CPU_MCGIR_CLK_HZ_CONFIG_0       32768UL /* MCG internal reference clock frequency in clock configuration 0 */
-#define CPU_OSCER_CLK_HZ_CONFIG_0       0UL /* System OSC external reference clock frequency in clock configuration 0 */
+#define CPU_OSCER_CLK_HZ_CONFIG_0       8000000UL /* System OSC external reference clock frequency in clock configuration 0 */
 #define CPU_ERCLK32K_CLK_HZ_CONFIG_0    32768UL /* External reference clock 32k frequency in clock configuration 0 */
-#define CPU_MCGFF_CLK_HZ_CONFIG_0       32768UL /* MCG fixed frequency clock */
-
-/* CPU frequencies in clock configuration 1 */
-#define CPU_CLOCK_CONFIG_1              0x01U /* Clock configuration 1 identifier */
-#define CPU_CORE_CLK_HZ_CONFIG_1        120000000UL /* Core clock frequency in clock configuration 1 */
-#define CPU_BUS_CLK_HZ_CONFIG_1         60000000UL /* Bus clock frequency in clock configuration 1 */
-#define CPU_FLEXBUS_CLK_HZ_CONFIG_1     60000000UL /* Flexbus clock frequency in clock configuration 1 */
-#define CPU_FLASH_CLK_HZ_CONFIG_1       24000000UL /* FLASH clock frequency in clock configuration 1 */
-#define CPU_USB_CLK_HZ_CONFIG_1         0UL /* USB clock frequency in clock configuration 1 */
-#define CPU_PLL_FLL_CLK_HZ_CONFIG_1     120000000UL /* PLL/FLL clock frequency in clock configuration 1 */
-#define CPU_MCGIR_CLK_HZ_CONFIG_1       32768UL /* MCG internal reference clock frequency in clock configuration 1 */
-#define CPU_OSCER_CLK_HZ_CONFIG_1       8000000UL /* System OSC external reference clock frequency in clock configuration 1 */
-#define CPU_ERCLK32K_CLK_HZ_CONFIG_1    32768UL /* External reference clock 32k frequency in clock configuration 1 */
-#define CPU_MCGFF_CLK_HZ_CONFIG_1       31250UL /* MCG fixed frequency clock */
-
-/* CPU frequencies in clock configuration 2 */
-#define CPU_CLOCK_CONFIG_2              0x02U /* Clock configuration 2 identifier */
-#define CPU_CORE_CLK_HZ_CONFIG_2        4000000UL /* Core clock frequency in clock configuration 2 */
-#define CPU_BUS_CLK_HZ_CONFIG_2         4000000UL /* Bus clock frequency in clock configuration 2 */
-#define CPU_FLEXBUS_CLK_HZ_CONFIG_2     4000000UL /* Flexbus clock frequency in clock configuration 2 */
-#define CPU_FLASH_CLK_HZ_CONFIG_2       800000UL /* FLASH clock frequency in clock configuration 2 */
-#define CPU_USB_CLK_HZ_CONFIG_2         0UL /* USB clock frequency in clock configuration 2 */
-#define CPU_PLL_FLL_CLK_HZ_CONFIG_2     48000000UL /* PLL/FLL clock frequency in clock configuration 2 */
-#define CPU_MCGIR_CLK_HZ_CONFIG_2       4000000UL /* MCG internal reference clock frequency in clock configuration 2 */
-#define CPU_OSCER_CLK_HZ_CONFIG_2       8000000UL /* System OSC external reference clock frequency in clock configuration 2 */
-#define CPU_ERCLK32K_CLK_HZ_CONFIG_2    32768UL /* External reference clock 32k frequency in clock configuration 2 */
-#define CPU_MCGFF_CLK_HZ_CONFIG_2       32768UL /* MCG fixed frequency clock */
-
-/* CPU frequencies in clock configuration 3 */
-#define CPU_CLOCK_CONFIG_3              0x03U /* Clock configuration 3 identifier */
-#define CPU_CORE_CLK_HZ_CONFIG_3        4000000UL /* Core clock frequency in clock configuration 3 */
-#define CPU_BUS_CLK_HZ_CONFIG_3         4000000UL /* Bus clock frequency in clock configuration 3 */
-#define CPU_FLEXBUS_CLK_HZ_CONFIG_3     4000000UL /* Flexbus clock frequency in clock configuration 3 */
-#define CPU_FLASH_CLK_HZ_CONFIG_3       1000000UL /* FLASH clock frequency in clock configuration 3 */
-#define CPU_USB_CLK_HZ_CONFIG_3         0UL /* USB clock frequency in clock configuration 3 */
-#define CPU_PLL_FLL_CLK_HZ_CONFIG_3     48000000UL /* PLL/FLL clock frequency in clock configuration 3 */
-#define CPU_MCGIR_CLK_HZ_CONFIG_3       2000000UL /* MCG internal reference clock frequency in clock configuration 3 */
-#define CPU_OSCER_CLK_HZ_CONFIG_3       0UL /* System OSC external reference clock frequency in clock configuration 3 */
-#define CPU_ERCLK32K_CLK_HZ_CONFIG_3    32768UL /* External reference clock 32k frequency in clock configuration 3 */
-#define CPU_MCGFF_CLK_HZ_CONFIG_3       31250UL /* MCG fixed frequency clock */
-
-/* CPU frequencies in clock configuration 4 */
-#define CPU_CLOCK_CONFIG_4              0x04U /* Clock configuration 4 identifier */
-#define CPU_CORE_CLK_HZ_CONFIG_4        120000000UL /* Core clock frequency in clock configuration 4 */
-#define CPU_BUS_CLK_HZ_CONFIG_4         60000000UL /* Bus clock frequency in clock configuration 4 */
-#define CPU_FLEXBUS_CLK_HZ_CONFIG_4     60000000UL /* Flexbus clock frequency in clock configuration 4 */
-#define CPU_FLASH_CLK_HZ_CONFIG_4       24000000UL /* FLASH clock frequency in clock configuration 4 */
-#define CPU_USB_CLK_HZ_CONFIG_4         0UL /* USB clock frequency in clock configuration 4 */
-#define CPU_PLL_FLL_CLK_HZ_CONFIG_4     120000000UL /* PLL/FLL clock frequency in clock configuration 4 */
-#define CPU_MCGIR_CLK_HZ_CONFIG_4       32768UL /* MCG internal reference clock frequency in clock configuration 4 */
-#define CPU_OSCER_CLK_HZ_CONFIG_4       8000000UL /* System OSC external reference clock frequency in clock configuration 4 */
-#define CPU_ERCLK32K_CLK_HZ_CONFIG_4    32768UL /* External reference clock 32k frequency in clock configuration 4 */
-#define CPU_MCGFF_CLK_HZ_CONFIG_4       31250UL /* MCG fixed frequency clock */
+#define CPU_MCGFF_CLK_HZ_CONFIG_0       31250UL /* MCG fixed frequency clock */
 
 
 /* Clock configuration structure declaration. Structure is initialized in PE_LDD.c */
@@ -335,80 +271,20 @@ typedef struct {
 */
 
 /* Clock configuration 0 */
-#define CPU_MCG_MODE_CONFIG_0                              (CPU_MCG_MODE_FEI | CPU_CLOCK_SLOW_MASK) /* Clock generator mode */
-#define CPU_CLOCK_PMODE_CONFIG_0                           0U /* RUN power mode */      
+#define CPU_MCG_MODE_CONFIG_0                              (CPU_MCG_MODE_PEE | CPU_CLOCK_EXTERNAL_CRYSTAL_MASK | CPU_CLOCK_SLOW_MASK) /* Clock generator mode */
+#define CPU_CLOCK_PMODE_CONFIG_0                           CPU_CLOCK_HSRUN_ENABLE_MASK /* High speed RUN power mode */
 
-#define CPU_MCG_C1_CONFIG_0                                0x06U /* MCG_C1 */
+#define CPU_MCG_C1_CONFIG_0                                0x1AU /* MCG_C1 */
 #define CPU_MCG_C2_CONFIG_0                                0x24U /* MCG_C2 */
 #define CPU_MCG_C4_CONFIG_0                                0x00U /* MCG_C4 */
-#define CPU_MCG_C5_CONFIG_0                                0x00U /* MCG_C5 */
-#define CPU_MCG_C6_CONFIG_0                                0x00U /* MCG_C6 */
+#define CPU_MCG_C5_CONFIG_0                                0x01U /* MCG_C5 */
+#define CPU_MCG_C6_CONFIG_0                                0x46U /* MCG_C6 */
 #define CPU_MCG_C7_CONFIG_0                                0x00U /* MCG_C7 */
 #define CPU_MCG_SC_CONFIG_0                                0x00U /* MCG_SC */
-#define CPU_OSC_CR_CONFIG_0                                0x00U /* OSC_CR */
+#define CPU_OSC_CR_CONFIG_0                                0x80U /* OSC_CR */
 #define CPU_SIM_SOPT1_CONFIG_0                             0x00080000UL /* SIM_SOPT1 */
-#define CPU_SIM_SOPT2_CONFIG_0                             0x00UL /* SIM_SOPT2 */
-#define CPU_SIM_CLKDIV1_CONFIG_0                           0x00110000UL /* SIM_CLKDIV1 */
-/* Clock configuration 1 */
-#define CPU_MCG_MODE_CONFIG_1                              (CPU_MCG_MODE_PEE | CPU_CLOCK_EXTERNAL_CRYSTAL_MASK | CPU_CLOCK_SLOW_MASK) /* Clock generator mode */
-#define CPU_CLOCK_PMODE_CONFIG_1                           CPU_CLOCK_HSRUN_ENABLE_MASK /* High speed RUN power mode */
-
-#define CPU_MCG_C1_CONFIG_1                                0x1AU /* MCG_C1 */
-#define CPU_MCG_C2_CONFIG_1                                0x24U /* MCG_C2 */
-#define CPU_MCG_C4_CONFIG_1                                0x00U /* MCG_C4 */
-#define CPU_MCG_C5_CONFIG_1                                0x01U /* MCG_C5 */
-#define CPU_MCG_C6_CONFIG_1                                0x46U /* MCG_C6 */
-#define CPU_MCG_C7_CONFIG_1                                0x00U /* MCG_C7 */
-#define CPU_MCG_SC_CONFIG_1                                0x00U /* MCG_SC */
-#define CPU_OSC_CR_CONFIG_1                                0x80U /* OSC_CR */
-#define CPU_SIM_SOPT1_CONFIG_1                             0x00080000UL /* SIM_SOPT1 */
-#define CPU_SIM_SOPT2_CONFIG_1                             0x00010000UL /* SIM_SOPT2 */
-#define CPU_SIM_CLKDIV1_CONFIG_1                           0x01140000UL /* SIM_CLKDIV1 */
-/* Clock configuration 2 */
-#define CPU_MCG_MODE_CONFIG_2                              (CPU_MCG_MODE_BLPI | CPU_CLOCK_EXTERNAL_CRYSTAL_MASK | CPU_CLOCK_FAST_MASK) /* Clock generator mode */
-#define CPU_CLOCK_PMODE_CONFIG_2                           0U /* RUN power mode */      
-
-#define CPU_MCG_C1_CONFIG_2                                0x46U /* MCG_C1 */
-#define CPU_MCG_C2_CONFIG_2                                0x27U /* MCG_C2 */
-#define CPU_MCG_C4_CONFIG_2                                0x00U /* MCG_C4 */
-#define CPU_MCG_C5_CONFIG_2                                0x00U /* MCG_C5 */
-#define CPU_MCG_C6_CONFIG_2                                0x00U /* MCG_C6 */
-#define CPU_MCG_C7_CONFIG_2                                0x00U /* MCG_C7 */
-#define CPU_MCG_SC_CONFIG_2                                0x00U /* MCG_SC */
-#define CPU_OSC_CR_CONFIG_2                                0x80U /* OSC_CR */
-#define CPU_SIM_SOPT1_CONFIG_2                             0x00080000UL /* SIM_SOPT1 */
-#define CPU_SIM_SOPT2_CONFIG_2                             0x00030000UL /* SIM_SOPT2 */
-#define CPU_SIM_CLKDIV1_CONFIG_2                           0x00040000UL /* SIM_CLKDIV1 */
-/* Clock configuration 3 */
-#define CPU_MCG_MODE_CONFIG_3                              (CPU_MCG_MODE_BLPE | CPU_CLOCK_EXTERNAL_CRYSTAL_MASK | CPU_CLOCK_FAST_MASK) /* Clock generator mode */
-#define CPU_CLOCK_PMODE_CONFIG_3                           0U /* RUN power mode */      
-
-#define CPU_MCG_C1_CONFIG_3                                0x9AU /* MCG_C1 */
-#define CPU_MCG_C2_CONFIG_3                                0x27U /* MCG_C2 */
-#define CPU_MCG_C4_CONFIG_3                                0x00U /* MCG_C4 */
-#define CPU_MCG_C5_CONFIG_3                                0x00U /* MCG_C5 */
-#define CPU_MCG_C6_CONFIG_3                                0x00U /* MCG_C6 */
-#define CPU_MCG_C7_CONFIG_3                                0x00U /* MCG_C7 */
-#define CPU_MCG_SC_CONFIG_3                                0x02U /* MCG_SC */
-#define CPU_OSC_CR_CONFIG_3                                0x00U /* OSC_CR */
-#define CPU_SIM_SOPT1_CONFIG_3                             0x00080000UL /* SIM_SOPT1 */
-#define CPU_SIM_SOPT2_CONFIG_3                             0x00030000UL /* SIM_SOPT2 */
-#define CPU_SIM_CLKDIV1_CONFIG_3                           0x11170000UL /* SIM_CLKDIV1 */
-/* Clock configuration 4 */
-#define CPU_MCG_MODE_CONFIG_4                              (CPU_MCG_MODE_PEE | CPU_CLOCK_EXTERNAL_CRYSTAL_MASK | CPU_CLOCK_SLOW_MASK) /* Clock generator mode */
-#define CPU_CLOCK_PMODE_CONFIG_4                           CPU_CLOCK_HSRUN_ENABLE_MASK /* High speed RUN power mode */
-
-#define CPU_MCG_C1_CONFIG_4                                0x1AU /* MCG_C1 */
-#define CPU_MCG_C2_CONFIG_4                                0x24U /* MCG_C2 */
-#define CPU_MCG_C4_CONFIG_4                                0x00U /* MCG_C4 */
-#define CPU_MCG_C5_CONFIG_4                                0x01U /* MCG_C5 */
-#define CPU_MCG_C6_CONFIG_4                                0x46U /* MCG_C6 */
-#define CPU_MCG_C7_CONFIG_4                                0x00U /* MCG_C7 */
-#define CPU_MCG_SC_CONFIG_4                                0x00U /* MCG_SC */
-#define CPU_OSC_CR_CONFIG_4                                0x80U /* OSC_CR */
-#define CPU_SIM_SOPT1_CONFIG_4                             0x00080000UL /* SIM_SOPT1 */
-#define CPU_SIM_SOPT2_CONFIG_4                             0x00010000UL /* SIM_SOPT2 */
-#define CPU_SIM_CLKDIV1_CONFIG_4                           0x01140000UL /* SIM_CLKDIV1 */
+#define CPU_SIM_SOPT2_CONFIG_0                             0x00010000UL /* SIM_SOPT2 */
+#define CPU_SIM_CLKDIV1_CONFIG_0                           0x01140000UL /* SIM_CLKDIV1 */
 
 /* 
    Clock generator structure default content
@@ -750,7 +626,7 @@ typedef struct {
 
 /* MCG */
 
-#define STARTUP_MCG_C1_VALUE                               0x06U     /* MCG_C1 value */ 
+#define STARTUP_MCG_C1_VALUE                               0x1AU     /* MCG_C1 value */ 
 #define STARTUP_MCG_C2_VALUE                               0x24U     /* MCG_C2 value */ 
 #define STARTUP_MCG_C3_VALUE                               0x00U     /* MCG_C3 value */ 
 #define STARTUP_MCG_C4_VALUE                               0x00U     /* MCG_C4 value */ 
@@ -759,14 +635,14 @@ typedef struct {
 
 /* OSC0 */
 
-#define STARTUP_OSC_CR_VALUE                               0x00U     /* OSC_CR value */ 
+#define STARTUP_OSC_CR_VALUE                               0x80U     /* OSC_CR value */ 
 
 /* SIM */
 
 #define STARTUP_SIM_SOPT1_VALUE                            0x00080000UL /* SIM_SOPT1 value */ 
-#define STARTUP_SIM_SOPT2_VALUE                            0x00UL    /* SIM_SOPT2 value */ 
-#define STARTUP_SIM_CLKDIV1_VALUE                          0x00110000UL /* SIM_CLKDIV1 value */ 
-#define STARTUP_SIM_SCGC5_VALUE                            0x00040182UL /* SIM_SCGC5 value */ 
+#define STARTUP_SIM_SOPT2_VALUE                            0x00010000UL /* SIM_SOPT2 value */ 
+#define STARTUP_SIM_CLKDIV1_VALUE                          0x01140000UL /* SIM_CLKDIV1 value */ 
+#define STARTUP_SIM_SCGC5_VALUE                            0x00040382UL /* SIM_SCGC5 value */ 
   
 /* 
    PE_low_level_init() parameterization constants 

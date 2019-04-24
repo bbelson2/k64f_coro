@@ -8,14 +8,13 @@
 **     Repository  : Kinetis
 **     Datasheet   : K22P121M120SF7RM, Rev. 1, March 24, 2014
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-04-01, 12:50, # CodeGen: 1
+**     Date/Time   : 2019-04-24, 11:03, # CodeGen: 8
 **     Abstract    :
 **
 **     Settings    :
 **
 **     Contents    :
-**         SetClockConfiguration - LDD_TError Cpu_SetClockConfiguration(LDD_TClockConfiguration ModeID);
-**         GetClockConfiguration - LDD_TClockConfiguration Cpu_GetClockConfiguration(void);
+**         No public methods
 **
 **     (c) Freescale Semiconductor, Inc.
 **     2004 All Rights Reserved

@@ -303,7 +303,6 @@
 									<listOptionValue builtIn="false" value="CONFIG_LLVM_NS"/>
 									<listOptionValue builtIn="false" value="COBUILD_EXTERNAL_TIMER"/>
 									<listOptionValue builtIn="false" value="COBUILD_MINIMAL"/>
-									<listOptionValue builtIn="false" value="SET_GLOBAL_COUNTER"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input.937401159" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.c.compiler.input"/>
 							</tool>
@@ -335,7 +334,6 @@
 									<listOptionValue builtIn="false" value="SCHEDULER_VERSION_2"/>
 									<listOptionValue builtIn="false" value="UNUSED_TASK_COUNT=0"/>
 									<listOptionValue builtIn="false" value="COBUILD_EXTERNAL_TIMER"/>
-									<listOptionValue builtIn="false" value="SET_GLOBAL_COUNTER"/>
 								</option>
 								<inputType id="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input.1383129314" superClass="ilg.gnuarmeclipse.managedbuild.cross.tool.cpp.compiler.input"/>
 							</tool>

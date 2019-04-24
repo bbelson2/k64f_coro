@@ -47,8 +47,6 @@ void trace(const char* tpl, ...) {}
 
 void pt_main_cpp();
 
-//#define LOOP_ONLY
-
 #if defined(LOOP_ONLY)
 #ifndef PTBUILD_EXTERNAL_TIMER
 extern unsigned long __pt_g_cycles;
