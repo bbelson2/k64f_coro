@@ -168,7 +168,6 @@ promise_t<word> read_adc_promise;
 
 future_t<word> read_adc2(uint8_t channelId) {
 	auto w = findAdc(channelId);
-	promise_t<word> p;
 	split_phase_event_t(w->measureEventId, [w](void) {
 		word result = 0;
 		auto rc = w->getValue16(&result);

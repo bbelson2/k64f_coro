@@ -14,6 +14,21 @@
 #include "core_resumable.h"
 #include "Bit1.h"
 
+#ifdef TEST_SIZEOF
+int voidfn() { return 321; }
+typedef int (*pfn_t)(void);
+pfn_t  pfn = voidfn;
+
+extern "C"
+void offline_test() {
+	auto l = [](){ return 123; };
+	auto sizeof_l = sizeof(l);
+	auto sizeof_v = sizeof(pfn);
+	trace("sizeof_l=%d, sizeof_v=%d\r\n", sizeof_l, sizeof_v);
+	trace("l()=%d, pfn()=%d\r\n", l(), pfn());
+}
+#endif
+
 /***************************************************************************/
 /* Timer task                                                                */
 /***************************************************************************/
