@@ -32,9 +32,29 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>Shared</name>
-			<type>2</type>
-			<locationURI>PARENT-1-PROJECT_LOC/Shared</locationURI>
+			<name>Sources/api2_adc.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Shared2/Sources/api2_adc.cpp</locationURI>
+		</link>
+		<link>
+			<name>Sources/core_scheduler.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Shared/Sources/core_scheduler.cpp</locationURI>
+		</link>
+		<link>
+			<name>Sources/main2_cpp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Shared2/Sources/main2_cpp.cpp</locationURI>
+		</link>
+		<link>
+			<name>Sources/min_services.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Shared/Sources/min_services.cpp</locationURI>
+		</link>
+		<link>
+			<name>Sources/services.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/Shared/Sources/services.cpp</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>
