@@ -72,7 +72,7 @@ extern resumable testTaskAltFn(uint8_t value);
 extern "C"
 void main_cpp()
 {
-	PRINT_STRING("co_main_cpp (" COBUILD_DESCRIPTION ")\r\n");
+	PRINT_STRING("\r\nco_main_cpp (" COBUILD_DESCRIPTION ")\r\n");
 
 #ifdef INCLUDE_ADC_TASK
 	// Instantiate and initialise the application-specific tasks

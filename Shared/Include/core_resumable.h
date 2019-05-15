@@ -59,11 +59,11 @@ namespace scp { namespace core {
 			}
 			*/
 			void* operator new(std::size_t sz) {
-				trace("resumable::new(%lu)\n", sz);
+				trace("resumable::new(%lu)\r\n", sz);
 				return malloc(sz);
 			}
 			void operator delete(void* p) {
-				trace("resumable::delete()\n");
+				trace("resumable::delete()\r\n");
 				if (p)
 					free(p);
 			}

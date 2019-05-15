@@ -12,6 +12,14 @@
 #ifndef SOURCES_INCLUDE_COBUILD_H_
 #define SOURCES_INCLUDE_COBUILD_H_
 
+// Add a definintion to Project Properties > Settings > C++ Compiler > Preprocessor:
+// e.g.: COBUILD_APP_NAME=\"k22fawait2\"
+
+#ifndef COBUILD_APP_NAME
+#define COBUILD_APP_NAME "[coro_test_app]"
+#endif
+#define COBUILD_APP_NAME_DESC "AppName=" COBUILD_APP_NAME
+
 #if defined(COBUILD_EXTERNAL_TIMER)
 
 #define PRINT_NUMBER(x)
@@ -57,18 +65,34 @@
 #else
 
 #define COBUILD_MINIMAL_DESCRIPTION "Minimal=false"
-
+/*
 #ifdef INCLUDE_TEST_TASK
 #undef INCLUDE_TEST_TASK
 #endif
 
+#ifndef INCLUDE_IDLE_TASK
 #define INCLUDE_IDLE_TASK
+#endif
+
+#ifndef INCLUDE_ADC_TASK
 #define INCLUDE_ADC_TASK
+#endif
+
+#ifndef INCLUDE_TIMER_TASK
 #define INCLUDE_TIMER_TASK
+#endif
+
+#ifndef INCLUDE_I2C_TASK
 #define INCLUDE_I2C_TASK
+#endif
+*/
 
 #endif
 
-#define COBUILD_DESCRIPTION COBUILD_EXTERNAL_TIMER_DESCRIPTION " " COBUILD_NO_SCHEDULER_DESCRIPTION " " COBUILD_MINIMAL_DESCRIPTION
+#define COBUILD_DESCRIPTION \
+	COBUILD_APP_NAME_DESC \
+	" " COBUILD_EXTERNAL_TIMER_DESCRIPTION \
+	" " COBUILD_NO_SCHEDULER_DESCRIPTION \
+	" " COBUILD_MINIMAL_DESCRIPTION
 
 #endif /* SOURCES_INCLUDE_COBUILD_H_ */

@@ -196,6 +196,7 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.other.587852167" name="Other compiler flags" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.other" useByScannerDiscovery="true" value="-fshort-enums -target armv7m-none-eabi &quot;-fcoroutines-ts&quot; &quot;-stdlib=libc++&quot; -std=c++14" valueType="string"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs.736259550" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="CONFIG_LLVM"/>
+									<listOptionValue builtIn="false" value="COBUILD_APP_NAME=\&quot;k22awaitmin_xt\&quot;"/>
 									<listOptionValue builtIn="false" value="COBUILD_MINIMAL"/>
 									<listOptionValue builtIn="false" value="SCHEDULER_VERSION_2"/>
 									<listOptionValue builtIn="false" value="UNUSED_TASK_COUNT=0"/>
@@ -329,6 +330,7 @@
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.other.2042786789" name="Other compiler flags" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.other" useByScannerDiscovery="true" value="-fshort-enums -target armv7m-none-eabi &quot;-fcoroutines-ts&quot; &quot;-stdlib=libc++&quot; -std=c++14" valueType="string"/>
 								<option id="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs.1183618382" name="Defined symbols (-D)" superClass="ilg.gnuarmeclipse.managedbuild.cross.option.cpp.compiler.defs" useByScannerDiscovery="false" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="CONFIG_LLVM_NS"/>
+									<listOptionValue builtIn="false" value="COBUILD_APP_NAME=\&quot;k22awaitmin_xt\&quot;"/>
 									<listOptionValue builtIn="false" value="COBUILD_NO_SCHEDULER"/>
 									<listOptionValue builtIn="false" value="COBUILD_MINIMAL"/>
 									<listOptionValue builtIn="false" value="SCHEDULER_VERSION_2"/>
