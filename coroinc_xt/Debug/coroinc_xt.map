@@ -1,0 +1,1876 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-aeabi_memset-soft.o)
+                              ./Generated_Code/PE_LDD.o (__aeabi_memset)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-exit.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (exit)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-impure.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-exit.o) (_global_impure_ptr)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-init.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (__libc_init_array)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-malloc.o)
+                              ./Sources/llvm2.o (malloc)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memset.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o (memset)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-freer.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-malloc.o) (_free_r)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-mallocr.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-malloc.o) (_malloc_r)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-sbrkr.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-mallocr.o) (_sbrk_r)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-snprintf.o)
+                              ./Sources/arm_print.o (snprintf)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-mlock.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-freer.o) (__malloc_lock)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-snprintf.o) (_svfprintf_r)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o) (_printf_i)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-reent.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-sbrkr.o) (errno)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memchr.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o) (memchr)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memcpy-stub.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o) (memcpy)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memmove.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o) (memmove)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-reallocr.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o) (_realloc_r)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-msizer.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-reallocr.o) (_malloc_usable_size_r)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-sbrkr.o) (_sbrk)
+c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(_exit.o)
+                              c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-exit.o) (_exit)
+
+Allocating common symbols
+Common symbol       size              file
+
+ASerialLdd1_DeviceDataPtr
+                    0x4               ./Generated_Code/Inhr1.o
+CalibrationStatus   0x2               ./Generated_Code/AD1.o
+errno               0x4               c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-reent.o)
+AD1_OutV            0x2               ./Generated_Code/AD1.o
+AdcLdd1_DeviceDataPtr
+                    0x4               ./Generated_Code/AD1.o
+SR_reg              0x1               ./Static_Code/System/CPU_Init.o
+
+Discarded input sections
+
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+ .data          0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+ .ARM.extab     0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+ .text          0x00000000        0x0 ./Static_Code/System/CPU_Init.o
+ .text.CPU_SetClockConfiguration
+                0x00000000       0xfe ./Static_Code/System/CPU_Init.o
+ .ARM.exidx.text.CPU_SetClockConfiguration
+                0x00000000        0x8 ./Static_Code/System/CPU_Init.o
+ .llvm_addrsig  0x00000000       0x12 ./Static_Code/System/CPU_Init.o
+ .text          0x00000000        0x0 ./Static_Code/System/Peripherals_Init.o
+ .text.Peripherals_Init
+                0x00000000        0x2 ./Static_Code/System/Peripherals_Init.o
+ .ARM.exidx.text.Peripherals_Init
+                0x00000000        0x8 ./Static_Code/System/Peripherals_Init.o
+ .debug_str     0x00000000       0x9b ./Static_Code/System/Peripherals_Init.o
+ .debug_abbrev  0x00000000       0x29 ./Static_Code/System/Peripherals_Init.o
+ .debug_info    0x00000000       0x38 ./Static_Code/System/Peripherals_Init.o
+ .debug_macinfo
+                0x00000000        0x1 ./Static_Code/System/Peripherals_Init.o
+ .comment       0x00000000       0x1d ./Static_Code/System/Peripherals_Init.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Static_Code/System/Peripherals_Init.o
+ .ARM.attributes
+                0x00000000       0x49 ./Static_Code/System/Peripherals_Init.o
+ .debug_frame   0x00000000       0x24 ./Static_Code/System/Peripherals_Init.o
+ .debug_line    0x00000000       0x60 ./Static_Code/System/Peripherals_Init.o
+ .llvm_addrsig  0x00000000        0x0 ./Static_Code/System/Peripherals_Init.o
+ .text          0x00000000        0x0 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_NMI
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_NMI
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Hard_Fault
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Hard_Fault
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Mem_Manage_Fault
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Mem_Manage_Fault
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Bus_Fault
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Bus_Fault
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Usage_Fault
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Usage_Fault
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved7
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved7
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved8
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved8
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved9
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved9
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved10
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved10
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_SVCall
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_SVCall
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DebugMonitor
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DebugMonitor
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved13
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved13
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_PendableSrvReq
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_PendableSrvReq
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_SysTick
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_SysTick
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA0
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA0
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA1
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA1
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA2
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA2
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA3
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA3
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA4
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA4
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA5
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA5
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA6
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA6
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA7
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA7
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA8
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA8
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA9
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA9
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA10
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA10
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA11
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA11
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA12
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA12
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA13
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA13
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA14
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA14
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA15
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA15
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DMA_Error
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DMA_Error
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_MCM
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_MCM
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_FTF
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_FTF
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Read_Collision
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Read_Collision
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_LVD_LVW
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_LVD_LVW
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_LLWU
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_LLWU
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_WDOG_EWM
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_WDOG_EWM
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_RNG
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_RNG
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_I2C0
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_I2C0
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_I2C1
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_I2C1
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_SPI0
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_SPI0
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_SPI1
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_SPI1
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_I2S0_Tx
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_I2S0_Tx
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_I2S0_Rx
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_I2S0_Rx
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_LPUART0
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_LPUART0
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_UART0_RX_TX
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_UART0_RX_TX
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_UART0_ERR
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_UART0_ERR
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_UART1_RX_TX
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_UART1_RX_TX
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_UART1_ERR
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_UART1_ERR
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_UART2_RX_TX
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_UART2_RX_TX
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_UART2_ERR
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_UART2_ERR
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved53
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved53
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved54
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved54
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_ADC0
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_ADC0
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_CMP0
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_CMP0
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_CMP1
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_CMP1
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_FTM0
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_FTM0
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_FTM1
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_FTM1
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_FTM2
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_FTM2
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved61
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved61
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_RTC
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_RTC
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_RTC_Seconds
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_RTC_Seconds
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_PIT0
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_PIT0
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_PIT1
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_PIT1
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_PIT2
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_PIT2
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_PIT3
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_PIT3
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_PDB0
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_PDB0
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_USB0
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_USB0
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved70
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved70
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved71
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved71
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DAC0
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DAC0
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_MCG
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_MCG
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_LPTMR0
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_LPTMR0
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_PORTA
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_PORTA
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_PORTB
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_PORTB
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_PORTC
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_PORTC
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_PORTD
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_PORTD
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_PORTE
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_PORTE
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_SWI
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_SWI
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved81
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved81
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved82
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved82
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved83
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved83
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved84
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved84
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved85
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved85
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved86
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved86
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_FTM3
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_FTM3
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_DAC1
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_DAC1
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_ADC1
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_ADC1
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved90
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved90
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved91
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved91
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved92
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved92
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved93
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved93
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved94
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved94
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved95
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved95
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved96
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved96
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved97
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved97
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved98
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved98
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved99
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved99
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved100
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved100
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .text.Unhandled_ivINT_Reserved101
+                0x00000000       0x16 ./Static_Code/System/Vectors.o
+ .ARM.exidx.text.Unhandled_ivINT_Reserved101
+                0x00000000        0x8 ./Static_Code/System/Vectors.o
+ .llvm_addrsig  0x00000000        0xa ./Static_Code/System/Vectors.o
+ .text          0x00000000        0x0 ./Sources/Events.o
+ .llvm_addrsig  0x00000000        0x1 ./Sources/Events.o
+ .text          0x00000000        0x0 ./Sources/arm_print.o
+ .llvm_addrsig  0x00000000        0x0 ./Sources/arm_print.o
+ .text          0x00000000        0x0 ./Sources/c_with_coawait.o
+ .text._Z20co_unresolve_promisePa
+                0x00000000        0x6 ./Sources/c_with_coawait.o
+ .ARM.exidx.text._Z20co_unresolve_promisePa
+                0x00000000        0x8 ./Sources/c_with_coawait.o
+ .text._Z13co_mark_framePa
+                0x00000000        0x2 ./Sources/c_with_coawait.o
+ .ARM.exidx.text._Z13co_mark_framePa
+                0x00000000        0x8 ./Sources/c_with_coawait.o
+ .text._Z15co_make_promisePv
+                0x00000000        0x2 ./Sources/c_with_coawait.o
+ .ARM.exidx.text._Z15co_make_promisePv
+                0x00000000        0x8 ./Sources/c_with_coawait.o
+ .text._Z15co_suspend_selfv
+                0x00000000        0x2 ./Sources/c_with_coawait.o
+ .ARM.exidx.text._Z15co_suspend_selfv
+                0x00000000        0x8 ./Sources/c_with_coawait.o
+ .text._Z9co_resumePa
+                0x00000000        0x2 ./Sources/c_with_coawait.o
+ .ARM.exidx.text._Z9co_resumePa
+                0x00000000        0x8 ./Sources/c_with_coawait.o
+ .text._Z8read_adcPa.cleanup
+                0x00000000        0xc ./Sources/c_with_coawait.o
+ .ARM.exidx.text._Z8read_adcPa.cleanup
+                0x00000000        0x8 ./Sources/c_with_coawait.o
+ .rodata..L_Z8read_adcPa.resumers
+                0x00000000        0xc ./Sources/c_with_coawait.o
+ .llvm_addrsig  0x00000000        0x8 ./Sources/c_with_coawait.o
+ .text          0x00000000        0x0 ./Sources/llvm2.o
+ .text._Z2f1i.cleanup
+                0x00000000        0x2 ./Sources/llvm2.o
+ .ARM.exidx.text._Z2f1i.cleanup
+                0x00000000        0x8 ./Sources/llvm2.o
+ .rodata..L_Z2f1i.resumers
+                0x00000000        0xc ./Sources/llvm2.o
+ .llvm_addrsig  0x00000000        0x5 ./Sources/llvm2.o
+ .text          0x00000000        0x0 ./Sources/main.o
+ .llvm_addrsig  0x00000000        0x0 ./Sources/main.o
+ .text          0x00000000        0x0 ./Project_Settings/Startup_Code/startup.o
+ .text.__init_hardware
+                0x00000000        0x2 ./Project_Settings/Startup_Code/startup.o
+ .ARM.exidx.text.__init_hardware
+                0x00000000        0x8 ./Project_Settings/Startup_Code/startup.o
+ .text.__iar_program_start
+                0x00000000        0x8 ./Project_Settings/Startup_Code/startup.o
+ .ARM.exidx.text.__iar_program_start
+                0x00000000        0x8 ./Project_Settings/Startup_Code/startup.o
+ .llvm_addrsig  0x00000000        0x2 ./Project_Settings/Startup_Code/startup.o
+ .text          0x00000000        0x0 ./Generated_Code/AD1.o
+ .text.AD1_GetValue
+                0x00000000       0x34 ./Generated_Code/AD1.o
+ .ARM.exidx.text.AD1_GetValue
+                0x00000000        0x8 ./Generated_Code/AD1.o
+ .text.AD1_GetCalibrationStatus
+                0x00000000        0xe ./Generated_Code/AD1.o
+ .ARM.exidx.text.AD1_GetCalibrationStatus
+                0x00000000        0x8 ./Generated_Code/AD1.o
+ .text.AD1_SetClockConfiguration
+                0x00000000       0x14 ./Generated_Code/AD1.o
+ .ARM.exidx.text.AD1_SetClockConfiguration
+                0x00000000        0x8 ./Generated_Code/AD1.o
+ .llvm_addrsig  0x00000000        0x5 ./Generated_Code/AD1.o
+ .text          0x00000000        0x0 ./Generated_Code/ASerialLdd1.o
+ .text.ASerialLdd1_ReceiveBlock
+                0x00000000       0x32 ./Generated_Code/ASerialLdd1.o
+ .ARM.exidx.text.ASerialLdd1_ReceiveBlock
+                0x00000000        0x8 ./Generated_Code/ASerialLdd1.o
+ .text.ASerialLdd1_GetReceivedDataNum
+                0x00000000        0x4 ./Generated_Code/ASerialLdd1.o
+ .ARM.exidx.text.ASerialLdd1_GetReceivedDataNum
+                0x00000000        0x8 ./Generated_Code/ASerialLdd1.o
+ .text.ASerialLdd1_GetError
+                0x00000000       0x20 ./Generated_Code/ASerialLdd1.o
+ .ARM.exidx.text.ASerialLdd1_GetError
+                0x00000000        0x8 ./Generated_Code/ASerialLdd1.o
+ .llvm_addrsig  0x00000000        0x2 ./Generated_Code/ASerialLdd1.o
+ .text          0x00000000        0x0 ./Generated_Code/AdcLdd1.o
+ .llvm_addrsig  0x00000000        0x6 ./Generated_Code/AdcLdd1.o
+ .text          0x00000000        0x0 ./Generated_Code/Bit1.o
+ .comment       0x00000000       0x1d ./Generated_Code/Bit1.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Generated_Code/Bit1.o
+ .ARM.attributes
+                0x00000000       0x47 ./Generated_Code/Bit1.o
+ .llvm_addrsig  0x00000000        0x0 ./Generated_Code/Bit1.o
+ .text          0x00000000        0x0 ./Generated_Code/BitIoLdd1.o
+ .text.BitIoLdd1_SetDir
+                0x00000000       0x1a ./Generated_Code/BitIoLdd1.o
+ .ARM.exidx.text.BitIoLdd1_SetDir
+                0x00000000        0x8 ./Generated_Code/BitIoLdd1.o
+ .text.BitIoLdd1_GetVal
+                0x00000000       0x18 ./Generated_Code/BitIoLdd1.o
+ .ARM.exidx.text.BitIoLdd1_GetVal
+                0x00000000        0x8 ./Generated_Code/BitIoLdd1.o
+ .text.BitIoLdd1_ClrVal
+                0x00000000       0x10 ./Generated_Code/BitIoLdd1.o
+ .ARM.exidx.text.BitIoLdd1_ClrVal
+                0x00000000        0x8 ./Generated_Code/BitIoLdd1.o
+ .text.BitIoLdd1_SetVal
+                0x00000000       0x10 ./Generated_Code/BitIoLdd1.o
+ .ARM.exidx.text.BitIoLdd1_SetVal
+                0x00000000        0x8 ./Generated_Code/BitIoLdd1.o
+ .llvm_addrsig  0x00000000        0x1 ./Generated_Code/BitIoLdd1.o
+ .text          0x00000000        0x0 ./Generated_Code/Cpu.o
+ .llvm_addrsig  0x00000000        0x0 ./Generated_Code/Cpu.o
+ .text          0x00000000        0x0 ./Generated_Code/Inhr1.o
+ .text.Inhr1_RecvChar
+                0x00000000       0x72 ./Generated_Code/Inhr1.o
+ .ARM.exidx.text.Inhr1_RecvChar
+                0x00000000        0x8 ./Generated_Code/Inhr1.o
+ .text.Inhr1_GetCharsInRxBuf
+                0x00000000       0x1c ./Generated_Code/Inhr1.o
+ .ARM.exidx.text.Inhr1_GetCharsInRxBuf
+                0x00000000        0x8 ./Generated_Code/Inhr1.o
+ .text.Inhr1_SetClockConfiguration
+                0x00000000       0x1a ./Generated_Code/Inhr1.o
+ .ARM.exidx.text.Inhr1_SetClockConfiguration
+                0x00000000        0x8 ./Generated_Code/Inhr1.o
+ .bss.BufferRead
+                0x00000000        0x1 ./Generated_Code/Inhr1.o
+ .llvm_addrsig  0x00000000        0x2 ./Generated_Code/Inhr1.o
+ .text          0x00000000        0x0 ./Generated_Code/PE_LDD.o
+ .text.PE_FillMemory
+                0x00000000       0x1a ./Generated_Code/PE_LDD.o
+ .ARM.exidx.text.PE_FillMemory
+                0x00000000        0x8 ./Generated_Code/PE_LDD.o
+ .text.PE_PeripheralUsed
+                0x00000000       0x2c ./Generated_Code/PE_LDD.o
+ .ARM.exidx.text.PE_PeripheralUsed
+                0x00000000        0x8 ./Generated_Code/PE_LDD.o
+ .text.LDD_SetClockConfiguration
+                0x00000000       0x32 ./Generated_Code/PE_LDD.o
+ .ARM.exidx.text.LDD_SetClockConfiguration
+                0x00000000        0x8 ./Generated_Code/PE_LDD.o
+ .rodata.PE_CpuClockConfigurations
+                0x00000000       0xc8 ./Generated_Code/PE_LDD.o
+ .llvm_addrsig  0x00000000        0x0 ./Generated_Code/PE_LDD.o
+ .text          0x00000000        0x0 ./Generated_Code/Term1.o
+ .text.Term1_SendChar
+                0x00000000       0x14 ./Generated_Code/Term1.o
+ .ARM.exidx.text.Term1_SendChar
+                0x00000000        0x8 ./Generated_Code/Term1.o
+ .text.Term1_ReadChar
+                0x00000000       0x14 ./Generated_Code/Term1.o
+ .ARM.exidx.text.Term1_ReadChar
+                0x00000000        0x8 ./Generated_Code/Term1.o
+ .text.Term1_KeyPressed
+                0x00000000       0x10 ./Generated_Code/Term1.o
+ .ARM.exidx.text.Term1_KeyPressed
+                0x00000000        0x8 ./Generated_Code/Term1.o
+ .text.Term1_CRLF
+                0x00000000       0x1c ./Generated_Code/Term1.o
+ .ARM.exidx.text.Term1_CRLF
+                0x00000000        0x8 ./Generated_Code/Term1.o
+ .text.Term1_SendNum
+                0x00000000       0x3c ./Generated_Code/Term1.o
+ .ARM.exidx.text.Term1_SendNum
+                0x00000000        0x8 ./Generated_Code/Term1.o
+ .text.LongToStr
+                0x00000000       0x9a ./Generated_Code/Term1.o
+ .ARM.exidx.text.LongToStr
+                0x00000000        0x8 ./Generated_Code/Term1.o
+ .text.Term1_Cls
+                0x00000000       0x20 ./Generated_Code/Term1.o
+ .ARM.exidx.text.Term1_Cls
+                0x00000000        0x8 ./Generated_Code/Term1.o
+ .text.SendESCPrefix
+                0x00000000       0x1c ./Generated_Code/Term1.o
+ .ARM.exidx.text.SendESCPrefix
+                0x00000000        0x8 ./Generated_Code/Term1.o
+ .text.Term1_MoveTo
+                0x00000000       0x30 ./Generated_Code/Term1.o
+ .ARM.exidx.text.Term1_MoveTo
+                0x00000000        0x8 ./Generated_Code/Term1.o
+ .llvm_addrsig  0x00000000        0x0 ./Generated_Code/Term1.o
+ .text          0x00000000        0x0 ./Generated_Code/pin_mux.o
+ .text.pin_mux_hardware_init
+                0x00000000      0x262 ./Generated_Code/pin_mux.o
+ .ARM.exidx.text.pin_mux_hardware_init
+                0x00000000        0x8 ./Generated_Code/pin_mux.o
+ .debug_str     0x00000000      0x2f6 ./Generated_Code/pin_mux.o
+ .debug_abbrev  0x00000000       0xc3 ./Generated_Code/pin_mux.o
+ .debug_info    0x00000000      0x5bc ./Generated_Code/pin_mux.o
+ .debug_macinfo
+                0x00000000        0x1 ./Generated_Code/pin_mux.o
+ .comment       0x00000000       0x1d ./Generated_Code/pin_mux.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Generated_Code/pin_mux.o
+ .ARM.attributes
+                0x00000000       0x49 ./Generated_Code/pin_mux.o
+ .debug_frame   0x00000000       0x34 ./Generated_Code/pin_mux.o
+ .debug_line    0x00000000      0x2e6 ./Generated_Code/pin_mux.o
+ .llvm_addrsig  0x00000000        0x0 ./Generated_Code/pin_mux.o
+ .text          0x00000000       0x9a c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-aeabi_memset-soft.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-aeabi_memset-soft.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-aeabi_memset-soft.o)
+ .ARM.attributes
+                0x00000000       0x20 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-aeabi_memset-soft.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-exit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-impure.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-impure.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-impure.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-init.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-init.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-init.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-malloc.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-malloc.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-malloc.o)
+ .text.free     0x00000000       0x10 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-malloc.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memset.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memset.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memset.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-freer.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-freer.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-freer.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-mallocr.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-mallocr.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-mallocr.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-sbrkr.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-sbrkr.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-sbrkr.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-snprintf.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-snprintf.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-snprintf.o)
+ .text._snprintf_r
+                0x00000000       0x5e c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-snprintf.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-mlock.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-mlock.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-mlock.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o)
+ .text.__ssprint_r
+                0x00000000       0xf4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-reent.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-reent.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-reent.o)
+ .text.cleanup_glue
+                0x00000000       0x1a c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-reent.o)
+ .text._reclaim_reent
+                0x00000000       0xb8 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-reent.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memchr.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memchr.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memcpy-stub.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memcpy-stub.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memcpy-stub.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memmove.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memmove.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memmove.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-reallocr.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-reallocr.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-reallocr.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-msizer.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-msizer.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-msizer.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(_exit.o)
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(_exit.o)
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(_exit.o)
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .eh_frame      0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .jcr           0x00000000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .ARM.attributes
+                0x00000000       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+ .text          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ .data          0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ .bss           0x00000000        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+m_interrupts     0x00000000         0x00000198         xr
+m_text           0x00000410         0x0007fbf0         xr
+m_data           0x1fff0000         0x00010000         rw
+m_data_20000000  0x20000000         0x00010000         rw
+m_cfmprotrom     0x00000400         0x00000010         xr
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+LOAD ./Static_Code/System/CPU_Init.o
+LOAD ./Static_Code/System/Peripherals_Init.o
+LOAD ./Static_Code/System/Vectors.o
+LOAD ./Sources/Events.o
+LOAD ./Sources/arm_print.o
+LOAD ./Sources/c_with_coawait.o
+LOAD ./Sources/llvm2.o
+LOAD ./Sources/main.o
+LOAD ./Project_Settings/Startup_Code/startup.o
+LOAD ./Generated_Code/AD1.o
+LOAD ./Generated_Code/ASerialLdd1.o
+LOAD ./Generated_Code/AdcLdd1.o
+LOAD ./Generated_Code/Bit1.o
+LOAD ./Generated_Code/BitIoLdd1.o
+LOAD ./Generated_Code/Cpu.o
+LOAD ./Generated_Code/Inhr1.o
+LOAD ./Generated_Code/PE_LDD.o
+LOAD ./Generated_Code/Term1.o
+LOAD ./Generated_Code/pin_mux.o
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libstdc++_nano.a
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libm.a
+START GROUP
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a
+END GROUP
+START GROUP
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a
+END GROUP
+START GROUP
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard\libgcc.a
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libc_nano.a
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a
+END GROUP
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
+LOAD c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+                0x20000000                _estack = 0x20000000
+                0x20000000                __SP_INIT = _estack
+                0x20000000                __stack = _estack
+                0x00000000                __heap_size = 0x0
+                0x00000400                __stack_size = 0x400
+
+.interrupts     0x00000000      0x198
+                0x00000000                __vector_table = .
+                0x00000000                . = ALIGN (0x4)
+ *(.vectortable)
+ .vectortable   0x00000000      0x198 ./Static_Code/System/Vectors.o
+                0x00000000                __vect_table
+                0x00000198                . = ALIGN (0x4)
+
+.cfmprotect     0x00000400        0x0
+                0x00000400                . = ALIGN (0x4)
+ *(.cfmconfig)
+                0x00000400                . = ALIGN (0x4)
+
+.text           0x00000410     0x207c
+                0x00000410                . = ALIGN (0x4)
+ *(.text)
+ .text          0x00000410       0x6c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .text          0x0000047c       0x74 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+                0x0000047c                _start
+                0x0000047c                _mainCRTStartup
+ .text          0x000004f0       0xa0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memchr.o)
+                0x000004f0                memchr
+ *(.text*)
+ .text.CPU_SetBASEPRI
+                0x00000590        0x6 ./Static_Code/System/CPU_Init.o
+                0x00000590                CPU_SetBASEPRI
+ .text.__init_hardware
+                0x00000596       0xa2 ./Static_Code/System/CPU_Init.o
+                0x00000596                __init_hardware
+ .text.CPU_SetClockConfigGenMode
+                0x00000638      0x362 ./Static_Code/System/CPU_Init.o
+                0x00000638                CPU_SetClockConfigGenMode
+ .text.PE_low_level_init
+                0x0000099a       0x40 ./Static_Code/System/CPU_Init.o
+                0x0000099a                PE_low_level_init
+ .text.CPU_GetClockGenMode
+                0x000009da       0x5c ./Static_Code/System/CPU_Init.o
+                0x000009da                CPU_GetClockGenMode
+ .text.CPU_GetClockConfiguration
+                0x00000a36        0xc ./Static_Code/System/CPU_Init.o
+                0x00000a36                CPU_GetClockConfiguration
+ .text.UnhandledInterrupt
+                0x00000a42       0x16 ./Static_Code/System/Vectors.o
+                0x00000a42                UnhandledInterrupt
+ .text.Cpu_OnNMI
+                0x00000a58        0x2 ./Sources/Events.o
+                0x00000a58                Cpu_OnNMI
+ .text.AD1_OnEnd
+                0x00000a5a        0x4 ./Sources/Events.o
+                0x00000a5a                AD1_OnEnd
+ .text.AD1_OnCalibrationEnd
+                0x00000a5e        0xe ./Sources/Events.o
+                0x00000a5e                AD1_OnCalibrationEnd
+ .text._Z9print_bufPKc
+                0x00000a6c       0x1e ./Sources/arm_print.o
+                0x00000a6c                print_buf(char const*)
+ .text._Z9print_ptrPKcPv
+                0x00000a8a       0x20 ./Sources/arm_print.o
+                0x00000a8a                print_ptr(char const*, void*)
+ .text._Z10print_sizePKcj
+                0x00000aaa       0x20 ./Sources/arm_print.o
+                0x00000aaa                print_size(char const*, unsigned int)
+ .text._Z9print_intPKci
+                0x00000aca       0x20 ./Sources/arm_print.o
+                0x00000aca                print_int(char const*, int)
+ .text._Z11co_resolvedPa
+                0x00000aea       0x22 ./Sources/c_with_coawait.o
+                0x00000aea                co_resolved(signed char*)
+ .text._Z13co_promise_fnPa
+                0x00000b0c       0x1c ./Sources/c_with_coawait.o
+                0x00000b0c                co_promise_fn(signed char*)
+ .text._Z18co_resolve_promisePa
+                0x00000b28        0x6 ./Sources/c_with_coawait.o
+                0x00000b28                co_resolve_promise(signed char*)
+ .text._Z20_co_initialise_framePa
+                0x00000b2e        0x8 ./Sources/c_with_coawait.o
+                0x00000b2e                _co_initialise_frame(signed char*)
+ .text._Z8read_adcPa
+                0x00000b36       0xbe ./Sources/c_with_coawait.o
+                0x00000b36                read_adc(signed char*)
+ .text.ADC_ISR  0x00000bf4       0x50 ./Sources/c_with_coawait.o
+                0x00000bf4                ADC_ISR
+ .text._Z9schedulerv
+                0x00000c44       0x4a ./Sources/c_with_coawait.o
+                0x00000c44                scheduler()
+ *fill*         0x00000c8e        0x2 
+ .text.inner_main
+                0x00000c90       0x16 ./Sources/c_with_coawait.o
+                0x00000c90                inner_main
+ .text._Z8read_adcPa.resume
+                0x00000ca6       0x1a ./Sources/c_with_coawait.o
+ .text._Z8read_adcPa.destroy
+                0x00000cc0        0xc ./Sources/c_with_coawait.o
+ .text._Z2f1i   0x00000ccc       0x24 ./Sources/llvm2.o
+                0x00000ccc                f1(int)
+ .text.mymain   0x00000cf0       0x22 ./Sources/llvm2.o
+                0x00000cf0                mymain
+ *fill*         0x00000d12        0x2 
+ .text._Z2f1i.resume
+                0x00000d14       0x3c ./Sources/llvm2.o
+ .text._Z2f1i.destroy
+                0x00000d50        0x2 ./Sources/llvm2.o
+ *fill*         0x00000d52        0x2 
+ .text.main     0x00000d54       0x12 ./Sources/main.o
+                0x00000d54                main
+ *fill*         0x00000d66        0x2 
+ .text.__copy_rom_section
+                0x00000d68       0x5a ./Project_Settings/Startup_Code/startup.o
+                0x00000d68                __copy_rom_section
+ *fill*         0x00000dc2        0x2 
+ .text.__copy_rom_sections_to_ram
+                0x00000dc4       0x36 ./Project_Settings/Startup_Code/startup.o
+                0x00000dc4                __copy_rom_sections_to_ram
+ .text.__init_registers
+                0x00000dfa       0x12 ./Project_Settings/Startup_Code/startup.o
+                0x00000dfa                __init_registers
+ .text.__init_user
+                0x00000e0c        0x2 ./Project_Settings/Startup_Code/startup.o
+                0x00000e0c                __init_user
+ *fill*         0x00000e0e        0x2 
+ .text.__thumb_startup
+                0x00000e10       0x3a ./Project_Settings/Startup_Code/startup.o
+                0x00000e10                __thumb_startup
+ .text.AD1_HWEnDi
+                0x00000e4a       0x60 ./Generated_Code/AD1.o
+                0x00000e4a                AD1_HWEnDi
+ *fill*         0x00000eaa        0x2 
+ .text.AD1_Measure
+                0x00000eac       0x3e ./Generated_Code/AD1.o
+                0x00000eac                AD1_Measure
+ .text.AD1_GetValue16
+                0x00000eea       0x34 ./Generated_Code/AD1.o
+                0x00000eea                AD1_GetValue16
+ *fill*         0x00000f1e        0x2 
+ .text.AD1_Calibrate
+                0x00000f20       0x7a ./Generated_Code/AD1.o
+                0x00000f20                AD1_Calibrate
+ .text.AdcLdd1_OnMeasurementComplete
+                0x00000f9a       0x58 ./Generated_Code/AD1.o
+                0x00000f9a                AdcLdd1_OnMeasurementComplete
+ .text.AD1_Init
+                0x00000ff2       0x38 ./Generated_Code/AD1.o
+                0x00000ff2                AD1_Init
+ .text.ASerialLdd1_Init
+                0x0000102a       0x9c ./Generated_Code/ASerialLdd1.o
+                0x0000102a                ASerialLdd1_Init
+ .text.ASerialLdd1_SetClockConfiguration
+                0x000010c6       0x30 ./Generated_Code/ASerialLdd1.o
+                0x000010c6                ASerialLdd1_SetClockConfiguration
+ .text.ASerialLdd1_Enable
+                0x000010f6       0x24 ./Generated_Code/ASerialLdd1.o
+                0x000010f6                ASerialLdd1_Enable
+ .text.HWEnDi   0x0000111a       0x44 ./Generated_Code/ASerialLdd1.o
+ .text.ASerialLdd1_Disable
+                0x0000115e       0x1e ./Generated_Code/ASerialLdd1.o
+                0x0000115e                ASerialLdd1_Disable
+ .text.ASerialLdd1_SendBlock
+                0x0000117c       0x3a ./Generated_Code/ASerialLdd1.o
+                0x0000117c                ASerialLdd1_SendBlock
+ .text.ASerialLdd1_Main
+                0x000011b6       0x82 ./Generated_Code/ASerialLdd1.o
+                0x000011b6                ASerialLdd1_Main
+ .text.InterruptRx
+                0x00001238       0x2e ./Generated_Code/ASerialLdd1.o
+ .text.InterruptTx
+                0x00001266       0x3e ./Generated_Code/ASerialLdd1.o
+ .text.AdcLdd1_Init
+                0x000012a4       0x8a ./Generated_Code/AdcLdd1.o
+                0x000012a4                AdcLdd1_Init
+ .text.AdcLdd1_SetClockConfiguration
+                0x0000132e       0x30 ./Generated_Code/AdcLdd1.o
+                0x0000132e                AdcLdd1_SetClockConfiguration
+ .text.AdcLdd1_StartSingleMeasurement
+                0x0000135e       0x36 ./Generated_Code/AdcLdd1.o
+                0x0000135e                AdcLdd1_StartSingleMeasurement
+ .text.AdcLdd1_CancelMeasurement
+                0x00001394       0x24 ./Generated_Code/AdcLdd1.o
+                0x00001394                AdcLdd1_CancelMeasurement
+ .text.AdcLdd1_CreateSampleGroup
+                0x000013b8       0x36 ./Generated_Code/AdcLdd1.o
+                0x000013b8                AdcLdd1_CreateSampleGroup
+ *fill*         0x000013ee        0x2 
+ .text.AdcLdd1_GetMeasuredValues
+                0x000013f0       0x2e ./Generated_Code/AdcLdd1.o
+                0x000013f0                AdcLdd1_GetMeasuredValues
+ .text.AdcLdd1_GetMeasurementCompleteStatus
+                0x0000141e       0x58 ./Generated_Code/AdcLdd1.o
+                0x0000141e                AdcLdd1_GetMeasurementCompleteStatus
+ .text.AdcLdd1_StartCalibration
+                0x00001476       0x38 ./Generated_Code/AdcLdd1.o
+                0x00001476                AdcLdd1_StartCalibration
+ .text.AdcLdd1_GetCalibrationResultStatus
+                0x000014ae       0x52 ./Generated_Code/AdcLdd1.o
+                0x000014ae                AdcLdd1_GetCalibrationResultStatus
+ .text.AdcLdd1_MeasurementCompleteInterrupt
+                0x00001500       0x30 ./Generated_Code/AdcLdd1.o
+                0x00001500                AdcLdd1_MeasurementCompleteInterrupt
+ .text.BitIoLdd1_Init
+                0x00001530       0x5a ./Generated_Code/BitIoLdd1.o
+                0x00001530                BitIoLdd1_Init
+ .text.BitIoLdd1_PutVal
+                0x0000158a       0x16 ./Generated_Code/BitIoLdd1.o
+                0x0000158a                BitIoLdd1_PutVal
+ .text.Common_Init
+                0x000015a0       0x52 ./Generated_Code/Cpu.o
+                0x000015a0                Common_Init
+ .text.Components_Init
+                0x000015f2       0x16 ./Generated_Code/Cpu.o
+                0x000015f2                Components_Init
+ .text.Cpu_INT_NMIInterrupt
+                0x00001608       0x18 ./Generated_Code/Cpu.o
+                0x00001608                Cpu_INT_NMIInterrupt
+ .text.Inhr1_SendChar
+                0x00001620       0x64 ./Generated_Code/Inhr1.o
+                0x00001620                Inhr1_SendChar
+ .text.Inhr1_Init
+                0x00001684       0x34 ./Generated_Code/Inhr1.o
+                0x00001684                Inhr1_Init
+ .text.HWEnDi   0x000016b8       0x28 ./Generated_Code/Inhr1.o
+ .text.ASerialLdd1_OnBreak
+                0x000016e0       0x12 ./Generated_Code/Inhr1.o
+                0x000016e0                ASerialLdd1_OnBreak
+ *fill*         0x000016f2        0x2 
+ .text.Term1_SendStr
+                0x000016f4       0x24 ./Generated_Code/Term1.o
+                0x000016f4                Term1_SendStr
+ .text.exit     0x00001718       0x28 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-exit.o)
+                0x00001718                exit
+ .text.__libc_init_array
+                0x00001740       0x48 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-init.o)
+                0x00001740                __libc_init_array
+ .text.malloc   0x00001788       0x10 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-malloc.o)
+                0x00001788                malloc
+ .text.memset   0x00001798       0x10 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memset.o)
+                0x00001798                memset
+ .text._free_r  0x000017a8       0x9c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-freer.o)
+                0x000017a8                _free_r
+ .text._malloc_r
+                0x00001844       0xbc c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-mallocr.o)
+                0x00001844                _malloc_r
+ .text._sbrk_r  0x00001900       0x20 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-sbrkr.o)
+                0x00001900                _sbrk_r
+ .text.snprintf
+                0x00001920       0x68 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-snprintf.o)
+                0x00001920                sniprintf
+                0x00001920                snprintf
+ .text.__malloc_lock
+                0x00001988        0x2 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-mlock.o)
+                0x00001988                __malloc_lock
+ .text.__malloc_unlock
+                0x0000198a        0x2 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-mlock.o)
+                0x0000198a                __malloc_unlock
+ .text.__ssputs_r
+                0x0000198c       0xb6 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x0000198c                __ssputs_r
+ *fill*         0x00001a42        0x2 
+ .text._svfprintf_r
+                0x00001a44      0x1e8 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o)
+                0x00001a44                _svfiprintf_r
+                0x00001a44                _svfprintf_r
+ .text._printf_common
+                0x00001c2c       0xec c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00001c2c                _printf_common
+ .text._printf_i
+                0x00001d18      0x240 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-vfprintf_i.o)
+                0x00001d18                _printf_i
+ .text.memcpy   0x00001f58       0x16 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memcpy-stub.o)
+                0x00001f58                memcpy
+ .text.memmove  0x00001f6e       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memmove.o)
+                0x00001f6e                memmove
+ .text._realloc_r
+                0x00001fa2       0x4c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-reallocr.o)
+                0x00001fa2                _realloc_r
+ .text._malloc_usable_size_r
+                0x00001fee       0x12 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-msizer.o)
+                0x00001fee                _malloc_usable_size_r
+ .text._sbrk    0x00002000       0x1c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
+                0x00002000                _sbrk
+ .text._exit    0x0000201c        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(_exit.o)
+                0x0000201c                _exit
+ *(.rodata)
+ *(.rodata*)
+ .rodata.CPU_ClockConfigDescriptors
+                0x00002020       0x8c ./Static_Code/System/CPU_Init.o
+ .rodata.ClockGenModeMatrix
+                0x000020ac       0x80 ./Static_Code/System/CPU_Init.o
+ .rodata.CPU_ClockGenModeRegs
+                0x0000212c       0x20 ./Static_Code/System/CPU_Init.o
+ .rodata.CPU_DefaultFEI
+                0x0000214c        0x8 ./Static_Code/System/CPU_Init.o
+ .rodata.CPU_DefaultFBI
+                0x00002154        0x8 ./Static_Code/System/CPU_Init.o
+ .rodata.CPU_DefaultBLPI
+                0x0000215c        0x8 ./Static_Code/System/CPU_Init.o
+ .rodata.CPU_DefaultFEE
+                0x00002164        0x8 ./Static_Code/System/CPU_Init.o
+ .rodata.CPU_DefaultFBE
+                0x0000216c        0x8 ./Static_Code/System/CPU_Init.o
+ .rodata.CPU_DefaultBLPE
+                0x00002174        0x8 ./Static_Code/System/CPU_Init.o
+ .rodata.CPU_DefaultPBE
+                0x0000217c        0x8 ./Static_Code/System/CPU_Init.o
+ .rodata.CPU_DefaultPEE
+                0x00002184        0x8 ./Static_Code/System/CPU_Init.o
+ .rodata.str1.1
+                0x0000218c      0x2ad ./Sources/c_with_coawait.o
+ *fill*         0x00002439        0x3 
+ .rodata._global_impure_ptr
+                0x0000243c        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-impure.o)
+                0x0000243c                _global_impure_ptr
+ .rodata._svfprintf_r.str1.1
+                0x00002440       0x11 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o)
+ .rodata._printf_i.str1.1
+                0x00002451       0x22 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ *(.glue_7)
+ .glue_7        0x00002473        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x00002473        0x0 linker stubs
+ *(.eh_frame)
+ *fill*         0x00002473        0x1 
+ .eh_frame      0x00002474        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ *(.init)
+ .init          0x00002474        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x00002474                _init
+ .init          0x00002478        0x8 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+ *(.fini)
+ .fini          0x00002480        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+                0x00002480                _fini
+ .fini          0x00002484        0x8 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+                0x0000248c                . = ALIGN (0x4)
+                0x0000248c                _etext = .
+
+.vfp11_veneer   0x0000248c        0x0
+ .vfp11_veneer  0x0000248c        0x0 linker stubs
+
+.v4_bx          0x0000248c        0x0
+ .v4_bx         0x0000248c        0x0 linker stubs
+
+.iplt           0x0000248c        0x0
+ .iplt          0x0000248c        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x0000248c        0x8
+                0x0000248c                __exidx_start = .
+ *(.ARM.exidx*)
+ .ARM.exidx     0x0000248c        0x8 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+ .ARM.exidx.text.CPU_SetBASEPRI
+                0x00002494        0x0 ./Static_Code/System/CPU_Init.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.__init_hardware
+                0x00002494        0x0 ./Static_Code/System/CPU_Init.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.CPU_SetClockConfigGenMode
+                0x00002494        0x0 ./Static_Code/System/CPU_Init.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.PE_low_level_init
+                0x00002494        0x0 ./Static_Code/System/CPU_Init.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.CPU_GetClockGenMode
+                0x00002494        0x0 ./Static_Code/System/CPU_Init.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.CPU_GetClockConfiguration
+                0x00002494        0x0 ./Static_Code/System/CPU_Init.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.UnhandledInterrupt
+                0x00002494        0x0 ./Static_Code/System/Vectors.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.Cpu_OnNMI
+                0x00002494        0x0 ./Sources/Events.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AD1_OnEnd
+                0x00002494        0x0 ./Sources/Events.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AD1_OnCalibrationEnd
+                0x00002494        0x0 ./Sources/Events.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z9print_bufPKc
+                0x00002494        0x0 ./Sources/arm_print.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z9print_ptrPKcPv
+                0x00002494        0x0 ./Sources/arm_print.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z10print_sizePKcj
+                0x00002494        0x0 ./Sources/arm_print.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z9print_intPKci
+                0x00002494        0x0 ./Sources/arm_print.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z11co_resolvedPa
+                0x00002494        0x0 ./Sources/c_with_coawait.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z13co_promise_fnPa
+                0x00002494        0x0 ./Sources/c_with_coawait.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z18co_resolve_promisePa
+                0x00002494        0x0 ./Sources/c_with_coawait.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z20_co_initialise_framePa
+                0x00002494        0x0 ./Sources/c_with_coawait.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z8read_adcPa
+                0x00002494        0x0 ./Sources/c_with_coawait.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.ADC_ISR
+                0x00002494        0x0 ./Sources/c_with_coawait.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z9schedulerv
+                0x00002494        0x0 ./Sources/c_with_coawait.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.inner_main
+                0x00002494        0x0 ./Sources/c_with_coawait.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z8read_adcPa.resume
+                0x00002494        0x0 ./Sources/c_with_coawait.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z8read_adcPa.destroy
+                0x00002494        0x0 ./Sources/c_with_coawait.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z2f1i
+                0x00002494        0x0 ./Sources/llvm2.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.mymain
+                0x00002494        0x0 ./Sources/llvm2.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z2f1i.resume
+                0x00002494        0x0 ./Sources/llvm2.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text._Z2f1i.destroy
+                0x00002494        0x0 ./Sources/llvm2.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.main
+                0x00002494        0x0 ./Sources/main.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.__copy_rom_section
+                0x00002494        0x0 ./Project_Settings/Startup_Code/startup.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.__copy_rom_sections_to_ram
+                0x00002494        0x0 ./Project_Settings/Startup_Code/startup.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.__init_registers
+                0x00002494        0x0 ./Project_Settings/Startup_Code/startup.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.__init_user
+                0x00002494        0x0 ./Project_Settings/Startup_Code/startup.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.__thumb_startup
+                0x00002494        0x0 ./Project_Settings/Startup_Code/startup.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AD1_HWEnDi
+                0x00002494        0x0 ./Generated_Code/AD1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AD1_Measure
+                0x00002494        0x0 ./Generated_Code/AD1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AD1_GetValue16
+                0x00002494        0x0 ./Generated_Code/AD1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AD1_Calibrate
+                0x00002494        0x0 ./Generated_Code/AD1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AdcLdd1_OnMeasurementComplete
+                0x00002494        0x0 ./Generated_Code/AD1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AD1_Init
+                0x00002494        0x0 ./Generated_Code/AD1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.ASerialLdd1_Init
+                0x00002494        0x0 ./Generated_Code/ASerialLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.ASerialLdd1_SetClockConfiguration
+                0x00002494        0x0 ./Generated_Code/ASerialLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.ASerialLdd1_Enable
+                0x00002494        0x0 ./Generated_Code/ASerialLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.HWEnDi
+                0x00002494        0x0 ./Generated_Code/ASerialLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.ASerialLdd1_Disable
+                0x00002494        0x0 ./Generated_Code/ASerialLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.ASerialLdd1_SendBlock
+                0x00002494        0x0 ./Generated_Code/ASerialLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.ASerialLdd1_Main
+                0x00002494        0x0 ./Generated_Code/ASerialLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.InterruptRx
+                0x00002494        0x0 ./Generated_Code/ASerialLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.InterruptTx
+                0x00002494        0x0 ./Generated_Code/ASerialLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AdcLdd1_Init
+                0x00002494        0x0 ./Generated_Code/AdcLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AdcLdd1_SetClockConfiguration
+                0x00002494        0x0 ./Generated_Code/AdcLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AdcLdd1_StartSingleMeasurement
+                0x00002494        0x0 ./Generated_Code/AdcLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AdcLdd1_CancelMeasurement
+                0x00002494        0x0 ./Generated_Code/AdcLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AdcLdd1_CreateSampleGroup
+                0x00002494        0x0 ./Generated_Code/AdcLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AdcLdd1_GetMeasuredValues
+                0x00002494        0x0 ./Generated_Code/AdcLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AdcLdd1_GetMeasurementCompleteStatus
+                0x00002494        0x0 ./Generated_Code/AdcLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AdcLdd1_StartCalibration
+                0x00002494        0x0 ./Generated_Code/AdcLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AdcLdd1_GetCalibrationResultStatus
+                0x00002494        0x0 ./Generated_Code/AdcLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.AdcLdd1_MeasurementCompleteInterrupt
+                0x00002494        0x0 ./Generated_Code/AdcLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.BitIoLdd1_Init
+                0x00002494        0x0 ./Generated_Code/BitIoLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.BitIoLdd1_PutVal
+                0x00002494        0x0 ./Generated_Code/BitIoLdd1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.Common_Init
+                0x00002494        0x0 ./Generated_Code/Cpu.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.Components_Init
+                0x00002494        0x0 ./Generated_Code/Cpu.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.Cpu_INT_NMIInterrupt
+                0x00002494        0x0 ./Generated_Code/Cpu.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.Inhr1_SendChar
+                0x00002494        0x0 ./Generated_Code/Inhr1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.Inhr1_Init
+                0x00002494        0x0 ./Generated_Code/Inhr1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.HWEnDi
+                0x00002494        0x0 ./Generated_Code/Inhr1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.ASerialLdd1_OnBreak
+                0x00002494        0x0 ./Generated_Code/Inhr1.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx.text.Term1_SendStr
+                0x00002494        0x0 ./Generated_Code/Term1.o
+                                  0x8 (size before relaxing)
+                0x00002494                __exidx_end = .
+
+.rel.dyn        0x00002494        0x0
+ .rel.iplt      0x00002494        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+
+.ctors          0x00002494        0x0
+                0x00002494                __CTOR_LIST__ = .
+ *crtbegin.o(.ctors)
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+                0x00002494                __CTOR_END__ = .
+
+.dtors          0x00002494        0x0
+                0x00002494                __DTOR_LIST__ = .
+ *crtbegin.o(.dtors)
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+                0x00002494                __DTOR_END__ = .
+
+.preinit_array  0x00002494        0x0
+                0x00002494                PROVIDE (__preinit_array_start, .)
+ *(.preinit_array*)
+                0x00002494                PROVIDE (__preinit_array_end, .)
+
+.init_array     0x00002494        0x4
+                0x00002494                PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*))
+ *(.init_array*)
+ .init_array    0x00002494        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+                0x00002498                PROVIDE (__init_array_end, .)
+
+.fini_array     0x00002498        0x4
+                [!provide]                PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*))
+ *(.fini_array*)
+ .fini_array    0x00002498        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+                [!provide]                PROVIDE (__fini_array_end, .)
+                0x0000249c                ___ROM_AT = .
+
+.data           0x1fff0000       0x64 load address 0x0000249c
+                0x1fff0000                . = ALIGN (0x4)
+                0x1fff0000                _sdata = .
+ *(.data)
+ *(.data*)
+ .data._impure_ptr
+                0x1fff0000        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-impure.o)
+                0x1fff0000                _impure_ptr
+ .data.impure_data
+                0x1fff0004       0x60 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-impure.o)
+                0x1fff0064                . = ALIGN (0x4)
+                0x1fff0064                _edata = .
+                0x00000064                ___data_size = (_edata - _sdata)
+                0x00002500                ___m_data_20000000_ROMStart = (___ROM_AT + SIZEOF (.data))
+
+.jcr            0x1fff0064        0x0 load address 0x00002500
+ .jcr           0x1fff0064        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+
+.igot.plt       0x1fff0064        0x0 load address 0x00002500
+ .igot.plt      0x1fff0064        0x0 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+
+.m_data_20000000
+                0x20000000        0x0 load address 0x00002500
+                0x20000000                . = ALIGN (0x4)
+                0x20000000                ___m_data_20000000_RAMStart = .
+ *(.m_data_20000000)
+                0x20000000                ___m_data_20000000_RAMEnd = .
+                0x20000000                . = ALIGN (0x4)
+                0x00000000                ___m_data_20000000_ROMSize = (___m_data_20000000_RAMEnd - ___m_data_20000000_RAMStart)
+                0x20000000                . = ALIGN (0x4)
+
+.bss            0x1fff0064      0x14c load address 0x00002500
+                0x1fff0064                __START_BSS = .
+                0x1fff0064                PROVIDE (__bss_start__, __START_BSS)
+ *(.bss)
+ .bss           0x1fff0064       0x1c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ *(.bss*)
+ .bss.SR_lock   0x1fff0080        0x1 ./Static_Code/System/CPU_Init.o
+                0x1fff0080                SR_lock
+ .bss.ClockConfigurationID
+                0x1fff0081        0x1 ./Static_Code/System/CPU_Init.o
+                0x1fff0081                ClockConfigurationID
+ *fill*         0x1fff0082        0x2 
+ .bss.adc_calibrated
+                0x1fff0084        0x4 ./Sources/c_with_coawait.o
+                0x1fff0084                adc_calibrated
+ .bss.read_adc_handle
+                0x1fff0088       0xc8 ./Sources/c_with_coawait.o
+                0x1fff0088                read_adc_handle
+ .bss.EnMode    0x1fff0150        0x1 ./Generated_Code/AD1.o
+ .bss.ModeFlg   0x1fff0151        0x1 ./Generated_Code/AD1.o
+ .bss.OutFlg    0x1fff0152        0x1 ./Generated_Code/AD1.o
+ .bss.SampleGroup
+                0x1fff0153        0x1 ./Generated_Code/AD1.o
+ .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
+                0x1fff0154       0x20 ./Generated_Code/ASerialLdd1.o
+ .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
+                0x1fff0174        0x8 ./Generated_Code/AdcLdd1.o
+ .bss.DeviceDataPrv__DEFAULT_RTOS_ALLOC
+                0x1fff017c        0x4 ./Generated_Code/BitIoLdd1.o
+ .bss.EnMode    0x1fff0180        0x1 ./Generated_Code/Inhr1.o
+ .bss.OutBuffer
+                0x1fff0181        0x1 ./Generated_Code/Inhr1.o
+ .bss.SerFlag   0x1fff0182        0x2 ./Generated_Code/Inhr1.o
+ .bss.PE_LDD_DeviceDataList
+                0x1fff0184        0xc ./Generated_Code/PE_LDD.o
+                0x1fff0184                PE_LDD_DeviceDataList
+ .bss.__malloc_free_list
+                0x1fff0190        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-mallocr.o)
+                0x1fff0190                __malloc_free_list
+ .bss.__malloc_sbrk_start
+                0x1fff0194        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-mallocr.o)
+                0x1fff0194                __malloc_sbrk_start
+ .bss.heap_end.5239
+                0x1fff0198        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
+ *(COMMON)
+ COMMON         0x1fff019c        0x1 ./Static_Code/System/CPU_Init.o
+                0x1fff019c                SR_reg
+ *fill*         0x1fff019d        0x3 
+ COMMON         0x1fff01a0        0x8 ./Generated_Code/AD1.o
+                0x1fff01a0                CalibrationStatus
+                0x1fff01a2                AD1_OutV
+                0x1fff01a4                AdcLdd1_DeviceDataPtr
+ COMMON         0x1fff01a8        0x4 ./Generated_Code/Inhr1.o
+                0x1fff01a8                ASerialLdd1_DeviceDataPtr
+ COMMON         0x1fff01ac        0x4 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-reent.o)
+                0x1fff01ac                errno
+                0x1fff01b0                . = ALIGN (0x4)
+                0x1fff01b0                __END_BSS = .
+                0x1fff01b0                PROVIDE (__bss_end__, __END_BSS)
+                0x00002500                _romp_at = ((___ROM_AT + SIZEOF (.data)) + SIZEOF (.m_data_20000000))
+
+.romp           0x1fff01b0       0x24 load address 0x00002500
+                0x00002500                __S_romp = _romp_at
+                0x1fff01b0        0x4 LONG 0x249c ___ROM_AT
+                0x1fff01b4        0x4 LONG 0x1fff0000 _sdata
+                0x1fff01b8        0x4 LONG 0x64 ___data_size
+                0x1fff01bc        0x4 LONG 0x2500 ___m_data_20000000_ROMStart
+                0x1fff01c0        0x4 LONG 0x20000000 ___m_data_20000000_RAMStart
+                0x1fff01c4        0x4 LONG 0x0 ___m_data_20000000_ROMSize
+                0x1fff01c8        0x4 LONG 0x0
+                0x1fff01cc        0x4 LONG 0x0
+                0x1fff01d0        0x4 LONG 0x0
+                0x00080000                text_end = (ORIGIN (m_text) + LENGTH (m_text))
+                0x00002524                data_init_end = ((___m_data_20000000_ROMStart + SIZEOF (.m_data_20000000)) + SIZEOF (.romp))
+                0x00000001                ASSERT ((data_init_end <= text_end), region m_text overflowed with text and data)
+
+._user_heap_stack
+                0x1fff01d4      0x400 load address 0x00002524
+                0x1fff01d4                . = ALIGN (0x4)
+                0x1fff01d4                PROVIDE (end, .)
+                [!provide]                PROVIDE (_end, .)
+                [!provide]                PROVIDE (__end__, .)
+                0x1fff01d4                __heap_addr = .
+                0x1fff01d4                __HeapBase = .
+                0x1fff01d4                . = (. + __heap_size)
+                0x1fff01d4                __HeapLimit = .
+                0x1fff05d4                . = (. + __stack_size)
+ *fill*         0x1fff01d4      0x400 
+                0x1fff05d4                . = ALIGN (0x4)
+
+.ARM.attributes
+                0x00000000       0x36
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x22 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crti.o
+ .ARM.attributes
+                0x00000022       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtbegin.o
+ .ARM.attributes
+                0x00000056       0x20 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/crt0.o
+ .ARM.attributes
+                0x00000076       0x49 ./Static_Code/System/CPU_Init.o
+ .ARM.attributes
+                0x000000bf       0x49 ./Static_Code/System/Vectors.o
+ .ARM.attributes
+                0x00000108       0x49 ./Sources/Events.o
+ .ARM.attributes
+                0x00000151       0x49 ./Sources/arm_print.o
+ .ARM.attributes
+                0x0000019a       0x49 ./Sources/c_with_coawait.o
+ .ARM.attributes
+                0x000001e3       0x49 ./Sources/llvm2.o
+ .ARM.attributes
+                0x0000022c       0x49 ./Sources/main.o
+ .ARM.attributes
+                0x00000275       0x49 ./Project_Settings/Startup_Code/startup.o
+ .ARM.attributes
+                0x000002be       0x49 ./Generated_Code/AD1.o
+ .ARM.attributes
+                0x00000307       0x49 ./Generated_Code/ASerialLdd1.o
+ .ARM.attributes
+                0x00000350       0x49 ./Generated_Code/AdcLdd1.o
+ .ARM.attributes
+                0x00000399       0x49 ./Generated_Code/BitIoLdd1.o
+ .ARM.attributes
+                0x000003e2       0x49 ./Generated_Code/Cpu.o
+ .ARM.attributes
+                0x0000042b       0x49 ./Generated_Code/Inhr1.o
+ .ARM.attributes
+                0x00000474       0x49 ./Generated_Code/PE_LDD.o
+ .ARM.attributes
+                0x000004bd       0x49 ./Generated_Code/Term1.o
+ .ARM.attributes
+                0x00000506       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x0000053a       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000056e       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x000005a2       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-malloc.o)
+ .ARM.attributes
+                0x000005d6       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000060a       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-freer.o)
+ .ARM.attributes
+                0x0000063e       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-mallocr.o)
+ .ARM.attributes
+                0x00000672       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-sbrkr.o)
+ .ARM.attributes
+                0x000006a6       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-snprintf.o)
+ .ARM.attributes
+                0x000006da       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-mlock.o)
+ .ARM.attributes
+                0x0000070e       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o)
+ .ARM.attributes
+                0x00000742       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .ARM.attributes
+                0x00000776       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-reent.o)
+ .ARM.attributes
+                0x000007aa       0x20 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memchr.o)
+ .ARM.attributes
+                0x000007ca       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memcpy-stub.o)
+ .ARM.attributes
+                0x000007fe       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memmove.o)
+ .ARM.attributes
+                0x00000832       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-reallocr.o)
+ .ARM.attributes
+                0x00000866       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-msizer.o)
+ .ARM.attributes
+                0x0000089a       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
+ .ARM.attributes
+                0x000008ce       0x34 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(_exit.o)
+ .ARM.attributes
+                0x00000902       0x22 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
+OUTPUT(coroinc_xt.elf elf32-littlearm)
+
+.debug_str      0x00000000     0x226d
+ .debug_str     0x00000000      0x689 ./Static_Code/System/CPU_Init.o
+                                0x6f2 (size before relaxing)
+ .debug_str     0x00000689      0x9e0 ./Static_Code/System/Vectors.o
+                                0xa37 (size before relaxing)
+ .debug_str     0x00001069       0x5b ./Sources/Events.o
+                                 0x9e (size before relaxing)
+ .debug_str     0x000010c4       0xb7 ./Sources/arm_print.o
+                                0x12a (size before relaxing)
+ .debug_str     0x0000117b      0x2c9 ./Sources/c_with_coawait.o
+                                0x36c (size before relaxing)
+ .debug_str     0x00001444       0x91 ./Sources/llvm2.o
+                                 0xf9 (size before relaxing)
+ .debug_str     0x000014d5       0x32 ./Sources/main.o
+                                 0x80 (size before relaxing)
+ .debug_str     0x00001507      0x113 ./Project_Settings/Startup_Code/startup.o
+                                0x243 (size before relaxing)
+ .debug_str     0x0000161a      0x16b ./Generated_Code/AD1.o
+                                0x283 (size before relaxing)
+ .debug_str     0x00001785      0x332 ./Generated_Code/ASerialLdd1.o
+                                0x5ae (size before relaxing)
+ .debug_str     0x00001ab7      0x2b6 ./Generated_Code/AdcLdd1.o
+                                0x568 (size before relaxing)
+ .debug_str     0x00001d6d      0x115 ./Generated_Code/BitIoLdd1.o
+                                0x331 (size before relaxing)
+ .debug_str     0x00001e82       0x6b ./Generated_Code/Cpu.o
+                                0x212 (size before relaxing)
+ .debug_str     0x00001eed      0x100 ./Generated_Code/Inhr1.o
+                                0x238 (size before relaxing)
+ .debug_str     0x00001fed      0x192 ./Generated_Code/PE_LDD.o
+                                0x278 (size before relaxing)
+ .debug_str     0x0000217f       0xee ./Generated_Code/Term1.o
+                                0x1ca (size before relaxing)
+
+.debug_loc      0x00000000      0xce4
+ .debug_loc     0x00000000      0x12f ./Static_Code/System/CPU_Init.o
+ .debug_loc     0x0000012f       0xd2 ./Sources/arm_print.o
+ .debug_loc     0x00000201      0x183 ./Sources/c_with_coawait.o
+ .debug_loc     0x00000384       0xb0 ./Sources/llvm2.o
+ .debug_loc     0x00000434       0x6a ./Project_Settings/Startup_Code/startup.o
+ .debug_loc     0x0000049e       0x88 ./Generated_Code/AD1.o
+ .debug_loc     0x00000526      0x23c ./Generated_Code/ASerialLdd1.o
+ .debug_loc     0x00000762      0x1a5 ./Generated_Code/AdcLdd1.o
+ .debug_loc     0x00000907       0xb2 ./Generated_Code/BitIoLdd1.o
+ .debug_loc     0x000009b9       0xaf ./Generated_Code/Inhr1.o
+ .debug_loc     0x00000a68       0xa8 ./Generated_Code/PE_LDD.o
+ .debug_loc     0x00000b10      0x1d4 ./Generated_Code/Term1.o
+
+.debug_abbrev   0x00000000     0x1040
+ .debug_abbrev  0x00000000      0x167 ./Static_Code/System/CPU_Init.o
+ .debug_abbrev  0x00000167       0xab ./Static_Code/System/Vectors.o
+ .debug_abbrev  0x00000212       0x29 ./Sources/Events.o
+ .debug_abbrev  0x0000023b       0x8d ./Sources/arm_print.o
+ .debug_abbrev  0x000002c8      0x1af ./Sources/c_with_coawait.o
+ .debug_abbrev  0x00000477       0xc7 ./Sources/llvm2.o
+ .debug_abbrev  0x0000053e       0x36 ./Sources/main.o
+ .debug_abbrev  0x00000574      0x101 ./Project_Settings/Startup_Code/startup.o
+ .debug_abbrev  0x00000675      0x14e ./Generated_Code/AD1.o
+ .debug_abbrev  0x000007c3      0x1b7 ./Generated_Code/ASerialLdd1.o
+ .debug_abbrev  0x0000097a      0x19a ./Generated_Code/AdcLdd1.o
+ .debug_abbrev  0x00000b14      0x154 ./Generated_Code/BitIoLdd1.o
+ .debug_abbrev  0x00000c68       0xb8 ./Generated_Code/Cpu.o
+ .debug_abbrev  0x00000d20      0x11f ./Generated_Code/Inhr1.o
+ .debug_abbrev  0x00000e3f       0xda ./Generated_Code/PE_LDD.o
+ .debug_abbrev  0x00000f19      0x127 ./Generated_Code/Term1.o
+
+.debug_info     0x00000000     0x4074
+ .debug_info    0x00000000      0xae4 ./Static_Code/System/CPU_Init.o
+ .debug_info    0x00000ae4      0x79e ./Static_Code/System/Vectors.o
+ .debug_info    0x00001282       0x5a ./Sources/Events.o
+ .debug_info    0x000012dc      0x15f ./Sources/arm_print.o
+ .debug_info    0x0000143b      0x4e2 ./Sources/c_with_coawait.o
+ .debug_info    0x0000191d      0x1b9 ./Sources/llvm2.o
+ .debug_info    0x00001ad6       0x43 ./Sources/main.o
+ .debug_info    0x00001b19      0x30d ./Project_Settings/Startup_Code/startup.o
+ .debug_info    0x00001e26      0x2b1 ./Generated_Code/AD1.o
+ .debug_info    0x000020d7      0x963 ./Generated_Code/ASerialLdd1.o
+ .debug_info    0x00002a3a      0x812 ./Generated_Code/AdcLdd1.o
+ .debug_info    0x0000324c      0x49c ./Generated_Code/BitIoLdd1.o
+ .debug_info    0x000036e8      0x2f5 ./Generated_Code/Cpu.o
+ .debug_info    0x000039dd      0x21f ./Generated_Code/Inhr1.o
+ .debug_info    0x00003bfc      0x1fa ./Generated_Code/PE_LDD.o
+ .debug_info    0x00003df6      0x27e ./Generated_Code/Term1.o
+
+.debug_ranges   0x00000000      0x6d0
+ .debug_ranges  0x00000000       0x40 ./Static_Code/System/CPU_Init.o
+ .debug_ranges  0x00000040      0x330 ./Static_Code/System/Vectors.o
+ .debug_ranges  0x00000370       0x20 ./Sources/Events.o
+ .debug_ranges  0x00000390       0x28 ./Sources/arm_print.o
+ .debug_ranges  0x000003b8       0x88 ./Sources/c_with_coawait.o
+ .debug_ranges  0x00000440       0x30 ./Sources/llvm2.o
+ .debug_ranges  0x00000470       0x40 ./Project_Settings/Startup_Code/startup.o
+ .debug_ranges  0x000004b0       0x50 ./Generated_Code/AD1.o
+ .debug_ranges  0x00000500       0x68 ./Generated_Code/ASerialLdd1.o
+ .debug_ranges  0x00000568       0x58 ./Generated_Code/AdcLdd1.o
+ .debug_ranges  0x000005c0       0x38 ./Generated_Code/BitIoLdd1.o
+ .debug_ranges  0x000005f8       0x20 ./Generated_Code/Cpu.o
+ .debug_ranges  0x00000618       0x40 ./Generated_Code/Inhr1.o
+ .debug_ranges  0x00000658       0x20 ./Generated_Code/PE_LDD.o
+ .debug_ranges  0x00000678       0x58 ./Generated_Code/Term1.o
+
+.debug_macinfo  0x00000000       0x10
+ .debug_macinfo
+                0x00000000        0x1 ./Static_Code/System/CPU_Init.o
+ .debug_macinfo
+                0x00000001        0x1 ./Static_Code/System/Vectors.o
+ .debug_macinfo
+                0x00000002        0x1 ./Sources/Events.o
+ .debug_macinfo
+                0x00000003        0x1 ./Sources/arm_print.o
+ .debug_macinfo
+                0x00000004        0x1 ./Sources/c_with_coawait.o
+ .debug_macinfo
+                0x00000005        0x1 ./Sources/llvm2.o
+ .debug_macinfo
+                0x00000006        0x1 ./Sources/main.o
+ .debug_macinfo
+                0x00000007        0x1 ./Project_Settings/Startup_Code/startup.o
+ .debug_macinfo
+                0x00000008        0x1 ./Generated_Code/AD1.o
+ .debug_macinfo
+                0x00000009        0x1 ./Generated_Code/ASerialLdd1.o
+ .debug_macinfo
+                0x0000000a        0x1 ./Generated_Code/AdcLdd1.o
+ .debug_macinfo
+                0x0000000b        0x1 ./Generated_Code/BitIoLdd1.o
+ .debug_macinfo
+                0x0000000c        0x1 ./Generated_Code/Cpu.o
+ .debug_macinfo
+                0x0000000d        0x1 ./Generated_Code/Inhr1.o
+ .debug_macinfo
+                0x0000000e        0x1 ./Generated_Code/PE_LDD.o
+ .debug_macinfo
+                0x0000000f        0x1 ./Generated_Code/Term1.o
+
+.comment        0x00000000       0x1c
+ .comment       0x00000000       0x1c ./Static_Code/System/CPU_Init.o
+                                 0x1d (size before relaxing)
+ .comment       0x0000001c       0x1d ./Static_Code/System/Vectors.o
+ .comment       0x0000001c       0x1d ./Sources/Events.o
+ .comment       0x0000001c       0x1d ./Sources/arm_print.o
+ .comment       0x0000001c       0x1d ./Sources/c_with_coawait.o
+ .comment       0x0000001c       0x1d ./Sources/llvm2.o
+ .comment       0x0000001c       0x1d ./Sources/main.o
+ .comment       0x0000001c       0x1d ./Project_Settings/Startup_Code/startup.o
+ .comment       0x0000001c       0x1d ./Generated_Code/AD1.o
+ .comment       0x0000001c       0x1d ./Generated_Code/ASerialLdd1.o
+ .comment       0x0000001c       0x1d ./Generated_Code/AdcLdd1.o
+ .comment       0x0000001c       0x1d ./Generated_Code/BitIoLdd1.o
+ .comment       0x0000001c       0x1d ./Generated_Code/Cpu.o
+ .comment       0x0000001c       0x1d ./Generated_Code/Inhr1.o
+ .comment       0x0000001c       0x1d ./Generated_Code/PE_LDD.o
+ .comment       0x0000001c       0x1d ./Generated_Code/Term1.o
+
+.note.GNU-stack
+                0x00000000        0x0
+ .note.GNU-stack
+                0x00000000        0x0 ./Static_Code/System/CPU_Init.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Static_Code/System/Vectors.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Sources/Events.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Sources/arm_print.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Sources/c_with_coawait.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Sources/llvm2.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Sources/main.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Project_Settings/Startup_Code/startup.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Generated_Code/AD1.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Generated_Code/ASerialLdd1.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Generated_Code/AdcLdd1.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Generated_Code/BitIoLdd1.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Generated_Code/Cpu.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Generated_Code/Inhr1.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Generated_Code/PE_LDD.o
+ .note.GNU-stack
+                0x00000000        0x0 ./Generated_Code/Term1.o
+
+.debug_frame    0x00000000     0x1b94
+ .debug_frame   0x00000000       0xd0 ./Static_Code/System/CPU_Init.o
+ .debug_frame   0x000000d0      0xcb4 ./Static_Code/System/Vectors.o
+ .debug_frame   0x00000d84       0x44 ./Sources/Events.o
+ .debug_frame   0x00000dc8       0x94 ./Sources/arm_print.o
+ .debug_frame   0x00000e5c      0x184 ./Sources/c_with_coawait.o
+ .debug_frame   0x00000fe0       0x90 ./Sources/llvm2.o
+ .debug_frame   0x00001070       0x30 ./Sources/main.o
+ .debug_frame   0x000010a0       0xac ./Project_Settings/Startup_Code/startup.o
+ .debug_frame   0x0000114c       0xf4 ./Generated_Code/AD1.o
+ .debug_frame   0x00001240      0x110 ./Generated_Code/ASerialLdd1.o
+ .debug_frame   0x00001350       0xd8 ./Generated_Code/AdcLdd1.o
+ .debug_frame   0x00001428       0x74 ./Generated_Code/BitIoLdd1.o
+ .debug_frame   0x0000149c       0x60 ./Generated_Code/Cpu.o
+ .debug_frame   0x000014fc       0xd4 ./Generated_Code/Inhr1.o
+ .debug_frame   0x000015d0       0x60 ./Generated_Code/PE_LDD.o
+ .debug_frame   0x00001630      0x14c ./Generated_Code/Term1.o
+ .debug_frame   0x0000177c       0x28 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-exit.o)
+ .debug_frame   0x000017a4       0x2c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-init.o)
+ .debug_frame   0x000017d0       0x30 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-malloc.o)
+ .debug_frame   0x00001800       0x20 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memset.o)
+ .debug_frame   0x00001820       0x38 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00001858       0x2c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00001884       0x2c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x000018b0       0x7c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-snprintf.o)
+ .debug_frame   0x0000192c       0x30 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x0000195c       0x90 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x000019ec       0x60 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x00001a4c       0x5c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-reent.o)
+ .debug_frame   0x00001aa8       0x28 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x00001ad0       0x28 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-memmove.o)
+ .debug_frame   0x00001af8       0x3c c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00001b34       0x20 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libg_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x00001b54       0x20 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
+ .debug_frame   0x00001b74       0x20 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(_exit.o)
+
+.debug_line     0x00000000     0x3273
+ .debug_line    0x00000000      0x5fc ./Static_Code/System/CPU_Init.o
+ .debug_line    0x000005fc      0xa60 ./Static_Code/System/Vectors.o
+ .debug_line    0x0000105c       0x73 ./Sources/Events.o
+ .debug_line    0x000010cf       0xc5 ./Sources/arm_print.o
+ .debug_line    0x00001194      0x341 ./Sources/c_with_coawait.o
+ .debug_line    0x000014d5      0x1e5 ./Sources/llvm2.o
+ .debug_line    0x000016ba       0x4b ./Sources/main.o
+ .debug_line    0x00001705      0x292 ./Project_Settings/Startup_Code/startup.o
+ .debug_line    0x00001997      0x36b ./Generated_Code/AD1.o
+ .debug_line    0x00001d02      0x4d3 ./Generated_Code/ASerialLdd1.o
+ .debug_line    0x000021d5      0x436 ./Generated_Code/AdcLdd1.o
+ .debug_line    0x0000260b      0x276 ./Generated_Code/BitIoLdd1.o
+ .debug_line    0x00002881      0x1e1 ./Generated_Code/Cpu.o
+ .debug_line    0x00002a62      0x2cf ./Generated_Code/Inhr1.o
+ .debug_line    0x00002d31      0x1ea ./Generated_Code/PE_LDD.o
+ .debug_line    0x00002f1b      0x358 ./Generated_Code/Term1.o
