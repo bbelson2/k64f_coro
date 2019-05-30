@@ -14,6 +14,7 @@
 #include "core_resumable.h"
 #include "core_scheduler.h"
 #include "core_future2.h"
-//#include "app_ids.h"
-//#include "services.h"
-//#include "api2_adc.h"
+#include "app_ids.h"
+#include "services.h"
+#include "api2_adc.h"
+

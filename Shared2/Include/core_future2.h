@@ -169,6 +169,31 @@ namespace scp { namespace core {
 		}
 	};
 
+	template<typename T>
+	struct persistent_promise_t {
+		typedef future2_t<T> future_type;
+		typedef persistent_awaitable_state_t<T> state_type;
+		state_type _state;
+
+		// movable not copyable
+		template <typename ...Args>
+		persistent_promise_t(Args&&... args) : _state(std::forward<Args>(args)...)
+		{
+		}
+		persistent_promise_t(const persistent_promise_t&) = delete;
+		persistent_promise_t(persistent_promise_t&&) = default;
+
+		future2_type get() {
+#ifdef assert
+			assert (!_state._future_acquired && "A future on this promise is already in place");
+#endif
+			return future_type(_state);
+		}
+
+		void put(const T& t) {
+			_state.set_value(t);
+		}
+	};
 
 }}
 
