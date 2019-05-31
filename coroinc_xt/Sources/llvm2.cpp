@@ -29,22 +29,21 @@
 // the compiler crashes.
 // It is, however, pure C code.
 
-//#include <stdio.h>
 #include <stdlib.h>
-//#include <stddef.h>
 #include "Bit1.h"
 
-void *f1(int n) {
+void *f1(int n, void* csf) {
 	int on = n % 2;
    __builtin_coro_id(2, &on, 0, 0);
-   size_t size = __builtin_coro_size();// TODO - replace by a passed param
-   void* alloc = malloc(size);
+   //size_t size = __builtin_coro_size();// TODO - replace by a passed param
+   //void* alloc = malloc(size);
    void* id = __builtin_coro_promise(&on, 2, 1);
-   void* hdl = __builtin_coro_begin(alloc);
-
+   void* hdl = __builtin_coro_begin(csf);
+   int onoroff = n % 2;
    if (__builtin_coro_alloc()) {
   	//
    }
+   on = n % 2;
    for(;;) {
   	 n++;
      int8_t flag;
@@ -57,7 +56,7 @@ void *f1(int n) {
      }
      else if (flag == 0) {
     	 //continue;
-    	 Bit1_PutVal(on);
+    	 Bit1_PutVal(onoroff);
      }
    }
 CLEANUP:
@@ -67,10 +66,19 @@ SUSPEND:
    return hdl;
 }
 
+#define CSF_SIZE 40
+
+char csf1[CSF_SIZE];
+char csf2[CSF_SIZE];
+
 extern "C"
 int mymain() {
-  void* hdl1 = f1(4);
-  void* hdl2 = f1(3);
+	size_t i;
+	for (i = 0; i < CSF_SIZE; i++) {
+		csf1[i] = csf2[i] = 0;
+	}
+  void* hdl1 = f1(0, (void*)csf1);
+  void* hdl2 = f1(1, (void*)csf2);
   for (;;) {
   	__builtin_coro_resume(hdl1);
   	__builtin_coro_resume(hdl2);
