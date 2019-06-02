@@ -27,13 +27,13 @@
 // It cannot built by clang - only by clang++.
 // Perhaps we can find some flags that will allow it, but generally
 // the compiler crashes.
-// It is, however, pure C code.
+// It should, however, be pure C code.
 
 #include <stdlib.h>
 #include "Bit1.h"
 
 void *f1(int n, void* csf) {
-	int on = n % 2;
+	int on = 0;
    __builtin_coro_id(2, &on, 0, 0);
    //size_t size = __builtin_coro_size();// TODO - replace by a passed param
    //void* alloc = malloc(size);

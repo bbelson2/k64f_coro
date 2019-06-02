@@ -6,7 +6,7 @@
 **     Version     : Component 01.048, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-30, 15:24, # CodeGen: 0
+**     Date/Time   : 2019-05-31, 15:01, # CodeGen: 2
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -88,58 +88,6 @@ const TCpuClockConfiguration PE_CpuClockConfigurations[CPU_CLOCK_CONFIG_NUMBER] 
     CPU_OSCER_CLK_HZ_CONFIG_0,         /*!< System OSC external reference clock frequency in clock configuration 0 */
     CPU_ERCLK32K_CLK_HZ_CONFIG_0,      /*!< External reference clock 32k frequency in clock configuration 0 */
     CPU_MCGFF_CLK_HZ_CONFIG_0          /*!< MCG fixed frequency clock */
-  },
-  /* Clock configuration 1 */
-  {
-    CPU_CORE_CLK_HZ_CONFIG_1,          /*!< Core clock frequency in clock configuration 1 */
-    CPU_BUS_CLK_HZ_CONFIG_1,           /*!< Bus clock frequency in clock configuration 1 */
-    CPU_FLEXBUS_CLK_HZ_CONFIG_1,       /*!< Flexbus clock frequency in clock configuration 1 */
-    CPU_FLASH_CLK_HZ_CONFIG_1,         /*!< FLASH clock frequency in clock configuration 1 */
-    CPU_USB_CLK_HZ_CONFIG_1,           /*!< USB clock frequency in clock configuration 1 */
-    CPU_PLL_FLL_CLK_HZ_CONFIG_1,       /*!< PLL/FLL clock frequency in clock configuration 1 */
-    CPU_MCGIR_CLK_HZ_CONFIG_1,         /*!< MCG internal reference clock frequency in clock configuration 1 */
-    CPU_OSCER_CLK_HZ_CONFIG_1,         /*!< System OSC external reference clock frequency in clock configuration 1 */
-    CPU_ERCLK32K_CLK_HZ_CONFIG_1,      /*!< External reference clock 32k frequency in clock configuration 1 */
-    CPU_MCGFF_CLK_HZ_CONFIG_1          /*!< MCG fixed frequency clock */
-  },
-  /* Clock configuration 2 */
-  {
-    CPU_CORE_CLK_HZ_CONFIG_2,          /*!< Core clock frequency in clock configuration 2 */
-    CPU_BUS_CLK_HZ_CONFIG_2,           /*!< Bus clock frequency in clock configuration 2 */
-    CPU_FLEXBUS_CLK_HZ_CONFIG_2,       /*!< Flexbus clock frequency in clock configuration 2 */
-    CPU_FLASH_CLK_HZ_CONFIG_2,         /*!< FLASH clock frequency in clock configuration 2 */
-    CPU_USB_CLK_HZ_CONFIG_2,           /*!< USB clock frequency in clock configuration 2 */
-    CPU_PLL_FLL_CLK_HZ_CONFIG_2,       /*!< PLL/FLL clock frequency in clock configuration 2 */
-    CPU_MCGIR_CLK_HZ_CONFIG_2,         /*!< MCG internal reference clock frequency in clock configuration 2 */
-    CPU_OSCER_CLK_HZ_CONFIG_2,         /*!< System OSC external reference clock frequency in clock configuration 2 */
-    CPU_ERCLK32K_CLK_HZ_CONFIG_2,      /*!< External reference clock 32k frequency in clock configuration 2 */
-    CPU_MCGFF_CLK_HZ_CONFIG_2          /*!< MCG fixed frequency clock */
-  },
-  /* Clock configuration 3 */
-  {
-    CPU_CORE_CLK_HZ_CONFIG_3,          /*!< Core clock frequency in clock configuration 3 */
-    CPU_BUS_CLK_HZ_CONFIG_3,           /*!< Bus clock frequency in clock configuration 3 */
-    CPU_FLEXBUS_CLK_HZ_CONFIG_3,       /*!< Flexbus clock frequency in clock configuration 3 */
-    CPU_FLASH_CLK_HZ_CONFIG_3,         /*!< FLASH clock frequency in clock configuration 3 */
-    CPU_USB_CLK_HZ_CONFIG_3,           /*!< USB clock frequency in clock configuration 3 */
-    CPU_PLL_FLL_CLK_HZ_CONFIG_3,       /*!< PLL/FLL clock frequency in clock configuration 3 */
-    CPU_MCGIR_CLK_HZ_CONFIG_3,         /*!< MCG internal reference clock frequency in clock configuration 3 */
-    CPU_OSCER_CLK_HZ_CONFIG_3,         /*!< System OSC external reference clock frequency in clock configuration 3 */
-    CPU_ERCLK32K_CLK_HZ_CONFIG_3,      /*!< External reference clock 32k frequency in clock configuration 3 */
-    CPU_MCGFF_CLK_HZ_CONFIG_3          /*!< MCG fixed frequency clock */
-  },
-  /* Clock configuration 4 */
-  {
-    CPU_CORE_CLK_HZ_CONFIG_4,          /*!< Core clock frequency in clock configuration 4 */
-    CPU_BUS_CLK_HZ_CONFIG_4,           /*!< Bus clock frequency in clock configuration 4 */
-    CPU_FLEXBUS_CLK_HZ_CONFIG_4,       /*!< Flexbus clock frequency in clock configuration 4 */
-    CPU_FLASH_CLK_HZ_CONFIG_4,         /*!< FLASH clock frequency in clock configuration 4 */
-    CPU_USB_CLK_HZ_CONFIG_4,           /*!< USB clock frequency in clock configuration 4 */
-    CPU_PLL_FLL_CLK_HZ_CONFIG_4,       /*!< PLL/FLL clock frequency in clock configuration 4 */
-    CPU_MCGIR_CLK_HZ_CONFIG_4,         /*!< MCG internal reference clock frequency in clock configuration 4 */
-    CPU_OSCER_CLK_HZ_CONFIG_4,         /*!< System OSC external reference clock frequency in clock configuration 4 */
-    CPU_ERCLK32K_CLK_HZ_CONFIG_4,      /*!< External reference clock 32k frequency in clock configuration 4 */
-    CPU_MCGFF_CLK_HZ_CONFIG_4          /*!< MCG fixed frequency clock */
   }
 };
 
@@ -216,16 +164,8 @@ bool PE_PeripheralUsed(uint32_t PrphBaseAddress)
 /* ===================================================================*/
 void LDD_SetClockConfiguration(LDD_TClockConfiguration ClockConfiguration)
 {
-  /* Component ASerialLdd1 (Serial_LDD). */
-  if (PE_LDD_DeviceDataList[PE_LDD_COMPONENT_ASerialLdd1_ID] != NULL) {
-    ASerialLdd1_SetClockConfiguration(PE_LDD_DeviceDataList[PE_LDD_COMPONENT_ASerialLdd1_ID], ClockConfiguration);
-  }
-  /* Component AdcLdd1 (ADC_LDD). */
-  if (PE_LDD_DeviceDataList[PE_LDD_COMPONENT_AdcLdd1_ID] != NULL) {
-    AdcLdd1_SetClockConfiguration(PE_LDD_DeviceDataList[PE_LDD_COMPONENT_AdcLdd1_ID], ClockConfiguration);
-  }
-  Inhr1_SetClockConfiguration(ClockConfiguration);
-  AD1_SetClockConfiguration(ClockConfiguration);
+  (void)ClockConfiguration;            /*!< Parameter is not used, suppress unused argument warning */
+  /* Just one clock configuration defined in CPU component. */
 }
 
 /* END PE_LDD. */

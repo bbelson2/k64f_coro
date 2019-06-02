@@ -7,7 +7,7 @@
 **     Version     : Component 01.697, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-30, 15:24, # CodeGen: 0
+**     Date/Time   : 2019-05-31, 15:01, # CodeGen: 2
 **     Abstract    :
 **         This device "ADC" implements an A/D converter,
 **         its control methods and interrupt/event handling procedure.
@@ -268,19 +268,6 @@ byte AD1_GetCalibrationStatus(void);
 */
 
 void AdcLdd1_OnMeasurementComplete(LDD_TUserData *UserDataPtr);
-
-void AD1_SetClockConfiguration(LDD_TClockConfiguration ClockConfiguration);
-/*
-** ===================================================================
-**     Method      :  AD1_SetClockConfiguration (component ADC)
-**
-**     Description :
-**         This method changes the clock configuration. During a clock 
-**         configuration change the component changes it's setting 
-**         immediately upon a request.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
 
 void AD1_Init(void);
 /*

@@ -45,6 +45,9 @@ endif
 -include ../makefile.defs
 
 # Add inputs and outputs from these tool invocations to the build variables 
+SECONDARY_SIZE += \
+coroinc_xt.siz \
+
 
 # All Target
 all: coroinc_xt.elf secondary-outputs
@@ -57,12 +60,18 @@ coroinc_xt.elf: $(OBJS) $(USER_OBJS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
+coroinc_xt.siz: coroinc_xt.elf
+	@echo 'Invoking: Cross ARM GNU Print Size'
+	arm-none-eabi-size --format=berkeley "coroinc_xt.elf"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) $(C++_DEPS)$(OBJS)$(C_DEPS)$(ASM_DEPS)$(CC_DEPS)$(CPP_DEPS)$(CXX_DEPS)$(C_UPPER_DEPS)$(S_UPPER_DEPS) coroinc_xt.elf
+	-$(RM) $(SECONDARY_SIZE)$(C++_DEPS)$(OBJS)$(C_DEPS)$(ASM_DEPS)$(CC_DEPS)$(CPP_DEPS)$(CXX_DEPS)$(C_UPPER_DEPS)$(S_UPPER_DEPS) coroinc_xt.elf
 	-@echo ' '
 
-secondary-outputs:
+secondary-outputs: $(SECONDARY_SIZE)
 
 .PHONY: all clean dependents
 .SECONDARY:

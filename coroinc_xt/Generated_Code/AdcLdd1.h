@@ -7,7 +7,7 @@
 **     Version     : Component 01.183, Driver 01.08, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-30, 15:24, # CodeGen: 0
+**     Date/Time   : 2019-05-31, 15:01, # CodeGen: 2
 **     Abstract    :
 **         This device "ADC_LDD" implements an A/D converter,
 **         its control methods and interrupt/event handling procedure.
@@ -33,11 +33,11 @@
 **          Sample time                                    : 24 clock periods
 **          Number of conversions                          : 1
 **          Conversion time                                : 17.166138 µs
-**          ADC clock                                      : 2.621 MHz (381.47 ns)
-**          Single conversion time - Single-ended          : 18.548 us
-**          Single conversion time - Differential          : 21.982 us
-**          Additional conversion time - Single-ended      : 17.166 us
-**          Additional conversion time - Differential      : 20.599 us
+**          ADC clock                                      : 2.6 MHz (384.615 ns)
+**          Single conversion time - Single-ended          : 23.544 us
+**          Single conversion time - Differential          : 27.006 us
+**          Additional conversion time - Single-ended      : 17.307 us
+**          Additional conversion time - Differential      : 20.769 us
 **          Result type                                    : unsigned 16 bits, right justified
 **          Trigger                                        : Disabled
 **          Voltage reference                              : 
@@ -439,19 +439,6 @@ LDD_TError AdcLdd1_GetCalibrationResultStatus(LDD_TDeviceData *DeviceDataPtr);
 */
 /* {Default RTOS Adapter} ISR function prototype */
 PE_ISR(AdcLdd1_MeasurementCompleteInterrupt);
-
-/*
-** ===================================================================
-**     Method      :  AdcLdd1_SetClockConfiguration (component ADC_LDD)
-**
-**     Description :
-**         This method changes the clock configuration. During a clock 
-**         configuration change the component changes it's setting 
-**         immediately upon a request.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void AdcLdd1_SetClockConfiguration(LDD_TDeviceData *DeviceDataPtr, LDD_TClockConfiguration ClockConfiguration);
 
 /* END AdcLdd1. */
 

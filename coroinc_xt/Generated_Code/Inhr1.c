@@ -7,7 +7,7 @@
 **     Version     : Component 02.611, Driver 01.01, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-30, 15:24, # CodeGen: 0
+**     Date/Time   : 2019-05-31, 15:01, # CodeGen: 2
 **     Abstract    :
 **         This component "AsynchroSerial" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -117,7 +117,6 @@ extern "C" {
 #define BREAK_ERR        0x0200U       /* Break detect              */
 
 LDD_TDeviceData *ASerialLdd1_DeviceDataPtr; /* Device data pointer */
-static bool EnMode;                    /* Enable/Disable SCI in speed mode */
 static word SerFlag;                   /* Flags for serial communication */
                                        /* Bits: 0 - OverRun error */
                                        /*       1 - Framing error */
@@ -147,11 +146,7 @@ static Inhr1_TComData OutBuffer;       /* Output char for SCI communication */
 */
 static void HWEnDi(void)
 {
-  if (EnMode) {                        /* Enable device? */
-    (void)ASerialLdd1_Enable(ASerialLdd1_DeviceDataPtr); /* Enable device */
-  } else {
-    (void)ASerialLdd1_Disable(ASerialLdd1_DeviceDataPtr); /* Disable device */
-  }
+  (void)ASerialLdd1_ReceiveBlock(ASerialLdd1_DeviceDataPtr, &BufferRead, 1U); /* Receive one data byte */
 }
 
 /*
@@ -191,9 +186,6 @@ byte Inhr1_RecvChar(Inhr1_TComData *Chr)
   byte Result = ERR_OK;                /* Return error code */
   LDD_SERIAL_TError SerialErrorMask;   /* Serial error mask variable */
 
-  if (!EnMode) {                       /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
   ASerialLdd1_Main(ASerialLdd1_DeviceDataPtr);
   if (ASerialLdd1_GetError(ASerialLdd1_DeviceDataPtr, &SerialErrorMask) == ERR_OK) { /* Get error state */
     if (SerialErrorMask != 0U) {
@@ -236,9 +228,6 @@ byte Inhr1_SendChar(Inhr1_TComData Chr)
 {
   Inhr1_TComData TmpChr = OutBuffer;   /* Save OutBuffer value */
 
-  if (!EnMode) {                       /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
   ASerialLdd1_Main(ASerialLdd1_DeviceDataPtr);
   OutBuffer = Chr;                     /* Save character */
   if (ASerialLdd1_SendBlock(ASerialLdd1_DeviceDataPtr, (LDD_TData *)&OutBuffer, 1U) == ERR_BUSY) { /* Send one data byte */
@@ -282,32 +271,7 @@ void Inhr1_Init(void)
 {
   SerFlag = 0x00U;                     /* Reset flags */
   ASerialLdd1_DeviceDataPtr = ASerialLdd1_Init(NULL); /* Calling init method of the inherited component */
-  EnMode = TRUE;                       /* Set the flag "device enabled" in the actual speed CPU mode */
   HWEnDi();                            /* Enable/disable device according to status flags */
-}
-
-/*
-** ===================================================================
-**     Method      :  Inhr1_SetClockConfiguration (component AsynchroSerial)
-**
-**     Description :
-**         This method changes the clock configuration.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void Inhr1_SetClockConfiguration(LDD_TClockConfiguration ClockConfiguration)
-{
-  switch (ClockConfiguration) {
-    case CPU_CLOCK_CONFIG_0:
-      EnMode = TRUE;                   /* Set the flag "device enabled" in the actual speed CPU mode */
-      break;
-    default:
-      EnMode = FALSE;                  /* Set the flag "device disabled" in the actual speed CPU mode */
-      break;
-  }
-  if (EnMode) {                        /* Enable device? */
-    HWEnDi();                          /* Enable/disable device according to status flags */
-  }
 }
 
 /*

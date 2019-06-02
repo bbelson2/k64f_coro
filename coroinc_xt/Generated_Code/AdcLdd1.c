@@ -7,7 +7,7 @@
 **     Version     : Component 01.183, Driver 01.08, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-30, 15:24, # CodeGen: 0
+**     Date/Time   : 2019-05-31, 15:01, # CodeGen: 2
 **     Abstract    :
 **         This device "ADC_LDD" implements an A/D converter,
 **         its control methods and interrupt/event handling procedure.
@@ -33,11 +33,11 @@
 **          Sample time                                    : 24 clock periods
 **          Number of conversions                          : 1
 **          Conversion time                                : 17.166138 µs
-**          ADC clock                                      : 2.621 MHz (381.47 ns)
-**          Single conversion time - Single-ended          : 18.548 us
-**          Single conversion time - Differential          : 21.982 us
-**          Additional conversion time - Single-ended      : 17.166 us
-**          Additional conversion time - Differential      : 20.599 us
+**          ADC clock                                      : 2.6 MHz (384.615 ns)
+**          Single conversion time - Single-ended          : 23.544 us
+**          Single conversion time - Differential          : 27.006 us
+**          Additional conversion time - Single-ended      : 17.307 us
+**          Additional conversion time - Differential      : 20.769 us
 **          Result type                                    : unsigned 16 bits, right justified
 **          Trigger                                        : Disabled
 **          Voltage reference                              : 
@@ -135,7 +135,6 @@ static const uint8_t ChannelToPin[] = { /* Channel to pin conversion table */
 
 typedef struct {
   uint8_t SampleCount;                 /* Number of samples in the last selected/created sample group */
-  bool EnMode;                         /* Enable/Disable device in clock configuration */
   uint8_t FirstSample;                 /* First sample of group store */
   uint8_t CompleteStatus;              /* Measurement complete status flag */
   LDD_TUserData *UserData;             /* RTOS device data structure */
@@ -196,11 +195,11 @@ LDD_TDeviceData* AdcLdd1_Init(LDD_TUserData *UserDataPtr)
   /* Initialization of pin routing */
   /* ADC0_SC2: REFSEL=0 */
   ADC0_SC2 &= (uint32_t)~(uint32_t)(ADC_SC2_REFSEL(0x03));
-  /* ADC0_CFG1: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,ADLPC=0,ADIV=3,ADLSMP=1,MODE=3,ADICLK=0 */
-  ADC0_CFG1 = ADC_CFG1_ADIV(0x03) |
+  /* ADC0_CFG1: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,ADLPC=0,ADIV=1,ADLSMP=1,MODE=3,ADICLK=3 */
+  ADC0_CFG1 = ADC_CFG1_ADIV(0x01) |
               ADC_CFG1_ADLSMP_MASK |
               ADC_CFG1_MODE(0x03) |
-              ADC_CFG1_ADICLK(0x00);
+              ADC_CFG1_ADICLK(0x03);
 
   /* ADC0_CFG2: MUXSEL=0,ADACKEN=0,ADHSC=0,ADLSTS=0 */
   ADC0_CFG2 &= (uint32_t)~(uint32_t)(
@@ -213,7 +212,6 @@ LDD_TDeviceData* AdcLdd1_Init(LDD_TUserData *UserDataPtr)
   ADC0_SC2 = ADC_SC2_REFSEL(0x00);
   /* ADC0_SC3: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,CAL=0,CALF=1,??=0,??=0,ADCO=0,AVGE=0,AVGS=0 */
   ADC0_SC3 = (ADC_SC3_CALF_MASK | ADC_SC3_AVGS(0x00));
-  AdcLdd1_SetClockConfiguration(DeviceDataPrv, Cpu_GetClockConfiguration()); /* Set Initial according speed CPU mode */
   /* Registration of the device structure */
   PE_LDD_RegisterDeviceStructure(PE_LDD_COMPONENT_AdcLdd1_ID,DeviceDataPrv);
   return ((LDD_TDeviceData *)DeviceDataPrv); /* Return pointer to the data data structure */
@@ -259,11 +257,7 @@ LDD_TDeviceData* AdcLdd1_Init(LDD_TUserData *UserDataPtr)
 /* ===================================================================*/
 LDD_TError AdcLdd1_StartSingleMeasurement(LDD_TDeviceData *DeviceDataPtr)
 {
-  /* Clock configuration test - this test can be disabled by setting the "Ignore clock configuration test"
-     property to the "yes" value in the "Configuration inspector" */
-  if (!((AdcLdd1_TDeviceDataPtr)DeviceDataPtr)->EnMode) { /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
+  (void)DeviceDataPtr;                 /* Parameter is not used, suppress unused argument warning */
   if (ADC_PDD_GetConversionActiveFlag(ADC0_BASE_PTR) != 0U) { /* Last measurement still pending? */
     return ERR_BUSY;                   /* Yes, return ERR_BUSY */
   }
@@ -296,11 +290,7 @@ LDD_TError AdcLdd1_StartSingleMeasurement(LDD_TDeviceData *DeviceDataPtr)
 /* ===================================================================*/
 LDD_TError AdcLdd1_CancelMeasurement(LDD_TDeviceData *DeviceDataPtr)
 {
-  /* Clock configuration test - this test can be disabled by setting the "Ignore clock configuration test"
-     property to the "yes" value in the "Configuration inspector" */
-  if (!((AdcLdd1_TDeviceDataPtr)DeviceDataPtr)->EnMode) { /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
+  (void)DeviceDataPtr;                 /* Parameter is not used, suppress unused argument warning */
   ADC_PDD_SetConversionTriggerType(ADC0_BASE_PTR, ADC_PDD_SW_TRIGGER); /* Select SW triggering */
   ADC_PDD_WriteStatusControl1Reg(ADC0_BASE_PTR, 0U, 0x1FU); /* Disable device - A */
   
@@ -352,11 +342,6 @@ LDD_TError AdcLdd1_CreateSampleGroup(LDD_TDeviceData *DeviceDataPtr, LDD_ADC_TSa
 {
   AdcLdd1_TDeviceDataPtr DeviceDataPrv = (AdcLdd1_TDeviceDataPtr)DeviceDataPtr;
 
-  /* Clock configuration test - this test can be disabled by setting the "Ignore clock configuration test"
-     property to the "yes" value in the "Configuration inspector" */
-  if (!((AdcLdd1_TDeviceDataPtr)DeviceDataPtr)->EnMode) { /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
   /* Sample count test - this test can be disabled by setting the "Ignore range checking"
      property to the "yes" value in the "Configuration inspector" */
   if ((SampleCount > AdcLdd1_MAX_HW_SAMPLE_COUNT) || (SampleCount == 0U)) { /* Is number of sample greater then supported by the HW? */
@@ -412,11 +397,6 @@ LDD_TError AdcLdd1_GetMeasuredValues(LDD_TDeviceData *DeviceDataPtr, LDD_TData *
   uint8_t Sample;
   AdcLdd1_TResultData *pBuffer = (AdcLdd1_TResultData *)BufferPtr;
 
-  /* Clock configuration test - this test can be disabled by setting the "Ignore clock configuration test"
-     property to the "yes" value in the "Configuration inspector" */
-  if (!((AdcLdd1_TDeviceDataPtr)DeviceDataPtr)->EnMode) { /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
   /* Copy values from result registers defined in the active sample
      group to the user supplied buffer */
   for (Sample = 0U; Sample < ((AdcLdd1_TDeviceDataPtr)DeviceDataPtr)->SampleCount; Sample++) {
@@ -481,11 +461,7 @@ bool AdcLdd1_GetMeasurementCompleteStatus(LDD_TDeviceData *DeviceDataPtr)
 /* ===================================================================*/
 LDD_TError AdcLdd1_StartCalibration(LDD_TDeviceData *DeviceDataPtr)
 {
-  /* Clock configuration test - this test can be disabled by setting the "Ignore clock configuration test"
-     property to the "yes" value in the "Configuration inspector" */
-  if (!((AdcLdd1_TDeviceDataPtr)DeviceDataPtr)->EnMode) { /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
+  (void)DeviceDataPtr;                 /* Parameter is not used, suppress unused argument warning */
   if (ADC_PDD_GetConversionActiveFlag(ADC0_BASE_PTR) != 0U) { /* Last measurement still pending? */
     return ERR_BUSY;                   /* Yes, return ERR_BUSY */
   }
@@ -559,36 +535,6 @@ PE_ISR(AdcLdd1_MeasurementCompleteInterrupt)
   DeviceDataPrv->CompleteStatus = TRUE; /* Set measurement complete status flag */
   AdcLdd1_OnMeasurementComplete(DeviceDataPrv->UserData);
   (void)ADC_PDD_GetResultValueRaw(ADC0_BASE_PTR, 0U); /* Clear conversion complete flag */
-}
-
-/*
-** ===================================================================
-**     Method      :  AdcLdd1_SetClockConfiguration (component ADC_LDD)
-**
-**     Description :
-**         This method changes the clock configuration. During a clock 
-**         configuration change the component changes it's setting 
-**         immediately upon a request.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void AdcLdd1_SetClockConfiguration(LDD_TDeviceData *DeviceDataPtr, LDD_TClockConfiguration ClockConfiguration)
-{
-  AdcLdd1_TDeviceData *DeviceDataPrv = (AdcLdd1_TDeviceData *)DeviceDataPtr;
-  
-  switch (ClockConfiguration) {
-    case CPU_CLOCK_CONFIG_0:
-      DeviceDataPrv->EnMode = TRUE;    /* Set the flag "device enabled" in the actual speed CPU mode */
-      ADC_PDD_WriteConfiguration1Reg(ADC0_BASE_PTR,
-        (ADC_PDD_ReadConfiguration1Reg(ADC0_BASE_PTR) & ((uint32_t)~((uint32_t)(ADC_CFG1_ADIV_MASK | ADC_CFG1_ADICLK_MASK))))
-        | 0x60U);
-      break;
-    default:
-      DeviceDataPrv->EnMode = FALSE;   /* Set the flag "device disabled" in the actual speed CPU mode */
-      ADC_PDD_SetConversionTriggerType(ADC0_BASE_PTR, ADC_PDD_SW_TRIGGER); /* Select SW triggering */
-      ADC_PDD_WriteStatusControl1Reg(ADC0_BASE_PTR, 0U, 0x1FU); /* Disable device */
-      break;
-  }
 }
 
 /* END AdcLdd1. */

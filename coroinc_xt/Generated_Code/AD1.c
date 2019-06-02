@@ -7,7 +7,7 @@
 **     Version     : Component 01.697, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-30, 15:24, # CodeGen: 0
+**     Date/Time   : 2019-05-31, 15:01, # CodeGen: 2
 **     Abstract    :
 **         This device "ADC" implements an A/D converter,
 **         its control methods and interrupt/event handling procedure.
@@ -102,7 +102,6 @@ extern "C" {
 #define SINGLE          0x03U          /* SINGLE state         */
 #define CALIBRATING     0x04U          /* CALIBRATING state    */
 
-static bool EnMode;                    /* Enable/Disable device in speed mode */
 static volatile byte ModeFlg;          /* Current state of device */
 LDD_TDeviceData *AdcLdd1_DeviceDataPtr; /* Device data pointer */
 /* Sample group configuration */
@@ -127,16 +126,11 @@ static volatile bool OutFlg;           /* Measurement finish flag */
 */
 void AD1_HWEnDi(void)
 {
-  if (EnMode) {                        /* Enable device? */
-    if (ModeFlg) {                     /* Start or stop measurement? */
-      OutFlg = FALSE;                  /* Output value isn't available */
-      SampleGroup[0].ChannelIdx = 0U;
-      (void)AdcLdd1_CreateSampleGroup(AdcLdd1_DeviceDataPtr, (LDD_ADC_TSample *)SampleGroup, 1U); /* Configure sample group */
-      (void)AdcLdd1_StartSingleMeasurement(AdcLdd1_DeviceDataPtr);
-    }
-  }
-  else {
-    (void)AdcLdd1_CancelMeasurement(AdcLdd1_DeviceDataPtr); /* Cancel measurement */
+  if (ModeFlg) {                       /* Start or stop measurement? */
+    OutFlg = FALSE;                    /* Output value isn't available */
+    SampleGroup[0].ChannelIdx = 0U;
+    (void)AdcLdd1_CreateSampleGroup(AdcLdd1_DeviceDataPtr, (LDD_ADC_TSample *)SampleGroup, 1U); /* Configure sample group */
+    (void)AdcLdd1_StartSingleMeasurement(AdcLdd1_DeviceDataPtr);
   }
 }
 
@@ -175,9 +169,6 @@ void AD1_HWEnDi(void)
 /* ===================================================================*/
 byte AD1_Measure(bool WaitForResult)
 {
-  if (!EnMode) {                       /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
   if (ModeFlg != STOP) {               /* Is the device in different mode than "stop"? */
     return ERR_BUSY;                   /* If yes then error */
   }
@@ -221,9 +212,6 @@ byte AD1_Measure(bool WaitForResult)
 /* ===================================================================*/
 byte AD1_GetValue(void* Values)
 {
-  if (!EnMode) {                       /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
   if (!OutFlg) {                       /* Is output flag set? */
     return ERR_NOTAVAIL;               /* If no then error */
   }
@@ -262,9 +250,6 @@ byte AD1_GetValue(void* Values)
 /* ===================================================================*/
 byte AD1_GetValue16(word *Values)
 {
-  if (!EnMode) {                       /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
   if (!OutFlg) {                       /* Is output flag set? */
     return ERR_NOTAVAIL;               /* If no then error */
   }
@@ -299,9 +284,6 @@ byte AD1_GetValue16(word *Values)
 */
 byte AD1_Calibrate(bool WaitForResult)
 {
-  if (!EnMode) {                       /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
   if (ModeFlg != STOP) {               /* Is the device in different mode than "stop"? */
     return ERR_BUSY;                   /* If yes then error */
   }
@@ -366,30 +348,6 @@ void AdcLdd1_OnMeasurementComplete(LDD_TUserData *UserDataPtr)
 
 /*
 ** ===================================================================
-**     Method      :  AD1_SetClockConfiguration (component ADC)
-**
-**     Description :
-**         This method changes the clock configuration. During a clock 
-**         configuration change the component changes it's setting 
-**         immediately upon a request.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void AD1_SetClockConfiguration(LDD_TClockConfiguration ClockConfiguration)
-{
-  switch (ClockConfiguration) {
-    case CPU_CLOCK_CONFIG_0:
-      EnMode = TRUE;                   /* Set the flag "device enabled" in the actual speed CPU mode */
-      break;
-    default:
-      EnMode = FALSE;                  /* Set the flag "device disabled" in the actual speed CPU mode */
-      break;
-  }
-  AD1_HWEnDi();                        /* Enable/disable device according to status flags */
-}
-
-/*
-** ===================================================================
 **     Method      :  AD1_Init (component ADC)
 **
 **     Description :
@@ -401,7 +359,6 @@ void AD1_SetClockConfiguration(LDD_TClockConfiguration ClockConfiguration)
 */
 void AD1_Init(void)
 {
-  EnMode = TRUE;                       /* Set the flag "device enabled" in the actual speed CPU mode */
   OutFlg = FALSE;                      /* No measured value */
   ModeFlg = STOP;                      /* Device isn't running */
   AdcLdd1_DeviceDataPtr = AdcLdd1_Init(NULL); /* Calling init method of the inherited component */

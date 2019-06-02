@@ -7,7 +7,7 @@
 **     Version     : Component 01.188, Driver 01.12, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2019-05-30, 15:24, # CodeGen: 0
+**     Date/Time   : 2019-05-31, 15:01, # CodeGen: 2
 **     Abstract    :
 **         This component "Serial_LDD" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -56,8 +56,6 @@
 **            Clock configuration 7                        : This component disabled
 **     Contents    :
 **         Init               - LDD_TDeviceData* ASerialLdd1_Init(LDD_TUserData *UserDataPtr);
-**         Enable             - LDD_TError ASerialLdd1_Enable(LDD_TDeviceData *DeviceDataPtr);
-**         Disable            - LDD_TError ASerialLdd1_Disable(LDD_TDeviceData *DeviceDataPtr);
 **         SendBlock          - LDD_TError ASerialLdd1_SendBlock(LDD_TDeviceData *DeviceDataPtr, LDD_TData...
 **         ReceiveBlock       - LDD_TError ASerialLdd1_ReceiveBlock(LDD_TDeviceData *DeviceDataPtr, LDD_TData...
 **         GetError           - LDD_TError ASerialLdd1_GetError(LDD_TDeviceData *DeviceDataPtr,...
@@ -129,8 +127,6 @@ extern "C" {
 
 /* {Default RTOS Adapter} Static object used for simulation of dynamic driver memory allocation */
 static ASerialLdd1_TDeviceData DeviceDataPrv__DEFAULT_RTOS_ALLOC;
-/* Internal method prototypes */
-static void HWEnDi(LDD_TDeviceData *DeviceDataPtr);
 
 /*
 ** ===================================================================
@@ -191,7 +187,6 @@ LDD_TDeviceData* ASerialLdd1_Init(LDD_TUserData *UserDataPtr)
   UART_PDD_EnableReceiver(UART1_BASE_PTR, PDD_DISABLE); /* Disable receiver. */
   DeviceDataPrv->SerFlag = 0x00U;      /* Reset flags */
   DeviceDataPrv->ErrFlag = 0x00U;      /* Reset error flags */
-  DeviceDataPrv->EnUser = TRUE;        /* Enable device */
   /* UART1_C1: LOOPS=0,UARTSWAI=0,RSRC=0,M=0,WAKE=0,ILT=0,PE=0,PT=0 */
   UART1_C1 = 0x00U;                    /*  Set the C1 register */
   /* UART1_C3: R8=0,T8=0,TXDIR=0,TXINV=0,ORIE=0,NEIE=0,FEIE=0,PEIE=0 */
@@ -202,72 +197,15 @@ LDD_TDeviceData* ASerialLdd1_Init(LDD_TUserData *UserDataPtr)
   UART1_S2 = 0x00U;                    /*  Set the S2 register */
   /* UART1_MODEM: ??=0,??=0,??=0,??=0,RXRTSE=0,TXRTSPOL=0,TXRTSE=0,TXCTSE=0 */
   UART1_MODEM = 0x00U;                 /*  Set the MODEM register */
-  ASerialLdd1_SetClockConfiguration(DeviceDataPrv, Cpu_GetClockConfiguration()); /* Initial speed CPU mode is high */
+  UART_PDD_SetBaudRateFineAdjust(UART1_BASE_PTR, 3u); /* Set baud rate fine adjust */
+  UART_PDD_SetBaudRate(UART1_BASE_PTR, 65U); /* Set the baud rate register. */
+  UART_PDD_EnableFifo(UART1_BASE_PTR, (UART_PDD_TX_FIFO_ENABLE | UART_PDD_RX_FIFO_ENABLE)); /* Enable RX and TX FIFO */
+  UART_PDD_FlushFifo(UART1_BASE_PTR, (UART_PDD_TX_FIFO_FLUSH | UART_PDD_RX_FIFO_FLUSH)); /* Flush RX and TX FIFO */
+  UART_PDD_EnableTransmitter(UART1_BASE_PTR, PDD_ENABLE); /* Enable transmitter */
+  UART_PDD_EnableReceiver(UART1_BASE_PTR, PDD_ENABLE); /* Enable receiver */
   /* Registration of the device structure */
   PE_LDD_RegisterDeviceStructure(PE_LDD_COMPONENT_ASerialLdd1_ID,DeviceDataPrv);
   return ((LDD_TDeviceData *)DeviceDataPrv);
-}
-
-/*
-** ===================================================================
-**     Method      :  ASerialLdd1_Enable (component Serial_LDD)
-*/
-/*!
-**     @brief
-**         Enables the device, starts the transmitting and receiving.
-**     @param
-**         DeviceDataPtr   - Device data structure
-**                           pointer returned by [Init] method.
-**     @return
-**                         - Error code, possible codes:
-**                           ERR_OK - OK
-**                           ERR_SPEED - The component does not work in
-**                           the active clock configuration.
-*/
-/* ===================================================================*/
-LDD_TError ASerialLdd1_Enable(LDD_TDeviceData *DeviceDataPtr)
-{
-  ASerialLdd1_TDeviceDataPtr DeviceDataPrv = (ASerialLdd1_TDeviceDataPtr)DeviceDataPtr;
-
-  if (!DeviceDataPrv->EnMode) {        /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
-  if (!DeviceDataPrv->EnUser) {        /* Is the device disabled by user? */
-    DeviceDataPrv->EnUser = TRUE;      /* If yes then set the flag "device enabled" */
-    HWEnDi(DeviceDataPrv);             /* Enable the device */
-  }
-  return ERR_OK;                       /* OK */
-}
-
-/*
-** ===================================================================
-**     Method      :  ASerialLdd1_Disable (component Serial_LDD)
-*/
-/*!
-**     @brief
-**         Disables the device, stops the transmitting and receiving.
-**     @param
-**         DeviceDataPtr   - Device data structure
-**                           pointer returned by [Init] method.
-**     @return
-**                         - Error code, possible codes:
-**                           ERR_OK - OK
-**                           ERR_SPEED - The component does not work in
-**                           the active clock configuration.
-*/
-/* ===================================================================*/
-LDD_TError ASerialLdd1_Disable(LDD_TDeviceData *DeviceDataPtr)
-{
-  ASerialLdd1_TDeviceDataPtr DeviceDataPrv = (ASerialLdd1_TDeviceDataPtr)DeviceDataPtr;
-
-  if (!DeviceDataPrv->EnMode) {        /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
-  if (DeviceDataPrv->EnUser) {         /* Is the device enabled by user? */
-    DeviceDataPrv->EnUser = FALSE;     /* If yes then set the flag "device disabled" */
-    HWEnDi(DeviceDataPrv);             /* Disable the device */
-  }
-  return ERR_OK;                       /* OK */
 }
 
 /*
@@ -318,12 +256,6 @@ LDD_TError ASerialLdd1_ReceiveBlock(LDD_TDeviceData *DeviceDataPtr, LDD_TData *B
 {
   ASerialLdd1_TDeviceDataPtr DeviceDataPrv = (ASerialLdd1_TDeviceDataPtr)DeviceDataPtr;
 
-  if (!DeviceDataPrv->EnMode) {        /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
-  if (!DeviceDataPrv->EnUser) {        /* Is the device disabled by user? */
-    return ERR_DISABLED;               /* If yes then error */
-  }
   if (Size == 0U) {                    /* Is the parameter Size within an expected range? */
     return ERR_PARAM_SIZE;             /* If no then error */
   }
@@ -380,12 +312,6 @@ LDD_TError ASerialLdd1_SendBlock(LDD_TDeviceData *DeviceDataPtr, LDD_TData *Buff
 {
   ASerialLdd1_TDeviceDataPtr DeviceDataPrv = (ASerialLdd1_TDeviceDataPtr)DeviceDataPtr;
 
-  if (!DeviceDataPrv->EnMode) {        /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
-  if (!DeviceDataPrv->EnUser) {        /* Is the device disabled by user? */
-    return ERR_DISABLED;               /* If yes then error */
-  }
   if (Size == 0U) {                    /* Is the parameter Size within an expected range? */
     return ERR_PARAM_SIZE;             /* If no then error */
   }
@@ -422,31 +348,6 @@ uint16_t ASerialLdd1_GetReceivedDataNum(LDD_TDeviceData *DeviceDataPtr)
   return (DeviceDataPrv->InpRecvDataNum); /* Return the number of received characters. */
 }
 
-/*
-** ===================================================================
-**     Method      :  HWEnDi (component Serial_LDD)
-**
-**     Description :
-**         Enables or disables the peripheral(s) associated with the 
-**         component. The method is called automatically as a part of the 
-**         Enable and Disable methods and several internal methods.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-static void HWEnDi(LDD_TDeviceData *DeviceDataPtr)
-{
-  ASerialLdd1_TDeviceDataPtr DeviceDataPrv = (ASerialLdd1_TDeviceDataPtr)DeviceDataPtr;
-
-  if (DeviceDataPrv->EnMode && DeviceDataPrv->EnUser) { /* Enable device? */
-    UART_PDD_EnableFifo(UART1_BASE_PTR, (UART_PDD_TX_FIFO_ENABLE | UART_PDD_RX_FIFO_ENABLE)); /* Enable RX and TX FIFO */
-    UART_PDD_FlushFifo(UART1_BASE_PTR, (UART_PDD_TX_FIFO_FLUSH | UART_PDD_RX_FIFO_FLUSH)); /* Flush RX and TX FIFO */
-    UART_PDD_EnableTransmitter(UART1_BASE_PTR, PDD_ENABLE); /* Enable transmitter */
-    UART_PDD_EnableReceiver(UART1_BASE_PTR, PDD_ENABLE); /* Enable receiver */
-  } else {
-    UART_PDD_EnableTransmitter(UART1_BASE_PTR, PDD_DISABLE); /* Disable transmitter. */
-    UART_PDD_EnableReceiver(UART1_BASE_PTR, PDD_DISABLE); /* Disable receiver. */
-  }
-}
 /*
 ** ===================================================================
 **     Method      :  InterruptRx (component Serial_LDD)
@@ -558,34 +459,6 @@ void ASerialLdd1_Main(LDD_TDeviceData *DeviceDataPtr)
 
 /*
 ** ===================================================================
-**     Method      :  ASerialLdd1_SetClockConfiguration (component Serial_LDD)
-**
-**     Description :
-**         This method changes the clock configuration. During a clock 
-**         configuration change the component changes it`s setting 
-**         immediately upon a request.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-void ASerialLdd1_SetClockConfiguration(LDD_TDeviceData *DeviceDataPtr, LDD_TClockConfiguration ClockConfiguration)
-{
-  ASerialLdd1_TDeviceDataPtr DeviceDataPrv = (ASerialLdd1_TDeviceDataPtr)DeviceDataPtr;
-
-  switch (ClockConfiguration) {
-    case CPU_CLOCK_CONFIG_0:
-      UART_PDD_SetBaudRateFineAdjust(UART1_BASE_PTR, 12u); /* Set baud rate fine adjust */
-      UART_PDD_SetBaudRate(UART1_BASE_PTR, 11U); /* Set the baud rate register. */
-      DeviceDataPrv->EnMode = TRUE;    /* Set the flag "device enabled" in the actual speed CPU mode */
-      break;
-    default:
-      DeviceDataPrv->EnMode = FALSE;   /* Set the flag "device disabled" in the actual speed CPU mode */
-      break;
-  }
-  HWEnDi(DeviceDataPtr);               /* Enable/disable device according to status flags */
-}
-
-/*
-** ===================================================================
 **     Method      :  ASerialLdd1_GetError (component Serial_LDD)
 */
 /*!
@@ -617,12 +490,6 @@ LDD_TError ASerialLdd1_GetError(LDD_TDeviceData *DeviceDataPtr, LDD_SERIAL_TErro
 {
   ASerialLdd1_TDeviceDataPtr DeviceDataPrv = (ASerialLdd1_TDeviceDataPtr)DeviceDataPtr;
 
-  if (!DeviceDataPrv->EnMode) {        /* Is the device disabled in the actual speed CPU mode? */
-    return ERR_SPEED;                  /* If yes then error */
-  }
-  if (!DeviceDataPrv->EnUser) {        /* Is the device disabled by user? */
-    return ERR_DISABLED;               /* If yes then error */
-  }
   *ErrorPtr = DeviceDataPrv->ErrFlag;
   DeviceDataPrv->ErrFlag = 0x00U;      /* Reset error flags */
   return ERR_OK;                       /* OK */

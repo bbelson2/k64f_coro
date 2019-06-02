@@ -175,8 +175,8 @@
               <Methods>
                 <Init v="generate code" />
                 <Deinit v="don&amp;apos;t generate code" />
-                <Enable v="don&amp;apos;t generate code" />
-                <Disable v="don&amp;apos;t generate code" />
+                <Enable v="generate code" />
+                <Disable v="generate code" />
                 <SendBlock v="generate code" />
                 <ReceiveBlock v="generate code" />
                 <CancelBlockTransmission v="don&amp;apos;t generate code" />
@@ -331,11 +331,11 @@ Autoselect
           <Sample_time v="24 clock periods" />
           <Number_of_conversions v="1" />
           <Conversion_time v="17.166138 &amp;#181;s" />
-          <ADC_clock v="2.6 MHz (384.615 ns)" />
-          <Single_conversion_time___Single_ended v="23.544 us" />
-          <Single_conversion_time___Differential v="27.006 us" />
-          <Additional_conversion_time___Single_ended v="17.307 us" />
-          <Additional_conversion_time___Differential v="20.769 us" />
+          <ADC_clock v="2.621 MHz (381.47 ns)" />
+          <Single_conversion_time___Single_ended v="18.548 us" />
+          <Single_conversion_time___Differential v="21.982 us" />
+          <Additional_conversion_time___Single_ended v="17.166 us" />
+          <Additional_conversion_time___Differential v="20.599 us" />
           <Result_type v="unsigned 16 bits, right justified" />
           <boolgroup name="Trigger" v="Disabled" />
           <group name="Voltage reference">

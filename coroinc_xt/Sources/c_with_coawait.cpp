@@ -1,3 +1,5 @@
+#ifndef INCLUDE_C_MODEL
+
 #include <stdbool.h>
 #include <stdint.h>
 #include <stdio.h>
@@ -534,3 +536,5 @@ co_promise int* testTaskFn(coro_frame *fr, uint8_t value) {
   return &testDummy; // return the thing labelled with co_make_promise
 }
 #endif
+
+#endif //INCLUDE_C_MODEL
