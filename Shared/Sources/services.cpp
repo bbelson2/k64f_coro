@@ -47,7 +47,11 @@ void trace(const char* tpl, ...) {
 
 	Term1_SendStr(achBuf);
 }
+#else
 
+extern "C"
+void trace(const char* tpl, ...) {
+}
 #endif // __has_include("Term1.h")
 
 #endif

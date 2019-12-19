@@ -33,19 +33,22 @@
 #include "Bit1.h"
 
 void *f1(int n, void* csf) {
-	int on = 0;
-   __builtin_coro_id(2, &on, 0, 0);
+  int onoroff = n % 2;
+	//int on = 0;
+   //__builtin_coro_id(2, &onoroff, 0, 0);
+  __builtin_coro_id(2, 0, 0, 0);
    //size_t size = __builtin_coro_size();// TODO - replace by a passed param
    //void* alloc = malloc(size);
-   void* id = __builtin_coro_promise(&on, 2, 1);
+   //void* id = __builtin_coro_promise(&onoroff, 2, 1);
+  void* id = __builtin_coro_promise(0, 2, 1);
    void* hdl = __builtin_coro_begin(csf);
-   int onoroff = n % 2;
    if (__builtin_coro_alloc()) {
   	//
    }
-   on = n % 2;
+   //on = n % 2;
+   onoroff = n % 2;
    for(;;) {
-  	 n++;
+  	 //n++;
      int8_t flag;
      flag = __builtin_coro_suspend(0);
      if (flag == -1) {

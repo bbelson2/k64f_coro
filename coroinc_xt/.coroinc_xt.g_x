@@ -56,7 +56,7 @@
       <File Name="Static_Code/PDD/SMC_PDD.h" FileDate="2019-03-21, 00:30:56" FileAge="1553092256690" FileType="1048576" />
       <File Name="Generated_Code/PE_LDD.c" FileDate="2019-05-31, 15:01:37" FileAge="1559278897643" FileType="45637" CompNumb="1" />
       <File Name="Generated_Code/PE_Const.h" FileDate="2019-05-30, 15:25:07" FileAge="1559193907312" FileType="45637" />
-      <File Name="Generated_Code/CPU_Config.h" FileDate="2019-05-31, 15:09:18" FileAge="1559279358335" FileType="45637" CompNumb="1" />
+      <File Name="Generated_Code/CPU_Config.h" FileDate="2019-06-19, 15:39:31" FileAge="1560922771262" FileType="45637" CompNumb="1" />
       <File Name="Generated_Code/pin_mux.c" FileDate="2019-05-30, 15:25:07" FileAge="1559193907407" FileType="45637" CompNumb="2" />
       <File Name="Project_Settings/Linker_Files/ProcessorExpert.ld" FileDate="2019-05-30, 15:25:07" FileAge="1559193907278" FileType="8" CompNumb="1" />
       <File Name="Static_Code/PDD/RCM_PDD.h" FileDate="2019-03-21, 00:30:56" FileAge="1553092256656" FileType="1048576" />
@@ -64,7 +64,7 @@
       <File Name="Generated_Code/ASerialLdd1.h" FileDate="2019-05-31, 15:01:37" FileAge="1559278897434" FileType="45637" CompNumb="5" />
       <File Name="Documentation/doxygen/AdcLdd1_component.txt" FileDate="2019-05-31, 15:01:37" FileAge="1559278897580" FileType="45637" CompNumb="7" />
       <File Name="Static_Code/PDD/LPUART_PDD.h" FileDate="2019-03-21, 00:30:56" FileAge="1553092256614" FileType="1048576" />
-      <File Name="Sources/main.c" FileDate="2019-05-29, 18:12:10" FileAge="1559117530432" FileType="128" />
+      <File Name="Sources/main.c" FileDate="2019-05-31, 15:18:02" FileAge="1559279882438" FileType="128" />
       <File Name="Generated_Code/ASerialLdd1.c" FileDate="2019-05-31, 15:01:37" FileAge="1559278897457" FileType="45637" CompNumb="5" />
       <File Name="Static_Code/PDD/PORT_PDD.h" FileDate="2019-03-21, 00:30:56" FileAge="1553092256651" FileType="1048576" />
       <File Name="Generated_Code/AdcLdd1.h" FileDate="2019-05-31, 15:01:37" FileAge="1559278897492" FileType="45637" CompNumb="7" />
@@ -112,5 +112,5 @@
       <File Name="Static_Code/System/Peripherals_Init.c" FileDate="2019-03-21, 00:30:56" FileAge="1553092256477" FileType="1048576" CompNumb="1" />
     </GeneratedByPE>
   </GeneratedFilesList>
-  <CodeGenReference>4</CodeGenReference>
+  <CodeGenReference>8</CodeGenReference>
 </CodeGenerationInfo>

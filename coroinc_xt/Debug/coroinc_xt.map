@@ -1610,7 +1610,7 @@ OUTPUT(coroinc_xt.elf elf32-littlearm)
  .debug_str     0x0000111c      0x2a2 ./Sources/c_with_coawait.o
                                 0x370 (size before relaxing)
  .debug_str     0x000013be       0x7b ./Sources/llvm2.o
-                                0x121 (size before relaxing)
+                                0x11e (size before relaxing)
  .debug_str     0x00001439       0x34 ./Sources/main.o
                                  0x84 (size before relaxing)
  .debug_str     0x0000146d       0xf5 ./Project_Settings/Startup_Code/startup.o
@@ -1632,72 +1632,72 @@ OUTPUT(coroinc_xt.elf elf32-littlearm)
  .debug_str     0x0000202f       0xee ./Generated_Code/Term1.o
                                 0x1ca (size before relaxing)
 
-.debug_loc      0x00000000      0xb43
+.debug_loc      0x00000000      0xb1f
  .debug_loc     0x00000000      0x106 ./Static_Code/System/CPU_Init.o
  .debug_loc     0x00000106       0xd2 ./Sources/arm_print.o
  .debug_loc     0x000001d8      0x183 ./Sources/c_with_coawait.o
- .debug_loc     0x0000035b       0x87 ./Sources/llvm2.o
- .debug_loc     0x000003e2       0x6a ./Project_Settings/Startup_Code/startup.o
- .debug_loc     0x0000044c       0x75 ./Generated_Code/AD1.o
- .debug_loc     0x000004c1      0x178 ./Generated_Code/ASerialLdd1.o
- .debug_loc     0x00000639      0x156 ./Generated_Code/AdcLdd1.o
- .debug_loc     0x0000078f       0xb2 ./Generated_Code/BitIoLdd1.o
- .debug_loc     0x00000841       0xa4 ./Generated_Code/Inhr1.o
- .debug_loc     0x000008e5       0x8a ./Generated_Code/PE_LDD.o
- .debug_loc     0x0000096f      0x1d4 ./Generated_Code/Term1.o
+ .debug_loc     0x0000035b       0x63 ./Sources/llvm2.o
+ .debug_loc     0x000003be       0x6a ./Project_Settings/Startup_Code/startup.o
+ .debug_loc     0x00000428       0x75 ./Generated_Code/AD1.o
+ .debug_loc     0x0000049d      0x178 ./Generated_Code/ASerialLdd1.o
+ .debug_loc     0x00000615      0x156 ./Generated_Code/AdcLdd1.o
+ .debug_loc     0x0000076b       0xb2 ./Generated_Code/BitIoLdd1.o
+ .debug_loc     0x0000081d       0xa4 ./Generated_Code/Inhr1.o
+ .debug_loc     0x000008c1       0x8a ./Generated_Code/PE_LDD.o
+ .debug_loc     0x0000094b      0x1d4 ./Generated_Code/Term1.o
 
-.debug_abbrev   0x00000000     0x10ad
+.debug_abbrev   0x00000000     0x10af
  .debug_abbrev  0x00000000      0x16e ./Static_Code/System/CPU_Init.o
  .debug_abbrev  0x0000016e       0xab ./Static_Code/System/Vectors.o
  .debug_abbrev  0x00000219       0x29 ./Sources/Events.o
  .debug_abbrev  0x00000242       0x8d ./Sources/arm_print.o
  .debug_abbrev  0x000002cf      0x1af ./Sources/c_with_coawait.o
- .debug_abbrev  0x0000047e      0x11e ./Sources/llvm2.o
- .debug_abbrev  0x0000059c       0x36 ./Sources/main.o
- .debug_abbrev  0x000005d2      0x101 ./Project_Settings/Startup_Code/startup.o
- .debug_abbrev  0x000006d3      0x14e ./Generated_Code/AD1.o
- .debug_abbrev  0x00000821      0x1c6 ./Generated_Code/ASerialLdd1.o
- .debug_abbrev  0x000009e7      0x19a ./Generated_Code/AdcLdd1.o
- .debug_abbrev  0x00000b81      0x154 ./Generated_Code/BitIoLdd1.o
- .debug_abbrev  0x00000cd5       0xb8 ./Generated_Code/Cpu.o
- .debug_abbrev  0x00000d8d      0x110 ./Generated_Code/Inhr1.o
- .debug_abbrev  0x00000e9d       0xe9 ./Generated_Code/PE_LDD.o
- .debug_abbrev  0x00000f86      0x127 ./Generated_Code/Term1.o
+ .debug_abbrev  0x0000047e      0x120 ./Sources/llvm2.o
+ .debug_abbrev  0x0000059e       0x36 ./Sources/main.o
+ .debug_abbrev  0x000005d4      0x101 ./Project_Settings/Startup_Code/startup.o
+ .debug_abbrev  0x000006d5      0x14e ./Generated_Code/AD1.o
+ .debug_abbrev  0x00000823      0x1c6 ./Generated_Code/ASerialLdd1.o
+ .debug_abbrev  0x000009e9      0x19a ./Generated_Code/AdcLdd1.o
+ .debug_abbrev  0x00000b83      0x154 ./Generated_Code/BitIoLdd1.o
+ .debug_abbrev  0x00000cd7       0xb8 ./Generated_Code/Cpu.o
+ .debug_abbrev  0x00000d8f      0x110 ./Generated_Code/Inhr1.o
+ .debug_abbrev  0x00000e9f       0xe9 ./Generated_Code/PE_LDD.o
+ .debug_abbrev  0x00000f88      0x127 ./Generated_Code/Term1.o
 
-.debug_info     0x00000000     0x3df7
+.debug_info     0x00000000     0x3de1
  .debug_info    0x00000000      0xa44 ./Static_Code/System/CPU_Init.o
  .debug_info    0x00000a44      0x79e ./Static_Code/System/Vectors.o
  .debug_info    0x000011e2       0x5a ./Sources/Events.o
  .debug_info    0x0000123c      0x15f ./Sources/arm_print.o
  .debug_info    0x0000139b      0x4e2 ./Sources/c_with_coawait.o
- .debug_info    0x0000187d      0x1f5 ./Sources/llvm2.o
- .debug_info    0x00001a72       0x43 ./Sources/main.o
- .debug_info    0x00001ab5      0x30d ./Project_Settings/Startup_Code/startup.o
- .debug_info    0x00001dc2      0x26a ./Generated_Code/AD1.o
- .debug_info    0x0000202c      0x852 ./Generated_Code/ASerialLdd1.o
- .debug_info    0x0000287e      0x7b8 ./Generated_Code/AdcLdd1.o
- .debug_info    0x00003036      0x49c ./Generated_Code/BitIoLdd1.o
- .debug_info    0x000034d2      0x2f5 ./Generated_Code/Cpu.o
- .debug_info    0x000037c7      0x1ba ./Generated_Code/Inhr1.o
- .debug_info    0x00003981      0x1f8 ./Generated_Code/PE_LDD.o
- .debug_info    0x00003b79      0x27e ./Generated_Code/Term1.o
+ .debug_info    0x0000187d      0x1df ./Sources/llvm2.o
+ .debug_info    0x00001a5c       0x43 ./Sources/main.o
+ .debug_info    0x00001a9f      0x30d ./Project_Settings/Startup_Code/startup.o
+ .debug_info    0x00001dac      0x26a ./Generated_Code/AD1.o
+ .debug_info    0x00002016      0x852 ./Generated_Code/ASerialLdd1.o
+ .debug_info    0x00002868      0x7b8 ./Generated_Code/AdcLdd1.o
+ .debug_info    0x00003020      0x49c ./Generated_Code/BitIoLdd1.o
+ .debug_info    0x000034bc      0x2f5 ./Generated_Code/Cpu.o
+ .debug_info    0x000037b1      0x1ba ./Generated_Code/Inhr1.o
+ .debug_info    0x0000396b      0x1f8 ./Generated_Code/PE_LDD.o
+ .debug_info    0x00003b63      0x27e ./Generated_Code/Term1.o
 
-.debug_ranges   0x00000000      0x6a0
+.debug_ranges   0x00000000      0x688
  .debug_ranges  0x00000000       0x30 ./Static_Code/System/CPU_Init.o
  .debug_ranges  0x00000030      0x330 ./Static_Code/System/Vectors.o
  .debug_ranges  0x00000360       0x20 ./Sources/Events.o
  .debug_ranges  0x00000380       0x28 ./Sources/arm_print.o
  .debug_ranges  0x000003a8       0x88 ./Sources/c_with_coawait.o
- .debug_ranges  0x00000430       0x48 ./Sources/llvm2.o
- .debug_ranges  0x00000478       0x40 ./Project_Settings/Startup_Code/startup.o
- .debug_ranges  0x000004b8       0x48 ./Generated_Code/AD1.o
- .debug_ranges  0x00000500       0x48 ./Generated_Code/ASerialLdd1.o
- .debug_ranges  0x00000548       0x50 ./Generated_Code/AdcLdd1.o
- .debug_ranges  0x00000598       0x38 ./Generated_Code/BitIoLdd1.o
- .debug_ranges  0x000005d0       0x20 ./Generated_Code/Cpu.o
- .debug_ranges  0x000005f0       0x38 ./Generated_Code/Inhr1.o
- .debug_ranges  0x00000628       0x20 ./Generated_Code/PE_LDD.o
- .debug_ranges  0x00000648       0x58 ./Generated_Code/Term1.o
+ .debug_ranges  0x00000430       0x30 ./Sources/llvm2.o
+ .debug_ranges  0x00000460       0x40 ./Project_Settings/Startup_Code/startup.o
+ .debug_ranges  0x000004a0       0x48 ./Generated_Code/AD1.o
+ .debug_ranges  0x000004e8       0x48 ./Generated_Code/ASerialLdd1.o
+ .debug_ranges  0x00000530       0x50 ./Generated_Code/AdcLdd1.o
+ .debug_ranges  0x00000580       0x38 ./Generated_Code/BitIoLdd1.o
+ .debug_ranges  0x000005b8       0x20 ./Generated_Code/Cpu.o
+ .debug_ranges  0x000005d8       0x38 ./Generated_Code/Inhr1.o
+ .debug_ranges  0x00000610       0x20 ./Generated_Code/PE_LDD.o
+ .debug_ranges  0x00000630       0x58 ./Generated_Code/Term1.o
 
 .debug_macinfo  0x00000000       0x10
  .debug_macinfo
@@ -1823,20 +1823,20 @@ OUTPUT(coroinc_xt.elf elf32-littlearm)
  .debug_frame   0x00001a48       0x20 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(sbrk.o)
  .debug_frame   0x00001a68       0x20 c:/program files (x86)/gnu tools arm embedded/6 2017-q2-update/bin/../lib/gcc/arm-none-eabi/6.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard\libnosys.a(_exit.o)
 
-.debug_line     0x00000000     0x2ecd
+.debug_line     0x00000000     0x2ebd
  .debug_line    0x00000000      0x4e4 ./Static_Code/System/CPU_Init.o
  .debug_line    0x000004e4      0xa64 ./Static_Code/System/Vectors.o
  .debug_line    0x00000f48       0x73 ./Sources/Events.o
  .debug_line    0x00000fbb       0xc5 ./Sources/arm_print.o
  .debug_line    0x00001080      0x343 ./Sources/c_with_coawait.o
- .debug_line    0x000013c3      0x1ed ./Sources/llvm2.o
- .debug_line    0x000015b0       0x4b ./Sources/main.o
- .debug_line    0x000015fb      0x29f ./Project_Settings/Startup_Code/startup.o
- .debug_line    0x0000189a      0x301 ./Generated_Code/AD1.o
- .debug_line    0x00001b9b      0x398 ./Generated_Code/ASerialLdd1.o
- .debug_line    0x00001f33      0x3a3 ./Generated_Code/AdcLdd1.o
- .debug_line    0x000022d6      0x276 ./Generated_Code/BitIoLdd1.o
- .debug_line    0x0000254c      0x1e1 ./Generated_Code/Cpu.o
- .debug_line    0x0000272d      0x271 ./Generated_Code/Inhr1.o
- .debug_line    0x0000299e      0x1d7 ./Generated_Code/PE_LDD.o
- .debug_line    0x00002b75      0x358 ./Generated_Code/Term1.o
+ .debug_line    0x000013c3      0x1dd ./Sources/llvm2.o
+ .debug_line    0x000015a0       0x4b ./Sources/main.o
+ .debug_line    0x000015eb      0x29f ./Project_Settings/Startup_Code/startup.o
+ .debug_line    0x0000188a      0x301 ./Generated_Code/AD1.o
+ .debug_line    0x00001b8b      0x398 ./Generated_Code/ASerialLdd1.o
+ .debug_line    0x00001f23      0x3a3 ./Generated_Code/AdcLdd1.o
+ .debug_line    0x000022c6      0x276 ./Generated_Code/BitIoLdd1.o
+ .debug_line    0x0000253c      0x1e1 ./Generated_Code/Cpu.o
+ .debug_line    0x0000271d      0x271 ./Generated_Code/Inhr1.o
+ .debug_line    0x0000298e      0x1d7 ./Generated_Code/PE_LDD.o
+ .debug_line    0x00002b65      0x358 ./Generated_Code/Term1.o
